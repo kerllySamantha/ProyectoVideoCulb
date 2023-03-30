@@ -1,3 +1,8 @@
+package view;
+
+import view.Formato;
+import view.Multimedia;
+
 public class Pelicula extends Multimedia {
     private int duracion;
     private String actorPrincipal;

@@ -1,4 +1,9 @@
-public class Videojuego extends Multimedia{
+package view;
+
+import view.Formato;
+import view.Multimedia;
+
+public class Videojuego extends Multimedia {
     private static final String [] plataformasDisponibles = {"PlayStation" , "Nintendo Switch", "XBox", "PC"};
     private String plataforma;
 
