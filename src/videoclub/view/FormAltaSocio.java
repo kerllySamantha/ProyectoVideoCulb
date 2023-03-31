@@ -1,18 +1,48 @@
 package view;
 
+import model.Socio;
+
 import javax.swing.*;
+import java.util.ArrayList;
 
-public class FormVideoClub extends JFrame {
 
+public class FormAltaSocio extends JFrame {
+    //ArrayList<Socio>socios = new ArrayList<>();
     private JMenuBar menuVideoClub;
     private JMenu altas, bajas, alquileres,devoluciones,  listados, salir;
     private JMenuItem socio, videojueo, pelicula, listMultimedia, listPelisOrden, listVideJAnio,
     listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio;
-    private JPanel panelPrincipalVideo;
+    private JPanel altasSocioMenu;
+    private JTextField txtNIFSocioAlta;
+    private JTextField txtNombreSocioAlta;
+    private JTextField txtPoblacionSocioAlta;
+    private JButton btnCrearSocio;
+    private JLabel nifSocioALta;
+    private JLabel nombreSocioAlta;
+    private JLabel fechaNacSocioAlta;
+    private JLabel poblacionSocioAlta;
 
-    public FormVideoClub() {
-        super.setContentPane(panelPrincipalVideo);
+    private String nifSocio, nombreSocio, poblacionSocio;
+
+    public FormAltaSocio() {
+        super.setContentPane(altasSocioMenu);
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        crearMenuBar();
+        btnCrearSocio.addActionListener(actionEvent -> {
+            nifSocio = txtNombreSocioAlta.getText().toUpperCase();
+            nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
+            poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
+
+            new Socio(nifSocio, nombreSocio,"", poblacionSocio);
+
+
+
+
+
+        });
+    }
+
+    public void crearMenuBar(){
         menuVideoClub = new JMenuBar();
         super.setJMenuBar(menuVideoClub);
 

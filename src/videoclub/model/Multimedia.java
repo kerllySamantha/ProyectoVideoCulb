@@ -1,4 +1,4 @@
-package view;
+package model;
 
 public class Multimedia {
     private String titulo;

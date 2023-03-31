@@ -1,7 +1,4 @@
-package view;
-
-import view.Formato;
-import view.Multimedia;
+package model;
 
 public class Pelicula extends Multimedia {
     private int duracion;
