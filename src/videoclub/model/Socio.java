@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 
 public class Socio {
@@ -74,6 +76,26 @@ public class Socio {
 
     public ArrayList<Multimedia> getAlquilerActual() {
         return alquilerActual;
+    }
+
+    public static int buscarSocio(String nif, ArrayList<Socio> socios) {
+        int index = 0;
+        for (int i = 0; i < socios.size(); i++) {
+            if (socios.get(i).getNif().equalsIgnoreCase(nif)) {
+                index = i;
+                return index;
+            }
+        }
+        return -1;
+    }
+
+    public static boolean comprobarNif(ArrayList<Socio> socios, String nif) {
+        for (Socio socio : socios) {
+            if (nif.equalsIgnoreCase(socio.getNif())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public String toString() {

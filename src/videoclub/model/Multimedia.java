@@ -1,3 +1,5 @@
+package model;
+
 public class Multimedia {
     private String titulo;
     private String autor;

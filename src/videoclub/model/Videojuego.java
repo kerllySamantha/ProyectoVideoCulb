@@ -1,4 +1,6 @@
-public class Videojuego extends Multimedia{
+package model;
+
+public class Videojuego extends Multimedia {
     private static final String [] plataformasDisponibles = {"PlayStation" , "Nintendo Switch", "XBox", "PC"};
     private String plataforma;
 
