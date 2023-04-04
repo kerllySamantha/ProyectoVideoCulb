@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio&#10;Crear un metodo para menuBar">
-      <change afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionVideoClub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/Principal.java" afterDir="false" />
-    </list>
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="aaaa" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +29,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="cambioMain" />
+        <entry key="$PROJECT_DIR$" value="kerlly" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,8 +49,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="kerllyS" />
+                    <option name="lastUsedInstant" value="1680640268" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1680633267" />
+                    <option name="lastUsedInstant" value="1680640180" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -187,6 +187,7 @@
     <MESSAGE value="Establecer la ruta pricipal" />
     <MESSAGE value="Realizar un menu" />
     <MESSAGE value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio&#10;Crear un metodo para menuBar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio&#10;Crear un metodo para menuBar" />
+    <MESSAGE value="aaaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaaa" />
   </component>
 </project>
