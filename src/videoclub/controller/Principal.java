@@ -25,8 +25,8 @@ public class Principal {
 
     public static void alquilarMultSocio(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
 
-       // System.out.println("Introduce el título que quiera alquilar el socio");
-        String titMult  = "";
+        // System.out.println("Introduce el título que quiera alquilar el socio");
+        String titMult = "";
         if (buscarTitulo(titMult, multimedia) != -1) {
             System.out.println("Introduce el NIF del socio");
             String nif = "";
@@ -65,7 +65,7 @@ public class Principal {
         String titMult = "sc.nextLine()";
         if (buscarTitulo(titMult, multimedia) != -1) {
             System.out.println("Introduce el NIF del socio");
-            String nif =" sc.nextLine()";
+            String nif = " sc.nextLine()";
             if (buscarSocio(nif, socios) != -1) {
                 if (buscarTituloAlquilados(titMult, socios.get(buscarSocio(nif, socios))) != -1) {
                     System.out.println("Introduce los dias pasados desde que se realizó el alquiler");
