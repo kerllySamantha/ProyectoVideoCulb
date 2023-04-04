@@ -1,5 +1,6 @@
 package view;
 
+import controller.GestionSocioVideoClub;
 import controller.Principal;
 import model.Socio;
 
@@ -26,23 +27,17 @@ public class FormAltaSocio extends JFrame {
     public FormAltaSocio() {
         super.setContentPane(altasSocioMenu);
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
-
         super.setJMenuBar(MenuBar.crearMenuBar());
-
-
         btnCrearSocio.addActionListener(actionEvent -> {
-            nifSocio = txtNombreSocioAlta.getText().toUpperCase();
-            existeNif = socios.contains(socios);
-           // int encontrado = Principal.buscarSocio(nifSocio, ArrayList<Socio> socios);
-           do{
-               if (existeNif) {
-                JOptionPane.showMessageDialog(null, "El NIf ya existe");
-            }
-        } while (existeNif);
-
+            do {
+                nifSocio = txtNombreSocioAlta.getText().toUpperCase();
+                existeNif = GestionSocioVideoClub.comprobarNif(socios, nifSocio);
+                if (existeNif) {
+                    JOptionPane.showMessageDialog(null, "El NIf ya existe");
+                }
+            } while (existeNif);
             nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
             poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
-
 
             new Socio(nifSocio, nombreSocio, "", poblacionSocio);
 

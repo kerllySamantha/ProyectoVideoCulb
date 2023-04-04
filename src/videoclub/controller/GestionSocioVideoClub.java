@@ -5,7 +5,7 @@ import model.Socio;
 
 import java.util.ArrayList;
 
-public class GestionVideoClub {
+public class GestionSocioVideoClub {
 
     ArrayList<Socio> socios = new ArrayList<>();
     ArrayList<Multimedia> multimedia = new ArrayList<>();
@@ -120,6 +120,15 @@ public class GestionVideoClub {
             }
         }
         return -1;
+    }
+
+    public static boolean comprobarNif(ArrayList<Socio> socios, String nif) {
+        for (Socio socio : socios) {
+            if (nif.equalsIgnoreCase(socio.getNif())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
 
