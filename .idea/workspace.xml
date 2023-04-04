@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Realizar un menu">
-      <change afterPath="$PROJECT_DIR$/src/videoclub/model/Cancion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/videoclub/model/Disco.java" afterDir="false" />
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Crear clase canción y disco.&#10;Crear form alta pelicula.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Pelicula.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680176570621</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Crear clase canción y disco.&#10;Crear form alta pelicula.">
+      <created>1680631731608</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680631731608</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +176,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Establecer la ruta pricipal" />
     <MESSAGE value="Realizar un menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Realizar un menu" />
+    <MESSAGE value="Crear clase canción y disco.&#10;Crear form alta pelicula." />
+    <option name="LAST_COMMIT_MESSAGE" value="Crear clase canción y disco.&#10;Crear form alta pelicula." />
   </component>
 </project>
