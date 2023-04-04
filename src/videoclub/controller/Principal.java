@@ -11,8 +11,6 @@ public class Principal {
 
         SwingUtilities.invokeLater((() -> {
             try {
-
-
                 FormAltaSocio formVideoClub = new FormAltaSocio();
                 formVideoClub.setSize(300, 200);
                 formVideoClub.setVisible(true);
