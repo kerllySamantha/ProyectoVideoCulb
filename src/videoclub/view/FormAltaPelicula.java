@@ -27,7 +27,10 @@ public class FormAltaPelicula extends JFrame{
         super.setContentPane(panelAltaPelicula);
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        altaPelicula();
+    }
 
+    public void altaPelicula() {
         btnAltaPelicula.addActionListener(actionEvent -> {
             String tituloPelicula = txtTituloPelicula.getText().toUpperCase();
             String autorPelicula = txtAutorPelicula.getText().toUpperCase();
