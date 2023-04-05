@@ -4,7 +4,6 @@ import controller.GestionSocioVideoClub;
 import model.Socio;
 
 import javax.swing.*;
-import java.awt.event.ContainerAdapter;
 import java.util.ArrayList;
 
 
@@ -21,6 +20,7 @@ public class FormAltaSocio extends JFrame {
     private JLabel fechaNacSocioAlta;
     private JLabel poblacionSocioAlta;
     private JTextArea txtDatosSocio;
+    private JButton btnRestValues;
 
     private String nifSocio, nombreSocio, poblacionSocio;
     private boolean existeNif;
@@ -30,19 +30,23 @@ public class FormAltaSocio extends JFrame {
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setJMenuBar(MenuBar.crearMenuBar());
         btnCrearSocio.addActionListener(actionEvent -> {
-            do {
-                nifSocio = txtNIFSocioAlta.getText().toUpperCase();
-                existeNif = GestionSocioVideoClub.comprobarNif(socios, nifSocio);
-                if (existeNif) {
-                    JOptionPane.showMessageDialog(null, "El NIf ya existe");
-                }
-            } while (existeNif);
+            //do {
+            nifSocio = txtNIFSocioAlta.getText().toUpperCase();
+            existeNif = GestionSocioVideoClub.comprobarNif(socios, nifSocio);
+            if (existeNif) {
+                JOptionPane.showMessageDialog(null, "El NIf ya existe");
+            }
+            // } while (existeNif);
             nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
             poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
 
             Socio socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
 
             txtDatosSocio.setText(socio.toString());
+            txtNIFSocioAlta.setText("");
+            txtNombreSocioAlta.setText("");
+
+            socios.add(socio);
 
 
         });
