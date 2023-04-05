@@ -1,6 +1,6 @@
 package view;
 
-import controller.Principal;
+import controller.*;
 import model.Socio;
 
 import javax.swing.*;
@@ -45,6 +45,8 @@ public class FormAltaSocio extends JFrame {
 
 
             new Socio(nifSocio, nombreSocio, "", poblacionSocio);
+
+            if()
 
 
         });
