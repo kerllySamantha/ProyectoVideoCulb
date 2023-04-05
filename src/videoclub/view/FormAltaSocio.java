@@ -1,7 +1,7 @@
 package view;
 
 import controller.GestionSocioVideoClub;
-import controller.Principal;
+import controller.*;
 import model.Socio;
 
 import javax.swing.*;
@@ -40,6 +40,8 @@ public class FormAltaSocio extends JFrame {
             poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
 
             new Socio(nifSocio, nombreSocio, "", poblacionSocio);
+
+            if()
 
 
         });
