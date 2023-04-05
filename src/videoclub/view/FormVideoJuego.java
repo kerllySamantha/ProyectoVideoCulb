@@ -1,3 +1,5 @@
+package view;
+
 import javax.swing.*;
 
 public class FormVideoJuego extends JFrame {
@@ -24,10 +26,10 @@ public class FormVideoJuego extends JFrame {
 
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new FormVideoJuego();
-        frame.setVisible(true);
-        frame.setTitle("Altas VideoJuego");
-        frame.setBounds(200, 200, 500, 200);
-    }
+//    public static void main(String[] args) {
+//        JFrame frame = new FormVideoJuego();
+//        frame.setVisible(true);
+//        frame.setTitle("Altas VideoJuego");
+//        frame.setBounds(200, 200, 500, 200);
+//    }
 }

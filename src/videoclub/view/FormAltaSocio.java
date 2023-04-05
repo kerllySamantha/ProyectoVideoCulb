@@ -4,6 +4,8 @@ import controller.GestionSocioVideoClub;
 import model.Socio;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 
@@ -24,6 +26,7 @@ public class FormAltaSocio extends JFrame {
 
     private String nifSocio, nombreSocio, poblacionSocio;
     private boolean existeNif;
+    Socio socio;
 
     public FormAltaSocio() {
         super.setContentPane(altasSocioMenu);
@@ -40,7 +43,7 @@ public class FormAltaSocio extends JFrame {
             nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
             poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
 
-            Socio socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
+            this.socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
 
             txtDatosSocio.setText(socio.toString());
             txtNIFSocioAlta.setText("");
@@ -49,6 +52,12 @@ public class FormAltaSocio extends JFrame {
             socios.add(socio);
 
 
+        });
+        btnRestValues.addActionListener(e -> {
+            txtNombreSocioAlta.setText("");
+            txtNIFSocioAlta.setText("");
+            txtNombreSocioAlta.setText("");
+            txtPoblacionSocioAlta.setText("");
         });
     }
 
