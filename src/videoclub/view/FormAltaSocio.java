@@ -1,10 +1,10 @@
 package view;
 
 import controller.GestionSocioVideoClub;
-import controller.*;
 import model.Socio;
 
 import javax.swing.*;
+import java.awt.event.ContainerAdapter;
 import java.util.ArrayList;
 
 
@@ -20,6 +20,7 @@ public class FormAltaSocio extends JFrame {
     private JLabel nombreSocioAlta;
     private JLabel fechaNacSocioAlta;
     private JLabel poblacionSocioAlta;
+    private JTextArea txtDatosSocio;
 
     private String nifSocio, nombreSocio, poblacionSocio;
     private boolean existeNif;
@@ -30,7 +31,7 @@ public class FormAltaSocio extends JFrame {
         super.setJMenuBar(MenuBar.crearMenuBar());
         btnCrearSocio.addActionListener(actionEvent -> {
             do {
-                nifSocio = txtNombreSocioAlta.getText().toUpperCase();
+                nifSocio = txtNIFSocioAlta.getText().toUpperCase();
                 existeNif = GestionSocioVideoClub.comprobarNif(socios, nifSocio);
                 if (existeNif) {
                     JOptionPane.showMessageDialog(null, "El NIf ya existe");
@@ -39,9 +40,9 @@ public class FormAltaSocio extends JFrame {
             nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
             poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
 
-            new Socio(nifSocio, nombreSocio, "", poblacionSocio);
+            Socio socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
 
-            if()
+            txtDatosSocio.setText(socio.toString());
 
 
         });
