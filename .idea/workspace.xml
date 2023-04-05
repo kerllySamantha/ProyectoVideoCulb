@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio&#10;Se ha creado e alta de peliculas&#10;Se ha creado el form de VideoJuegos">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,12 +49,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1680189226" />
+                    <option name="branchName" value="kerlly" />
+                    <option name="lastUsedInstant" value="1680708974" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="cambioMain" />
-                    <option name="lastUsedInstant" value="1680123962" />
+                    <option name="branchName" value="ramaPrincipal" />
+                    <option name="lastUsedInstant" value="1680708753" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1680189226" />
                   </RecentBranch>
                 </list>
               </option>
@@ -82,6 +84,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2NhPCX1QOoCoig0wcEVW9ZdlUzs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -150,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680633689052</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal">
+      <created>1680708998805</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680708998805</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +193,7 @@
     <MESSAGE value="Realizar un menu" />
     <MESSAGE value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio" />
     <MESSAGE value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio&#10;Se ha creado e alta de peliculas&#10;Se ha creado el form de VideoJuegos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio&#10;Se ha creado e alta de peliculas&#10;Se ha creado el form de VideoJuegos" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal" />
   </component>
 </project>
