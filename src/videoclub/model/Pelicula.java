@@ -1,24 +1,24 @@
 package model;
 
 public class Pelicula extends Multimedia {
-    private int duracion;
+    private int duracionPelicula;
     private String actorPrincipal;
     private String actrizPrincipal;
 
 
-    public Pelicula (String titulo, String autor, Formato formato, int anio, int duracion, String actor, String actriz) {
+    public Pelicula (String titulo, String autor, Formato formato, int anio, int duracion, String actriz, String actor) {
         super(titulo, autor, formato, anio);
-        setDuracion(duracion);
+        setDuracionPelicula(duracion);
         setActorPrincipal(actor);
         setActrizPrincipal(actriz);
     }
 
-    public int getDuracion() {
-        return duracion;
+    public int getDuracionPelicula() {
+        return duracionPelicula;
     }
 
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
+    public void setDuracionPelicula(int duracion) {
+        this.duracionPelicula = duracion;
     }
 
     public String getActorPrincipal() {
@@ -40,7 +40,7 @@ public class Pelicula extends Multimedia {
     @Override
     public String toString() {
         return super.toString() +
-                "\nDuración: " + getDuracion() +
+                "\nDuración: " + getDuracionPelicula() +
                 "\nActor principal: " + getActorPrincipal() +
                 "\nActriz principal: " + getActrizPrincipal();
     }
