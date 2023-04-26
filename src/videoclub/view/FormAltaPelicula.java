@@ -14,7 +14,7 @@ public class FormAltaPelicula extends JFrame{
     private JTextField txtAutorPelicula;
     private JTextField txtAnioPelicula;
     private JTextField txtDuracionPelicula;
-    private JTextField txtActtiz;
+    private JTextField txtActriz;
     private JTextField txtActor;
     private JRadioButton rbtnBlueray;
     private JRadioButton rbtnArchivo;
@@ -26,30 +26,76 @@ public class FormAltaPelicula extends JFrame{
     public FormAltaPelicula() {
         super.setContentPane(panelAltaPelicula);
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+        super.setLocationRelativeTo(null);
+        super.setVisible(true);
+        super.setJMenuBar(MenuBar.crearMenuBar());
         altaPelicula();
     }
 
     public void altaPelicula() {
         btnAltaPelicula.addActionListener(actionEvent -> {
-            String tituloPelicula = txtTituloPelicula.getText().toUpperCase();
-            String autorPelicula = txtAutorPelicula.getText().toUpperCase();
-            int anioPelicula = Integer.parseInt(txtAnioPelicula.getText());
-            int duracionPelicula = Integer.parseInt(txtDuracionPelicula.getText());
-            String actrizPrincipal = txtActtiz.getText().toUpperCase();
-            String actorPrincipal = txtActor.getText().toUpperCase();
-            Formato formato = Formato.CD;
-            if (rbtnArchivo.isSelected()) {
-                formato = Formato.ARCHIVO;
-            } else if (rbtnBlueray.isSelected()) {
-                formato = Formato.BLURAY;
-            } else if (rbtnCd.isSelected()) {
-                formato = Formato.CD;
-            } else if (rbtnDVD.isSelected()) {
-                formato = Formato.DVD;
-            }
-            //new Pelicula(tituloPelicula, autorPelicula,formato, anioPelicula, duracionPelicula, actrizPrincipal, actorPrincipal);
+            try {
+                String tituloPelicula = "";
+                String autorPelicula = "";
+                int anioPelicula = 0;
+                int duracionPelicula = 0;
+                String actrizPrincipal = "";
+                String actorPrincipal = "";
+                Formato formato = null;
+                boolean datosCorrectos = true;
 
+                if (!txtTituloPelicula.getText().equals("")) {
+                    tituloPelicula = txtTituloPelicula.getText().toUpperCase();
+                } else {
+                    datosCorrectos = false;
+                }
+                if (!txtAutorPelicula.getText().equals("")) {
+                    autorPelicula = txtAutorPelicula.getText().toUpperCase();
+                } else {
+                    datosCorrectos = false;
+                }
+                if (Integer.parseInt(txtAnioPelicula.getText()) >= 1895) {
+                    anioPelicula = Integer.parseInt(txtAnioPelicula.getText());
+                } else {
+                    datosCorrectos = false;
+                }
+                if (Integer.parseInt(txtDuracionPelicula.getText()) != 0) {
+                    duracionPelicula = Integer.parseInt(txtDuracionPelicula.getText());
+                } else {
+                    datosCorrectos = false;
+                }
+                if (!txtActriz.getText().equals("")) {
+                    actrizPrincipal = txtActriz.getText().toUpperCase();
+                } else {
+                    datosCorrectos = false;
+                }
+                if (!txtActor.getText().equals("")) {
+                    actorPrincipal = txtActor.getText().toUpperCase();
+                } else {
+                    datosCorrectos = false;
+                }
+
+                if (rbtnArchivo.isSelected()) {
+                    formato = Formato.ARCHIVO;
+                } else if (rbtnBlueray.isSelected()) {
+                    formato = Formato.BLURAY;
+                } else if (rbtnCd.isSelected()) {
+                    formato = Formato.CD;
+                } else if (rbtnDVD.isSelected()) {
+                    formato = Formato.DVD;
+                }
+
+
+                if (datosCorrectos) {
+                    //new Pelicula(tituloPelicula, autorPelicula, formato, anioPelicula, duracionPelicula, actrizPrincipal, actorPrincipal);
+                }
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         });
+    }
+
+    public static void main(String[] args) {
+        new FormAltaPelicula();
     }
 }

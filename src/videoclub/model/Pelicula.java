@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Pelicula extends Multimedia {
     private int duracionPelicula;
     private String actorPrincipal;
@@ -35,6 +37,15 @@ public class Pelicula extends Multimedia {
 
     public void setActrizPrincipal(String actrizPrincipal) {
         this.actrizPrincipal = actrizPrincipal;
+    }
+
+    public static boolean buscarPelicula(ArrayList<Multimedia> multimedia, String titulo) {
+        for (Multimedia pelicula : multimedia) {
+            if (titulo.equalsIgnoreCase(pelicula.getTitulo())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
