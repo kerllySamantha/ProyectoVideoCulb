@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal" />
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Pelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Pelicula.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
