@@ -28,7 +28,6 @@ public class FormAltaSocio extends JFrame {
     Socio socio;
 
     public FormAltaSocio() {
-
         super.setContentPane(altasSocioMenu);
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setJMenuBar(MenuBar.crearMenuBar());
@@ -45,20 +44,15 @@ public class FormAltaSocio extends JFrame {
             //poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
             poblacionSocio = cmbProvincias.getSelectedItem().toString();
             this.socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
-            if(nombreSocio.equalsIgnoreCase("") || nifSocio.equalsIgnoreCase("")){
+            if (nombreSocio.equalsIgnoreCase("") || nifSocio.equalsIgnoreCase("")) {
                 JOptionPane.showMessageDialog(null, "No se pude crear un Socio sin NIF o nombre");
                 socios.remove(this.socio);
-            }
-            else {
+            } else {
                 socios.add(this.socio);
                 txtDatosSocio.setText(socio.toString());
             }
-
             txtNIFSocioAlta.setText("");
             txtNombreSocioAlta.setText("");
-
-
-
         });
         btnRestValues.addActionListener(e -> {
             txtNombreSocioAlta.setText("");
@@ -67,8 +61,6 @@ public class FormAltaSocio extends JFrame {
             //txtPoblacionSocioAlta.setText("");
             cmbProvincias.setSelectedIndex(0);
             txtDatosSocio.setText("");
-
-
         });
     }
 
