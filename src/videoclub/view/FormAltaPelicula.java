@@ -33,6 +33,7 @@ public class FormAltaPelicula extends JFrame{
     }
 
     public void altaPelicula() {
+        MenuBar.gestionDeVentanas();
         btnAltaPelicula.addActionListener(actionEvent -> {
             try {
                 String tituloPelicula = "";
@@ -95,7 +96,5 @@ public class FormAltaPelicula extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        new FormAltaPelicula();
-    }
+
 }
