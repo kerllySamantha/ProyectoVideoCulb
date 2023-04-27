@@ -111,6 +111,12 @@ public class MenuBar {
         salir.addActionListener(e -> {
             System.exit(0);
         });
+
+
+
+        salir.addActionListener(e->{
+            System.exit(0);
+        });
     }
 
 }
