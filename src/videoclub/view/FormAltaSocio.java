@@ -1,6 +1,6 @@
 package view;
 
-import controller.GestionSocioVideoClub;
+import controller.*;
 import model.Socio;
 
 import javax.swing.*;
