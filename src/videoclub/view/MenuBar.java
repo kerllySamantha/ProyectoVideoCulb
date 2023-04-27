@@ -1,11 +1,13 @@
 package view;
 
+import model.Disco;
+
 import javax.swing.*;
 
 public class MenuBar {
     private static JMenuBar menuVideoClub;
     private static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
-    private static JMenuItem socio, videojueo, pelicula, listMultimedia, listPelisOrden, listVideJAnio,
+    private static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
             listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio;
 
 
@@ -15,7 +17,7 @@ public class MenuBar {
         altas = new JMenu("Altas");
         bajas = new JMenu("Bajas");
         alquileres = new JMenu("Alquileres");
-        devoluciones = new JMenu("Devoluviones");
+        devoluciones = new JMenu("Devoluciones");
         listados = new JMenu("Listados");
         salir = new JMenu("Salir");
 
@@ -28,11 +30,15 @@ public class MenuBar {
 
         socio = new JMenuItem("Socio");
         pelicula = new JMenuItem("Pelicula");
-        videojueo = new JMenuItem("Videojuego");
+        videojuego = new JMenuItem("Videojuego");
+        disco = new JMenuItem("Disco");
+
 
         altas.add(socio);
         altas.add(pelicula);
-        altas.add(videojueo);
+        altas.add(videojuego);
+        altas.add(disco);
+
 
         listMultimedia = new JMenuItem("Multimedias");
         listPelisOrden = new JMenuItem("Peliculas en Orden");
@@ -49,7 +55,27 @@ public class MenuBar {
         listados.add(listRecargosPendSocio);
 
         return menuVideoClub;
+    }
 
+    public static void gestionDeVentanas(){
+        socio.addActionListener( e ->{
+            FormAltaSocio formAltaSocio = new FormAltaSocio();
+            formAltaSocio.setVisible(true);
+            formAltaSocio.setDefaultCloseOperation(formAltaSocio.HIDE_ON_CLOSE);
+            formAltaSocio.setBounds(100, 100, 600, 300);
+        });
+        disco.addActionListener( e ->{
+            FormAltaDisco formAltaDisco = new FormAltaDisco();
+            formAltaDisco.setDefaultCloseOperation(formAltaDisco.HIDE_ON_CLOSE);
+            formAltaDisco.setVisible(true);
+            formAltaDisco.setBounds(100, 100, 600, 300);
+        });
+        pelicula.addActionListener(e->{
+            FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
+            formAltaPelicula.setVisible(true);
+            formAltaPelicula.setDefaultCloseOperation(formAltaPelicula.HIDE_ON_CLOSE);
+            formAltaPelicula.setBounds(100, 100, 600, 300);
+        });
     }
 
 }
