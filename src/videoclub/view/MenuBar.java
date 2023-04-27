@@ -76,6 +76,12 @@ public class MenuBar {
             formAltaPelicula.setDefaultCloseOperation(formAltaPelicula.HIDE_ON_CLOSE);
             formAltaPelicula.setBounds(100, 100, 600, 300);
         });
+        videojuego.addActionListener(e->{
+            FormVideoJuego formAVideoJuego = new FormVideoJuego();
+            formAVideoJuego.setVisible(true);
+            formAVideoJuego.setDefaultCloseOperation(formAVideoJuego.HIDE_ON_CLOSE);
+            formAVideoJuego.setBounds(100, 100, 600, 300);
+        });
     }
 
 }
