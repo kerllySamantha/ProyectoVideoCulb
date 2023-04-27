@@ -15,14 +15,14 @@ public class MenuBar {
         menuVideoClub = new JMenuBar();
 
         altas = new JMenu("Altas");
-        bajas = new JMenu("Bajas");
+        //bajas = new JMenu("Bajas");
         alquileres = new JMenu("Alquileres");
         devoluciones = new JMenu("Devoluciones");
         listados = new JMenu("Listados");
         salir = new JMenu("Salir");
 
         menuVideoClub.add(altas);
-        menuVideoClub.add(bajas);
+        //menuVideoClub.add(bajas);
         menuVideoClub.add(alquileres);
         menuVideoClub.add(devoluciones);
         menuVideoClub.add(listados);
@@ -81,6 +81,12 @@ public class MenuBar {
             formAVideoJuego.setVisible(true);
             formAVideoJuego.setDefaultCloseOperation(formAVideoJuego.HIDE_ON_CLOSE);
             formAVideoJuego.setBounds(100, 100, 600, 300);
+        });
+
+
+
+        salir.addActionListener(e->{
+            System.exit(0);
         });
     }
 
