@@ -5,6 +5,7 @@ import model.Socio;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class FormAltaSocio extends JFrame {
@@ -32,27 +33,42 @@ public class FormAltaSocio extends JFrame {
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
+
         btnCrearSocio.addActionListener(actionEvent -> {
             //do {
             nifSocio = txtNIFSocioAlta.getText().toUpperCase();
             existeNif = GestionSocioVideoClub.comprobarNif(socios, nifSocio);
+            nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
+            poblacionSocio = Objects.requireNonNull(cmbProvincias.getSelectedItem()).toString();
             if (existeNif) {
+                txtDatosSocio.setText("");
                 JOptionPane.showMessageDialog(null, "El NIf ya existe");
             }
             // } while (existeNif);
-            nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
             //poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
-            poblacionSocio = cmbProvincias.getSelectedItem().toString();
-            this.socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
-            if (nombreSocio.equalsIgnoreCase("") || nifSocio.equalsIgnoreCase("")) {
-                JOptionPane.showMessageDialog(null, "No se pude crear un Socio sin NIF o nombre");
+            else if ((nombreSocio.equalsIgnoreCase("") && nifSocio.equalsIgnoreCase(""))) {
+                JOptionPane.showMessageDialog(null, "No puedes dejar los campos vacios ");
                 socios.remove(this.socio);
+                txtDatosSocio.setText("");
+            } else if ( nifSocio.equalsIgnoreCase("")) {
+                JOptionPane.showMessageDialog(null, "No puedes dejar el Nif vacio");
+                socios.remove(this.socio);
+                txtDatosSocio.setText("");
+
+            } else if (nombreSocio.equalsIgnoreCase("")) {
+                JOptionPane.showMessageDialog(null, "No puedes dejar el nombre vacio");
+                socios.remove(this.socio);
+                txtDatosSocio.setText("");
+
             } else {
                 socios.add(this.socio);
                 txtDatosSocio.setText(socio.toString());
             }
+
+            this.socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
             txtNIFSocioAlta.setText("");
             txtNombreSocioAlta.setText("");
+
         });
         btnRestValues.addActionListener(e -> {
             txtNombreSocioAlta.setText("");
