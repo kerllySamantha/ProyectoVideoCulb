@@ -9,7 +9,10 @@ public class MenuBar {
     private static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
     private static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
             listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio;
-
+    static FormAltaSocio formAltaSocio = new FormAltaSocio();
+    static FormAltaDisco formAltaDisco = new FormAltaDisco();
+    static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
+    static FormVideoJuego formAVideoJuego = new FormVideoJuego();
 
     public static JMenuBar crearMenuBar() {
         menuVideoClub = new JMenuBar();
@@ -57,35 +60,53 @@ public class MenuBar {
         return menuVideoClub;
     }
 
-    public static void gestionDeVentanas(){
-        socio.addActionListener( e ->{
-            FormAltaSocio formAltaSocio = new FormAltaSocio();
-            formAltaSocio.setVisible(true);
+    public static void visivilidadVentanas() {
+        formAVideoJuego.setVisible(false);
+        formAltaPelicula.setVisible(false);
+        formAltaSocio.setVisible(false);
+        formAltaDisco.setVisible(false);
+
+    }
+
+    public static void gestionDeVentanas() {
+        socio.addActionListener(e -> {
+            if (!formAltaSocio.isVisible()) {
+                visivilidadVentanas();
+                formAltaSocio.setVisible(true);
+
+            }
+
             formAltaSocio.setDefaultCloseOperation(formAltaSocio.HIDE_ON_CLOSE);
             formAltaSocio.setBounds(100, 100, 600, 300);
         });
-        disco.addActionListener( e ->{
-            FormAltaDisco formAltaDisco = new FormAltaDisco();
+        disco.addActionListener(e -> {
             formAltaDisco.setDefaultCloseOperation(formAltaDisco.HIDE_ON_CLOSE);
-            formAltaDisco.setVisible(true);
+            if (!formAltaDisco.isVisible()) {
+                visivilidadVentanas();
+                formAltaDisco.setVisible(true);
+
+            }
+            formAltaDisco.setDefaultCloseOperation(formAltaPelicula.HIDE_ON_CLOSE);
             formAltaDisco.setBounds(100, 100, 600, 300);
         });
-        pelicula.addActionListener(e->{
-            FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
-            formAltaPelicula.setVisible(true);
+        pelicula.addActionListener(e -> {
+            if (!formAltaPelicula.isVisible()) {
+                 visivilidadVentanas();
+                 formAltaPelicula.setVisible(true);
+            }
             formAltaPelicula.setDefaultCloseOperation(formAltaPelicula.HIDE_ON_CLOSE);
             formAltaPelicula.setBounds(100, 100, 600, 300);
         });
-        videojuego.addActionListener(e->{
-            FormVideoJuego formAVideoJuego = new FormVideoJuego();
-            formAVideoJuego.setVisible(true);
+        videojuego.addActionListener(e -> {
+            if (!formAVideoJuego.isVisible()) {
+                visivilidadVentanas();
+                formAVideoJuego.setVisible(true);
+            }
             formAVideoJuego.setDefaultCloseOperation(formAVideoJuego.HIDE_ON_CLOSE);
             formAVideoJuego.setBounds(100, 100, 600, 300);
         });
 
-
-
-        salir.addActionListener(e->{
+        salir.addActionListener(e -> {
             System.exit(0);
         });
     }

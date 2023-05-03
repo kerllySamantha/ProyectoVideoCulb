@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Gestionar errores Socio">
+      <change afterPath="$PROJECT_DIR$/src/postgresql-42.6.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaSocio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaSocio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Multimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Multimedia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaSocio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaSocio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Multimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Multimedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +40,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
+        <entry key="$PROJECT_DIR$" value="kerlly" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,7 +61,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1682592421" />
+                    <option name="lastUsedInstant" value="1682681777" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
@@ -101,12 +107,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ainea/IdeaProjects/ProyectoVideoClub/src/videoclub/view&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kerll/IdeaProjects/ProyectoVideoClub/src&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kerll\IdeaProjects\ProyectoVideoClub\src" />
       <recent name="C:\Users\ainea\IdeaProjects\ProyectoVideoClub\src\videoclub\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -120,6 +127,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller" />
       <recent name="view" />
     </key>
   </component>
@@ -195,7 +203,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="cambioMain" />
+                        <option value="origin/kerlly" />
                       </list>
                     </value>
                   </entry>
