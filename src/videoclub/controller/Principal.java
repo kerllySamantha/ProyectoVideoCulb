@@ -11,9 +11,10 @@ public class Principal {
 
         SwingUtilities.invokeLater((() -> {
             try {
-                FormAltaSocio formVideoClub = new FormAltaSocio();
-                formVideoClub.setSize(400, 400);
-                formVideoClub.setVisible(true);
+                FormPrincipalVideoClub formPrincipalVideoClub = new FormPrincipalVideoClub();
+                formPrincipalVideoClub.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                formPrincipalVideoClub.setSize(400, 400);
+                formPrincipalVideoClub.setVisible(true);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -30,45 +30,51 @@ public class FormAltaSocio extends JFrame {
 
     public FormAltaSocio() {
         super.setContentPane(altasSocioMenu);
-        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
 
         btnCrearSocio.addActionListener(actionEvent -> {
-            //do {
-            nifSocio = txtNIFSocioAlta.getText().toUpperCase();
-            existeNif = GestionSocioVideoClub.comprobarNif(socios, nifSocio);
-            nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
-            poblacionSocio = Objects.requireNonNull(cmbProvincias.getSelectedItem()).toString();
-            if (existeNif) {
-                txtDatosSocio.setText("");
-                JOptionPane.showMessageDialog(null, "El NIf ya existe");
+            try {
+                //do {
+                nifSocio = txtNIFSocioAlta.getText().toUpperCase();
+                existeNif = GestionSocioVideoClub.comprobarNif(socios, nifSocio);
+                nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
+                poblacionSocio = Objects.requireNonNull(cmbProvincias.getSelectedItem()).toString();
+                if (existeNif) {
+                    txtDatosSocio.setText("");
+                    JOptionPane.showMessageDialog(null, "El NIf ya existe");
+
+                // } while (existeNif);
+                //poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
             }
-            // } while (existeNif);
-            //poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
-            else if ((nombreSocio.equalsIgnoreCase("") && nifSocio.equalsIgnoreCase(""))) {
-                JOptionPane.showMessageDialog(null, "No puedes dejar los campos vacios ");
-                socios.remove(this.socio);
-                txtDatosSocio.setText("");
-            } else if ( nifSocio.equalsIgnoreCase("")) {
-                JOptionPane.showMessageDialog(null, "No puedes dejar el Nif vacio");
-                socios.remove(this.socio);
-                txtDatosSocio.setText("");
+                else if ((nombreSocio.equalsIgnoreCase("") && nifSocio.equalsIgnoreCase(""))) {
+                    JOptionPane.showMessageDialog(null, "No puedes dejar los campos vacios ");
+                    //socios.remove(this.socio);
+                    txtDatosSocio.setText("");
 
-            } else if (nombreSocio.equalsIgnoreCase("")) {
-                JOptionPane.showMessageDialog(null, "No puedes dejar el nombre vacio");
-                socios.remove(this.socio);
-                txtDatosSocio.setText("");
+                } else if (nifSocio.equalsIgnoreCase("")) {
+                    JOptionPane.showMessageDialog(null, "No puedes dejar el Nif vacio");
+                    // socios.remove(this.socio);
+                    txtDatosSocio.setText("");
 
-            } else {
-                socios.add(this.socio);
-                txtDatosSocio.setText(socio.toString());
+                } else if (nombreSocio.equalsIgnoreCase("")) {
+                    JOptionPane.showMessageDialog(null, "No puedes dejar el nombre vacio");
+                    //socios.remove(this.socio);
+                    txtDatosSocio.setText("");
+
+                }
+                else {
+                    socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
+                    socios.add(socio);
+                    txtDatosSocio.setText(socio.toString());
+                }
+
+
+                txtNIFSocioAlta.setText("");
+                txtNombreSocioAlta.setText("");
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-
-            this.socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
-            txtNIFSocioAlta.setText("");
-            txtNombreSocioAlta.setText("");
-
         });
         btnRestValues.addActionListener(e -> {
             txtNombreSocioAlta.setText("");
