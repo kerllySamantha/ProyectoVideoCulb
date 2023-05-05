@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Visualizar ventanas">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Salir" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="aine" />
+    <option name="BRANCH" value="origin/kerlly" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -31,7 +29,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="aine" />
+        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +50,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1680708974" />
+                    <option name="lastUsedInstant" value="1683153149" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
@@ -83,7 +81,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2NhPCX1QOoCoig0wcEVW9ZdlUzs" />
   <component name="ProjectLevelVcsManager">
@@ -98,13 +96,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ainea/IdeaProjects/ProyectoVideoClub/src/videoclub/view&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kerll/IdeaProjects/ProyectoVideoClub/src&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kerll\IdeaProjects\ProyectoVideoClub\src" />
       <recent name="C:\Users\ainea\IdeaProjects\ProyectoVideoClub\src\videoclub\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -118,6 +116,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller" />
       <recent name="view" />
     </key>
   </component>
@@ -165,14 +164,42 @@
       <option name="project" value="LOCAL" />
       <updated>1680708998805</updated>
     </task>
-    <task id="LOCAL-00006" summary="Visualizar ventanas">
-      <created>1682606175047</created>
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal">
+      <created>1682530380575</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1682606175047</updated>
+      <updated>1682530380575</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal">
+      <created>1682530422354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682530422354</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Crear un metodo con todas las ventanas y que solo se abra una ventana">
+      <created>1683153001568</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683153001568</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Crear un metodo con todas las ventanas y que solo se abra una ventana">
+      <created>1683153007955</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683153007955</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Crear un metodo con todas las ventanas y que solo se abra una ventana">
+      <created>1683153079790</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683153079790</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,7 +213,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="cambioMain" />
+                        <option value="origin/kerlly" />
                       </list>
                     </value>
                   </entry>
@@ -204,7 +231,8 @@
     <MESSAGE value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio" />
     <MESSAGE value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio&#10;Se ha creado e alta de peliculas&#10;Se ha creado el form de VideoJuegos" />
     <MESSAGE value="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal" />
-    <MESSAGE value="Visualizar ventanas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Visualizar ventanas" />
+    <MESSAGE value="Gestionar errores Socio" />
+    <MESSAGE value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
   </component>
 </project>

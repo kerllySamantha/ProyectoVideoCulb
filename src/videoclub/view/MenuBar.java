@@ -8,7 +8,7 @@ public class MenuBar {
     private static JMenuBar menuVideoClub;
     private static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
     private static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
-            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio;
+            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, exit;
 
 
     public static JMenuBar crearMenuBar() {
@@ -54,6 +54,9 @@ public class MenuBar {
         listados.add(listActualSocio);
         listados.add(listRecargosPendSocio);
 
+        exit = new JMenuItem("Exit");
+        salir.add(exit);
+
         return menuVideoClub;
     }
 
@@ -85,7 +88,7 @@ public class MenuBar {
 
 
 
-        salir.addActionListener(e->{
+        exit.addActionListener(e->{
             System.exit(0);
         });
     }
