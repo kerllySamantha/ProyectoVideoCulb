@@ -8,7 +8,7 @@ public class MenuBar {
     private static JMenuBar menuVideoClub;
     private static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
     private static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
-            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, botonSalir;
+            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, exit;
     static FormAltaSocio formAltaSocio = new FormAltaSocio();
     static FormAltaDisco formAltaDisco = new FormAltaDisco();
     static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
@@ -37,6 +37,7 @@ public class MenuBar {
         videojuego = new JMenuItem("Videojuego");
         disco = new JMenuItem("Disco");
 
+
         altas.add(socio);
         altas.add(pelicula);
         altas.add(videojuego);
@@ -57,8 +58,8 @@ public class MenuBar {
         listados.add(listActualSocio);
         listados.add(listRecargosPendSocio);
 
-        botonSalir = new JMenuItem("EXIT");
-        salir.add(botonSalir);
+        exit = new JMenuItem("Exit");
+        salir.add(exit);
 
         return menuVideoClub;
     }
@@ -114,7 +115,7 @@ public class MenuBar {
 
 
 
-        salir.addActionListener(e->{
+        exit.addActionListener(e->{
             System.exit(0);
         });
     }
