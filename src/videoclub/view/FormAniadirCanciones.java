@@ -65,7 +65,7 @@ public class FormAniadirCanciones extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                FormAltaDisco.recibirCanciones(canciones);
+                view.FormAltaDisco.recibirCanciones(canciones);
 
             }
         });

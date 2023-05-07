@@ -41,3 +41,4 @@ public class Cancion {
         this.duracionCancionSeg = duracionCancionSeg;
     }
 }
+
