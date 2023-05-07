@@ -4,27 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Realizar un menu">
-      <change afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.java" afterDir="false" />
+    <list default="true" id="12405648-d186-4662-a87a-499681c213ff" name="Changes" comment="Modificar clase FormAltaPelicula.java y crear forms FormAltaDisco y FormAniadirCanciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Pelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Pelicula.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Pelicula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Cancion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Cancion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Disco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Disco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Cancion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Cancion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Disco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Disco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +29,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/marta" />
+    <option name="BRANCH" value="origin/kerlly" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -71,7 +61,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1680708974" />
+                    <option name="lastUsedInstant" value="1683153149" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
@@ -102,7 +92,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2NhPCX1QOoCoig0wcEVW9ZdlUzs" />
   <component name="ProjectLevelVcsManager">
@@ -117,13 +107,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "false",
-    "last_opened_file_path": "C:/Users/ainea/IdeaProjects/ProyectoVideoClub/src/videoclub/view",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "258",
+    "last_opened_file_path": "C:/Users/kerll/IdeaProjects/ProyectoVideoClub/src",
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kerll\IdeaProjects\ProyectoVideoClub\src" />
       <recent name="C:\Users\ainea\IdeaProjects\ProyectoVideoClub\src\videoclub\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -137,6 +130,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller" />
       <recent name="view" />
     </key>
   </component>
@@ -184,7 +178,42 @@
       <option name="project" value="LOCAL" />
       <updated>1680708998805</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal">
+      <created>1682530380575</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682530380575</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal">
+      <created>1682530422354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682530422354</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Crear un metodo con todas las ventanas y que solo se abra una ventana">
+      <created>1683153001568</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683153001568</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Crear un metodo con todas las ventanas y que solo se abra una ventana">
+      <created>1683153007955</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683153007955</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Crear un metodo con todas las ventanas y que solo se abra una ventana">
+      <created>1683153079790</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683153079790</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,7 +227,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="cambioMain" />
+                        <option value="origin/kerlly" />
                       </list>
                     </value>
                   </entry>
@@ -216,6 +245,8 @@
     <MESSAGE value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio" />
     <MESSAGE value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio&#10;Se ha creado e alta de peliculas&#10;Se ha creado el form de VideoJuegos" />
     <MESSAGE value="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal" />
+    <MESSAGE value="Gestionar errores Socio" />
+    <MESSAGE value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
   </component>
 </project>
