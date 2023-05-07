@@ -1,49 +1,81 @@
-//package view;
-//
-//<<<<<<< HEAD
-//package view;
-//
-//=======
-//>>>>>>> origin/main
-//import javax.swing.*;
-//
-//public class FormVideoJuego extends JFrame {
-//    private JPanel panelPrincipalVideo;
-//    private JLabel lblTitulo;
-//    private JLabel lblAutor;
-//    private JLabel lblFormato;
-//    private JLabel lblAño;
-//    private JLabel lblPlataforma;
-//    private JRadioButton CDRadioButton;
-//    private JRadioButton DVDRadioButton;
-//    private JRadioButton BLURAYRadioButton;
-//    private JRadioButton ARCHIVORadioButton;
-//    private JPanel panelPrincipalVideoJuego;
-//    private JTextField textTitulo;
-//    private JTextField textAutor;
-//    private JTextField textAño;
-//    private JTextField textPlataforma;
-//    private JButton btnCrear;
-//
-//    public FormVideoJuego() {
-//        setContentPane(panelPrincipalVideoJuego);
-//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//
-//    }
-//
-//<<<<<<< HEAD
-////    public static void main(String[] args) {
-////        JFrame frame = new FormVideoJuego();
-////        frame.setVisible(true);
-////        frame.setTitle("Altas VideoJuego");
-////        frame.setBounds(200, 200, 500, 200);
-////    }
-//=======
-//    public static void main(String[] args) {
-//        JFrame frame = new FormVideoJuego();
-//        frame.setVisible(true);
-//        frame.setTitle("Altas VideoJuego");
-//        frame.setBounds(200, 200, 500, 200);
-//    }
-//>>>>>>> origin/main
-//}
+package view;
+
+import model.Formato;
+
+import javax.swing.*;
+import java.util.Objects;
+
+public class FormVideoJuego extends JFrame {
+
+    private JPanel panelPrincipalVideo;
+    private JLabel lblTitulo;
+    private JLabel lblAutor;
+    private JLabel lblFormato;
+    private JLabel lblAnio;
+    private JLabel lblPlataforma;
+    private JRadioButton CDRadioButton;
+    private JRadioButton DVDRadioButton;
+    private JRadioButton BLURAYRadioButton;
+    private JRadioButton ARCHIVORadioButton;
+    private JPanel panelPrincipalVideoJuego;
+    private JTextField textTitulo;
+    private JTextField textAutor;
+    private JTextField textAnio;
+    private JTextField textPlataforma;
+    private JButton btnCrear;
+    private JComboBox<Integer> comboBox1;
+
+    public FormVideoJuego() {
+        super.setContentPane(panelPrincipalVideoJuego);
+        super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        super.setLocationRelativeTo(null);
+        super.setJMenuBar(MenuBar.crearMenuBar());
+        MenuBar.gestionDeVentanas();
+    }
+    public void altaVideoJuego(){
+        try {
+            String titulo = "";
+            String autor = "";
+            int anio = 0;
+            Formato formato = null;
+            String plataforma = "";
+            boolean datos = true;
+
+            if (!textTitulo.getText().equals("")) {
+                titulo = textTitulo.getText().toUpperCase();
+            } else {
+                datos = false;
+            }
+            if (!textAutor.getText().equals("")) {
+                autor = textAutor.getText().toUpperCase();
+            } else {
+                datos = false;
+            }
+            if (!Objects.equals(comboBox1.getSelectedItem(), 0)) {
+                datos = false;
+            } else {
+                anio = Integer.parseInt(String.valueOf(comboBox1.getSelectedIndex()));
+            }
+            if (!textPlataforma.getText().equals("")) {
+                plataforma = textPlataforma.getText().toUpperCase();
+            } else {
+                datos = false;
+            }
+
+
+            if (CDRadioButton.isSelected()) {
+                formato = Formato.CD;
+            } else if (DVDRadioButton.isSelected()) {
+                formato = Formato.DVD;
+            } else if (BLURAYRadioButton.isSelected()) {
+                formato = Formato.BLURAY;
+            } else if (ARCHIVORadioButton.isSelected()) {
+                formato = Formato.ARCHIVO;
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        
+    }
+}
