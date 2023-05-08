@@ -32,6 +32,7 @@ public class FormAltaSocio extends JFrame {
         super.setContentPane(altasSocioMenu);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
+        txtDatosSocio.setEditable(false);
 
         btnCrearSocio.addActionListener(actionEvent -> {
             try {

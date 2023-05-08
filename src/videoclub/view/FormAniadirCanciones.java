@@ -22,6 +22,7 @@ public class FormAniadirCanciones extends JFrame{
         super.setDefaultCloseOperation(HIDE_ON_CLOSE);
         super.setLocationRelativeTo(null);
         super.setVisible(true);
+        txtListaCanciones.setEditable(false);
 
         aniadirCancion();
         terminar();

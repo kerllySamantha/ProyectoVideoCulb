@@ -34,6 +34,7 @@ public class FormAltaDisco extends JFrame{
         super.setLocationRelativeTo(null);
         super.setVisible(true);
         super.setJMenuBar(MenuBar.crearMenuBar());
+        txtResumenAlta.setEditable(false);
         altaDisco();
         mostrarDatos();
     }
