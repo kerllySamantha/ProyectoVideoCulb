@@ -15,6 +15,7 @@ public class MenuBar {
     static FormVideoJuego formAVideoJuego = new FormVideoJuego();
     static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
 
+
     public static JMenuBar crearMenuBar() {
         menuVideoClub = new JMenuBar();
 

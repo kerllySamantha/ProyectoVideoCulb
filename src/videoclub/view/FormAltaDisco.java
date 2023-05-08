@@ -34,6 +34,7 @@ public class FormAltaDisco extends JFrame{
         super.setLocationRelativeTo(null);
         super.setVisible(true);
         super.setJMenuBar(MenuBar.crearMenuBar());
+        MenuBar.gestionDeVentanas();
         altaDisco();
         mostrarDatos();
     }
@@ -90,12 +91,9 @@ public class FormAltaDisco extends JFrame{
     }
 
     public void mostrarDatos() {
-        btnAltaDisco.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                txtResumenAlta.setText(disco.toString());
-                limpiarCampos();
-            }
+        btnAltaDisco.addActionListener(e -> {
+            txtResumenAlta.setText(disco.toString());
+            limpiarCampos();
         });
     }
 
@@ -106,9 +104,9 @@ public class FormAltaDisco extends JFrame{
         grupoFormato.clearSelection();
     }
 
-    public static void main(String[] args) {
-        FormAltaDisco d = new FormAltaDisco();
-        d.setSize(500,500);
-    }
+//    public static void main(String[] args) {
+//        FormAltaDisco d = new FormAltaDisco();
+//        d.setSize(500,500);
+//    }
 }
 

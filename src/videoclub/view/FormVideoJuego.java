@@ -27,7 +27,6 @@ public class FormVideoJuego extends JFrame {
 
     public FormVideoJuego() {
         super.setContentPane(panelPrincipalVideoJuego);
-        super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         super.setLocationRelativeTo(null);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
