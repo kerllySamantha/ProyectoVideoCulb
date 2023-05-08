@@ -25,10 +25,10 @@ public class FormAltaPelicula extends JFrame{
 
     public FormAltaPelicula() {
         super.setContentPane(panelAltaPelicula);
-        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setLocationRelativeTo(null);
         super.setVisible(true);
         super.setJMenuBar(MenuBar.crearMenuBar());
+        MenuBar.gestionDeVentanas();
         altaPelicula();
     }
 
