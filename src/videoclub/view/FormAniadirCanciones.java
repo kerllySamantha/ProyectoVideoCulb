@@ -21,7 +21,6 @@ public class FormAniadirCanciones extends JFrame{
         super.setContentPane(panelCancion);
         super.setDefaultCloseOperation(HIDE_ON_CLOSE);
         super.setLocationRelativeTo(null);
-        super.setVisible(true);
         txtListaCanciones.setEditable(false);
 
         aniadirCancion();
@@ -35,7 +34,6 @@ public class FormAniadirCanciones extends JFrame{
                 boolean datosCorrectos = true;
                 String tituloCancion = "";
                 String duracion = "";
-                int duracionSeg = 0;
 
                 try {
                     if (!txtTituloCancion.getText().equals("")) {
