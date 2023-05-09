@@ -30,9 +30,7 @@ public class FormAltaDisco extends JFrame{
 
     public FormAltaDisco() {
         super.setContentPane(panelAltaDisco);
-        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setLocationRelativeTo(null);
-        super.setVisible(true);
         super.setJMenuBar(MenuBar.crearMenuBar());
         txtResumenAlta.setEditable(false);
         altaDisco();
