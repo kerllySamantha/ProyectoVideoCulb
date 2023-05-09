@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Eliminar los setVisible de los constructores de los form">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/marta" />
+    <option name="BRANCH" value="origin/kerlly" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -31,7 +29,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="marta" />
+        <entry key="$PROJECT_DIR$" value="kerlly" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,12 +49,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1683553421" />
+                    <option name="branchName" value="ramaPrincipal" />
+                    <option name="lastUsedInstant" value="1683655975" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="ramaPrincipal" />
-                    <option name="lastUsedInstant" value="1680708753" />
+                    <option name="branchName" value="kerlly" />
+                    <option name="lastUsedInstant" value="1683655833" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -218,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683654051649</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Crear un metodo con todas las ventanas y que solo se abra una ventana">
+      <created>1683655950775</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1683655950775</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,8 +256,8 @@
     <MESSAGE value="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio&#10;Se ha creado e alta de peliculas&#10;Se ha creado el form de VideoJuegos" />
     <MESSAGE value="Merge remote-tracking branch 'origin/kerlly' into kerlly&#10;Cambiar el form para dar de Altas a Socios&#10;Añadir funcionlidad al botón para crear Socios&#10;Mergearlo con la rama Principal" />
     <MESSAGE value="Gestionar errores Socio" />
-    <MESSAGE value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
     <MESSAGE value="Eliminar los setVisible de los constructores de los form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eliminar los setVisible de los constructores de los form" />
+    <MESSAGE value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
   </component>
 </project>
