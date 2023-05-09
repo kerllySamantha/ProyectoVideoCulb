@@ -106,10 +106,5 @@ public class FormAltaDisco extends JFrame{
         txtTituloDisco.setText("");
         grupoFormato.clearSelection();
     }
-
-    public static void main(String[] args) {
-        FormAltaDisco d = new FormAltaDisco();
-        d.setSize(500,500);
-    }
 }
 
