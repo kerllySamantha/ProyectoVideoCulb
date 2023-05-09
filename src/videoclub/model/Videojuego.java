@@ -4,7 +4,6 @@ public class Videojuego extends Multimedia {
     private static final String [] plataformasDisponibles = {"PlayStation" , "Nintendo Switch", "XBox", "PC"};
     private String plataforma;
 
-
     public Videojuego() {
         super();
         plataforma = "";

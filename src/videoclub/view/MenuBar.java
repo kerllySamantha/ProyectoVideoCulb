@@ -9,11 +9,6 @@ public class MenuBar {
     private static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
     private static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
             listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, exit;
-    static FormAltaSocio formAltaSocio = new FormAltaSocio();
-    static FormAltaDisco formAltaDisco = new FormAltaDisco();
-    static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
-    static FormVideoJuego formAVideoJuego = new FormVideoJuego();
-    static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
 
 
     public static JMenuBar crearMenuBar() {
@@ -65,53 +60,30 @@ public class MenuBar {
         return menuVideoClub;
     }
 
-    public static void visivilidadVentanas() {
-        formAVideoJuego.setVisible(false);
-        formAltaPelicula.setVisible(false);
-        formAltaSocio.setVisible(false);
-        formAltaDisco.setVisible(false);
-        formPrincipalAltas.setVisible(false);
-
-
-    }
-
-    public static void gestionDeVentanas() {
-        socio.addActionListener(e -> {
+    public static void gestionDeVentanas(){
+        socio.addActionListener( e ->{
+            FormAltaSocio formAltaSocio = new FormAltaSocio();
+            formAltaSocio.setVisible(true);
             formAltaSocio.setDefaultCloseOperation(formAltaSocio.HIDE_ON_CLOSE);
             formAltaSocio.setBounds(100, 100, 600, 300);
-            if (!formAltaSocio.isVisible()) {
-                visivilidadVentanas();
-                formAltaSocio.setVisible(true);
-            }
-
         });
-        disco.addActionListener(e -> {
+        disco.addActionListener( e ->{
+            FormAltaDisco formAltaDisco = new FormAltaDisco();
             formAltaDisco.setDefaultCloseOperation(formAltaDisco.HIDE_ON_CLOSE);
+            formAltaDisco.setVisible(true);
             formAltaDisco.setBounds(100, 100, 600, 300);
-            if (!formAltaDisco.isVisible()) {
-                visivilidadVentanas();
-                formAltaDisco.setVisible(true);
-            }
         });
-        pelicula.addActionListener(e -> {
+        pelicula.addActionListener(e->{
+            FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
+            formAltaPelicula.setVisible(true);
             formAltaPelicula.setDefaultCloseOperation(formAltaPelicula.HIDE_ON_CLOSE);
             formAltaPelicula.setBounds(100, 100, 600, 300);
-            if (!formAltaPelicula.isVisible()) {
-                 visivilidadVentanas();
-                 formAltaPelicula.setVisible(true);
-            }
         });
-        videojuego.addActionListener(e -> {
+        videojuego.addActionListener(e->{
+            FormVideoJuego formAVideoJuego = new FormVideoJuego();
+            formAVideoJuego.setVisible(true);
             formAVideoJuego.setDefaultCloseOperation(formAVideoJuego.HIDE_ON_CLOSE);
             formAVideoJuego.setBounds(100, 100, 600, 300);
-            if (!formAVideoJuego.isVisible()) {
-                visivilidadVentanas();
-                formAVideoJuego.setVisible(true);
-            }
-        });
-
-        salir.addActionListener(e -> {
-            System.exit(0);
         });
 
 
