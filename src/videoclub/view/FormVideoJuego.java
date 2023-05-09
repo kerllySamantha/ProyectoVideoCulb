@@ -3,6 +3,7 @@ package view;
 import model.Formato;
 
 import javax.swing.*;
+import java.util.Objects;
 
 public class FormVideoJuego extends JFrame {
 
@@ -22,10 +23,10 @@ public class FormVideoJuego extends JFrame {
     private JTextField textAnio;
     private JTextField textPlataforma;
     private JButton btnCrear;
+    private JComboBox<Integer> comboBox1;
 
     public FormVideoJuego() {
         super.setContentPane(panelPrincipalVideoJuego);
-        super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         super.setLocationRelativeTo(null);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
@@ -49,10 +50,10 @@ public class FormVideoJuego extends JFrame {
             } else {
                 datos = false;
             }
-            if (Integer.parseInt(textAnio.getText()) >= 1895) {
-                anio = Integer.parseInt(textAnio.getText());
-            } else {
+            if (!Objects.equals(comboBox1.getSelectedItem(), 0)) {
                 datos = false;
+            } else {
+                anio = Integer.parseInt(String.valueOf(comboBox1.getSelectedIndex()));
             }
             if (!textPlataforma.getText().equals("")) {
                 plataforma = textPlataforma.getText().toUpperCase();
