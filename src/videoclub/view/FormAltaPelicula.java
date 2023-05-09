@@ -29,6 +29,7 @@ public class FormAltaPelicula extends JFrame{
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
         altaPelicula();
+
     }
 
     public void altaPelicula() {

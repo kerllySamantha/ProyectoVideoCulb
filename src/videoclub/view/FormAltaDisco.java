@@ -35,6 +35,7 @@ public class FormAltaDisco extends JFrame{
         txtResumenAlta.setEditable(false);
         altaDisco();
         mostrarDatos();
+        MenuBar.gestionDeVentanas();
     }
     public void altaDisco() {
         btnAniadirCanciones.addActionListener(actionEvent -> {
