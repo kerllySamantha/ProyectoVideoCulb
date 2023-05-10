@@ -22,6 +22,8 @@ public class FormAltaPelicula extends JFrame{
     private JRadioButton rbtnCd;
     private JLabel actrizPelicula;
     private JLabel actorPelicula;
+    private JComboBox cbAnioPelicula;
+    private Pelicula pelicula;
 
     public FormAltaPelicula() {
         super.setContentPane(panelAltaPelicula);
@@ -44,6 +46,10 @@ public class FormAltaPelicula extends JFrame{
                 String actorPrincipal = "";
                 Formato formato = null;
                 boolean datosCorrectos = true;
+
+                if (txtTituloPelicula.getText().equals("") && txtAutorPelicula.getText().equals("")) {
+
+                }
 
                 if (!txtTituloPelicula.getText().equals("")) {
                     tituloPelicula = txtTituloPelicula.getText().toUpperCase();

@@ -23,7 +23,7 @@ public class FormAltaDisco extends JFrame{
     private JTextArea txtResumenAlta;
     private JTextField txtTituloDisco;
     private JTextField txtAutorDisco;
-    private JTextField txtAnioDisco;
+    private JComboBox cbAnioDisco;
     private ButtonGroup grupoFormato;
     static Disco disco;
 
@@ -46,23 +46,6 @@ public class FormAltaDisco extends JFrame{
                 Formato formato = null;
                 boolean datosCorrectos = true;
 
-                if (!txtTituloDisco.getText().equals("")) {
-                    tituloDisco = txtTituloDisco.getText().toUpperCase();
-                } else {
-                    datosCorrectos = false;
-                }
-                if (!txtAutorDisco.getText().equals("")) {
-                    autorDisco = txtAutorDisco.getText().toUpperCase();
-                } else {
-                    datosCorrectos = false;
-                }
-                if (Integer.parseInt(txtAnioDisco.getText()) >= 1895) {
-                    anioDisco = Integer.parseInt(txtAnioDisco.getText());
-                } else {
-                    datosCorrectos = false;
-                }
-
-
                 if (rbArchivo.isSelected()) {
                     formato = Formato.ARCHIVO;
                 } else if (rbBlueRay.isSelected()) {
@@ -71,8 +54,26 @@ public class FormAltaDisco extends JFrame{
                     formato = Formato.CD;
                 } else if (rbDvd.isSelected()) {
                     formato = Formato.DVD;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Debes seleccionar uno de los formatos");
+                    datosCorrectos = false;
                 }
 
+                if (txtTituloDisco.getText().equals("") && txtAutorDisco.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null, "No puedes dejar los campos vacio");
+                } else if (txtTituloDisco.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null, "No puedes dejar el título vacio");
+                } else if (txtAutorDisco.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null, "No puedes dejar el autor vacio");
+                } else {
+                    tituloDisco = txtTituloDisco.getText().toUpperCase();
+                    autorDisco = txtAutorDisco.getText().toUpperCase();
+                    anioDisco = Integer.parseInt(cbAnioDisco.getSelectedItem().toString());
+                }
+
+//                if (Integer.parseInt(txtAnioDisco.getText()) >= 1887) {
+//
+//                }
 
                 if (datosCorrectos) {
                     disco = new Disco(tituloDisco, autorDisco, formato, anioDisco);
@@ -100,7 +101,7 @@ public class FormAltaDisco extends JFrame{
     }
 
     public void limpiarCampos() {
-        txtAnioDisco.setText("");
+        cbAnioDisco.setSelectedItem("2023");
         txtAutorDisco.setText("");
         txtTituloDisco.setText("");
         grupoFormato.clearSelection();

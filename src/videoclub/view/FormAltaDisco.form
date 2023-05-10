@@ -114,20 +114,86 @@
         </constraints>
         <properties/>
       </component>
-      <component id="b4bd2" class="javax.swing.JTextField" binding="txtAnioDisco">
-        <constraints>
-          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
       <component id="e8faf" class="javax.swing.JRadioButton" binding="rbBlueRay">
         <constraints>
           <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Blue-Ray"/>
+        </properties>
+      </component>
+      <component id="afe16" class="javax.swing.JComboBox" binding="cbAnioDisco">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="1960"/>
+            <item value="1961"/>
+            <item value="1962"/>
+            <item value="1963"/>
+            <item value="1964"/>
+            <item value="1965"/>
+            <item value="1965"/>
+            <item value="1966"/>
+            <item value="1967"/>
+            <item value="1968"/>
+            <item value="1969"/>
+            <item value="1970"/>
+            <item value="1971"/>
+            <item value="1972"/>
+            <item value="1973"/>
+            <item value="1974"/>
+            <item value="1975"/>
+            <item value="1976"/>
+            <item value="1977"/>
+            <item value="1978"/>
+            <item value="1979"/>
+            <item value="1980"/>
+            <item value="1981"/>
+            <item value="1982"/>
+            <item value="1983"/>
+            <item value="1984"/>
+            <item value="1985"/>
+            <item value="1986"/>
+            <item value="1987"/>
+            <item value="1988"/>
+            <item value="1989"/>
+            <item value="1990"/>
+            <item value="1991"/>
+            <item value="1992"/>
+            <item value="1993"/>
+            <item value="1994"/>
+            <item value="1995"/>
+            <item value="1996"/>
+            <item value="1997"/>
+            <item value="1998"/>
+            <item value="1999"/>
+            <item value="2000"/>
+            <item value="2001"/>
+            <item value="2002"/>
+            <item value="2003"/>
+            <item value="2004"/>
+            <item value="2005"/>
+            <item value="2006"/>
+            <item value="2007"/>
+            <item value="2008"/>
+            <item value="2009"/>
+            <item value="2010"/>
+            <item value="2011"/>
+            <item value="2012"/>
+            <item value="2013"/>
+            <item value="2014"/>
+            <item value="2015"/>
+            <item value="2016"/>
+            <item value="2017"/>
+            <item value="2018"/>
+            <item value="2019"/>
+            <item value="2020"/>
+            <item value="2021"/>
+            <item value="2022"/>
+            <item value="2023"/>
+          </model>
         </properties>
       </component>
     </children>
