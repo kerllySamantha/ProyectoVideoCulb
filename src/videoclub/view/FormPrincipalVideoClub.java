@@ -12,6 +12,7 @@ public class FormPrincipalVideoClub extends JFrame {
     JButton btnListados;
 
     FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
+    FormDevoluciones formDevoluciones = new FormDevoluciones();
 
 
     public FormPrincipalVideoClub() {
@@ -32,11 +33,11 @@ public class FormPrincipalVideoClub extends JFrame {
         botonAltas.setPreferredSize(new Dimension(200, 30));
         panelPrincipal.add(botonAltas);
 
-        btnBajas = new JButton("Bajas");
-        btnBajas.setMinimumSize(new Dimension(20, 20));
-        btnBajas.setMaximumSize(new Dimension(250, 60));
-        btnBajas.setPreferredSize(new Dimension(200, 30));
-        panelPrincipal.add(btnBajas);
+//        btnBajas = new JButton("Bajas");
+//        btnBajas.setMinimumSize(new Dimension(20, 20));
+//        btnBajas.setMaximumSize(new Dimension(250, 60));
+//        btnBajas.setPreferredSize(new Dimension(200, 30));
+//        panelPrincipal.add(btnBajas);
         //btnBajas.setFont(new Font("Titulo", Font.BOLD, 30));
 
         btnAlquiler = new JButton("Alquiler");
@@ -60,6 +61,14 @@ public class FormPrincipalVideoClub extends JFrame {
             formPrincipalAltas.setBounds(100, 100, 600, 300);
             if (!formPrincipalAltas.isVisible()) {
                 formPrincipalAltas.setVisible(true);
+            }
+        });
+
+        btnDevolucion.addActionListener(e -> {
+            formDevoluciones.setDefaultCloseOperation(formDevoluciones.HIDE_ON_CLOSE);
+            formDevoluciones.setBounds(100,100,600,300);
+            if (!formDevoluciones.isVisible()) {
+                formDevoluciones.setVisible(true);
             }
         });
     }

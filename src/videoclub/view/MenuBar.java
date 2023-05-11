@@ -8,12 +8,13 @@ public class MenuBar {
     private static JMenuBar menuVideoClub;
     private static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
     private static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
-            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, exit;
+            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, devolver, exit;
     static FormAltaSocio formAltaSocio = new FormAltaSocio();
     static FormAltaDisco formAltaDisco = new FormAltaDisco();
     static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
     static FormVideoJuego formAVideoJuego = new FormVideoJuego();
     static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
+    static FormDevoluciones formDevoluciones = new FormDevoluciones();
 
 
     public static JMenuBar crearMenuBar() {
@@ -44,6 +45,8 @@ public class MenuBar {
         altas.add(videojuego);
         altas.add(disco);
 
+        devolver = new JMenuItem("Devolver");
+        devoluciones.add(devolver);
 
         listMultimedia = new JMenuItem("Multimedias");
         listPelisOrden = new JMenuItem("Peliculas en Orden");
@@ -71,7 +74,7 @@ public class MenuBar {
         formAltaSocio.setVisible(false);
         formAltaDisco.setVisible(false);
         formPrincipalAltas.setVisible(false);
-
+        formDevoluciones.setVisible(false);
 
     }
 
@@ -110,10 +113,16 @@ public class MenuBar {
             }
         });
 
-        salir.addActionListener(e -> {
-            System.exit(0);
-        });
 
+
+        devolver.addActionListener(e -> {
+            formDevoluciones.setDefaultCloseOperation(formDevoluciones.HIDE_ON_CLOSE);
+            formDevoluciones.setBounds(100,100,600,300);
+            if(!formDevoluciones.isVisible()) {
+                visivilidadVentanas();
+                formDevoluciones.setVisible(true);
+            }
+        });
 
 
         exit.addActionListener(e->{
