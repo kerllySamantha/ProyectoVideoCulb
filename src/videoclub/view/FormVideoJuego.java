@@ -111,15 +111,15 @@ public class FormVideoJuego extends JFrame {
                 formato = Formato.ARCHIVO;
             }
 
-//            if(playRadioButton.isSelected()){
-//                plataforma = Plataforma.PlayStation5;
-//            } else if (XBoxRadioButton.isSelected()) {
-//                plataforma = Plataforma.XBox;
-//            } else if (nintendoRadioButton.isSelected()) {
-//                plataforma = Plataforma.NintendoSwitch;
-//            } else if (PCRadioButton.isSelected()) {
-//                plataforma=Plataforma.PC;
-//            }
+            if(playRadioButton.isSelected()){
+                plataforma = Plataforma.PlayStation5;
+            } else if (XBoxRadioButton.isSelected()) {
+                plataforma = Plataforma.XBox;
+            } else if (nintendoRadioButton.isSelected()) {
+                plataforma = Plataforma.NintendoSwitch;
+            } else if (PCRadioButton.isSelected()) {
+                plataforma=Plataforma.PC;
+            }
 
         } catch (Exception e) {
             System.out.println(e);
