@@ -97,8 +97,8 @@ public class MenuBar {
             formAltaPelicula.setDefaultCloseOperation(formAltaPelicula.HIDE_ON_CLOSE);
             formAltaPelicula.setBounds(100, 100, 600, 300);
             if (!formAltaPelicula.isVisible()) {
-                 visivilidadVentanas();
-                 formAltaPelicula.setVisible(true);
+                visivilidadVentanas();
+                formAltaPelicula.setVisible(true);
             }
         });
         videojuego.addActionListener(e -> {

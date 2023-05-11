@@ -31,29 +31,26 @@ public class FormAniadirCanciones extends JFrame{
         btnAniadirCancion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                boolean datosCorrectos = true;
                 String tituloCancion = "";
                 String duracion = "";
 
                 try {
-                    if (!txtTituloCancion.getText().equals("")) {
+                    if (txtTituloCancion.getText().equals("") && txtDuracionCancion.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "No puedes dejar los campos vacio");
+                    } else if (txtTituloCancion.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "No puedes dejar el título vacio");
+                    } else if (txtDuracionCancion.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "No puedes dejar la duración vacia");
+                    } else {
                         tituloCancion = txtTituloCancion.getText().toUpperCase();
-                    } else {
-                        datosCorrectos = false;
-                    }
-                    if (!txtDuracionCancion.getText().equals("")) {
                         duracion = txtDuracionCancion.getText();
-                    } else {
-                        datosCorrectos = false;
+                        canciones.add(new Cancion(tituloCancion, duracion));
+                        txtListaCanciones.setText(mostrarCanciones());
+                        limpiarCampos();
+
                     }
                 } catch (Exception exception) {
                     System.out.println(exception);
-                }
-
-                if (datosCorrectos) {
-                    canciones.add(new Cancion(tituloCancion, duracion));
-                    txtListaCanciones.setText(mostrarCanciones());
-                    limpiarCampos();
                 }
             }
         });
