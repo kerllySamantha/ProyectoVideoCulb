@@ -1,8 +1,12 @@
 package view;
 
 import model.Formato;
+import model.Plataforma;
+import model.Videojuego;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Objects;
 
 public class FormVideoJuego extends JFrame {
@@ -24,12 +28,47 @@ public class FormVideoJuego extends JFrame {
     private JTextField textPlataforma;
     private JButton btnCrear;
     private JComboBox<Integer> comboBox1;
-
+    private JRadioButton playRadioButton;
+    private JRadioButton XBoxRadioButton;
+    private JRadioButton nintendoRadioButton;
+    private JRadioButton PCRadioButton;
+    private JTextArea visualizarDatos;
+    private String tituloVideoJuego,autor;
+    private boolean validar;
+    Videojuego juego;
     public FormVideoJuego() {
         super.setContentPane(panelPrincipalVideoJuego);
         super.setLocationRelativeTo(null);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
+        btnCrear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    tituloVideoJuego = textTitulo.getText().toUpperCase();
+                    autor = textAutor.getText().toUpperCase();
+
+                    if(validar){
+                        visualizarDatos.setText(" ");
+                        JOptionPane.showMessageDialog(null,"Prueba");
+                    } else if ((tituloVideoJuego.equalsIgnoreCase("")) ){
+                        JOptionPane.showMessageDialog(null,"El campo título está vacío");
+                    } else if ((autor.equalsIgnoreCase("")) ) {
+                        JOptionPane.showMessageDialog(null,"El campo autor está vacío");
+                    }
+//                    else {
+//                        Videojuego videojuego = new Videojuego(tituloVideoJuego,autor);
+//                        juego.add(videojuego);
+//                        visualizarDatos.setText(Videojuego.toString());
+//                    }
+
+                    textTitulo.setText(" ");
+                    textAutor.setText(" ");
+                }catch (Exception e2){
+                    e2.printStackTrace();
+                }
+            }
+        });
     }
     public void altaVideoJuego(){
         try {
@@ -37,7 +76,7 @@ public class FormVideoJuego extends JFrame {
             String autor = "";
             int anio = 0;
             Formato formato = null;
-            String plataforma = "";
+            Plataforma plataforma = null;
             boolean datos = true;
 
             if (!textTitulo.getText().equals("")) {
@@ -56,7 +95,7 @@ public class FormVideoJuego extends JFrame {
                 anio = Integer.parseInt(String.valueOf(comboBox1.getSelectedIndex()));
             }
             if (!textPlataforma.getText().equals("")) {
-                plataforma = textPlataforma.getText().toUpperCase();
+                plataforma = Plataforma.valueOf(textPlataforma.getText().toUpperCase());
             } else {
                 datos = false;
             }
@@ -71,6 +110,16 @@ public class FormVideoJuego extends JFrame {
             } else if (ARCHIVORadioButton.isSelected()) {
                 formato = Formato.ARCHIVO;
             }
+
+//            if(playRadioButton.isSelected()){
+//                plataforma = Plataforma.PlayStation5;
+//            } else if (XBoxRadioButton.isSelected()) {
+//                plataforma = Plataforma.XBox;
+//            } else if (nintendoRadioButton.isSelected()) {
+//                plataforma = Plataforma.NintendoSwitch;
+//            } else if (PCRadioButton.isSelected()) {
+//                plataforma=Plataforma.PC;
+//            }
 
         } catch (Exception e) {
             System.out.println(e);
