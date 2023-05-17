@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="cambios">
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones.class" afterDir="false" />
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Añadir FormListadosMultimedia y una expresion regular para validar la duracion de las canciones">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="ramaPrincipal" />
+    <option name="BRANCH" value="marta" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -53,12 +51,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1684318445" />
-                  </RecentBranch>
-                  <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
                     <option name="lastUsedInstant" value="1683655975" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="kerlly" />
+                    <option name="lastUsedInstant" value="1683655833" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -234,14 +232,7 @@
       <option name="project" value="LOCAL" />
       <updated>1683813402270</updated>
     </task>
-    <task id="LOCAL-00015" summary="Gestionar Socio">
-      <created>1684318211751</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1684318211751</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +269,6 @@
     <MESSAGE value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
     <MESSAGE value="Funcionalidad de VideoJuego, que cuando dejas un campo vacío aparezca un mensaje" />
     <MESSAGE value="cambios" />
-    <MESSAGE value="Gestionar Socio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestionar Socio" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios" />
   </component>
 </project>
