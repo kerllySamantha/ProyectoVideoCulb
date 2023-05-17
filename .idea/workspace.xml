@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Crear un metodo con todas las ventanas y que solo se abra una ventana">
-      <change afterPath="$PROJECT_DIR$/src/videoclub/view/FormListadosMultimedia.java" afterDir="false" />
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Añadir FormListadosMultimedia y una expresion regular para validar la duracion de las canciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="ramaPrincipal" />
+    <option name="BRANCH" value="marta" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">

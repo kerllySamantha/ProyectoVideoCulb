@@ -33,7 +33,7 @@ public class FormAniadirCanciones extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 String tituloCancion = "";
                 String duracion = "";
-                String patron = "^(3[0]|[12]?\\d|30):([0-5]\\d)$";
+                String patron = "^(3[0]|[12]?\\d):([0-5]\\d)$";
 
 
                 try {
