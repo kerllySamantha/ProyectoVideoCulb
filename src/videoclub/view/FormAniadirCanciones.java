@@ -33,14 +33,16 @@ public class FormAniadirCanciones extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 String tituloCancion = "";
                 String duracion = "";
+                String patron = "^(3[0]|[12]?\\d):([0-5]\\d)$";
+
 
                 try {
                     if (txtTituloCancion.getText().equals("") && txtDuracionCancion.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "No puedes dejar los campos vacio");
                     } else if (txtTituloCancion.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "No puedes dejar el título vacio");
-                    } else if (txtDuracionCancion.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "No puedes dejar la duración vacia");
+                    } else if (txtDuracionCancion.getText().equals("") || !txtDuracionCancion.getText().matches(patron)) {
+                        JOptionPane.showMessageDialog(null, "Campo vacio o introducido incorrectemente\n Introduce un tiempo en formato mm:ss de máximo 30 minutos");
                     } else {
                         tituloCancion = txtTituloCancion.getText().toUpperCase();
                         duracion = txtDuracionCancion.getText();
