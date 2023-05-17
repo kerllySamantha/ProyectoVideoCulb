@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 public class GestionSocioVideoClub {
 
-    ArrayList<Socio> socios = new ArrayList<>();
-    ArrayList<Multimedia> multimedia = new ArrayList<>();
+  public static ArrayList<Socio> socios = new ArrayList<>();
+
     public static void alquilarMultSocio(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
 
         // System.out.println("Introduce el título que quiera alquilar el socio");
@@ -132,58 +132,7 @@ public class GestionSocioVideoClub {
     }
 }
 
-//    public static void listados(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
-//
-//        int op;
-//        do {
-//            System.out.println("""
-//                    1. Listado de todos los objetos multimedia
-//                    2. Listado de todas las películas ordenadas por título
-//                    3. Listado de todos los videojuegos ordenados por año
-//                    4. Listado del histórico de alquileres de un socio ordenados por fecha de alquiler
-//                    5. Listado de los alquileres actuales de un socio
-//                    6. Listado de los socios con recargos pendientes
-//                     --------------------------------
-//                     0. Volver al menú principal
-//                     """);
-//            op = 1;
-//            switch (op) {
-//                case 1 -> listaMultimedia(multimedia);
-//                case 2 -> listaPeliculas(multimedia);
-//                case 3 -> listaVideojuegos(multimedia);
-//                case 4 -> listaHistorial(socios);
-//                case 5 -> listaAlquilerActual(socios);
-//                case 6 -> listaRecargosPendientes(socios);
-//                case 0 -> System.out.println("Volver al menú principal");
-//            }
-//        } while (op != 0);
-//    }
-//
-//    public static void listaMultimedia(ArrayList<Multimedia> multimedia) {
-//        for (Multimedia m : multimedia) {
-//            System.out.println(m);
-//            System.out.println("--------------------------");
-//
-//        }
-//    }
-//
-//    public static void listaPeliculas(ArrayList<Multimedia> multimedia) {
-//        ArrayList<Pelicula> peliculas = new ArrayList<>();
-//        for (Multimedia m : multimedia) {
-//            if (tipoMultimedia(m) == 0) {
-//                peliculas.add((Pelicula) m);
-//            }
-//        }
-//        peliculas.sort(new Comparator<Pelicula>() {
-//            public int compare(Pelicula p1, Pelicula p2) {
-//                return p1.getTitulo().compareTo(p2.getTitulo());
-//            }
-//        });
-//        for (Pelicula p : peliculas) {
-//            System.out.println(p);
-//            System.out.println("--------------------------");
-//        }
-//    }
+
 //
 //    public static void listaVideojuegos(ArrayList<Multimedia> multimedia) {
 //        ArrayList<Videojuego> videojuegos = new ArrayList<>();
