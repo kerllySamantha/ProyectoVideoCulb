@@ -54,6 +54,10 @@ public class FormPrincipalVideoClub extends JFrame {
 
 
         btnListados = new JButton("Listar");
+        btnListados.setMinimumSize(new Dimension(20, 20));
+        btnListados.setMaximumSize(new Dimension(250, 60));
+        btnListados.setPreferredSize(new Dimension(200, 30));
+        panelPrincipal.add(btnListados);
 
 
         botonAltas.addActionListener(e -> {
