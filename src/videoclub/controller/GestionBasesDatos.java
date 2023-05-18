@@ -27,9 +27,9 @@ public class GestionBasesDatos {
     }
 
     public static void aniadiscoArrayMultimedia() {
-        String titulo , autor ;
-        Formato formato ;
-        int anio , duracion, cantidad ;
+        String titulo, autor;
+        Formato formato;
+        int anio, duracion, cantidad;
         try {
             getConexion();
             try {
@@ -51,11 +51,31 @@ public class GestionBasesDatos {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
 
+    public static void updateDisco(String titulo, String autor, Formato formato, int anio, int  duracion, int cantidad) {
+        try {
+            Disco disco = new model.Disco( titulo, autor, formato,  anio);
+            getConexion();
+            try {
+                Statement st = conex.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+                String origin ="update monitor set ";
+                st.executeUpdate(origin + "titulo = '" + titulo+ "' where autor = '" + disco.getAutor() + "'");
+                st.executeUpdate(origin + "autor = '" + autor + "' where autor = '" + disco.getAutor() + "'");
+                st.executeUpdate(origin + "formato = '" + formato+ "' where autor = '" + autor+ "'");
+                st.executeUpdate(origin + "anio = '" + anio+ "' where autor = '" + anio + "'");
+
+                Objects.requireNonNull(getConexion()).close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void aniadirSocios() {
-        String nif , nombre , poblacion ;
+        String nif, nombre, poblacion;
         //Date fecha_nac;
         try {
             getConexion();

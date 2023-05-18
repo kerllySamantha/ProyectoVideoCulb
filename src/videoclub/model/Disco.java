@@ -7,7 +7,7 @@ public class Disco extends Multimedia {
 
     public Disco(String titulo, String artista, Formato formato, int anio) {
         super(titulo, artista, formato, anio);
-        setCanciones(new ArrayList<>());
+        setCanciones(canciones);
     }
 
     public ArrayList<Cancion> getCanciones() {
@@ -18,9 +18,9 @@ public class Disco extends Multimedia {
         this.canciones = canciones;
     }
 
-    public void agregarCancion(Cancion cancion) {
-        this.canciones.add(cancion);
-    }
+//    public void agregarCancion(Cancion cancion) {
+//        this.canciones.add(cancion);
+//    }
 
     public String duracionDisco() {
         int duracionSeg = 0;
@@ -39,7 +39,8 @@ public class Disco extends Multimedia {
         }
         return super.toString() +
                 "\nDuración: " + duracionDisco() +
-                "\nCanciones: \n" + listaCaciones;
+                "\nAutor: " + getAutor()+
+                "\nCanciones: \n\t" + listaCaciones + "\n";
     }
 }
 
