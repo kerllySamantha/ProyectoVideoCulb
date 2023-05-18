@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class Disco extends Multimedia{
+public class Disco extends Multimedia {
     private ArrayList<Cancion> canciones;
 
     public Disco(String titulo, String artista, Formato formato, int anio) {
@@ -33,9 +33,6 @@ public class Disco extends Multimedia{
     }
 
     public String toString() {
-        String listaCaciones = "";
-        for (Cancion cancion : this.canciones) {
-            listaCaciones += "\t" + cancion.getTituloCancion() + " - " + cancion.getDuracionMinSeg() + "\n";
         StringBuilder listaCaciones = new StringBuilder();
         for (model.Cancion cancion : this.canciones) {
             listaCaciones.append("\t").append(cancion.getTituloCancion()).append(" - ").append(cancion.getDuracionMinSeg()).append("\n");
