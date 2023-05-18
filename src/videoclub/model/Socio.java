@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Socio {
     private String nif;
     private String nombre;
-    private String fechaNac;
+   // private String fechaNac;
     private String poblacion;
     private int recargo;
     private ArrayList <Multimedia> historial;
@@ -14,18 +14,18 @@ public class Socio {
     public Socio() {
         nif = "";
         nombre = "";
-        fechaNac = "";
+        //fechaNac = "";
         poblacion = "";
         recargo = 0;
         historial = new ArrayList<>();
         alquilerActual = new ArrayList<>();
     }
 
-    public Socio(String nif, String nombre, String fechaNac, String poblacion) {
+    public Socio(String nif, String nombre, String poblacion) {
         this();
         setNif(nif);
         setNombre(nombre);
-        setFechaNac(fechaNac);
+        //setFechaNac(fechaNac);
         setPoblacion(poblacion);
     }
 
@@ -45,14 +45,14 @@ public class Socio {
         this.nombre = nombre;
     }
 
-    public String getFechaNac() {
-        return fechaNac;
-    }
+//    public String getFechaNac() {
+//        return fechaNac;
+//    }
 
-    public void setFechaNac(String fechaNac) {
-
-        this.fechaNac = fechaNac;
-    }
+//    public void setFechaNac(String fechaNac) {
+//
+//        this.fechaNac = fechaNac;
+//    }
 
     public String getPoblacion() {
         return poblacion;
@@ -78,30 +78,12 @@ public class Socio {
         return alquilerActual;
     }
 
-    public static int buscarSocio(String nif, ArrayList<Socio> socios) {
-        int index = 0;
-        for (int i = 0; i < socios.size(); i++) {
-            if (socios.get(i).getNif().equalsIgnoreCase(nif)) {
-                index = i;
-                return index;
-            }
-        }
-        return -1;
-    }
 
-    public static boolean comprobarNif(ArrayList<Socio> socios, String nif) {
-        for (Socio socio : socios) {
-            if (nif.equalsIgnoreCase(socio.getNif())) {
-                return true;
-            }
-        }
-        return false;
-    }
 
     public String toString() {
         return "NIF: " + getNif() +
                 "\nNombre: " + getNombre() +
-                "\nFecha de nacimiento: " + getFechaNac() +
+          //      "\nFecha de nacimiento: " + getFechaNac() +
                 "\nPoblación: " + getPoblacion() +
                 "\nCargo: " + getRecargo();
     }
