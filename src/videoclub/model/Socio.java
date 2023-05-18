@@ -1,32 +1,38 @@
 package model;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 
 public class Socio {
+    //public static recargo por defecto;
     private String nif;
     private String nombre;
-    private String fechaNac;
+    private LocalDate fechaNac;
     private String poblacion;
     private int recargo;
     private ArrayList <Multimedia> historial;
     private ArrayList <Multimedia> alquilerActual;
 
-    public Socio() {
-        nif = "";
-        nombre = "";
-        fechaNac = "";
-        poblacion = "";
-        recargo = 0;
-        historial = new ArrayList<>();
-        alquilerActual = new ArrayList<>();
-    }
+//    public Socio() {
+//        nif = "";
+//        nombre = "";
+//        fechaNac = ;
+//        poblacion = "";
+//        recargo = 0;
+//        historial = new ArrayList<>();
+//        alquilerActual = new ArrayList<>();
+//    }
 
-    public Socio(String nif, String nombre, String fechaNac, String poblacion) {
-        this();
+    public Socio(String nif, String nombre, LocalDate fechaNac, String poblacion) {
+        //this();
         setNif(nif);
         setNombre(nombre);
         setFechaNac(fechaNac);
         setPoblacion(poblacion);
+        recargo = 0;
+        historial = new ArrayList<>();
+        alquilerActual = new ArrayList<>();
     }
 
     public String getNif() {
@@ -45,11 +51,11 @@ public class Socio {
         this.nombre = nombre;
     }
 
-    public String getFechaNac() {
+    public LocalDate getFechaNac() {
         return fechaNac;
     }
 
-    public void setFechaNac(String fechaNac) {
+    public void setFechaNac(LocalDate fechaNac) {
 
         this.fechaNac = fechaNac;
     }
@@ -98,6 +104,17 @@ public class Socio {
         return false;
     }
 
+    public static boolean calcularEdad(LocalDate fechaNac) {
+        LocalDate fechaActual = LocalDate.now();
+        Period period = Period.between(fechaNac, fechaActual);
+        int edad = period.getYears();
+        if (edad > 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public String toString() {
         return "NIF: " + getNif() +
                 "\nNombre: " + getNombre() +
@@ -106,3 +123,7 @@ public class Socio {
                 "\nCargo: " + getRecargo();
     }
 }
+
+/*
+        LocalDate fechaNacimiento = LocalDate.of(1990, 5, 10);
+ */

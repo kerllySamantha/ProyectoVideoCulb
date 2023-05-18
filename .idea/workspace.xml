@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Crear clase GestionMultimedia">
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Crear los metodos para listar y modificar el FormListadosMultimedia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionMultimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionMultimedia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Cancion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Cancion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Disco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Disco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormListadosMultimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormListadosMultimedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Socio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Socio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +32,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
+        <entry key="$PROJECT_DIR$" value="marta" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -244,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684317190209</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Crear los metodos para listar y modificar el FormListadosMultimedia">
+      <created>1684424274549</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1684424274549</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -282,6 +285,7 @@
     <MESSAGE value="Funcionalidad de VideoJuego, que cuando dejas un campo vacío aparezca un mensaje" />
     <MESSAGE value="cambios" />
     <MESSAGE value="Añadir FormListadosMultimedia y una expresion regular para validar la duracion de las canciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir FormListadosMultimedia y una expresion regular para validar la duracion de las canciones" />
+    <MESSAGE value="Crear los metodos para listar y modificar el FormListadosMultimedia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crear los metodos para listar y modificar el FormListadosMultimedia" />
   </component>
 </project>
