@@ -5,10 +5,10 @@ public class Cancion {
     private String duracionMinSeg;
     private int duracionCancionSeg;
 
-    public Cancion(String titulo, int duracion) {
-        setNombreCancion(titulo);
-        setDuracionCancion(duracion);
-    }
+//    public Cancion(String titulo, int duracion) {
+//        setNombreCancion(titulo);
+//        setDuracionCancion(duracion);
+//    }
 
     public Cancion(String titulo, String duracion) {
         setNombreCancion(titulo);
@@ -33,7 +33,7 @@ public class Cancion {
         this.tituloCancion = nombreCancion;
     }
 
-    public double getDuracionCancionSeg() {
+    public int getDuracionCancionSeg() {
         return duracionCancionSeg;
     }
 

@@ -3,6 +3,7 @@ package controller;
 import model.Multimedia;
 import model.Socio;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class GestionSocioVideoClub {
@@ -130,27 +131,42 @@ public class GestionSocioVideoClub {
         }
         return false;
     }
+
+
+    public static String listaSociosRecargos() {
+        String listasSocios = "Socios con recargos pendientes: \n";
+
+        for (Socio s : socios) {
+            if (s.getRecargo() >  0) {
+                listasSocios += "NIF: " + s.getNif() + "\nNombre: " + s.getNombre() + "\nRecargo: " + s.getRecargo();
+            }
+        }
+        return listasSocios;
+    }
+
+    public static String listaAlquilerActual(String nif) {
+        String listaAlquileres = "";
+        if (buscarSocio(nif, socios) != -1) {
+            try {
+                int indexSocio = buscarSocio(nif, socios);
+                listaAlquileres += "Nombre: " + socios.get(indexSocio).getNombre() +
+                        "\nAlquileres actuales del socio:";
+
+                for (int i = 0; i < socios.get(indexSocio).getAlquilerActual().size(); i++) {
+                    listaAlquileres += "\t" + socios.get(indexSocio).getAlquilerActual().get(i).getTitulo();
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "El socio introducido no tiene ningún alquiler actualmente");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "El NIF introducido no coincide con ningú socio registrado");
+        }
+        return listaAlquileres;
+    }
 }
 
 
-//
-//    public static void listaVideojuegos(ArrayList<Multimedia> multimedia) {
-//        ArrayList<Videojuego> videojuegos = new ArrayList<>();
-//        for (Multimedia m : multimedia) {
-//            if (tipoMultimedia(m) == 1) {
-//                videojuegos.add((Videojuego) m);
-//            }
-//        }
-////        videojuegos.sort(new Comparator<Videojuego>() {
-////            public int compare(Videojuego v1, Videojuego v2) {
-////                return Integer.compare(v1.getAnio(), (v2.getAnio()));
-////            }
-////        });
-////        for (Videojuego v : videojuegos) {
-////            System.out.println(v);
-////            System.out.println("--------------------------");
-////        }
-////    }
+
 //
 //    public static void listaHistorial(ArrayList<Socio> socios) {
 //        Scanner sc = new Scanner(System.in);
@@ -172,41 +188,5 @@ public class GestionSocioVideoClub {
 //        }
 //    }
 //
-//    public static void listaAlquilerActual(ArrayList<Socio> socios) {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Introduce el NIF del socio que quieras consultar");
-//        String nif = sc.nextLine();
-//        if (buscarSocio(nif, socios) != -1) {
-//            try {
-//                System.out.println("Alquileres actuales del socio");
-//                System.out.println("-----------------------------------------");
-//
-//                for (int i = 0; i < socios.get(buscarSocio(nif, socios)).getAlquilerActual().size(); i++) {
-//                    System.out.println(socios.get(buscarSocio(nif, socios)).getAlquilerActual().get(i));
-//                }
-//            } catch (Exception e) {
-//                System.out.println("No hay alquileres actuales");
-//            }
-//        } else {
-//            System.out.println("No se ha encontrado el socio");
-//        }
-//    }
-//
-//    public static void listaRecargosPendientes(ArrayList<Socio> socios) {
-//        System.out.println("Socios con recargos pendientes");
-//        System.out.println("-----------------------------------------");
-//        for (Socio s : socios) {
-//            if (s.getRecargo() > 0) {
-//                System.out.println(s.getNombre() + "\nRecargo pendiente: " + s.getRecargo() + "\n---------------");
-//            }
-//        }
-//    }
-//
-//    public static int tipoMultimedia(Multimedia m) {
-//        if (m instanceof Pelicula) {
-//            return 0;
-//        } else if (m instanceof Videojuego) {
-//            return 1;
-//        }
-//        return -1;
+
 

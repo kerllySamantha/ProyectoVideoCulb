@@ -3,28 +3,28 @@ package model;
 import java.util.ArrayList;
 
 public class Disco extends Multimedia{
-    private ArrayList<model.Cancion> canciones;
+    private ArrayList<Cancion> canciones;
 
     public Disco(String titulo, String artista, Formato formato, int anio) {
         super(titulo, artista, formato, anio);
         setCanciones(new ArrayList<>());
     }
 
-    public ArrayList<model.Cancion> getCanciones() {
+    public ArrayList<Cancion> getCanciones() {
         return canciones;
     }
 
-    public void setCanciones(ArrayList<model.Cancion> canciones) {
+    public void setCanciones(ArrayList<Cancion> canciones) {
         this.canciones = canciones;
     }
 
-    public void agregarCancion(model.Cancion cancion) {
+    public void agregarCancion(Cancion cancion) {
         this.canciones.add(cancion);
     }
 
     public String duracionDisco() {
         int duracionSeg = 0;
-        for (model.Cancion cancion : canciones) {
+        for (Cancion cancion : canciones) {
             duracionSeg += cancion.getDuracionCancionSeg();
         }
         int duracionMin = duracionSeg / 60;
@@ -34,14 +34,12 @@ public class Disco extends Multimedia{
 
     public String toString() {
         String listaCaciones = "";
-        for (model.Cancion cancion : this.canciones) {
+        for (Cancion cancion : this.canciones) {
             listaCaciones += "\t" + cancion.getTituloCancion() + " - " + cancion.getDuracionMinSeg() + "\n";
         }
         return super.toString() +
                 "\nDuración: " + duracionDisco() +
                 "\nCanciones: \n" + listaCaciones;
-
-
     }
 }
 
