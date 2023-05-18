@@ -5,16 +5,17 @@ import model.Disco;
 import javax.swing.*;
 
 public class MenuBar {
-    private static JMenuBar menuVideoClub;
-    private static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
-    private static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
+    public static JMenuBar menuVideoClub;
+    public static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
+    public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
             listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, devolver, exit;
-    static FormAltaSocio formAltaSocio = new FormAltaSocio();
-    static FormAltaDisco formAltaDisco = new FormAltaDisco();
-    static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
-    static FormVideoJuego formAVideoJuego = new FormVideoJuego();
-    static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
-    static FormDevoluciones formDevoluciones = new FormDevoluciones();
+    public static FormAltaSocio formAltaSocio = new FormAltaSocio();
+    public static FormAltaDisco formAltaDisco = new FormAltaDisco();
+    public static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
+    public static FormVideoJuego formAVideoJuego = new FormVideoJuego();
+    public static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
+    public static FormDevoluciones formDevoluciones = new FormDevoluciones();
+    public static FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
 
 
     public static JMenuBar crearMenuBar() {
@@ -75,6 +76,7 @@ public class MenuBar {
         formAltaDisco.setVisible(false);
         formPrincipalAltas.setVisible(false);
         formDevoluciones.setVisible(false);
+        formListadosMultimedia.setVisible(false);
 
     }
 
@@ -121,6 +123,15 @@ public class MenuBar {
             if(!formDevoluciones.isVisible()) {
                 visivilidadVentanas();
                 formDevoluciones.setVisible(true);
+            }
+        });
+
+        listMultimedia.addActionListener(e ->{
+            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
+            formListadosMultimedia.setBounds(100,100,600,300);
+            if(!formListadosMultimedia.isVisible()) {
+                visivilidadVentanas();
+                formListadosMultimedia.setVisible(true);
             }
         });
 

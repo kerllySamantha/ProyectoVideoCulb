@@ -1,6 +1,7 @@
 package view;
 
 import controller.*;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +11,6 @@ public class FormListadosMultimedia extends JFrame {
     private JTextArea txtListaMultimedia;
     private JTextField txtNif;
     private JButton btnListaMult, btnListaPeliculas, btnListaVideojuego, btnListaDisco, btnListaAlquileres, btnListaRecargos, btnBuscarNif;
-
 
 
     public FormListadosMultimedia() {
@@ -57,12 +57,8 @@ public class FormListadosMultimedia extends JFrame {
         btnListaRecargos = new JButton("");
         panel.add(btnListaRecargos);
 
-        btnListaMult.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia());
-            }
-        });
+        MenuBar.listMultimedia.addActionListener(e ->
+                txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia()));
 
         btnListaPeliculas.addActionListener(new ActionListener() {
             @Override
@@ -92,15 +88,12 @@ public class FormListadosMultimedia extends JFrame {
             }
         });
 
-        btnListaRecargos.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos());
-            }
-        });
+        btnListaRecargos.addActionListener(e -> txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos()));
     }
-    public static void main(String[] args) {
-        FormListadosMultimedia f = new FormListadosMultimedia();
-        f.setVisible(true);
-    }
+
+//    public static void main(String[] args) {
+//        FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
+//        formListadosMultimedia .setVisible(true);
+//
+//    }
 }

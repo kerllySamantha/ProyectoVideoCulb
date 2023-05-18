@@ -1,38 +1,32 @@
 package model;
 
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.ArrayList;
 
 public class Socio {
-    //public static recargo por defecto;
     private String nif;
     private String nombre;
-    private LocalDate fechaNac;
+   // private String fechaNac;
     private String poblacion;
     private int recargo;
     private ArrayList <Multimedia> historial;
     private ArrayList <Multimedia> alquilerActual;
 
-//    public Socio() {
-//        nif = "";
-//        nombre = "";
-//        fechaNac = ;
-//        poblacion = "";
-//        recargo = 0;
-//        historial = new ArrayList<>();
-//        alquilerActual = new ArrayList<>();
-//    }
-
-    public Socio(String nif, String nombre, LocalDate fechaNac, String poblacion) {
-        //this();
-        setNif(nif);
-        setNombre(nombre);
-        setFechaNac(fechaNac);
-        setPoblacion(poblacion);
+    public Socio() {
+        nif = "";
+        nombre = "";
+        //fechaNac = "";
+        poblacion = "";
         recargo = 0;
         historial = new ArrayList<>();
         alquilerActual = new ArrayList<>();
+    }
+
+    public Socio(String nif, String nombre, String poblacion) {
+        this();
+        setNif(nif);
+        setNombre(nombre);
+        //setFechaNac(fechaNac);
+        setPoblacion(poblacion);
     }
 
     public String getNif() {
@@ -51,14 +45,14 @@ public class Socio {
         this.nombre = nombre;
     }
 
-    public LocalDate getFechaNac() {
-        return fechaNac;
-    }
+//    public String getFechaNac() {
+//        return fechaNac;
+//    }
 
-    public void setFechaNac(LocalDate fechaNac) {
-
-        this.fechaNac = fechaNac;
-    }
+//    public void setFechaNac(String fechaNac) {
+//
+//        this.fechaNac = fechaNac;
+//    }
 
     public String getPoblacion() {
         return poblacion;
@@ -84,46 +78,13 @@ public class Socio {
         return alquilerActual;
     }
 
-    public static int buscarSocio(String nif, ArrayList<Socio> socios) {
-        int index = 0;
-        for (int i = 0; i < socios.size(); i++) {
-            if (socios.get(i).getNif().equalsIgnoreCase(nif)) {
-                index = i;
-                return index;
-            }
-        }
-        return -1;
-    }
 
-    public static boolean comprobarNif(ArrayList<Socio> socios, String nif) {
-        for (Socio socio : socios) {
-            if (nif.equalsIgnoreCase(socio.getNif())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean calcularEdad(LocalDate fechaNac) {
-        LocalDate fechaActual = LocalDate.now();
-        Period period = Period.between(fechaNac, fechaActual);
-        int edad = period.getYears();
-        if (edad > 18) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
     public String toString() {
         return "NIF: " + getNif() +
                 "\nNombre: " + getNombre() +
-                "\nFecha de nacimiento: " + getFechaNac() +
+          //      "\nFecha de nacimiento: " + getFechaNac() +
                 "\nPoblación: " + getPoblacion() +
                 "\nCargo: " + getRecargo();
     }
 }
-
-/*
-        LocalDate fechaNacimiento = LocalDate.of(1990, 5, 10);
- */
