@@ -33,9 +33,9 @@ public class Disco extends Multimedia{
     }
 
     public String toString() {
-        String listaCaciones = "";
+        StringBuilder listaCaciones = new StringBuilder();
         for (model.Cancion cancion : this.canciones) {
-            listaCaciones += "\t" + cancion.getTituloCancion() + " - " + cancion.getDuracionMinSeg() + "\n";
+            listaCaciones.append("\t").append(cancion.getTituloCancion()).append(" - ").append(cancion.getDuracionMinSeg()).append("\n");
         }
         return super.toString() +
                 "\nDuración: " + duracionDisco() +
