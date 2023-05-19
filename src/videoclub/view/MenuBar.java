@@ -1,5 +1,6 @@
 package view;
 
+import controller.GestionMultimedia;
 import model.Disco;
 
 import javax.swing.*;
@@ -135,6 +136,8 @@ public class MenuBar {
             }
         });
 
+        listMultimedia.addActionListener(e ->
+                FormListadosMultimedia.txtListaMultimedia.setText(String.valueOf(GestionMultimedia.ordenarMultimedia())));
 
         exit.addActionListener(e->{
             System.exit(0);

@@ -30,6 +30,7 @@ public class GestionBasesDatos {
         String titulo, autor;
         Formato formato;
         int anio, duracion, cantidad;
+        Disco disco;
         try {
             getConexion();
             try {
@@ -42,7 +43,9 @@ public class GestionBasesDatos {
                     anio = rs.getInt("anio");
                     duracion = rs.getInt("duracion");
                     cantidad = rs.getInt("cantidad");
-                    GestionMultimedia.multimedias.add(new Disco(titulo, autor, formato, anio));
+
+                    GestionMultimedia.multimedias.add(disco = new Disco(titulo, autor, formato, anio ));
+                    disco.agregarCancion(aniadirCancionArrayDisco());
                 }
                 getConexion().close();
             } catch (Exception e2) {
@@ -53,26 +56,27 @@ public class GestionBasesDatos {
         }
     }
 
-    public static void updateDisco(String titulo, String autor, Formato formato, int anio, int  duracion, int cantidad) {
-        try {
-            Disco disco = new model.Disco( titulo, autor, formato,  anio);
-            getConexion();
-            try {
-                Statement st = conex.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-                String origin ="update monitor set ";
-                st.executeUpdate(origin + "titulo = '" + titulo+ "' where autor = '" + disco.getAutor() + "'");
-                st.executeUpdate(origin + "autor = '" + autor + "' where autor = '" + disco.getAutor() + "'");
-                st.executeUpdate(origin + "formato = '" + formato+ "' where autor = '" + autor+ "'");
-                st.executeUpdate(origin + "anio = '" + anio+ "' where autor = '" + anio + "'");
-
-                Objects.requireNonNull(getConexion()).close();
-            } catch (Exception e2) {
-                e2.printStackTrace();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void updateDisco(String titulo, String autor, Formato formato, int anio, int duracion, int cantidad) {
+//        try {
+//            Disco disco = new model.Disco(titulo, autor, formato, anio
+//                    );
+//            getConexion();
+//            try {
+//                Statement st = conex.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+//                String origin = "update monitor set ";
+//                st.executeUpdate(origin + "titulo = '" + titulo + "' where autor = '" + disco.getAutor() + "'");
+//                st.executeUpdate(origin + "autor = '" + autor + "' where autor = '" + disco.getAutor() + "'");
+//                st.executeUpdate(origin + "formato = '" + formato + "' where autor = '" + autor + "'");
+//                st.executeUpdate(origin + "anio = '" + anio + "' where autor = '" + anio + "'");
+//
+//                Objects.requireNonNull(getConexion()).close();
+//            } catch (Exception e2) {
+//                e2.printStackTrace();
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static void aniadirSocios() {
         String nif, nombre, poblacion;
@@ -98,6 +102,33 @@ public class GestionBasesDatos {
         }
     }
 
+    public static Cancion aniadirCancionArrayDisco() {
+        Cancion cancion = null;
+        String tituloDisco, autor = null, nombre = null;
+        int duracion;
+        String newDuracion = null;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  CANCIONES");
+                while (rs.next()) {
+                    tituloDisco = rs.getString("tituloDisco");
+                    nombre = rs.getString("nombre");
+                    autor = rs.getString("autor");
+                    duracion = rs.getInt("duracion");
+                    newDuracion = String.valueOf(duracion);
+
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new Cancion(nombre, newDuracion,autor);
+    }
 
 //    public static ArrayList<Multimedia> aniaadirDiscoAlArrayMultimedias() {
 //        ArrayList<Multimedia> monitimedia = new ArrayList<>();
