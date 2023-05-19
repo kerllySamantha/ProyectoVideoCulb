@@ -58,7 +58,8 @@ public abstract class Multimedia {
                 "\nFormato: " + getFormato() +
                 "\nAño: " + getAnio();
     }
-    public Formato comprobarFormato(Formato formato)  {
+
+    public Formato comprobarFormato(Formato formato) {
         for (int i = 0; i < Formato.values().length; i++) {
             if (Formato.values()[i].equals(formato)) {
                 return Formato.values()[i];

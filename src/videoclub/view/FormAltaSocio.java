@@ -1,7 +1,7 @@
 package view;
 
 import controller.*;
-import model.Socio;
+import model.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 public class FormAltaSocio extends JFrame {
-    ArrayList<Socio> socios = new ArrayList<>();
+
 
     private JPanel altasSocioMenu;
     private JTextField txtNIFSocioAlta;
@@ -38,7 +38,7 @@ public class FormAltaSocio extends JFrame {
             try {
                 //do {
                 nifSocio = txtNIFSocioAlta.getText().toUpperCase();
-                existeNif = GestionSocioVideoClub.comprobarNif(socios, nifSocio);
+                existeNif = GestionSocioVideoClub.comprobarNif(GestionSocioVideoClub.socios, nifSocio);
                 nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
                 poblacionSocio = Objects.requireNonNull(cmbProvincias.getSelectedItem()).toString();
                 if (existeNif) {
@@ -65,8 +65,8 @@ public class FormAltaSocio extends JFrame {
 
                 }
                 else {
-                    socio = new Socio(nifSocio, nombreSocio, "", poblacionSocio);
-                    socios.add(socio);
+                    socio = new Socio(nifSocio, nombreSocio, poblacionSocio);
+                    GestionSocioVideoClub.socios.add(socio);
                     JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo Socio");
                     txtDatosSocio.setText(socio.toString());
                 }

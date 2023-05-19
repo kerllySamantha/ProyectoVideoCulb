@@ -1,5 +1,6 @@
 package view;
 
+import controller.*;
 import javax.swing.*;
 import java.awt.*;
 
@@ -33,6 +34,10 @@ public class FormPrincipalVideoClub extends JFrame {
         botonAltas.setPreferredSize(new Dimension(200, 30));
         panelPrincipal.add(botonAltas);
 
+
+        GestionBasesDatos.aniadiscoArrayMultimedia();
+        GestionBasesDatos.aniadirSocios();
+
 //        btnBajas = new JButton("Bajas");
 //        btnBajas.setMinimumSize(new Dimension(20, 20));
 //        btnBajas.setMaximumSize(new Dimension(250, 60));
@@ -54,6 +59,10 @@ public class FormPrincipalVideoClub extends JFrame {
 
 
         btnListados = new JButton("Listar");
+        btnListados.setMinimumSize(new Dimension(20, 20));
+        btnListados.setMaximumSize(new Dimension(250, 60));
+        btnListados.setPreferredSize(new Dimension(200, 30));
+        panelPrincipal.add(btnListados);
 
 
         botonAltas.addActionListener(e -> {

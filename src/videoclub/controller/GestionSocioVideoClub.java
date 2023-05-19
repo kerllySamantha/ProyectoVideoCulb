@@ -3,12 +3,13 @@ package controller;
 import model.Multimedia;
 import model.Socio;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class GestionSocioVideoClub {
 
-    ArrayList<Socio> socios = new ArrayList<>();
-    ArrayList<Multimedia> multimedia = new ArrayList<>();
+  public static ArrayList<Socio> socios = new ArrayList<>();
+
     public static void alquilarMultSocio(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
 
         // System.out.println("Introduce el título que quiera alquilar el socio");
@@ -130,78 +131,42 @@ public class GestionSocioVideoClub {
         }
         return false;
     }
+
+
+    public static String listaSociosRecargos() {
+        String listasSocios = "Socios con recargos pendientes: \n";
+
+        for (Socio s : socios) {
+            if (s.getRecargo() >  0) {
+                listasSocios += "NIF: " + s.getNif() + "\nNombre: " + s.getNombre() + "\nRecargo: " + s.getRecargo();
+            }
+        }
+        return listasSocios;
+    }
+
+    public static String listaAlquilerActual(String nif) {
+        String listaAlquileres = "";
+        if (buscarSocio(nif, socios) != -1) {
+            try {
+                int indexSocio = buscarSocio(nif, socios);
+                listaAlquileres += "Nombre: " + socios.get(indexSocio).getNombre() +
+                        "\nAlquileres actuales del socio:";
+
+                for (int i = 0; i < socios.get(indexSocio).getAlquilerActual().size(); i++) {
+                    listaAlquileres += "\t" + socios.get(indexSocio).getAlquilerActual().get(i).getTitulo();
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "El socio introducido no tiene ningún alquiler actualmente");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "El NIF introducido no coincide con ningú socio registrado");
+        }
+        return listaAlquileres;
+    }
 }
 
-//    public static void listados(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
-//
-//        int op;
-//        do {
-//            System.out.println("""
-//                    1. Listado de todos los objetos multimedia
-//                    2. Listado de todas las películas ordenadas por título
-//                    3. Listado de todos los videojuegos ordenados por año
-//                    4. Listado del histórico de alquileres de un socio ordenados por fecha de alquiler
-//                    5. Listado de los alquileres actuales de un socio
-//                    6. Listado de los socios con recargos pendientes
-//                     --------------------------------
-//                     0. Volver al menú principal
-//                     """);
-//            op = 1;
-//            switch (op) {
-//                case 1 -> listaMultimedia(multimedia);
-//                case 2 -> listaPeliculas(multimedia);
-//                case 3 -> listaVideojuegos(multimedia);
-//                case 4 -> listaHistorial(socios);
-//                case 5 -> listaAlquilerActual(socios);
-//                case 6 -> listaRecargosPendientes(socios);
-//                case 0 -> System.out.println("Volver al menú principal");
-//            }
-//        } while (op != 0);
-//    }
-//
-//    public static void listaMultimedia(ArrayList<Multimedia> multimedia) {
-//        for (Multimedia m : multimedia) {
-//            System.out.println(m);
-//            System.out.println("--------------------------");
-//
-//        }
-//    }
-//
-//    public static void listaPeliculas(ArrayList<Multimedia> multimedia) {
-//        ArrayList<Pelicula> peliculas = new ArrayList<>();
-//        for (Multimedia m : multimedia) {
-//            if (tipoMultimedia(m) == 0) {
-//                peliculas.add((Pelicula) m);
-//            }
-//        }
-//        peliculas.sort(new Comparator<Pelicula>() {
-//            public int compare(Pelicula p1, Pelicula p2) {
-//                return p1.getTitulo().compareTo(p2.getTitulo());
-//            }
-//        });
-//        for (Pelicula p : peliculas) {
-//            System.out.println(p);
-//            System.out.println("--------------------------");
-//        }
-//    }
-//
-//    public static void listaVideojuegos(ArrayList<Multimedia> multimedia) {
-//        ArrayList<Videojuego> videojuegos = new ArrayList<>();
-//        for (Multimedia m : multimedia) {
-//            if (tipoMultimedia(m) == 1) {
-//                videojuegos.add((Videojuego) m);
-//            }
-//        }
-////        videojuegos.sort(new Comparator<Videojuego>() {
-////            public int compare(Videojuego v1, Videojuego v2) {
-////                return Integer.compare(v1.getAnio(), (v2.getAnio()));
-////            }
-////        });
-////        for (Videojuego v : videojuegos) {
-////            System.out.println(v);
-////            System.out.println("--------------------------");
-////        }
-////    }
+
+
 //
 //    public static void listaHistorial(ArrayList<Socio> socios) {
 //        Scanner sc = new Scanner(System.in);
@@ -223,41 +188,5 @@ public class GestionSocioVideoClub {
 //        }
 //    }
 //
-//    public static void listaAlquilerActual(ArrayList<Socio> socios) {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Introduce el NIF del socio que quieras consultar");
-//        String nif = sc.nextLine();
-//        if (buscarSocio(nif, socios) != -1) {
-//            try {
-//                System.out.println("Alquileres actuales del socio");
-//                System.out.println("-----------------------------------------");
-//
-//                for (int i = 0; i < socios.get(buscarSocio(nif, socios)).getAlquilerActual().size(); i++) {
-//                    System.out.println(socios.get(buscarSocio(nif, socios)).getAlquilerActual().get(i));
-//                }
-//            } catch (Exception e) {
-//                System.out.println("No hay alquileres actuales");
-//            }
-//        } else {
-//            System.out.println("No se ha encontrado el socio");
-//        }
-//    }
-//
-//    public static void listaRecargosPendientes(ArrayList<Socio> socios) {
-//        System.out.println("Socios con recargos pendientes");
-//        System.out.println("-----------------------------------------");
-//        for (Socio s : socios) {
-//            if (s.getRecargo() > 0) {
-//                System.out.println(s.getNombre() + "\nRecargo pendiente: " + s.getRecargo() + "\n---------------");
-//            }
-//        }
-//    }
-//
-//    public static int tipoMultimedia(Multimedia m) {
-//        if (m instanceof Pelicula) {
-//            return 0;
-//        } else if (m instanceof Videojuego) {
-//            return 1;
-//        }
-//        return -1;
+
 
