@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Funcionalidad de VideoJuego, que cuando dejas un campo vacío aparezca un mensaje">
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Form Devoluciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Multimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Multimedia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Videojuego.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Multimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Multimedia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Videojuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Videojuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683813402270</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Form Devoluciones">
+      <created>1684503095669</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684503095669</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,6 +275,7 @@
     <MESSAGE value="Eliminar los setVisible de los constructores de los form" />
     <MESSAGE value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
     <MESSAGE value="Funcionalidad de VideoJuego, que cuando dejas un campo vacío aparezca un mensaje" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funcionalidad de VideoJuego, que cuando dejas un campo vacío aparezca un mensaje" />
+    <MESSAGE value="Form Devoluciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Form Devoluciones" />
   </component>
 </project>
