@@ -65,7 +65,7 @@ public class FormAltaSocio extends JFrame {
 
                 }
                 else {
-                    socio = new Socio(nifSocio, nombreSocio, poblacionSocio);
+                    //socio = new Socio(nifSocio, nombreSocio, poblacionSocio);
                     GestionSocioVideoClub.socios.add(socio);
                     JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo Socio");
                     txtDatosSocio.setText(socio.toString());
