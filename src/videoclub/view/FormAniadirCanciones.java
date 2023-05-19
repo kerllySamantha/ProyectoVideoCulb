@@ -31,7 +31,7 @@ public class FormAniadirCanciones extends JFrame{
         btnAniadirCancion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String tituloCancion = "";
+                String tituloCancion = "", autor = null;
                 String duracion = "";
                 String patron = "^(3[0]|[12]?\\d):([0-5]\\d)$";
 
@@ -46,7 +46,7 @@ public class FormAniadirCanciones extends JFrame{
                     } else {
                         tituloCancion = txtTituloCancion.getText().toUpperCase();
                         duracion = txtDuracionCancion.getText();
-                        canciones.add(new Cancion(tituloCancion, duracion));
+                        canciones.add(new Cancion(tituloCancion, duracion,autor));
                         txtListaCanciones.setText(mostrarCanciones());
                         limpiarCampos();
 
