@@ -1,6 +1,7 @@
 package view;
 
 import controller.*;
+import model.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -8,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class FormListadosMultimedia extends JFrame {
     private JPanel panel;
-    private JTextArea txtListaMultimedia;
+    public static JTextArea txtListaMultimedia;
     private JTextField txtNif;
     private JButton btnListaMult, btnListaPeliculas, btnListaVideojuego, btnListaDisco, btnListaAlquileres, btnListaRecargos, btnBuscarNif;
 
@@ -19,6 +20,7 @@ public class FormListadosMultimedia extends JFrame {
         this.setSize(450, 500);
         this.setResizable(false);
         super.setJMenuBar(MenuBar.crearMenuBar());
+        MenuBar.gestionDeVentanas();
 
         panel = new JPanel();
         panel.setBounds(0, 0, 450, 500);
@@ -58,14 +60,19 @@ public class FormListadosMultimedia extends JFrame {
         panel.add(btnListaRecargos);
 
         MenuBar.listMultimedia.addActionListener(e ->
-                txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia()));
+                {    //txtListaMultimedia.setText(String.valueOf(GestionMultimedia.ordenarMultimedia())));
+                    txtListaMultimedia.setText(String.valueOf((GestionBasesDatos.aniadirCancionArrayDisco())));
+                }
+        );
 
-        btnListaPeliculas.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
-            }
-        });
+
+        btnListaPeliculas.addActionListener(e ->
+                {
+                   // txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
+                    //txtListaMultimedia.setText((GestionMultimedia.multimedias).toString());
+                    txtListaMultimedia.setText(String.valueOf((GestionBasesDatos.aniadirCancionArrayDisco()).toString()));
+                }
+        );
 
         btnListaVideojuego.addActionListener(new ActionListener() {
             @Override

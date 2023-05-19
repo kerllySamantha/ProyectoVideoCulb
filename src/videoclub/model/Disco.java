@@ -5,9 +5,11 @@ import java.util.ArrayList;
 public class Disco extends Multimedia {
     private ArrayList<Cancion> canciones;
 
+
     public Disco(String titulo, String artista, Formato formato, int anio) {
         super(titulo, artista, formato, anio);
         setCanciones(canciones);
+
     }
 
     public ArrayList<Cancion> getCanciones() {
@@ -18,9 +20,13 @@ public class Disco extends Multimedia {
         this.canciones = canciones;
     }
 
-//    public void agregarCancion(Cancion cancion) {
-//        this.canciones.add(cancion);
-//    }
+    public void agregarCancion(Cancion cancion) {
+        if(cancion.getAutor().equalsIgnoreCase(super.getAutor())){
+            this.canciones.add(cancion);
+        }else {
+            throw new RuntimeException("No se puede añadir a ese disco");
+        }
+    }
 
     public String duracionDisco() {
         int duracionSeg = 0;

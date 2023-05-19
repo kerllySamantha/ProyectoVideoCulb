@@ -10,7 +10,7 @@ public class GestionMultimedia {
 
     public static String ordenarMultimedia() {
 
-        String listaMultimedia = "";
+        StringBuilder listaMultimedia = new StringBuilder();
         GestionMultimedia.multimedias.sort(new Comparator<Multimedia>() {
             public int compare(Multimedia p1, Multimedia p2) {
                 return p1.getTitulo().compareTo(p2.getTitulo());
@@ -18,9 +18,13 @@ public class GestionMultimedia {
         });
 
         for (Multimedia multimedia1 : multimedias) {
-            listaMultimedia += "Título: " + multimedia1.getTitulo() + "\nAño: " + multimedia1.getAnio() + "\nTipo: " + multimedia1.getClass().getName().substring(6);
+            listaMultimedia.append("Título: ")
+                    .append(multimedia1.getTitulo()).append("\nAño: ")
+                    .append(multimedia1.getAnio()).append("\nTipo: ")
+                    .append(multimedia1.getClass().getName().substring(6)).append("\n");
+            //listaMultimedia.append(multimedia1.toString());
         }
-        return listaMultimedia;
+        return listaMultimedia.toString();
     }
 
     public static String ordenarPeliculas() {
@@ -66,7 +70,7 @@ public class GestionMultimedia {
     }
 
     public static String ordenarDiscos() {
-        String listaDiscos = "";
+        StringBuilder listaDiscos = new StringBuilder();
         ArrayList<Disco> discos = new ArrayList<>();
 
         for (Multimedia m : multimedias) {
@@ -80,12 +84,12 @@ public class GestionMultimedia {
                     return Integer.compare(c1.getDuracionCancionSeg(), (c2.getDuracionCancionSeg()));
                 }
             });
-            listaDiscos += "Nombre del disco: " + d.getTitulo() + "\nCanciones: \n";
+            listaDiscos.append("Nombre del disco: ").append(d.getTitulo()).append("\nCanciones: \n");
 
             for (Cancion c: d.getCanciones()) {
-                listaDiscos += "\t" + c.getTituloCancion() + "\n";
+                listaDiscos.append("\t").append(c.getTituloCancion()).append("\n");
             }
         }
-        return listaDiscos;
+        return listaDiscos.toString();
     }
 }
