@@ -12,7 +12,6 @@ public class Disco extends Multimedia {
     public Disco(String titulo, String artista, Formato formato, int anio) {
         super(titulo, artista, formato, anio);
         setCanciones(new ArrayList<>());
-        //setDuracion(duracionDisco());
     }
 
     public ArrayList<Cancion> getCanciones() {

@@ -5,7 +5,7 @@ import java.time.Period;
 import java.util.ArrayList;
 
 public class Socio {
-    //public static recargo por defecto;
+    public static final int RECARGO_POR_DEFECTO = 0;
     private String nif;
     private String nombre;
     private LocalDate fechaNac;
@@ -14,23 +14,12 @@ public class Socio {
     private ArrayList <Multimedia> historial;
     private ArrayList <Multimedia> alquilerActual;
 
-//    public Socio() {
-//        nif = "";
-//        nombre = "";
-//        fechaNac = ;
-//        poblacion = "";
-//        recargo = 0;
-//        historial = new ArrayList<>();
-//        alquilerActual = new ArrayList<>();
-//    }
-
     public Socio(String nif, String nombre, LocalDate fechaNac, String poblacion) {
-        //this();
         setNif(nif);
         setNombre(nombre);
         setFechaNac(fechaNac);
         setPoblacion(poblacion);
-        recargo = 0;
+        recargo = RECARGO_POR_DEFECTO;
         historial = new ArrayList<>();
         alquilerActual = new ArrayList<>();
     }
@@ -84,27 +73,9 @@ public class Socio {
         return alquilerActual;
     }
 
-    public static int buscarSocio(String nif, ArrayList<Socio> socios) {
-        int index = 0;
-        for (int i = 0; i < socios.size(); i++) {
-            if (socios.get(i).getNif().equalsIgnoreCase(nif)) {
-                index = i;
-                return index;
-            }
-        }
-        return -1;
-    }
-
-    public static boolean comprobarNif(ArrayList<Socio> socios, String nif) {
-        for (Socio socio : socios) {
-            if (nif.equalsIgnoreCase(socio.getNif())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean calcularEdad(LocalDate fechaNac) {
+    public static boolean calcularEdad(String fecha) {
+        String [] partesFecha = fecha.split("/");
+        LocalDate fechaNac = LocalDate.of(Integer.parseInt(partesFecha[2]), Integer.parseInt(partesFecha[1]), Integer.parseInt(partesFecha[0]));
         LocalDate fechaActual = LocalDate.now();
         Period period = Period.between(fechaNac, fechaActual);
         int edad = period.getYears();
@@ -123,7 +94,3 @@ public class Socio {
                 "\nCargo: " + getRecargo();
     }
 }
-
-/*
-        LocalDate fechaNacimiento = LocalDate.of(1990, 5, 10);
- */
