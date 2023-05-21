@@ -1,6 +1,8 @@
 package view;
 
 import controller.*;
+import model.Disco;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -37,6 +39,10 @@ public class FormPrincipalVideoClub extends JFrame {
 
         GestionBasesDatos.aniadiscoArrayMultimedia();
         GestionBasesDatos.aniadirSocios();
+
+
+        Disco.agregarCancion(GestionMultimedia.multimedias, GestionBasesDatos.aniadirCancionArrayDisco());
+
 
 //        btnBajas = new JButton("Bajas");
 //        btnBajas.setMinimumSize(new Dimension(20, 20));

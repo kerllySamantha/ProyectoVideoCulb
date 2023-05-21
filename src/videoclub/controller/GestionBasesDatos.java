@@ -44,8 +44,8 @@ public class GestionBasesDatos {
                     duracion = rs.getInt("duracion");
                     cantidad = rs.getInt("cantidad");
 
-                    GestionMultimedia.multimedias.add(disco = new Disco(titulo, autor, formato, anio ));
-                    disco.agregarCancion(aniadirCancionArrayDisco());
+                    GestionMultimedia.multimedias.add(new Disco(titulo, autor, formato, anio));
+                    //disco.agregarCancion(aniadirCancionArrayDisco());
                 }
                 getConexion().close();
             } catch (Exception e2) {
@@ -102,7 +102,8 @@ public class GestionBasesDatos {
         }
     }
 
-    public static Cancion aniadirCancionArrayDisco() {
+    public static ArrayList<Cancion> aniadirCancionArrayDisco() {
+        ArrayList<Cancion> canciones = new ArrayList<>();
         Cancion cancion = null;
         String tituloDisco, autor = null, nombre = null;
         int duracion;
@@ -118,7 +119,8 @@ public class GestionBasesDatos {
                     autor = rs.getString("autor");
                     duracion = rs.getInt("duracion");
                     newDuracion = String.valueOf(duracion);
-
+                    cancion = new Cancion(nombre, newDuracion, autor);
+                    canciones.add(cancion);
                 }
                 getConexion().close();
             } catch (Exception e2) {
@@ -127,8 +129,9 @@ public class GestionBasesDatos {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return new Cancion(nombre, newDuracion,autor);
+        return canciones;
     }
+
 
 //    public static ArrayList<Multimedia> aniaadirDiscoAlArrayMultimedias() {
 //        ArrayList<Multimedia> monitimedia = new ArrayList<>();

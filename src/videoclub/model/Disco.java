@@ -1,15 +1,18 @@
 package model;
 
+import controller.GestionMultimedia;
+
 import java.util.ArrayList;
 
 public class Disco extends Multimedia {
+    private String duracion;
     private ArrayList<Cancion> canciones;
 
 
     public Disco(String titulo, String artista, Formato formato, int anio) {
         super(titulo, artista, formato, anio);
-        setCanciones(canciones);
-
+        setCanciones(new ArrayList<>());
+        //setDuracion(duracionDisco());
     }
 
     public ArrayList<Cancion> getCanciones() {
@@ -20,12 +23,25 @@ public class Disco extends Multimedia {
         this.canciones = canciones;
     }
 
-    public void agregarCancion(Cancion cancion) {
-        if(cancion.getAutor().equalsIgnoreCase(super.getAutor())){
-            this.canciones.add(cancion);
-        }else {
-            throw new RuntimeException("No se puede añadir a ese disco");
+    public static void agregarCancion(ArrayList<Multimedia> multimedias, ArrayList<Cancion>canciones) {
+        for (Cancion cancion: canciones) {
+            for (Multimedia m : multimedias) {
+                if (m instanceof Disco) {
+                    if(m.getAutor().equalsIgnoreCase(cancion.getAutor())){
+                        ((Disco) m).getCanciones().add(cancion);
+                        ((Disco) m).setDuracion(((Disco) m).duracionDisco());
+                    }
+                }
+            }
         }
+    }
+
+    public String getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(String duracion) {
+        this.duracion = duracion;
     }
 
     public String duracionDisco() {
@@ -44,7 +60,7 @@ public class Disco extends Multimedia {
             listaCaciones.append("\t").append(cancion.getTituloCancion()).append(" - ").append(cancion.getDuracionMinSeg()).append("\n");
         }
         return super.toString() +
-                "\nDuración: " + duracionDisco() +
+                "\nDuración: " + getDuracion() +
                 "\nAutor: " + getAutor()+
                 "\nCanciones: \n\t" + listaCaciones + "\n";
     }

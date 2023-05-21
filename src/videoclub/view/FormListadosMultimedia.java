@@ -60,8 +60,9 @@ public class FormListadosMultimedia extends JFrame {
         panel.add(btnListaRecargos);
 
         MenuBar.listMultimedia.addActionListener(e ->
-                {    //txtListaMultimedia.setText(String.valueOf(GestionMultimedia.ordenarMultimedia())));
-                    txtListaMultimedia.setText(String.valueOf((GestionBasesDatos.aniadirCancionArrayDisco())));
+                {    txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
+                    //txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
+                    //txtListaMultimedia.setText(String.valueOf((GestionBasesDatos.aniadirCancionArrayDisco())));
                 }
         );
 
@@ -70,7 +71,7 @@ public class FormListadosMultimedia extends JFrame {
                 {
                    // txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
                     //txtListaMultimedia.setText((GestionMultimedia.multimedias).toString());
-                    txtListaMultimedia.setText(String.valueOf((GestionBasesDatos.aniadirCancionArrayDisco()).toString()));
+                    //txtListaMultimedia.setText(String.valueOf((GestionBasesDatos.aniadirCancionArrayDisco()).toString()));
                 }
         );
 
@@ -95,7 +96,9 @@ public class FormListadosMultimedia extends JFrame {
             }
         });
 
-        btnListaRecargos.addActionListener(e -> txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos()));
+        btnListaRecargos.addActionListener(e -> {
+            txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos());
+        });
     }
 
 //    public static void main(String[] args) {

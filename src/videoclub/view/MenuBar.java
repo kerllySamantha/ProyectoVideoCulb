@@ -136,8 +136,8 @@ public class MenuBar {
             }
         });
 
-        listMultimedia.addActionListener(e ->
-                FormListadosMultimedia.txtListaMultimedia.setText(String.valueOf(GestionMultimedia.ordenarMultimedia())));
+//        listMultimedia.addActionListener(e ->
+//                FormListadosMultimedia.txtListaMultimedia.setText(String.valueOf(GestionMultimedia.ordenarMultimedia())));
 
         exit.addActionListener(e->{
             System.exit(0);
