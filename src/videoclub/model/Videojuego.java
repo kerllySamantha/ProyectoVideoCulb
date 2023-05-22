@@ -21,9 +21,10 @@ public class Videojuego extends Multimedia {
     public Plataforma getPlataforma() {
         return plataforma;
     }
-    public String comprobarPlataforma(String plataforma) {
+
+    public String comprobarPlataforma(Plataforma plataforma) {
         for (int i = 0; i < plataformasDisponibles.length; i++) {
-            if (plataformasDisponibles[i].equalsIgnoreCase(plataforma)) {
+            if (plataformasDisponibles[i].equalsIgnoreCase(String.valueOf(plataforma))) {
                 return plataformasDisponibles[i];
             }
         }
