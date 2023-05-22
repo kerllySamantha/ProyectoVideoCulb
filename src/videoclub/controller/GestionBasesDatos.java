@@ -30,9 +30,9 @@ public class GestionBasesDatos {
     }
 
     public static void aniadiscoArrayMultimedia() {
-        String titulo, autor;
+        String titulo, autor,  duracion;
         Formato formato;
-        int anio, duracion, cantidad;
+        int anio, cantidad;
         Disco disco;
         try {
             getConexion();
@@ -44,7 +44,7 @@ public class GestionBasesDatos {
                     autor = rs.getString("autor");
                     formato = Formato.valueOf(rs.getString("formato"));
                     anio = rs.getInt("anio");
-                    duracion = rs.getInt("duracion");
+                    duracion = rs.getString("duracion");
                     cantidad = rs.getInt("cantidad");
 
                     GestionMultimedia.multimedias.add(new Disco(titulo, autor, formato, anio));

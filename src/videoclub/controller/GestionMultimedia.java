@@ -13,6 +13,7 @@ public class GestionMultimedia {
         StringBuilder listaMultimedia = new StringBuilder();
         GestionMultimedia.multimedias.sort(new Comparator<Multimedia>() {
             public int compare(Multimedia p1, Multimedia p2) {
+
                 return p1.getTitulo().compareTo(p2.getTitulo());
             }
         });

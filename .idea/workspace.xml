@@ -7,7 +7,10 @@
     <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="G">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionMultimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionMultimedia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +26,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/ramaPrincipal" />
+    <option name="BRANCH" value="kerlly" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -34,7 +37,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
+        <entry key="$PROJECT_DIR$" value="kerlly" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,12 +64,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1684763728" />
+                    <option name="branchName" value="ramaPrincipal" />
+                    <option name="lastUsedInstant" value="1684770473" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="ramaPrincipal" />
-                    <option name="lastUsedInstant" value="1684763662" />
+                    <option name="branchName" value="kerlly" />
+                    <option name="lastUsedInstant" value="1684770412" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
