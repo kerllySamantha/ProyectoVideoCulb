@@ -38,9 +38,7 @@ public class FormVideoJuego extends JFrame {
     private int anioVideoJuego;
     private boolean validar;
     Videojuego juego, plataformaVideoJuego;
-    Formato formato;
-    //Plataforma plataformaVideoJuego;
-    Multimedia formatoVideojuego;
+
 
     public FormVideoJuego() {
         super.setContentPane(panelPrincipalVideoJuego);
@@ -69,7 +67,7 @@ public class FormVideoJuego extends JFrame {
                         visualizarDatos.setText("");
 
                     } else {
-                        juego = new Videojuego(tituloVideoJuego,autorVideoJuego,Formato.BLURAY,anioVideoJuego,Plataforma.PC);
+                        juego = new Videojuego(tituloVideoJuego,autorVideoJuego,Formato.BLUERAY,anioVideoJuego,Plataforma.PC);
                         visualizarDatos.setText(juego.toString());
                     }
 
@@ -119,7 +117,7 @@ public class FormVideoJuego extends JFrame {
                 formato = Formato.DVD;
                 datos = false;
             } else if (BLURAYRadioButton.isSelected()) {
-                formato = Formato.BLURAY;
+                formato = Formato.BLUERAY;
                 datos = false;
             } else if (ARCHIVORadioButton.isSelected()) {
                 formato = Formato.ARCHIVO;

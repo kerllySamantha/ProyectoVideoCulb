@@ -34,7 +34,7 @@ public class FormDevoluciones extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 socioNIF = txtFieldNifSocio.getText().toUpperCase();
                 existeNif = GestionSocioVideoClub.comprobarNif(socios,socioNIF);
-                if(!existeNif) {
+                if(existeNif) {
                     JOptionPane.showMessageDialog(null,"No existe el NIF introducido");
                 } else {
                     listaDevolver.setListData(lista.devolverMult(multimedia,socios));

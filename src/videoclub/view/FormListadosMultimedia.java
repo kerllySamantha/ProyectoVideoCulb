@@ -18,7 +18,7 @@ public class FormListadosMultimedia extends JFrame {
         this.setTitle("");
         this.setDefaultCloseOperation(HIDE_ON_CLOSE);
         this.setSize(450, 500);
-        this.setResizable(false);
+        this.setResizable(true);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
 
