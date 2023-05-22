@@ -1,14 +1,17 @@
 package view;
 
 import controller.GestionMultimedia;
+import controller.GestionSocioVideoClub;
 import model.Disco;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MenuBar {
     public static JMenuBar menuVideoClub;
     public static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
-    public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
+    public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listaPelisOrden, listaVideojAnio,
             listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, devolver, exit;
     public static FormAltaSocio formAltaSocio = new FormAltaSocio();
     public static FormAltaDisco formAltaDisco = new FormAltaDisco();
@@ -51,15 +54,15 @@ public class MenuBar {
         devoluciones.add(devolver);
 
         listMultimedia = new JMenuItem("Multimedias");
-        listPelisOrden = new JMenuItem("Peliculas en Orden");
-        listVideJAnio = new JMenuItem("Videojuego por año");
+        listaPelisOrden = new JMenuItem("Peliculas en Orden");
+        listaVideojAnio = new JMenuItem("Videojuego por año");
         listHistorialAlqSocioFecha = new JMenuItem("Historial de alquiler del Socio por fecha");
         listActualSocio = new JMenuItem("Actual del Socio");
         listRecargosPendSocio = new JMenuItem("Recargos pendientes");
 
         listados.add(listMultimedia);
-        listados.add(listPelisOrden);
-        listados.add(listVideJAnio);
+        listados.add(listaPelisOrden);
+        listados.add(listaVideojAnio);
         listados.add(listHistorialAlqSocioFecha);
         listados.add(listActualSocio);
         listados.add(listRecargosPendSocio);
@@ -136,8 +139,24 @@ public class MenuBar {
             }
         });
 
-//        listMultimedia.addActionListener(e ->
-//                FormListadosMultimedia.txtListaMultimedia.setText(String.valueOf(GestionMultimedia.ordenarMultimedia())));
+        listMultimedia.addActionListener(e ->
+                FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia()));
+
+        listaPelisOrden.addActionListener(e -> {
+            FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
+        });
+
+        listActualSocio.addActionListener(e -> {
+            //FormListadosMultimedia.txtListaMultimedia.setText(GestionSocioVideoClub.listaAlquilerActual());
+        });
+
+        listRecargosPendSocio.addActionListener( e -> {
+            FormListadosMultimedia.txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos());
+        });
+
+        listaVideojAnio.addActionListener(e -> {
+            FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.listaVideojuegos());
+        });
 
         exit.addActionListener(e->{
             System.exit(0);

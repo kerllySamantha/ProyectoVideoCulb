@@ -1,6 +1,7 @@
 package view;
 
 import model.Formato;
+import model.Multimedia;
 import model.Plataforma;
 import model.Videojuego;
 
@@ -33,9 +34,14 @@ public class FormVideoJuego extends JFrame {
     private JRadioButton nintendoRadioButton;
     private JRadioButton PCRadioButton;
     private JTextArea visualizarDatos;
-    private String tituloVideoJuego,autor;
+    private String tituloVideoJuego,autorVideoJuego;
+    private int anioVideoJuego;
     private boolean validar;
-    Videojuego juego;
+    Videojuego juego, plataformaVideoJuego;
+    Formato formato;
+    //Plataforma plataformaVideoJuego;
+    Multimedia formatoVideojuego;
+
     public FormVideoJuego() {
         super.setContentPane(panelPrincipalVideoJuego);
         super.setLocationRelativeTo(null);
@@ -46,25 +52,30 @@ public class FormVideoJuego extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try{
                     tituloVideoJuego = textTitulo.getText().toUpperCase();
-                    autor = textAutor.getText().toUpperCase();
+                    autorVideoJuego = textAutor.getText().toUpperCase();
+                    anioVideoJuego = Integer.parseInt(Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
 
                     if(validar){
                         visualizarDatos.setText(" ");
                         JOptionPane.showMessageDialog(null,"Prueba");
-                    } else if ((tituloVideoJuego.equalsIgnoreCase("")) ){
+                    } else if ((tituloVideoJuego.equalsIgnoreCase("")) && (autorVideoJuego.equalsIgnoreCase(""))) {
+                        JOptionPane.showMessageDialog(null,"El campo titulo y el campo autor están vacíos");
+                        visualizarDatos.setText("");
+                    } else if (tituloVideoJuego.equalsIgnoreCase("")){
                         JOptionPane.showMessageDialog(null,"El campo título está vacío");
-                    } else if ((autor.equalsIgnoreCase("")) ) {
+                        visualizarDatos.setText("");
+                    } else if (autorVideoJuego.equalsIgnoreCase("")) {
                         JOptionPane.showMessageDialog(null,"El campo autor está vacío");
+                        visualizarDatos.setText("");
+
+                    } else {
+                        juego = new Videojuego(tituloVideoJuego,autorVideoJuego,Formato.BLURAY,anioVideoJuego,Plataforma.PC);
+                        visualizarDatos.setText(juego.toString());
                     }
-//                    else {
-//                        Videojuego videojuego = new Videojuego(tituloVideoJuego,autor);
-//                        juego.add(videojuego);
-//                        visualizarDatos.setText(Videojuego.toString());
-//                    }
 
                     textTitulo.setText(" ");
                     textAutor.setText(" ");
-                }catch (Exception e2){
+                } catch (Exception e2){
                     e2.printStackTrace();
                 }
             }
@@ -103,12 +114,16 @@ public class FormVideoJuego extends JFrame {
 
             if (CDRadioButton.isSelected()) {
                 formato = Formato.CD;
+
             } else if (DVDRadioButton.isSelected()) {
                 formato = Formato.DVD;
+                datos = false;
             } else if (BLURAYRadioButton.isSelected()) {
                 formato = Formato.BLURAY;
+                datos = false;
             } else if (ARCHIVORadioButton.isSelected()) {
                 formato = Formato.ARCHIVO;
+                datos = false;
             }
 
             if(playRadioButton.isSelected()){

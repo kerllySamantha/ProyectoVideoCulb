@@ -59,10 +59,9 @@ public class FormListadosMultimedia extends JFrame {
         btnListaRecargos = new JButton("");
         panel.add(btnListaRecargos);
 
-        MenuBar.listMultimedia.addActionListener(e ->
-                {    txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
-                    //txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
-                    //txtListaMultimedia.setText(String.valueOf((GestionBasesDatos.aniadirCancionArrayDisco())));
+        btnListaMult.addActionListener(e ->
+                {
+
                 }
         );
 

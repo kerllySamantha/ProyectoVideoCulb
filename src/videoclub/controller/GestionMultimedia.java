@@ -84,11 +84,12 @@ public class GestionMultimedia {
                     return Integer.compare(c1.getDuracionCancionSeg(), (c2.getDuracionCancionSeg()));
                 }
             });
-            listaDiscos.append("Nombre del disco: ").append(d.getTitulo()).append("\nCanciones: \n");
+            listaDiscos.append("Nombre del disco: ").append(d.getTitulo()).append("\nAutor: ").append(d.getAutor()).append("\nCanciones: \n");
 
             for (Cancion c: d.getCanciones()) {
                 listaDiscos.append("\t").append(c.getTituloCancion()).append("\n");
             }
+            listaDiscos.append("\n");
         }
         return listaDiscos.toString();
     }
