@@ -55,7 +55,7 @@ public abstract class Multimedia {
     public String toString() {
         return "Título: " + getTitulo() +
                 "\nAutor: " + getAutor() +
-                "\nFromato: " + getFormato() +
+                "\nFormato: " + getFormato() +
                 "\nAño: " + getAnio();
     }
 
