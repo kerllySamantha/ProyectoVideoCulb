@@ -30,7 +30,7 @@ public class GestionBasesDatos {
     }
 
     public static void aniadiscoArrayMultimedia() {
-        String titulo, autor,  duracion;
+        String titulo, autor, duracion;
         Formato formato;
         int anio, cantidad;
         Disco disco;
@@ -58,6 +58,121 @@ public class GestionBasesDatos {
             e.printStackTrace();
         }
     }
+
+
+    public static void aniadirSocios() {
+        String nif, nombre, poblacion;
+        LocalDate fecha_nac;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  SOCIO");
+                while (rs.next()) {
+                    nif = rs.getString("nif");
+                    nombre = rs.getString("nombre");
+                    fecha_nac = LocalDate.parse(rs.getString("fecha_nac"));
+                    poblacion = rs.getString("poblacion");
+                    GestionSocioVideoClub.socios.add(new Socio(nif, nombre, fecha_nac, poblacion));
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static ArrayList<Cancion> aniadirCancionArrayDisco() {
+        ArrayList<Cancion> canciones = new ArrayList<>();
+        Cancion cancion  ;
+        String autor, nombre ;
+        int duracion;
+        String newDuracion ;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  CANCIONES");
+                while (rs.next()) {
+                    nombre = rs.getString("nombre");
+                    autor = rs.getString("autor");
+                    duracion = rs.getInt("duracion");
+                    newDuracion = String.valueOf(duracion);
+                    cancion = new Cancion(nombre, newDuracion, autor);
+                    canciones.add(cancion);
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return canciones;
+    }
+
+    public static void aniadirVideojuego() {
+        String titulo, autor;
+        Plataforma plataforma;
+        Formato formato;
+        int anio, cantidad;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  VIDEOJUEGO");
+                while (rs.next()) {
+
+                    titulo = rs.getString("titulo");
+                    autor = rs.getString("autor");
+                    formato = Formato.valueOf(rs.getString("formato"));
+                    anio = rs.getInt("anio");
+                    plataforma = Plataforma.valueOf(rs.getString("plataforma"));
+                    cantidad = rs.getInt("cantidad");
+                    GestionMultimedia.multimedias.add(new Videojuego(titulo, autor, formato, anio, plataforma));
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void aniadirPelicula() {
+        String titulo, autor, genero, duracion,actorPrincipal, actrizPrincipal;
+        Formato formato;
+        int anio, cantidad;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  PELICULA");
+                while (rs.next()) {
+
+                    titulo = rs.getString("titulo");
+                    autor = rs.getString("autor");
+                    formato = Formato.valueOf(rs.getString("formato"));
+                    anio = rs.getInt("anio");
+                    genero = rs.getString("genero");
+                    duracion = rs.getString("duracion");
+                    actorPrincipal = rs.getString("actorprincipal");
+                    actrizPrincipal = rs.getString("actrizprincipal");
+                    cantidad = rs.getInt("cantidad");
+                    GestionMultimedia.multimedias.add(new Pelicula(titulo, autor, formato, anio, duracion, actorPrincipal, actrizPrincipal, genero));
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public static void updateDisco(String titulo, String autor, Formato formato, int anio, String duracion) {
         try {
@@ -88,7 +203,6 @@ public class GestionBasesDatos {
                 Statement st = conex.createStatement();
                 st.executeUpdate("insert into disco (titulo, autor, formato, anio, duracion) values "
                         + "('" + titulo + "', '" + autor + "', '" + formato.toString() + "', " + anio + ", '" + duracion + "')");
-                //BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 
                 Objects.requireNonNull(getConexion()).close();
             } catch (Exception e2) {
@@ -99,58 +213,21 @@ public class GestionBasesDatos {
         }
     }
 
-    public static void aniadirSocios() {
-        String nif, nombre, poblacion;
-        LocalDate fecha_nac;
+    public static void insertPelicula(String titulo, String autor, Formato formato,String genero, int anio, String duracion, String actorPrincipal, String atrizPrincipal) {
         try {
             getConexion();
             try {
-                Statement st = Objects.requireNonNull(getConexion()).createStatement();
-                ResultSet rs = st.executeQuery("SELECT * FROM  SOCIO");
-                while (rs.next()) {
-                    nif = rs.getString("nif");
-                    nombre = rs.getString("nombre");
-                    fecha_nac = LocalDate.parse(rs.getString("fecha_nac"));
-                    poblacion = rs.getString("poblacion");
-                    GestionSocioVideoClub.socios.add(new Socio(nif, nombre, fecha_nac, poblacion));
-                }
-                getConexion().close();
-            } catch (Exception e2) {
-                e2.printStackTrace();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+                Statement st = conex.createStatement();
+                st.executeUpdate("insert into pelicula (titulo, autor, formato, genero,  anio, duracion, actorprincipal, actrinzprincipal) values "
+                        + "('" + titulo + "', '" + autor + "', '" + formato.toString() + "', " + anio + ", '" + duracion + "')");
 
-    public static ArrayList<Cancion> aniadirCancionArrayDisco() {
-        ArrayList<Cancion> canciones = new ArrayList<>();
-        Cancion cancion = null;
-        String tituloDisco, autor = null, nombre = null;
-        int duracion;
-        String newDuracion = null;
-        try {
-            getConexion();
-            try {
-                Statement st = Objects.requireNonNull(getConexion()).createStatement();
-                ResultSet rs = st.executeQuery("SELECT * FROM  CANCIONES");
-                while (rs.next()) {
-                    tituloDisco = rs.getString("tituloDisco");
-                    nombre = rs.getString("nombre");
-                    autor = rs.getString("autor");
-                    duracion = rs.getInt("duracion");
-                    newDuracion = String.valueOf(duracion);
-                    cancion = new Cancion(nombre, newDuracion, autor);
-                    canciones.add(cancion);
-                }
-                getConexion().close();
+                Objects.requireNonNull(getConexion()).close();
             } catch (Exception e2) {
                 e2.printStackTrace();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return canciones;
     }
 }
 

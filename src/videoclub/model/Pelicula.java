@@ -3,23 +3,22 @@ package model;
 import java.util.ArrayList;
 
 public class Pelicula extends Multimedia {
-    private int duracionPelicula;
-    private String actorPrincipal;
-    private String actrizPrincipal;
+    private String duracionPelicula, actorPrincipal, actrizPrincipal, genero;
 
 
-    public Pelicula (String titulo, String autor, Formato formato, int anio, int duracion, String actriz, String actor) {
+
+    public Pelicula (String titulo, String autor, Formato formato, int anio, String duracion, String actriz, String actor, String genero) {
         super(titulo, autor, formato, anio);
         setDuracionPelicula(duracion);
         setActorPrincipal(actor);
         setActrizPrincipal(actriz);
     }
 
-    public int getDuracionPelicula() {
+    public String getDuracionPelicula() {
         return duracionPelicula;
     }
 
-    public void setDuracionPelicula(int duracion) {
+    public void setDuracionPelicula(String duracion) {
         this.duracionPelicula = duracion;
     }
 
@@ -39,6 +38,14 @@ public class Pelicula extends Multimedia {
         this.actrizPrincipal = actrizPrincipal;
     }
 
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
     public static boolean buscarPelicula(ArrayList<Multimedia> multimedia, String titulo) {
         for (Multimedia pelicula : multimedia) {
             if (titulo.equalsIgnoreCase(pelicula.getTitulo())) {
@@ -53,6 +60,7 @@ public class Pelicula extends Multimedia {
         return super.toString() +
                 "\nDuración: " + getDuracionPelicula() +
                 "\nActor principal: " + getActorPrincipal() +
-                "\nActriz principal: " + getActrizPrincipal();
+                "\nActriz principal: " + getActrizPrincipal()+
+                "\nGenero: " + getGenero();
     }
 }
