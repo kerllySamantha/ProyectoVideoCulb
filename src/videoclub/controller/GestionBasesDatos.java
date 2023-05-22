@@ -11,7 +11,7 @@ public class GestionBasesDatos {
     private static final String DB = "videoclub";
     private static final String DRIVER = "org.postgresql.Driver";
     private static final String USER = "postgres";
-    private static final String PASS = "1202";
+    private static final String PASS = "130420";
     static Connection conex = null;
 
     public static Connection getConexion() {
@@ -30,6 +30,7 @@ public class GestionBasesDatos {
         String titulo, autor;
         Formato formato;
         int anio, duracion, cantidad;
+        Disco disco;
         try {
             getConexion();
             try {
@@ -42,7 +43,9 @@ public class GestionBasesDatos {
                     anio = rs.getInt("anio");
                     duracion = rs.getInt("duracion");
                     cantidad = rs.getInt("cantidad");
+
                     GestionMultimedia.multimedias.add(new Disco(titulo, autor, formato, anio));
+                    //disco.agregarCancion(aniadirCancionArrayDisco());
                 }
                 getConexion().close();
             } catch (Exception e2) {
@@ -53,26 +56,27 @@ public class GestionBasesDatos {
         }
     }
 
-    public static void updateDisco(String titulo, String autor, Formato formato, int anio, int  duracion, int cantidad) {
-        try {
-            Disco disco = new model.Disco( titulo, autor, formato,  anio);
-            getConexion();
-            try {
-                Statement st = conex.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-                String origin ="update monitor set ";
-                st.executeUpdate(origin + "titulo = '" + titulo+ "' where autor = '" + disco.getAutor() + "'");
-                st.executeUpdate(origin + "autor = '" + autor + "' where autor = '" + disco.getAutor() + "'");
-                st.executeUpdate(origin + "formato = '" + formato+ "' where autor = '" + autor+ "'");
-                st.executeUpdate(origin + "anio = '" + anio+ "' where autor = '" + anio + "'");
-
-                Objects.requireNonNull(getConexion()).close();
-            } catch (Exception e2) {
-                e2.printStackTrace();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void updateDisco(String titulo, String autor, Formato formato, int anio, int duracion, int cantidad) {
+//        try {
+//            Disco disco = new model.Disco(titulo, autor, formato, anio
+//                    );
+//            getConexion();
+//            try {
+//                Statement st = conex.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+//                String origin = "update monitor set ";
+//                st.executeUpdate(origin + "titulo = '" + titulo + "' where autor = '" + disco.getAutor() + "'");
+//                st.executeUpdate(origin + "autor = '" + autor + "' where autor = '" + disco.getAutor() + "'");
+//                st.executeUpdate(origin + "formato = '" + formato + "' where autor = '" + autor + "'");
+//                st.executeUpdate(origin + "anio = '" + anio + "' where autor = '" + anio + "'");
+//
+//                Objects.requireNonNull(getConexion()).close();
+//            } catch (Exception e2) {
+//                e2.printStackTrace();
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static void aniadirSocios() {
         String nif, nombre, poblacion;
@@ -86,7 +90,7 @@ public class GestionBasesDatos {
                     nif = rs.getString("nif");
                     nombre = rs.getString("nombre");
                     poblacion = rs.getString("poblacion");
-                    GestionSocioVideoClub.socios.add(new Socio(nif, nombre, poblacion));
+                    //GestionSocioVideoClub.socios.add(new Socio(nif, nombre, poblacion));
 
                 }
                 getConexion().close();
@@ -96,6 +100,36 @@ public class GestionBasesDatos {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<Cancion> aniadirCancionArrayDisco() {
+        ArrayList<Cancion> canciones = new ArrayList<>();
+        Cancion cancion = null;
+        String tituloDisco, autor = null, nombre = null;
+        int duracion;
+        String newDuracion = null;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  CANCIONES");
+                while (rs.next()) {
+                    tituloDisco = rs.getString("tituloDisco");
+                    nombre = rs.getString("nombre");
+                    autor = rs.getString("autor");
+                    duracion = rs.getInt("duracion");
+                    newDuracion = String.valueOf(duracion);
+                    cancion = new Cancion(nombre, newDuracion, autor);
+                    canciones.add(cancion);
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return canciones;
     }
 
 
