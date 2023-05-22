@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="G">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Formato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Formato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Pelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Pelicula.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionMultimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionMultimedia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
-                    <option name="lastUsedInstant" value="1684770473" />
+                    <option name="lastUsedInstant" value="1684796651" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
@@ -267,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684763787124</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Modificar la base de datos y gestionarla">
+      <created>1684796636345</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684796636345</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,6 +316,7 @@
     <MESSAGE value="Gestionar Socio" />
     <MESSAGE value="Crear clase GestionMultimedia" />
     <MESSAGE value="G" />
-    <option name="LAST_COMMIT_MESSAGE" value="G" />
+    <MESSAGE value="Modificar la base de datos y gestionarla" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificar la base de datos y gestionarla" />
   </component>
 </project>
