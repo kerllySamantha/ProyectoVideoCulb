@@ -1,6 +1,7 @@
 package view;
 
 import controller.GestionSocioVideoClub;
+import model.Multimedia;
 import model.Socio;
 
 import javax.swing.*;
@@ -11,6 +12,8 @@ import java.util.Objects;
 
 public class FormDevoluciones extends JFrame{
     ArrayList<Socio> socios = new ArrayList<>();
+    ArrayList<Multimedia> multimedia = new ArrayList<>();
+    GestionSocioVideoClub lista;
     private JPanel panelDevoluciones;
     private JTextField txtFieldNifSocio;
     private JButton btnComprobarSocio;
@@ -33,9 +36,9 @@ public class FormDevoluciones extends JFrame{
                 existeNif = GestionSocioVideoClub.comprobarNif(socios,socioNIF);
                 if(!existeNif) {
                     JOptionPane.showMessageDialog(null,"No existe el NIF introducido");
-                } //else {
-                    //listaDevolver.getAlquilerActual;
-                //}
+                } else {
+                    listaDevolver.setListData(lista.devolverMult(multimedia,socios));
+                }
 
             }
         });

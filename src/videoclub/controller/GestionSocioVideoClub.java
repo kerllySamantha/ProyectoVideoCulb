@@ -47,7 +47,7 @@ public class GestionSocioVideoClub {
 //        return precio;
 //    }
 
-    public static void devolverMult(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
+    public static Object[] devolverMult(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
         System.out.println("Introduce el titulo que se va a devolver");
         String titMult = "sc.nextLine()";
         if (buscarTitulo(titMult, multimedia) != -1) {
@@ -68,6 +68,7 @@ public class GestionSocioVideoClub {
         } else {
             System.out.println("No se ha encontrado el título");
         }
+        return new Object[0];
     }
 
     public static int calcularRecargoDev(int dias) {

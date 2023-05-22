@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Form Devoluciones">
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Crear clase GestionMultimedia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Cancion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Cancion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Multimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Multimedia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

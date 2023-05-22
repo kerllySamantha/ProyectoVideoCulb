@@ -69,8 +69,7 @@ public class FormVideoJuego extends JFrame {
                         visualizarDatos.setText("");
 
                     } else {
-                        juego = new Videojuego(tituloVideoJuego,autorVideoJuego,formatoVideojuego.comprobarFormato(formato),
-                                anioVideoJuego,Plataforma.PC);
+                        juego = new Videojuego(tituloVideoJuego,autorVideoJuego,Formato.BLURAY,anioVideoJuego,Plataforma.PC);
                         visualizarDatos.setText(juego.toString());
                     }
 
