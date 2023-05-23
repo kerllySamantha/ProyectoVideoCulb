@@ -85,7 +85,7 @@ public class FormAltaPelicula extends JFrame{
                 if (rbtnArchivo.isSelected()) {
                     formato = Formato.ARCHIVO;
                 } else if (rbtnBlueray.isSelected()) {
-                    formato = Formato.BLURAY;
+                    formato = Formato.BLUERAY;
                 } else if (rbtnCd.isSelected()) {
                     formato = Formato.CD;
                 } else if (rbtnDVD.isSelected()) {
