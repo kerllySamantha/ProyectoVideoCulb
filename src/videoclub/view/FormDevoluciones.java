@@ -39,7 +39,6 @@ public class FormDevoluciones extends JFrame{
                 } else {
                     listaDevolver.setListData(lista.devolverMult(multimedia,socios));
                 }
-
             }
         });
 

@@ -13,6 +13,7 @@ public class FormPrincipalVideoClub extends JFrame {
     JButton btnListados;
 
     FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
+    FormAlquiler formAlquiler = new FormAlquiler();
     FormDevoluciones formDevoluciones = new FormDevoluciones();
 
 
@@ -70,6 +71,14 @@ public class FormPrincipalVideoClub extends JFrame {
             formPrincipalAltas.setBounds(100, 100, 600, 300);
             if (!formPrincipalAltas.isVisible()) {
                 formPrincipalAltas.setVisible(true);
+            }
+        });
+
+        btnAlquiler.addActionListener(e -> {
+            formAlquiler.setDefaultCloseOperation(formAlquiler.HIDE_ON_CLOSE);
+            formAlquiler.setBounds(100,100,600,300);
+            if(!formAlquiler.isVisible()) {
+                formAlquiler.setVisible(true);
             }
         });
 

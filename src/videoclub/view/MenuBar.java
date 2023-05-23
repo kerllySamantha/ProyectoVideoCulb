@@ -8,12 +8,13 @@ public class MenuBar {
     public static JMenuBar menuVideoClub;
     public static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
     public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
-            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, devolver, exit;
+            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, alquiler, devolver, exit;
     public static FormAltaSocio formAltaSocio = new FormAltaSocio();
     public static FormAltaDisco formAltaDisco = new FormAltaDisco();
     public static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
     public static FormVideoJuego formAVideoJuego = new FormVideoJuego();
     public static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
+    public static FormAlquiler formAlquiler = new FormAlquiler();
     public static FormDevoluciones formDevoluciones = new FormDevoluciones();
     public static FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
 
@@ -40,11 +41,13 @@ public class MenuBar {
         videojuego = new JMenuItem("Videojuego");
         disco = new JMenuItem("Disco");
 
-
         altas.add(socio);
         altas.add(pelicula);
         altas.add(videojuego);
         altas.add(disco);
+
+        alquiler = new JMenuItem("Alquilar");
+        alquileres.add(alquiler);
 
         devolver = new JMenuItem("Devolver");
         devoluciones.add(devolver);
@@ -75,6 +78,7 @@ public class MenuBar {
         formAltaSocio.setVisible(false);
         formAltaDisco.setVisible(false);
         formPrincipalAltas.setVisible(false);
+        formAlquiler.setVisible(false);
         formDevoluciones.setVisible(false);
         formListadosMultimedia.setVisible(false);
 
@@ -115,7 +119,14 @@ public class MenuBar {
             }
         });
 
-
+        alquiler.addActionListener(e -> {
+            formAlquiler.setDefaultCloseOperation(formAlquiler.HIDE_ON_CLOSE);
+            formAlquiler.setBounds(100,100,600,300);
+            if (!formAlquiler.isVisible()) {
+                visivilidadVentanas();
+                formAlquiler.setVisible(true);
+            }
+        });
 
         devolver.addActionListener(e -> {
             formDevoluciones.setDefaultCloseOperation(formDevoluciones.HIDE_ON_CLOSE);
@@ -135,10 +146,8 @@ public class MenuBar {
             }
         });
 
-
         exit.addActionListener(e->{
             System.exit(0);
         });
     }
-
 }
