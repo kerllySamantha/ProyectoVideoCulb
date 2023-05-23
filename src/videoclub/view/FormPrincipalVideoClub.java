@@ -14,8 +14,8 @@ public class FormPrincipalVideoClub extends JFrame {
 
     FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
     FormAlquiler formAlquiler = new FormAlquiler();
-    FormDevoluciones formDevoluciones = new FormDevoluciones();
 
+    FormDevoluciones formDevoluciones = new FormDevoluciones();
 
     public FormPrincipalVideoClub() {
         super.setResizable(false);
@@ -57,7 +57,6 @@ public class FormPrincipalVideoClub extends JFrame {
         btnDevolucion.setMaximumSize(new Dimension(250, 60));
         btnDevolucion.setPreferredSize(new Dimension(200, 30));
         panelPrincipal.add(btnDevolucion);
-
 
         btnListados = new JButton("Listar");
         btnListados.setMinimumSize(new Dimension(20, 20));
