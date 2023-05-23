@@ -82,8 +82,6 @@ public class FormAltaDisco extends JFrame{
 
                     canciones.setVisible(true);
                     canciones.setSize(400,400);
-
-                    //GestionBasesDatos.insertDisco(tituloDisco, autorDisco, formato, anioDisco, disco.duracionDisco());
                 }
             } catch (Exception e) {
                 System.out.println(e);
@@ -98,8 +96,12 @@ public class FormAltaDisco extends JFrame{
         btnAltaDisco.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                txtResumenAlta.setText(disco.toString());
-                limpiarCampos();
+                if (disco != null) {
+                    txtResumenAlta.setText(disco.toString());
+                    limpiarCampos();
+                    GestionBasesDatos.insertDisco(disco.getTitulo(), disco.getAutor(), disco.getFormato(), disco.getAnio(), disco.duracionDisco());
+
+                }
             }
         });
     }
