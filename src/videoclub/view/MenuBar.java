@@ -1,23 +1,20 @@
 package view;
 
-import controller.GestionMultimedia;
-import controller.GestionSocioVideoClub;
 import model.Disco;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MenuBar {
     public static JMenuBar menuVideoClub;
     public static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
-    public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listaPelisOrden, listaVideojAnio,
-            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, listaDiscos, devolver, exit;
+    public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listPelisOrden, listVideJAnio,
+            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, alquiler, devolver, exit;
     public static FormAltaSocio formAltaSocio = new FormAltaSocio();
     public static FormAltaDisco formAltaDisco = new FormAltaDisco();
     public static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
     public static FormVideoJuego formAVideoJuego = new FormVideoJuego();
     public static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
+    public static FormAlquiler formAlquiler = new FormAlquiler();
     public static FormDevoluciones formDevoluciones = new FormDevoluciones();
     public static FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
 
@@ -44,27 +41,27 @@ public class MenuBar {
         videojuego = new JMenuItem("Videojuego");
         disco = new JMenuItem("Disco");
 
-
         altas.add(socio);
         altas.add(pelicula);
         altas.add(videojuego);
         altas.add(disco);
 
+        alquiler = new JMenuItem("Alquilar");
+        alquileres.add(alquiler);
+
         devolver = new JMenuItem("Devolver");
         devoluciones.add(devolver);
 
         listMultimedia = new JMenuItem("Multimedias");
-        listaDiscos = new JMenuItem("Discos");
-        listaPelisOrden = new JMenuItem("Peliculas en Orden");
-        listaVideojAnio = new JMenuItem("Videojuego por año");
+        listPelisOrden = new JMenuItem("Peliculas en Orden");
+        listVideJAnio = new JMenuItem("Videojuego por año");
         listHistorialAlqSocioFecha = new JMenuItem("Historial de alquiler del Socio por fecha");
         listActualSocio = new JMenuItem("Actual del Socio");
         listRecargosPendSocio = new JMenuItem("Recargos pendientes");
 
         listados.add(listMultimedia);
-        listados.add(listaPelisOrden);
-        listados.add(listaVideojAnio);
-        listados.add(listaDiscos);
+        listados.add(listPelisOrden);
+        listados.add(listVideJAnio);
         listados.add(listHistorialAlqSocioFecha);
         listados.add(listActualSocio);
         listados.add(listRecargosPendSocio);
@@ -81,6 +78,7 @@ public class MenuBar {
         formAltaSocio.setVisible(false);
         formAltaDisco.setVisible(false);
         formPrincipalAltas.setVisible(false);
+        formAlquiler.setVisible(false);
         formDevoluciones.setVisible(false);
         formListadosMultimedia.setVisible(false);
 
@@ -121,7 +119,14 @@ public class MenuBar {
             }
         });
 
-
+        alquiler.addActionListener(e -> {
+            formAlquiler.setDefaultCloseOperation(formAlquiler.HIDE_ON_CLOSE);
+            formAlquiler.setBounds(100,100,600,300);
+            if (!formAlquiler.isVisible()) {
+                visivilidadVentanas();
+                formAlquiler.setVisible(true);
+            }
+        });
 
         devolver.addActionListener(e -> {
             formDevoluciones.setDefaultCloseOperation(formDevoluciones.HIDE_ON_CLOSE);
@@ -139,74 +144,10 @@ public class MenuBar {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
             }
-            FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
-        });
-
-
-        listaPelisOrden.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
-            FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-        });
-
-        listActualSocio.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
-            FormListadosMultimedia.listaAlquileresCLiente();
-
-        });
-
-
-        listRecargosPendSocio.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
-            FormListadosMultimedia.txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
-        });
-
-        listaVideojAnio.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
-            FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.listaVideojuegos());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
-        });
-
-
-        listaDiscos.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
-            FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
         });
 
         exit.addActionListener(e->{
             System.exit(0);
         });
     }
-
 }
