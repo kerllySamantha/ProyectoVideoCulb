@@ -16,6 +16,7 @@ public class FormPrincipalVideoClub extends JFrame {
 
     FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
     FormDevoluciones formDevoluciones = new FormDevoluciones();
+//    FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
 
 
     public FormPrincipalVideoClub() {
@@ -86,5 +87,13 @@ public class FormPrincipalVideoClub extends JFrame {
                 formDevoluciones.setVisible(true);
             }
         });
+
+//        btnListados.addActionListener(e -> {
+//            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
+//            formListadosMultimedia.setBounds(100,100,600,300);
+//            if (!formListadosMultimedia.isVisible()) {
+//                formListadosMultimedia.setVisible(true);
+//            }
+//        });
     }
 }
