@@ -51,6 +51,9 @@ public class MenuBar {
         altas.add(videojuego);
         altas.add(disco);
 
+        alquiler = new JMenuItem("Alquilar");
+        alquileres.add(alquiler);
+
         devolver = new JMenuItem("Devolver");
         devoluciones.add(devolver);
 
