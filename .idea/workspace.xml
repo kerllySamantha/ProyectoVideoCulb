@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Crear clase GestionMultimedia">
-      <change afterPath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Formato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Formato.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Socio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Socio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaSocio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaSocio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" afterDir="false" />
-    </list>
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Correccion de errores" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/ramaPrincipal" />
+    <option name="BRANCH" value="kerlly" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -43,7 +29,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="kerlly" />
+        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,11 +57,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1684433925" />
+                    <option name="lastUsedInstant" value="1684948277" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
-                    <option name="lastUsedInstant" value="1684433476" />
+                    <option name="lastUsedInstant" value="1684947903" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -144,6 +130,29 @@
       <recent name="controller" />
       <recent name="view" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.Principal" />
+      <module name="ProyectoVideoClub" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Principal" />
+        <item itemvalue="Application.Principal" />
+        <item itemvalue="Application.Principal" />
+        <item itemvalue="Application.Principal" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -266,7 +275,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684433880994</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="G">
+      <created>1684763787124</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684763787124</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Correccion de errores">
+      <created>1684918506027</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684918506027</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -302,9 +325,11 @@
     <MESSAGE value="Eliminar los setVisible de los constructores de los form" />
     <MESSAGE value="Crear un metodo con todas las ventanas y que solo se abra una ventana" />
     <MESSAGE value="Funcionalidad de VideoJuego, que cuando dejas un campo vacío aparezca un mensaje" />
+    <MESSAGE value="cambios" />
     <MESSAGE value="Gestionar Socio" />
     <MESSAGE value="Crear clase GestionMultimedia" />
-    <MESSAGE value="cambios" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios" />
+    <MESSAGE value="G" />
+    <MESSAGE value="Correccion de errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correccion de errores" />
   </component>
 </project>

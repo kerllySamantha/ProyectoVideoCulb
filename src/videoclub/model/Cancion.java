@@ -10,7 +10,6 @@ public class Cancion {
 //        setNombreCancion(titulo);
 //        setDuracionCancion(duracion);
 //    }
-
     public Cancion(String titulo, String duracion, String autor) {
         setNombreCancion(titulo);
         setDuracionMinSeg(duracion);

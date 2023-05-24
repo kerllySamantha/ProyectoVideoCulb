@@ -12,7 +12,7 @@ public class MenuBar {
     public static JMenuBar menuVideoClub;
     public static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
     public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listaPelisOrden, listaVideojAnio,
-            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, listaDiscos, devolver, exit, alquiler;
+            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, devolver, exit, alquiler;
     public static FormAltaSocio formAltaSocio = new FormAltaSocio();
     public static FormAltaDisco formAltaDisco = new FormAltaDisco();
     public static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
@@ -20,7 +20,6 @@ public class MenuBar {
     public static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
     public static FormDevoluciones formDevoluciones = new FormDevoluciones();
     public static FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
-    public static  FormAlquiler formAlquiler = new FormAlquiler();
 
 
     public static JMenuBar crearMenuBar() {
@@ -51,11 +50,13 @@ public class MenuBar {
         altas.add(videojuego);
         altas.add(disco);
 
+        alquiler = new JMenuItem("Alquilar Multimedia");
+        alquileres.add(alquiler);
+
         devolver = new JMenuItem("Devolver");
         devoluciones.add(devolver);
 
         listMultimedia = new JMenuItem("Multimedias");
-        listaDiscos = new JMenuItem("Discos");
         listaPelisOrden = new JMenuItem("Peliculas en Orden");
         listaVideojAnio = new JMenuItem("Videojuego por año");
         listHistorialAlqSocioFecha = new JMenuItem("Historial de alquiler del Socio por fecha");
@@ -65,7 +66,6 @@ public class MenuBar {
         listados.add(listMultimedia);
         listados.add(listaPelisOrden);
         listados.add(listaVideojAnio);
-        listados.add(listaDiscos);
         listados.add(listHistorialAlqSocioFecha);
         listados.add(listActualSocio);
         listados.add(listRecargosPendSocio);
@@ -121,14 +121,6 @@ public class MenuBar {
                 formAVideoJuego.setVisible(true);
             }
         });
-        alquiler.addActionListener(e -> {
-            formAlquiler.setDefaultCloseOperation(formAlquiler.HIDE_ON_CLOSE);
-            formAlquiler.setBounds(100,100,600,300);
-            if (!formAlquiler.isVisible()) {
-                visivilidadVentanas();
-                formAlquiler.setVisible(true);
-            }
-        });
 
 
 
@@ -148,69 +140,25 @@ public class MenuBar {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
             }
-            FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
         });
 
+        listMultimedia.addActionListener(e ->
+                FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia()));
 
-        listaPelisOrden.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
+        listaPelisOrden.addActionListener(e -> {
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
         });
 
-        listActualSocio.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
-            FormListadosMultimedia.listaAlquileresCLiente();
-
+        listActualSocio.addActionListener(e -> {
+            //FormListadosMultimedia.txtListaMultimedia.setText(GestionSocioVideoClub.listaAlquilerActual());
         });
 
-
-        listRecargosPendSocio.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
+        listRecargosPendSocio.addActionListener( e -> {
             FormListadosMultimedia.txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
         });
 
-        listaVideojAnio.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
+        listaVideojAnio.addActionListener(e -> {
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.listaVideojuegos());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
-        });
-
-
-        listaDiscos.addActionListener(e ->{
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if(!formListadosMultimedia.isVisible()) {
-                visivilidadVentanas();
-                formListadosMultimedia.setVisible(true);
-            }
-            FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
-            FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
         });
 
         exit.addActionListener(e->{
