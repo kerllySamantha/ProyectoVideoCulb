@@ -12,7 +12,7 @@ public class MenuBar {
     public static JMenuBar menuVideoClub;
     public static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
     public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listaPelisOrden, listaVideojAnio,
-            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, listaDiscos, devolver, exit;
+            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, listaDiscos, devolver, exit, alquiler;
     public static FormAltaSocio formAltaSocio = new FormAltaSocio();
     public static FormAltaDisco formAltaDisco = new FormAltaDisco();
     public static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
@@ -20,6 +20,7 @@ public class MenuBar {
     public static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
     public static FormDevoluciones formDevoluciones = new FormDevoluciones();
     public static FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
+    public static  FormAlquiler formAlquiler = new FormAlquiler();
 
 
     public static JMenuBar crearMenuBar() {
@@ -118,6 +119,14 @@ public class MenuBar {
             if (!formAVideoJuego.isVisible()) {
                 visivilidadVentanas();
                 formAVideoJuego.setVisible(true);
+            }
+        });
+        alquiler.addActionListener(e -> {
+            formAlquiler.setDefaultCloseOperation(formAlquiler.HIDE_ON_CLOSE);
+            formAlquiler.setBounds(100,100,600,300);
+            if (!formAlquiler.isVisible()) {
+                visivilidadVentanas();
+                formAlquiler.setVisible(true);
             }
         });
 
