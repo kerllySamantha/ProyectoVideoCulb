@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Botones menubar - listados">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
@@ -17,21 +16,9 @@
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionMultimedia$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionMultimedia$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionMultimedia$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionMultimedia$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionMultimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionMultimedia.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +44,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,6 +70,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="marta" />
+                    <option name="lastUsedInstant" value="1684919157" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
                     <option name="lastUsedInstant" value="1684433925" />
