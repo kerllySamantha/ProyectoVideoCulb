@@ -1,5 +1,7 @@
 package model;
 
+import controller.*;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -11,8 +13,8 @@ public class Socio {
     private LocalDate fechaNac;
     private String poblacion;
     private double recargo;
-    private ArrayList <Multimedia> historial;
-    private ArrayList <Multimedia> alquilerActual;
+    private ArrayList <GestionAlquilerMul> historial;
+    private ArrayList <GestionAlquilerMul> alquilerActual;
 
     public Socio(String nif, String nombre, LocalDate fechaNac, String poblacion) {
         setNif(nif);
@@ -65,11 +67,11 @@ public class Socio {
         this.recargo = recargo;
     }
 
-    public ArrayList<Multimedia> getHistorial() {
+    public ArrayList<GestionAlquilerMul> getHistorial() {
         return historial;
     }
 
-    public ArrayList<Multimedia> getAlquilerActual() {
+    public ArrayList<GestionAlquilerMul> getAlquilerActual() {
         return alquilerActual;
     }
 
