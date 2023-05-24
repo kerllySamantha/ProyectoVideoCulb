@@ -57,11 +57,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1684878612" />
+                    <option name="lastUsedInstant" value="1684948277" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
-                    <option name="lastUsedInstant" value="1684867642" />
+                    <option name="lastUsedInstant" value="1684947903" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -147,6 +147,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Principal" />
         <item itemvalue="Application.Principal" />
         <item itemvalue="Application.Principal" />
         <item itemvalue="Application.Principal" />
