@@ -12,7 +12,7 @@ public class MenuBar {
     public static JMenuBar menuVideoClub;
     public static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
     public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listaPelisOrden, listaVideojAnio,
-            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, devolver, exit;
+            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, devolver, exit, alquiler;
     public static FormAltaSocio formAltaSocio = new FormAltaSocio();
     public static FormAltaDisco formAltaDisco = new FormAltaDisco();
     public static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
@@ -49,6 +49,9 @@ public class MenuBar {
         altas.add(pelicula);
         altas.add(videojuego);
         altas.add(disco);
+
+        alquiler = new JMenuItem("Alquilar Multimedia");
+        alquileres.add(alquiler);
 
         devolver = new JMenuItem("Devolver");
         devoluciones.add(devolver);
