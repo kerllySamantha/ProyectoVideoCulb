@@ -219,7 +219,7 @@ public class GestionBasesDatos {
             try {
                 Statement st = conex.createStatement();
                 st.executeUpdate("insert into pelicula (titulo, autor, formato, genero,  anio, duracion, actorprincipal, actrinzprincipal) values "
-                        + "('" + titulo + "', '" + autor + "', '" + formato.toString() + "', " + anio + ", '" + duracion + "')");
+                        + "('" + titulo + "', '" + autor + "', '" + formato.toString() + "', " + "', "+ genero + "', " +  "', " + anio + ", '" +  "', " +duracion+ "', " + "', "  +actorPrincipal+ "', " + "', " + atrizPrincipal + "')");
 
                 Objects.requireNonNull(getConexion()).close();
             } catch (Exception e2) {

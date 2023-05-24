@@ -95,6 +95,7 @@ public class FormAltaPelicula extends JFrame{
 
                 if (datosCorrectos) {
                     //new Pelicula(tituloPelicula, autorPelicula, formato, anioPelicula, duracionPelicula, actrizPrincipal, actorPrincipal);
+
                 }
             } catch (Exception e) {
                 System.out.println(e);
