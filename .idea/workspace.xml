@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Correccion de errores" />
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Añador el boton alquiler a la menuBar" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +29,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
+        <entry key="$PROJECT_DIR$" value="kerlly" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -289,10 +289,39 @@
       <option name="project" value="LOCAL" />
       <updated>1684918506027</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Correccion de errores">
+      <created>1684948309252</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684948309252</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Añador el boton alquiler a la menuBar">
+      <created>1684948634475</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684948634475</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -303,7 +332,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/kerlly" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -330,6 +359,7 @@
     <MESSAGE value="Crear clase GestionMultimedia" />
     <MESSAGE value="G" />
     <MESSAGE value="Correccion de errores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correccion de errores" />
+    <MESSAGE value="Añador el boton alquiler a la menuBar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añador el boton alquiler a la menuBar" />
   </component>
 </project>
