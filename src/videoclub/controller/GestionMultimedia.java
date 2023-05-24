@@ -29,7 +29,7 @@ public class GestionMultimedia {
     }
 
     public static String ordenarPeliculas() {
-        String listaPeliculas = "";
+        StringBuilder listaPeliculas = new StringBuilder();
         ArrayList<Pelicula> peliculas = new ArrayList<>();
         for (Multimedia m : multimedias) {
             if (m instanceof Pelicula) {
@@ -43,15 +43,16 @@ public class GestionMultimedia {
         });
 
         for (Pelicula p : peliculas) {
-            listaPeliculas += "Título: " + p.getTitulo() + "\nAño: " + p.getAnio() + "\nTipo: " + p.getClass().getName().substring(6);
+            listaPeliculas.append("Título: ").append(p.getTitulo()).append("\nAño: ").append(p.getAnio()).append("\nTipo: ")
+                    .append(p.getClass().getName().substring(6));
 
         }
-        return listaPeliculas;
+        return listaPeliculas.toString();
     }
 
 
     public static String listaVideojuegos() {
-        String listaVideojuegos = "";
+        StringBuilder listaVideojuegos = new StringBuilder();
         ArrayList<Videojuego> videojuegos = new ArrayList<>();
         for (Multimedia m : multimedias) {
             if (m instanceof Pelicula) {
@@ -64,10 +65,11 @@ public class GestionMultimedia {
             }
         });
         for (Videojuego v : videojuegos) {
-            listaVideojuegos += "Título: " + v.getTitulo() + "\nAño: " + v.getAnio() + "\nTipo: " + v.getClass().getName().substring(6);
+            listaVideojuegos.append("Título: ").append(v.getTitulo()).append("\nAño: ").append(v.getAnio())
+                    .append("\nTipo: ").append(v.getClass().getName().substring(6));
 
         }
-        return listaVideojuegos;
+        return listaVideojuegos.toString();
     }
 
     public static String ordenarDiscos() {

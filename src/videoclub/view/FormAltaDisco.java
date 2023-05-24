@@ -3,13 +3,12 @@ package view;
 import controller.GestionBasesDatos;
 import model.Formato;
 import model.*;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class FormAltaDisco extends JFrame {
+public class FormAltaDisco extends JFrame{
 
 
     private JPanel panelAltaDisco;
@@ -25,7 +24,7 @@ public class FormAltaDisco extends JFrame {
     private JTextArea txtResumenAlta;
     private JTextField txtTituloDisco;
     private JTextField txtAutorDisco;
-    private JComboBox<Integer> cbAnioDisco;
+    private JComboBox cbAnioDisco;
     private ButtonGroup grupoFormato;
     static Disco disco;
 
@@ -39,7 +38,6 @@ public class FormAltaDisco extends JFrame {
         mostrarDatos();
         MenuBar.gestionDeVentanas();
     }
-
     public void altaDisco() {
         btnAniadirCanciones.addActionListener(actionEvent -> {
             try {
@@ -74,23 +72,23 @@ public class FormAltaDisco extends JFrame {
                     anioDisco = Integer.parseInt(cbAnioDisco.getSelectedItem().toString());
                 }
 
+//                if (Integer.parseInt(txtAnioDisco.getText()) >= 1887) {
+//
+//                }
 
                 if (datosCorrectos) {
                     disco = new Disco(tituloDisco, autorDisco, formato, anioDisco);
                     FormAniadirCanciones canciones = new FormAniadirCanciones();
 
                     canciones.setVisible(true);
-                    canciones.setSize(400, 400);
-
-                    GestionBasesDatos.insertDisco(tituloDisco, autorDisco, formato, anioDisco, disco.duracionDisco());
+                    canciones.setSize(400,400);
                 }
             } catch (Exception e) {
                 System.out.println(e);
             }
         });
     }
-
-    public static void recibirCanciones(ArrayList<Cancion> canciones) {
+    public static void recibirCanciones(ArrayList<Cancion>canciones) {
         disco.setCanciones(canciones);
     }
 
@@ -98,8 +96,12 @@ public class FormAltaDisco extends JFrame {
         btnAltaDisco.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                txtResumenAlta.setText(disco.toString());
-                limpiarCampos();
+                if (disco != null) {
+                    txtResumenAlta.setText(disco.toString());
+                    limpiarCampos();
+                    GestionBasesDatos.insertDisco(disco.getTitulo(), disco.getAutor(), disco.getFormato(), disco.getAnio(), disco.duracionDisco());
+
+                }
             }
         });
     }
