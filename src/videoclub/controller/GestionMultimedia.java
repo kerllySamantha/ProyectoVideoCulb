@@ -44,7 +44,7 @@ public class GestionMultimedia {
 
         for (Pelicula p : peliculas) {
             listaPeliculas.append("Título: ").append(p.getTitulo()).append("\nAño: ").append(p.getAnio()).append("\nTipo: ")
-                    .append(p.getClass().getName().substring(6));
+                    .append(p.getClass().getName().substring(6)).append("\n");
 
         }
         return listaPeliculas.toString();

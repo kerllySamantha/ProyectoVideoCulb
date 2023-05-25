@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="añadir metodo para gestionar la disponibilidad antes de alquilar y clase GestionLogs">
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Añadir clase GestionAlquilerMultimedia y métodos de devolución de multimedia / calcular recargo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionMultimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionMultimedia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionMultimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionMultimedia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -307,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684949695113</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Solucionar error lista videojuegos">
+      <created>1685026154472</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685026154472</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,6 +354,7 @@
     <MESSAGE value="G" />
     <MESSAGE value="Correccion de errores" />
     <MESSAGE value="Añadir clase GestionAlquilerMultimedia y métodos de devolución de multimedia / calcular recargo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir clase GestionAlquilerMultimedia y métodos de devolución de multimedia / calcular recargo" />
+    <MESSAGE value="Solucionar error lista videojuegos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solucionar error lista videojuegos" />
   </component>
 </project>
