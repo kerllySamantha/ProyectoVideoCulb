@@ -55,7 +55,7 @@ public class GestionMultimedia {
         StringBuilder listaVideojuegos = new StringBuilder();
         ArrayList<Videojuego> videojuegos = new ArrayList<>();
         for (Multimedia m : multimedias) {
-            if (m instanceof Pelicula) {
+            if (m instanceof Videojuego) {
                 videojuegos.add((Videojuego) m);
             }
         }

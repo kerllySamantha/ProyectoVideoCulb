@@ -7,6 +7,8 @@ import model.*;
 import java.util.Objects;
 
 public class FormAltaPelicula extends JFrame {
+    public static final int ANIO_PRIMERA_PELICULA = 1895;
+    public static final int ANIO_ACTUAL = 2023;
     private JPanel panelAltaPelicula;
     private JLabel tituloPelicula;
     private JLabel autorPelicula;
@@ -37,6 +39,8 @@ public class FormAltaPelicula extends JFrame {
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
         altaPelicula();
+
+        valoresCBAnio();
 
     }
 
@@ -192,6 +196,12 @@ public class FormAltaPelicula extends JFrame {
                 throw new RuntimeException(e);
             }
         });
+    }
+
+    public void valoresCBAnio() {
+        for (int i = ANIO_ACTUAL; i >= ANIO_PRIMERA_PELICULA; i-- ) {
+            cbAnioPelicula.addItem(i);
+        }
     }
 
 
