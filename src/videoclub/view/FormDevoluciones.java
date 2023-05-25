@@ -11,8 +11,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class FormDevoluciones extends JFrame{
-    ArrayList<Socio> socios = new ArrayList<>();
-    ArrayList<Multimedia> multimedia = new ArrayList<>();
+
     GestionSocioVideoClub lista;
     private JPanel panelDevoluciones;
     private JTextField txtFieldNifSocio;
@@ -29,23 +28,29 @@ public class FormDevoluciones extends JFrame{
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
 
+
         btnComprobarSocio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 socioNIF = txtFieldNifSocio.getText().toUpperCase();
-                existeNif = GestionSocioVideoClub.comprobarNif(socios,socioNIF);
+                existeNif = GestionSocioVideoClub.comprobarNif(GestionSocioVideoClub.socios,socioNIF);
                 if(existeNif) {
                     JOptionPane.showMessageDialog(null,"No existe el NIF introducido");
                 } else {
-                    listaDevolver.setListData(lista.devolverMult(multimedia,socios));
+                    //listaDevolver.setListData(lista.devolverMult(multimedia,socios));
+                    listaDevolver.setModel(GestionSocioVideoClub.mostarMultSocio(txtFieldNifSocio.getText()));
                 }
+
             }
         });
 
         btnDevolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showConfirmDialog(null,"Estás seguro que quieres devolver-lo?","Alerta!",JOptionPane.YES_NO_OPTION);
+                int respuesta = JOptionPane.showConfirmDialog(null,"Estás seguro que quieres devolver-lo?","Alerta!",JOptionPane.YES_NO_OPTION);
+                if (respuesta == JOptionPane.YES_OPTION) {
+                    GestionSocioVideoClub.devolverMultimedia(txtFieldNifSocio.getText(), listaDevolver.getSelectedValue().toString());
+                }
             }
         });
     }

@@ -229,6 +229,29 @@ public class GestionBasesDatos {
             e.printStackTrace();
         }
     }
+
+    public static boolean comprobarDisponibilidad(String titulo, String tabla) {
+        int cantidad = 0;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM " + tabla + " WHERE TITULO = '" + titulo + "'");
+                while (rs.next()) {
+                    cantidad = rs.getInt("cantidad");
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (cantidad > 0) {
+            return true;
+        }
+        return false;
+    }
 }
 
 
