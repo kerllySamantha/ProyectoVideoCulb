@@ -1,6 +1,7 @@
 package view;
 
 import controller.GestionBasesDatos;
+import controller.GestionLogs;
 import model.Formato;
 import model.*;
 import javax.swing.*;
@@ -100,7 +101,7 @@ public class FormAltaDisco extends JFrame{
                     txtResumenAlta.setText(disco.toString());
                     limpiarCampos();
                     GestionBasesDatos.insertDisco(disco.getTitulo(), disco.getAutor(), disco.getFormato(), disco.getAnio(), disco.duracionDisco());
-
+                    GestionLogs.escribirRegistro(GestionLogs.registroAltaDisco(disco.getTitulo()));
                 }
             }
         });

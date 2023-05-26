@@ -237,12 +237,12 @@ public class GestionBasesDatos {
             try {
                 Statement st = Objects.requireNonNull(getConexion()).createStatement();
                 ResultSet rs = st.executeQuery("SELECT * FROM " + tabla + " WHERE TITULO = '" + titulo + "'");
-                while (rs.next()) {
+                if (rs.next()) {
                     cantidad = rs.getInt("cantidad");
                 }
                 getConexion().close();
-            } catch (Exception e2) {
-                e2.printStackTrace();
+            } catch (SQLException e) {
+            e.printStackTrace();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -252,6 +252,44 @@ public class GestionBasesDatos {
         }
         return false;
     }
+
+    public static void racalcularCantidadDev(String tabla, String titulo, String autor){
+        try {
+            getConexion();
+            try {
+                String consultaUpdate = "UPDATE " + tabla + " SET cantidad = cantidad + 1 WHERE titulo = ? AND autor = ?";
+                PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaUpdate);
+                statement.setString(1, titulo);
+                statement.setString(2, autor);
+                statement.executeUpdate();
+                getConexion().close();
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void recalcularCantidadAlquiler(String tabla, String titulo, String autor){
+        try {
+            getConexion();
+            try {
+                String consultaUpdate = "UPDATE " + tabla + " SET cantidad = cantidad - 1 WHERE titulo = ? AND autor = ?";
+                PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaUpdate);
+                statement.setString(1, titulo);
+                statement.setString(2, autor);
+                statement.executeUpdate();
+                getConexion().close();
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
 
 

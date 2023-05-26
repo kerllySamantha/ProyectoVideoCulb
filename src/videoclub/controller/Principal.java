@@ -7,6 +7,7 @@ import javax.swing.*;
 public class Principal {
     public static void main(String[] args) {
 
+        GestionLogs.escribirRegistro(GestionLogs.registrarInicioPrograma());
 
         SwingUtilities.invokeLater((() -> {
             try {
@@ -17,6 +18,9 @@ public class Principal {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }));
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            GestionLogs.escribirRegistro(GestionLogs.registroCerrarPrograma());
         }));
     }
 }

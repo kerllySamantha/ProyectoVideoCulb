@@ -1,0 +1,7 @@
+
+[2023-05-26 00:16:37] Se ha iniciado el programa
+[2023-05-26 00:16:43] Se ha cerrado el programa
+[2023-05-26 00:18:25] Se ha iniciado el programa
+[2023-05-26 00:18:30] Se ha cerrado el programa
+[26-05-2023 00:19:04] Se ha iniciado el programa
+[26-05-2023 00:19:10] Se ha cerrado el programa

@@ -91,6 +91,7 @@ public class FormAltaSocio extends JFrame {
                     txtDatosSocio.setText(socio.toString());
                     txtNIFSocioAlta.setText("");
                     txtNombreSocioAlta.setText("");
+                    GestionLogs.escribirRegistro(GestionLogs.registroAltaSocio(socio.getNif(), socio.getNombre()));
                 }
 
             } catch (Exception e) {

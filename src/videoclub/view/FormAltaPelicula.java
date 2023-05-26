@@ -2,6 +2,8 @@ package view;
 
 import javax.swing.*;
 
+import controller.GestionLogs;
+import controller.GestionMultimedia;
 import model.*;
 
 import java.util.Objects;
@@ -189,8 +191,10 @@ public class FormAltaPelicula extends JFrame {
                 }
 
                 if (datosCorrectos) {
-                    new Pelicula(tituloPelicula, autorPelicula, formato, anioPelicula, duracionPelicula, actrizPrincipal, actorPrincipal, genero);
+                    pelicula = new Pelicula(tituloPelicula, autorPelicula, formato, anioPelicula, duracionPelicula, actrizPrincipal, actorPrincipal, genero);
+                    GestionMultimedia.multimedias.add(pelicula);
                     JOptionPane.showMessageDialog(null, "Se ha dado  de alta correctamente la pelicula");
+                    GestionLogs.escribirRegistro(GestionLogs.registroAltaPelicula(pelicula.getTitulo()));
                 }
             } catch (Exception e) {
                 throw new RuntimeException(e);

@@ -1,5 +1,6 @@
 package view;
 
+import controller.GestionLogs;
 import controller.GestionSocioVideoClub;
 import model.Multimedia;
 import model.Socio;
@@ -50,6 +51,7 @@ public class FormDevoluciones extends JFrame{
                 int respuesta = JOptionPane.showConfirmDialog(null,"Estás seguro que quieres devolver-lo?","Alerta!",JOptionPane.YES_NO_OPTION);
                 if (respuesta == JOptionPane.YES_OPTION) {
                     GestionSocioVideoClub.devolverMultimedia(txtFieldNifSocio.getText(), listaDevolver.getSelectedValue().toString());
+                    //GestionLogs.escribirRegistro(GestionLogs.registroDevolucionMuolt(txtFieldNifSocio.getText(), listaDevolver.getSelectedValue().toString()));
                 }
             }
         });
