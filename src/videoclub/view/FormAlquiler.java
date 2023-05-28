@@ -46,28 +46,26 @@ public class FormAlquiler extends JFrame {
             String nifSocio = txtNifSocio.getText().toUpperCase();
             GestionSocioVideoClub.buscarSocio(nifSocio, alquilerSocio);
             String tituloSeleccionado = listarAlquiler.getSelectedValue();
-            Multimedia multimediaAlquilada ;
-            boolean encontrado  = false;
+            Multimedia multimediaAlquilada;
+            boolean encontrado = false;
 
             for (Multimedia multimedia : alquilerMultimedia) {
                 if (multimedia.getTitulo().equalsIgnoreCase(tituloSeleccionado)) {
                     multimediaAlquilada = multimedia;
-                    if (multimediaAlquilada != null) {
-                        for (Socio socio : alquilerSocio) {
-                            if (socio.getNif().equalsIgnoreCase(nifSocio)) {
-
-                                encontrado = true;
-                                JOptionPane.showMessageDialog(null,
-                                        "El aquiler del socio con identificacion "
-                                                + nifSocio + "se ha realiado correctamente");
-                            } if(encontrado){
-                                JOptionPane.showMessageDialog(null, "No exixte ningun Socio con ese nif");
-                            }
+                    for (Socio socio : alquilerSocio) {
+                        if (socio.getNif().equalsIgnoreCase(nifSocio)) {
+                            new GestionAlquilerMul(multimediaAlquilada, socio);
+                            encontrado = true;
+                            JOptionPane.showMessageDialog(null,
+                                    "El aquiler del socio con identificacion "
+                                            + nifSocio + "se ha realiado correctamente");
                         }
-                    } else {
-                        JOptionPane.showMessageDialog(null, "No se ha selecciodo correctamente");
+                        System.out.println(socio.toString());
                     }
                 }
+            }
+            if (!encontrado) {
+                JOptionPane.showMessageDialog(null, "No exixte ningun Socio con ese nif");
             }
 
 
@@ -91,29 +89,19 @@ public class FormAlquiler extends JFrame {
         });
     }
 
-    public void rellenarNif() {
-        for (Socio socio : GestionSocioVideoClub.socios) {
-            cmbNif.addItem(socio.getNif());
-        }
-
-    }
-
     public ArrayList<Multimedia> filtroAlquiler() {
         for (Multimedia multimedia : GestionMultimedia.multimedias) {
             switch (cmbTipoMultimedia.getSelectedIndex()) {
                 case 0 -> {
-
                 }
                 case 1 -> {
                     if (multimedia instanceof Disco) {
                         filtroMultimedias.add(multimedia);
-
                     }
                 }
                 case 2 -> {
                     if (multimedia instanceof Pelicula) {
                         filtroMultimedias.add(multimedia);
-                        System.out.println(filtroMultimedias);
                     }
                 }
                 case 3 -> {
@@ -133,12 +121,10 @@ public class FormAlquiler extends JFrame {
         String tituloBuscar = textBuscar.getText();
         boolean encontrado = false;
         for (Multimedia multimedia : nuevo_filtro) {
-
             if (CDRadioButton.isSelected() && multimedia.getFormato() == Formato.CD) {
                 if (tituloBuscar.isEmpty() || tituloBuscar.equalsIgnoreCase(multimedia.getTitulo())) {
                     titulosMultimediaSet.add(multimedia.getTitulo());
                     encontrado = true;
-
                 }
 
             } else if (DVDRadioButton.isSelected() && multimedia.getFormato() == Formato.DVD) {
@@ -160,6 +146,9 @@ public class FormAlquiler extends JFrame {
                 titulosMultimediaSet.add(multimedia.getTitulo());
                 encontrado = true;
             }
+        }
+        if (!encontrado) {
+            JOptionPane.showMessageDialog(null, "No se han encontrado multimedias con esas caracteristicas");
         }
         model.clear();
         return titulosMultimediaSet;
