@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Gestionar un metodo que filtra para alquilar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java" afterDir="false" />
-    </list>
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Añadir clase GestionAlquilerMultimedia y métodos de devolución de multimedia / calcular recargo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +29,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
+        <entry key="$PROJECT_DIR$" value="kerlly" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +57,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1685035138" />
+                    <option name="lastUsedInstant" value="1684948277" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
@@ -303,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684949695113</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Solucionar error lista videojuegos">
+      <created>1685026154472</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685026154472</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -345,6 +346,7 @@
     <MESSAGE value="G" />
     <MESSAGE value="Correccion de errores" />
     <MESSAGE value="Añadir clase GestionAlquilerMultimedia y métodos de devolución de multimedia / calcular recargo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir clase GestionAlquilerMultimedia y métodos de devolución de multimedia / calcular recargo" />
+    <MESSAGE value="Solucionar error lista videojuegos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solucionar error lista videojuegos" />
   </component>
 </project>
