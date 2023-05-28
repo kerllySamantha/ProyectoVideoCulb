@@ -12,7 +12,7 @@ public class GestionSocioVideoClub {
     public static ArrayList<Socio> socios = new ArrayList<>();
 
 
-    public static DefaultListModel<String> mostarMultSocio(String nif) {
+    public static DefaultListModel<String> mostarMultAlquiladosSocio(String nif) {
         DefaultListModel<String> listaMultimedia = new DefaultListModel<>();
         if (buscarSocio(nif, socios) != -1) {
             int index = buscarSocio(nif, socios);
@@ -24,22 +24,65 @@ public class GestionSocioVideoClub {
     }
 
     public static void devolverMultimedia(String nif, String titlulo) {
+        int diasRecargo = 0;
+        int index;
         if (comprobarNif(socios, nif)) {
-            int index = buscarSocio(nif, socios);
+            index = buscarSocio(nif, socios);
             for (int i = 0; i < socios.get(index).getAlquilerActual().size(); i++) {
                 if (socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo().equals(titlulo)) {
-                    calcularRecargoDev(socios.get(index).getAlquilerActual().get(i).getFechaAlquiler(), socios.get(index));
+
+                    diasRecargo = calcularRecargoDev(socios.get(index).getAlquilerActual().get(i).getFechaAlquiler(), socios.get(index));
+
+                    GestionLogs.escribirRegistro(GestionLogs.registroDevolucionMuolt(socios.get(index).getNif(),
+                            socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo(),
+                            socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getClass().getName().substring(6)));
+
+                    GestionBasesDatos.racalcularCantidadDev(socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getClass().getName().substring(6).toLowerCase(),
+                            socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo(),
+                            socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getAutor());
+
                     socios.get(index).getAlquilerActual().remove(i);
                     GestionAlquilerMul.eliminarAlquiler(socios.get(index), socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado());
                     break;
                 }
             }
+            if (socios.get(index).getRecargo() > 0) {
+                int respuesta = JOptionPane.showConfirmDialog(null, "Se ha pasado " + diasRecargo
+                        + " días del periodo máximo de alquiler." + "\nRecargo actual del socio: "
+                        + socios.get(index).getRecargo() + ".\n¿Pagar ahora?", "Alerta", JOptionPane.YES_NO_OPTION);
+
+                if (respuesta == JOptionPane.YES_OPTION) {
+                    socios.get(index).setRecargo(0);
+                }
+            }
+        }
+
+    }
+
+    public static void alquilarMultimedia(Multimedia multimediaAlquilado, Socio socio) {
+        if (socio.getRecargo() == 0) {
+            GestionAlquilerMul alquiler = new GestionAlquilerMul(multimediaAlquilado, socio);
+            socio.getAlquilerActual().add(alquiler);
+            GestionAlquilerMul.alquileres.add(alquiler);
+
+            GestionLogs.escribirRegistro(GestionLogs.registroAlquilerMult(socio.getNif(),
+                    multimediaAlquilado.getTitulo(),
+                    multimediaAlquilado.getClass().getName().substring(6)));
+
+            GestionBasesDatos.recalcularCantidadAlquiler(multimediaAlquilado.getClass().getName().substring(6).toLowerCase(),
+                    multimediaAlquilado.getTitulo(), multimediaAlquilado.getAutor());
+
+            JOptionPane.showMessageDialog(null,
+                    "El aquiler del socio con identificacion "
+                            + socio.getNif() + "se ha realiado correctamente"
+                            + "\nPrecio a pagar: " + alquiler.getPrecio());
+        } else {
+            JOptionPane.showMessageDialog(null, "El socio tiene recargos, no puede alquilar");
         }
     }
 
 
-
-    public static void calcularRecargoDev(LocalDate fecha, Socio socio) {
+    public static int calcularRecargoDev(LocalDate fecha, Socio socio) {
         int recargo = 0;
         LocalDate fechaActual = LocalDate.now();
         Period period = Period.between(fecha, fechaActual);
@@ -48,14 +91,13 @@ public class GestionSocioVideoClub {
             recargo = 2 * (dias - 3);
         }
         socio.setRecargo(recargo);
+        return period.getDays() - 3;
     }
 
     public static void pagarRecargo(String nif) {
         if (buscarSocio(nif, socios) != -1) {
             socios.get(buscarSocio(nif, socios)).setRecargo(0);
             JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " ha realizado el pago de los recargos");
-        } else {
-            JOptionPane.showMessageDialog(null, "No se ha encontrado el socio");
         }
     }
 

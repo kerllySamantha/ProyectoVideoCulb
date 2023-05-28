@@ -21,6 +21,7 @@ public class FormAlquiler extends JFrame {
     private JLabel lblBuscar;
     private JTextField txtNifSocio;
     private JComboBox<String> cmbNif;
+    private GestionAlquilerMul alquiler;
     private final ArrayList<Multimedia> filtroMultimedias = new ArrayList<>();
     DefaultListModel<String> model = new DefaultListModel<>();
     private boolean existeNif;
@@ -52,15 +53,38 @@ public class FormAlquiler extends JFrame {
             for (Multimedia multimedia : alquilerMultimedia) {
                 if (multimedia.getTitulo().equalsIgnoreCase(tituloSeleccionado)) {
                     multimediaAlquilada = multimedia;
-                    for (Socio socio : alquilerSocio) {
-                        if (socio.getNif().equalsIgnoreCase(nifSocio)) {
-                            new GestionAlquilerMul(multimediaAlquilada, socio);
-                            encontrado = true;
-                            JOptionPane.showMessageDialog(null,
-                                    "El aquiler del socio con identificacion "
-                                            + nifSocio + "se ha realiado correctamente");
+                    if (GestionBasesDatos.comprobarDisponibilidad(multimediaAlquilada.getTitulo(), multimediaAlquilada.getClass().getName().substring(6).toLowerCase())) {
+                        for (Socio socio : GestionSocioVideoClub.socios) {
+                            if (socio.getNif().equalsIgnoreCase(nifSocio)) {
+                                GestionSocioVideoClub.alquilarMultimedia(multimediaAlquilada, socio);
+                            }
+
+//                            if (socio.getNif().equalsIgnoreCase(nifSocio)) {
+//                                if (socio.getRecargo() == 0) {
+//                                    alquiler = new GestionAlquilerMul(multimediaAlquilada, socio);
+//                                    socio.getAlquilerActual().add(alquiler);
+//                                    GestionAlquilerMul.alquileres.add(alquiler);
+//
+//                                    GestionLogs.escribirRegistro(GestionLogs.registroAlquilerMult(socio.getNif(),
+//                                            multimediaAlquilada.getTitulo(),
+//                                            multimediaAlquilada.getClass().getName().substring(6)));
+//
+//                                    GestionBasesDatos.recalcularCantidadAlquiler(multimediaAlquilada.getClass().getName().substring(6).toLowerCase(),
+//                                            multimediaAlquilada.getTitulo(), multimediaAlquilada.getAutor());
+//
+//                                    encontrado = true;
+//                                    JOptionPane.showMessageDialog(null,
+//                                            "El aquiler del socio con identificacion "
+//                                                    + nifSocio + "se ha realiado correctamente"
+//                                                    + "\nPrecio a pagar: " + alquiler.getPrecio());
+//                                } else {
+//                                    JOptionPane.showMessageDialog(null, "El socio tiene recargos, no puede alquilar");
+//                                }
+//                            }
+                            System.out.println(socio.toString());
                         }
-                        System.out.println(socio.toString());
+                    } else {
+                        JOptionPane.showMessageDialog(null, "No quedan ejemplares disponibles");
                     }
                 }
             }

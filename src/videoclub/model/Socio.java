@@ -99,7 +99,6 @@ public class Socio {
                 "\nNombre: " + getNombre() +
                 "\nFecha de nacimiento: " + getFechaNac() +
                 "\nPoblación: " + getPoblacion() +
-                "\nCargo: " + getRecargo()+
-                "\nMultimedias: " + getAlquilerActual().toString();
+                "\nRecargo: " + getRecargo();
     }
 }

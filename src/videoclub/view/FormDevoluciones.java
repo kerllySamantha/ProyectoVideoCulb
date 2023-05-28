@@ -1,15 +1,12 @@
 package view;
 
-import controller.GestionLogs;
 import controller.GestionSocioVideoClub;
-import model.Multimedia;
-import model.Socio;
+
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Objects;
+
 
 public class FormDevoluciones extends JFrame{
 
@@ -38,8 +35,7 @@ public class FormDevoluciones extends JFrame{
                 if(existeNif) {
                     JOptionPane.showMessageDialog(null,"No existe el NIF introducido");
                 } else {
-                    //listaDevolver.setListData(lista.devolverMult(multimedia,socios));
-                    listaDevolver.setModel(GestionSocioVideoClub.mostarMultSocio(txtFieldNifSocio.getText()));
+                    listaDevolver.setModel(GestionSocioVideoClub.mostarMultAlquiladosSocio(txtFieldNifSocio.getText()));
                 }
 
             }
@@ -51,7 +47,6 @@ public class FormDevoluciones extends JFrame{
                 int respuesta = JOptionPane.showConfirmDialog(null,"Estás seguro que quieres devolver-lo?","Alerta!",JOptionPane.YES_NO_OPTION);
                 if (respuesta == JOptionPane.YES_OPTION) {
                     GestionSocioVideoClub.devolverMultimedia(txtFieldNifSocio.getText(), listaDevolver.getSelectedValue().toString());
-                    //GestionLogs.escribirRegistro(GestionLogs.registroDevolucionMuolt(txtFieldNifSocio.getText(), listaDevolver.getSelectedValue().toString()));
                 }
             }
         });
