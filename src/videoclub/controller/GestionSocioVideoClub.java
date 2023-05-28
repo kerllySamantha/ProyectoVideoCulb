@@ -13,7 +13,7 @@ public class GestionSocioVideoClub {
     public static ArrayList<Socio> socios = new ArrayList<>();
 
 //    public static void alquilarMultSocio(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
-//
+
 //        // System.out.println("Introduce el título que quiera alquilar el socio");
 //        String titMult = "";
 //        if (buscarTitulo(titMult, multimedia) != -1) {
@@ -47,7 +47,7 @@ public class GestionSocioVideoClub {
 //            }
 //        }
 //        return precio;
-//    }
+ ///   }
 
     public static DefaultListModel<String> mostarMultSocio(String nif) {
         DefaultListModel<String> listaMultimedia = new DefaultListModel<>();

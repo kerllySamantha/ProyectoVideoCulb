@@ -19,9 +19,11 @@ public class FormAlquiler extends JFrame {
     private JList<String> listarAlquiler;
     private JLabel lblNIF;
     private JLabel lblBuscar;
+    private JTextField txtNifSocio;
     private JComboBox<String> cmbNif;
     private final ArrayList<Multimedia> filtroMultimedias = new ArrayList<>();
     DefaultListModel<String> model = new DefaultListModel<>();
+    private boolean existeNif;
 
 
     public FormAlquiler() {
@@ -35,7 +37,43 @@ public class FormAlquiler extends JFrame {
         grup.add(BLUERAYRadioButton);
         grup.add(ARCHIVORadioButton);
 
-        btnAlquilar.addActionListener(e -> JOptionPane.showMessageDialog(null, "Quiere alquilar-lo?", "Alerta!", JOptionPane.YES_NO_OPTION));
+
+        btnAlquilar.addActionListener(e -> {
+
+            ArrayList<Socio> alquilerSocio = GestionSocioVideoClub.socios;
+            ArrayList<Multimedia> alquilerMultimedia = GestionMultimedia.multimedias;
+
+            String nifSocio = txtNifSocio.getText().toUpperCase();
+            GestionSocioVideoClub.buscarSocio(nifSocio, alquilerSocio);
+            String tituloSeleccionado = listarAlquiler.getSelectedValue();
+            Multimedia multimediaAlquilada ;
+            boolean encontrado  = false;
+
+            for (Multimedia multimedia : alquilerMultimedia) {
+                if (multimedia.getTitulo().equalsIgnoreCase(tituloSeleccionado)) {
+                    multimediaAlquilada = multimedia;
+                    if (multimediaAlquilada != null) {
+                        for (Socio socio : alquilerSocio) {
+                            if (socio.getNif().equalsIgnoreCase(nifSocio)) {
+
+                                encontrado = true;
+                                JOptionPane.showMessageDialog(null,
+                                        "El aquiler del socio con identificacion "
+                                                + nifSocio + "se ha realiado correctamente");
+                            } if(encontrado){
+                                JOptionPane.showMessageDialog(null, "No exixte ningun Socio con ese nif");
+                            }
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "No se ha selecciodo correctamente");
+                    }
+                }
+            }
+
+
+//            JOptionPane.showMessageDialog(null, "Quiere alquilar-lo?", "Alerta!", JOptionPane.YES_NO_OPTION);
+//
+        });
         btnBuscar.addActionListener(e -> {
 
             Set<String> titulos = filtroMultimedia();
@@ -48,6 +86,8 @@ public class FormAlquiler extends JFrame {
             ARCHIVORadioButton.setSelected(false);
             BLUERAYRadioButton.setSelected(false);
             CDRadioButton.setSelected(false);
+
+
         });
     }
 
@@ -55,12 +95,13 @@ public class FormAlquiler extends JFrame {
         for (Socio socio : GestionSocioVideoClub.socios) {
             cmbNif.addItem(socio.getNif());
         }
+
     }
 
     public ArrayList<Multimedia> filtroAlquiler() {
         for (Multimedia multimedia : GestionMultimedia.multimedias) {
             switch (cmbTipoMultimedia.getSelectedIndex()) {
-                case 0 ->{
+                case 0 -> {
 
                 }
                 case 1 -> {
