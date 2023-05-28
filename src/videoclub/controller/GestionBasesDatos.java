@@ -173,6 +173,44 @@ public class GestionBasesDatos {
         }
     }
 
+    public static void aniadirAlquiler(ArrayList<Multimedia>multimedias, ArrayList<Socio>socios) {
+        String titulo, autor, nif;
+        LocalDate fechaAlquiler;
+        int precio;
+        Formato formato;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  ALQUILER");
+                while (rs.next()) {
+
+                    titulo = rs.getString("titulo");
+                    autor = rs.getString("autor");
+                    formato = Formato.valueOf(rs.getString("formato"));
+                    fechaAlquiler = LocalDate.parse(rs.getString("fechaAlquiler"));
+                    precio = rs.getInt("precio");
+                    nif = rs.getString("nifSocio");
+
+                    for (Multimedia mult: multimedias) {
+                        if (mult.getTitulo().equals(titulo) && mult.getAutor().equals(autor) && mult.getFormato() == formato) {
+                            for (Socio socio: socios) {
+                                if (socio.getNif().equals(nif)) {
+                                    GestionAlquilerMul.alquileres.add(new GestionAlquilerMul(mult, fechaAlquiler, precio, socio));
+                                }
+                            }
+                        }
+                    }
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public static void updateDisco(String titulo, String autor, Formato formato, int anio, String duracion) {
         try {

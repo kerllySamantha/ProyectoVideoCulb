@@ -5,3 +5,6 @@
 [2023-05-26 00:18:30] Se ha cerrado el programa
 [26-05-2023 00:19:04] Se ha iniciado el programa
 [26-05-2023 00:19:10] Se ha cerrado el programa
+[26-05-2023 13:32:53] Se ha iniciado el programa
+[26-05-2023 13:33:24] Se ha dado de alta al socio BEE, con NIF 48682132X
+[26-05-2023 13:33:34] Se ha cerrado el programa

@@ -1,7 +1,6 @@
 package controller;
 
-import model.Multimedia;
-import model.Socio;
+import model.*;
 
 import javax.swing.*;
 import java.time.LocalDate;
@@ -12,42 +11,6 @@ public class GestionSocioVideoClub {
 
     public static ArrayList<Socio> socios = new ArrayList<>();
 
-//    public static void alquilarMultSocio(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
-//
-//        // System.out.println("Introduce el título que quiera alquilar el socio");
-//        String titMult = "";
-//        if (buscarTitulo(titMult, multimedia) != -1) {
-//            System.out.println("Introduce el NIF del socio");
-//            String nif = "";
-//            if (buscarSocio(nif, socios) != -1) {
-//                if (socios.get(buscarSocio(nif, socios)).getRecargo() == 0) {
-//                    //socios.get(buscarSocio(nif, socios)).setRecargo(calcularPrecio(multimedia.get(buscarTitulo(titMult, multimedia))));
-//                    socios.get(buscarSocio(nif, socios)).getHistorial().add(multimedia.get(buscarTitulo(titMult, multimedia)));
-//                    socios.get(buscarSocio(nif, socios)).getAlquilerActual().add(multimedia.get(buscarTitulo(titMult, multimedia)));
-//                } else {
-//                    System.out.println("Socio con recargos. No puede alquilar");
-//                }
-//            } else {
-//                System.out.println("No se ha encontrado el socio");
-//            }
-//        } else {
-//            System.out.println("No se ha encontrado el título");
-//        }
-//    }
-
-//    public static int calcularPrecio(Multimedia m) {
-//        int precio = 4;
-//        if (tipoMultimedia(m) == 0) {
-//            if (m.getAnio() < 2012) {
-//                precio = precio - 1;
-//            }
-//        } else if (tipoMultimedia(m) == 1) {
-//            if (m.getAnio() < 2010) {
-//                precio = precio - 1;
-//            }
-//        }
-//        return precio;
-//    }
 
     public static DefaultListModel<String> mostarMultSocio(String nif) {
         DefaultListModel<String> listaMultimedia = new DefaultListModel<>();
@@ -67,35 +30,14 @@ public class GestionSocioVideoClub {
                 if (socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo().equals(titlulo)) {
                     calcularRecargoDev(socios.get(index).getAlquilerActual().get(i).getFechaAlquiler(), socios.get(index));
                     socios.get(index).getAlquilerActual().remove(i);
+                    GestionAlquilerMul.eliminarAlquiler(socios.get(index), socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado());
                     break;
                 }
             }
         }
     }
 
-//    public static Object[] devolverMult(ArrayList<Multimedia> multimedia, ArrayList<Socio> socios) {
-//        System.out.println("Introduce el titulo que se va a devolver");
-//        String titMult = "sc.nextLine()";
-//        if (buscarTitulo(titMult, multimedia) != -1) {
-//            System.out.println("Introduce el NIF del socio");
-//            String nif = " sc.nextLine()";
-//            if (buscarSocio(nif, socios) != -1) {
-//                if (buscarTituloAlquilados(titMult, socios.get(buscarSocio(nif, socios))) != -1) {
-//                    System.out.println("Introduce los dias pasados desde que se realizó el alquiler");
-//                    int dias = 0;
-//                    socios.get(buscarSocio(nif, socios)).getAlquilerActual().remove(buscarTituloAlquilados(titMult, socios.get(buscarSocio(nif, socios))));
-//                    socios.get(buscarSocio(nif, socios)).setRecargo(socios.get(buscarSocio(nif, socios)).getRecargo() + calcularRecargoDev(dias));
-//                } else {
-//                    System.out.println("Este título no ha sido alquilado por el socio");
-//                }
-//            } else {
-//                System.out.println("No se ha encontrado el socio");
-//            }
-//        } else {
-//            System.out.println("No se ha encontrado el título");
-//        }
-//        return new Object[0];
-//    }
+
 
     public static void calcularRecargoDev(LocalDate fecha, Socio socio) {
         int recargo = 0;
@@ -108,15 +50,12 @@ public class GestionSocioVideoClub {
         socio.setRecargo(recargo);
     }
 
-    public static String pagarRecargo(ArrayList<Socio> socios) {
-
-        System.out.println("Indica que socio va a realizar el pago");
-        String nif = "";
+    public static void pagarRecargo(String nif) {
         if (buscarSocio(nif, socios) != -1) {
             socios.get(buscarSocio(nif, socios)).setRecargo(0);
-            return "Se ha pagado los recargos pendientes";
+            JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " ha realizado el pago de los recargos");
         } else {
-            return "No se ha encontrado el socio";
+            JOptionPane.showMessageDialog(null, "No se ha encontrado el socio");
         }
     }
 

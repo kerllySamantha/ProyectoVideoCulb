@@ -88,6 +88,12 @@ public class Socio {
         }
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        Socio s = (Socio) obj;
+        return (s.getNif().equals(getNif()));
+    }
+
     public String toString() {
         return "NIF: " + getNif() +
                 "\nNombre: " + getNombre() +
