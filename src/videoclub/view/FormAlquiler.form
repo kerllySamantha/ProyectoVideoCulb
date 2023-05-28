@@ -22,6 +22,7 @@
         </constraints>
         <properties>
           <model>
+            <item value="Selecciona un tipo"/>
             <item value="Disco"/>
             <item value="Pelicula"/>
             <item value="Videojuego"/>

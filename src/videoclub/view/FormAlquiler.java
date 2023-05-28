@@ -1,12 +1,9 @@
 package view;
 
-import controller.GestionMultimedia;
-import controller.GestionSocioVideoClub;
+import controller.*;
 import model.*;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.*;
 
 public class FormAlquiler extends JFrame {
@@ -24,6 +21,7 @@ public class FormAlquiler extends JFrame {
     private JLabel lblBuscar;
     private JComboBox<String> cmbNif;
     private final ArrayList<Multimedia> filtroMultimedias = new ArrayList<>();
+    DefaultListModel<String> model = new DefaultListModel<>();
 
 
     public FormAlquiler() {
@@ -39,15 +37,17 @@ public class FormAlquiler extends JFrame {
 
         btnAlquilar.addActionListener(e -> JOptionPane.showMessageDialog(null, "Quiere alquilar-lo?", "Alerta!", JOptionPane.YES_NO_OPTION));
         btnBuscar.addActionListener(e -> {
+
             Set<String> titulos = filtroMultimedia();
-            DefaultListModel<String> model = new DefaultListModel<>();
             for (String titulo : titulos) {
                 model.addElement(titulo);
+                listarAlquiler.setModel(model);
             }
 
-            listarAlquiler.setModel(model);
-
-
+            DVDRadioButton.setSelected(false);
+            ARCHIVORadioButton.setSelected(false);
+            BLUERAYRadioButton.setSelected(false);
+            CDRadioButton.setSelected(false);
         });
     }
 
@@ -60,17 +60,22 @@ public class FormAlquiler extends JFrame {
     public ArrayList<Multimedia> filtroAlquiler() {
         for (Multimedia multimedia : GestionMultimedia.multimedias) {
             switch (cmbTipoMultimedia.getSelectedIndex()) {
-                case 0 -> {
-                    if (multimedia instanceof Disco) {
-                        filtroMultimedias.add(multimedia);
-                    }
+                case 0 ->{
+
                 }
                 case 1 -> {
-                    if (multimedia instanceof Pelicula) {
+                    if (multimedia instanceof Disco) {
                         filtroMultimedias.add(multimedia);
+
                     }
                 }
                 case 2 -> {
+                    if (multimedia instanceof Pelicula) {
+                        filtroMultimedias.add(multimedia);
+                        System.out.println(filtroMultimedias);
+                    }
+                }
+                case 3 -> {
                     if (multimedia instanceof Videojuego) {
                         filtroMultimedias.add(multimedia);
                     }
@@ -83,36 +88,40 @@ public class FormAlquiler extends JFrame {
 
     public Set<String> filtroMultimedia() {
         ArrayList<Multimedia> nuevo_filtro = filtroAlquiler();
-        Set<String> titulosMultimedia = new HashSet<>();
-
+        Set<String> titulosMultimediaSet = new HashSet<>();
+        String tituloBuscar = textBuscar.getText();
+        boolean encontrado = false;
         for (Multimedia multimedia : nuevo_filtro) {
-            System.out.println(multimedia.getTitulo());
 
             if (CDRadioButton.isSelected() && multimedia.getFormato() == Formato.CD) {
-                if (textBuscar.getText().equalsIgnoreCase(multimedia.getTitulo()) || textBuscar.getText().isEmpty()) {
-                    titulosMultimedia.add(multimedia.getTitulo());
+                if (tituloBuscar.isEmpty() || tituloBuscar.equalsIgnoreCase(multimedia.getTitulo())) {
+                    titulosMultimediaSet.add(multimedia.getTitulo());
+                    encontrado = true;
+
                 }
+
             } else if (DVDRadioButton.isSelected() && multimedia.getFormato() == Formato.DVD) {
-                if (textBuscar.getText().equalsIgnoreCase(multimedia.getTitulo())) {
-                    titulosMultimedia.add(multimedia.getTitulo());
+                if (tituloBuscar.equalsIgnoreCase(multimedia.getTitulo()) || tituloBuscar.isEmpty()) {
+                    titulosMultimediaSet.add(multimedia.getTitulo());
+                    encontrado = true;
                 }
             } else if (ARCHIVORadioButton.isSelected() && multimedia.getFormato() == Formato.ARCHIVO) {
-                if (textBuscar.getText().equalsIgnoreCase(multimedia.getTitulo()) || textBuscar.getText().isEmpty()) {
-                    titulosMultimedia.add(multimedia.getTitulo());
+                if (tituloBuscar.equalsIgnoreCase(multimedia.getTitulo()) || tituloBuscar.isEmpty()) {
+                    titulosMultimediaSet.add(multimedia.getTitulo());
+                    encontrado = true;
                 }
             } else if (BLUERAYRadioButton.isSelected() && multimedia.getFormato() == Formato.BLUERAY) {
-                if (textBuscar.getText().contains(multimedia.getTitulo()) || textBuscar.getText().isEmpty()) {
-                    titulosMultimedia.add(multimedia.getTitulo());
+                if (tituloBuscar.contains(multimedia.getTitulo()) || tituloBuscar.isEmpty()) {
+                    titulosMultimediaSet.add(multimedia.getTitulo());
+                    encontrado = true;
                 }
-            } else {
-                titulosMultimedia.add(multimedia.getTitulo());
-                System.out.println(titulosMultimedia);
+            } else if (!CDRadioButton.isSelected() && !DVDRadioButton.isSelected() && !ARCHIVORadioButton.isSelected() && !BLUERAYRadioButton.isSelected()) {
+                titulosMultimediaSet.add(multimedia.getTitulo());
+                encontrado = true;
             }
         }
-
-        return titulosMultimedia;
+        model.clear();
+        return titulosMultimediaSet;
     }
-
-
 }
 
