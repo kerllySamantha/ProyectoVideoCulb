@@ -1,32 +1,29 @@
 package model;
 
+import controller.*;
+
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 
 public class Socio {
+    public static final int RECARGO_POR_DEFECTO = 0;
     private String nif;
     private String nombre;
-   // private String fechaNac;
+    private LocalDate fechaNac;
     private String poblacion;
-    private int recargo;
-    private ArrayList <Multimedia> historial;
-    private ArrayList <Multimedia> alquilerActual;
+    private double recargo;
+    private ArrayList <GestionAlquilerMul> historial;
+    private ArrayList <GestionAlquilerMul> alquilerActual;
 
-    public Socio() {
-        nif = "";
-        nombre = "";
-        //fechaNac = "";
-        poblacion = "";
-        recargo = 0;
-        historial = new ArrayList<>();
-        alquilerActual = new ArrayList<>();
-    }
-
-    public Socio(String nif, String nombre, String poblacion) {
-        this();
+    public Socio(String nif, String nombre, LocalDate fechaNac, String poblacion) {
         setNif(nif);
         setNombre(nombre);
-        //setFechaNac(fechaNac);
+        setFechaNac(fechaNac);
         setPoblacion(poblacion);
+        recargo = RECARGO_POR_DEFECTO;
+        historial = new ArrayList<>();
+        alquilerActual = new ArrayList<>();
     }
 
     public String getNif() {
@@ -45,14 +42,14 @@ public class Socio {
         this.nombre = nombre;
     }
 
-//    public String getFechaNac() {
-//        return fechaNac;
-//    }
+    public LocalDate getFechaNac() {
+        return fechaNac;
+    }
 
-//    public void setFechaNac(String fechaNac) {
-//
-//        this.fechaNac = fechaNac;
-//    }
+    public void setFechaNac(LocalDate fechaNac) {
+
+        this.fechaNac = fechaNac;
+    }
 
     public String getPoblacion() {
         return poblacion;
@@ -62,29 +59,47 @@ public class Socio {
         this.poblacion = poblacion;
     }
 
-    public int getRecargo() {
+    public double getRecargo() {
         return recargo;
     }
 
-    public void setRecargo(int recargo) {
+    public void setRecargo(double recargo) {
         this.recargo = recargo;
     }
 
-    public ArrayList<Multimedia> getHistorial() {
+    public ArrayList<GestionAlquilerMul> getHistorial() {
         return historial;
     }
 
-    public ArrayList<Multimedia> getAlquilerActual() {
+    public ArrayList<GestionAlquilerMul> getAlquilerActual() {
         return alquilerActual;
     }
 
+    public static boolean calcularEdad(String fecha) {
+        String [] partesFecha = fecha.split("/");
+        LocalDate fechaNac = LocalDate.of(Integer.parseInt(partesFecha[2]), Integer.parseInt(partesFecha[1]), Integer.parseInt(partesFecha[0]));
+        LocalDate fechaActual = LocalDate.now();
+        Period period = Period.between(fechaNac, fechaActual);
+        int edad = period.getYears();
+        if (edad > 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+        Socio s = (Socio) obj;
+        return (s.getNif().equals(getNif()));
+    }
 
     public String toString() {
         return "NIF: " + getNif() +
                 "\nNombre: " + getNombre() +
-          //      "\nFecha de nacimiento: " + getFechaNac() +
+                "\nFecha de nacimiento: " + getFechaNac() +
                 "\nPoblación: " + getPoblacion() +
-                "\nCargo: " + getRecargo();
+                "\nCargo: " + getRecargo()+
+                "\nMultimedias: " + getAlquilerActual().toString();
     }
 }

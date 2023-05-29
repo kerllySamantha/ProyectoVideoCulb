@@ -1,6 +1,8 @@
 package view;
 
 import controller.*;
+import model.Disco;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,8 +16,9 @@ public class FormPrincipalVideoClub extends JFrame {
 
     FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
     FormAlquiler formAlquiler = new FormAlquiler();
-
     FormDevoluciones formDevoluciones = new FormDevoluciones();
+    FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
+
 
     public FormPrincipalVideoClub() {
         super.setResizable(false);
@@ -38,6 +41,12 @@ public class FormPrincipalVideoClub extends JFrame {
 
         GestionBasesDatos.aniadiscoArrayMultimedia();
         GestionBasesDatos.aniadirSocios();
+        GestionBasesDatos.aniadirVideojuego();
+        GestionBasesDatos.aniadirPelicula();
+
+
+        Disco.agregarCancion(GestionMultimedia.multimedias, GestionBasesDatos.aniadirCancionArrayDisco());
+
 
 //        btnBajas = new JButton("Bajas");
 //        btnBajas.setMinimumSize(new Dimension(20, 20));
@@ -57,6 +66,7 @@ public class FormPrincipalVideoClub extends JFrame {
         btnDevolucion.setMaximumSize(new Dimension(250, 60));
         btnDevolucion.setPreferredSize(new Dimension(200, 30));
         panelPrincipal.add(btnDevolucion);
+
 
         btnListados = new JButton("Listar");
         btnListados.setMinimumSize(new Dimension(20, 20));
@@ -86,6 +96,14 @@ public class FormPrincipalVideoClub extends JFrame {
             formDevoluciones.setBounds(100,100,600,300);
             if (!formDevoluciones.isVisible()) {
                 formDevoluciones.setVisible(true);
+            }
+        });
+
+        btnListados.addActionListener(e -> {
+            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
+            formListadosMultimedia.setBounds(100,100,600,300);
+            if (!formListadosMultimedia.isVisible()) {
+                formListadosMultimedia.setVisible(true);
             }
         });
     }

@@ -1,5 +1,7 @@
 package view;
 
+import controller.GestionBasesDatos;
+import controller.GestionLogs;
 import model.Formato;
 import model.*;
 import javax.swing.*;
@@ -49,7 +51,7 @@ public class FormAltaDisco extends JFrame{
                 if (rbArchivo.isSelected()) {
                     formato = Formato.ARCHIVO;
                 } else if (rbBlueRay.isSelected()) {
-                    formato = Formato.BLURAY;
+                    formato = Formato.BLUERAY;
                 } else if (rbCD.isSelected()) {
                     formato = Formato.CD;
                 } else if (rbDvd.isSelected()) {
@@ -78,6 +80,7 @@ public class FormAltaDisco extends JFrame{
                 if (datosCorrectos) {
                     disco = new Disco(tituloDisco, autorDisco, formato, anioDisco);
                     FormAniadirCanciones canciones = new FormAniadirCanciones();
+
                     canciones.setVisible(true);
                     canciones.setSize(400,400);
                 }
@@ -94,8 +97,12 @@ public class FormAltaDisco extends JFrame{
         btnAltaDisco.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                txtResumenAlta.setText(disco.toString());
-                limpiarCampos();
+                if (disco != null) {
+                    txtResumenAlta.setText(disco.toString());
+                    limpiarCampos();
+                    GestionBasesDatos.insertDisco(disco.getTitulo(), disco.getAutor(), disco.getFormato(), disco.getAnio(), disco.duracionDisco());
+                    GestionLogs.escribirRegistro(GestionLogs.registroAltaDisco(disco.getTitulo()));
+                }
             }
         });
     }

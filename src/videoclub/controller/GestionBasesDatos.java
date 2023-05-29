@@ -2,7 +2,10 @@ package controller;
 
 import model.*;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.*;
 
 public class GestionBasesDatos {
@@ -11,7 +14,7 @@ public class GestionBasesDatos {
     private static final String DB = "videoclub";
     private static final String DRIVER = "org.postgresql.Driver";
     private static final String USER = "postgres";
-    private static final String PASS = "1202";
+    private static final String PASS = "123456";
     static Connection conex = null;
 
     public static Connection getConexion() {
@@ -27,9 +30,10 @@ public class GestionBasesDatos {
     }
 
     public static void aniadiscoArrayMultimedia() {
-        String titulo, autor;
+        String titulo, autor, duracion;
         Formato formato;
-        int anio, duracion, cantidad;
+        int anio, cantidad;
+        Disco disco;
         try {
             getConexion();
             try {
@@ -40,9 +44,11 @@ public class GestionBasesDatos {
                     autor = rs.getString("autor");
                     formato = Formato.valueOf(rs.getString("formato"));
                     anio = rs.getInt("anio");
-                    duracion = rs.getInt("duracion");
+                    duracion = rs.getString("duracion");
                     cantidad = rs.getInt("cantidad");
+
                     GestionMultimedia.multimedias.add(new Disco(titulo, autor, formato, anio));
+                    //disco.agregarCancion(aniadirCancionArrayDisco());
                 }
                 getConexion().close();
             } catch (Exception e2) {
@@ -53,17 +59,171 @@ public class GestionBasesDatos {
         }
     }
 
-    public static void updateDisco(String titulo, String autor, Formato formato, int anio, int  duracion, int cantidad) {
+
+    public static void aniadirSocios() {
+        String nif, nombre, poblacion;
+        LocalDate fecha_nac;
         try {
-            Disco disco = new model.Disco( titulo, autor, formato,  anio);
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  SOCIO");
+                while (rs.next()) {
+                    nif = rs.getString("nif");
+                    nombre = rs.getString("nombre");
+                    fecha_nac = LocalDate.parse(rs.getString("fecha_nac"));
+                    poblacion = rs.getString("poblacion");
+                    GestionSocioVideoClub.socios.add(new Socio(nif, nombre, fecha_nac, poblacion));
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static ArrayList<Cancion> aniadirCancionArrayDisco() {
+        ArrayList<Cancion> canciones = new ArrayList<>();
+        Cancion cancion  ;
+        String autor, nombre ;
+        int duracion;
+        String newDuracion ;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  CANCIONES");
+                while (rs.next()) {
+                    nombre = rs.getString("nombre");
+                    autor = rs.getString("autor");
+                    duracion = rs.getInt("duracion");
+                    newDuracion = String.valueOf(duracion);
+                    cancion = new Cancion(nombre, newDuracion, autor);
+                    canciones.add(cancion);
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return canciones;
+    }
+
+    public static void aniadirVideojuego() {
+        String titulo, autor;
+        Plataforma plataforma;
+        Formato formato;
+        int anio, cantidad;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  VIDEOJUEGO");
+                while (rs.next()) {
+
+                    titulo = rs.getString("titulo");
+                    autor = rs.getString("autor");
+                    formato = Formato.valueOf(rs.getString("formato"));
+                    anio = rs.getInt("anio");
+                    plataforma = Plataforma.valueOf(rs.getString("plataforma"));
+                    cantidad = rs.getInt("cantidad");
+                    GestionMultimedia.multimedias.add(new Videojuego(titulo, autor, formato, anio, plataforma));
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void aniadirPelicula() {
+        String titulo, autor, genero, duracion,actorPrincipal, actrizPrincipal;
+        Formato formato;
+        int anio, cantidad;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  PELICULA");
+                while (rs.next()) {
+
+                    titulo = rs.getString("titulo");
+                    autor = rs.getString("autor");
+                    formato = Formato.valueOf(rs.getString("formato"));
+                    anio = rs.getInt("anio");
+                    genero = rs.getString("genero");
+                    duracion = rs.getString("duracion");
+                    actorPrincipal = rs.getString("actorprincipal");
+                    actrizPrincipal = rs.getString("actrizprincipal");
+                    cantidad = rs.getInt("cantidad");
+                    GestionMultimedia.multimedias.add(new Pelicula(titulo, autor, formato, anio, duracion, actorPrincipal, actrizPrincipal, genero));
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void aniadirAlquiler(ArrayList<Multimedia>multimedias, ArrayList<Socio>socios) {
+        String titulo, autor, nif;
+        LocalDate fechaAlquiler;
+        int precio;
+        Formato formato;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM  ALQUILER");
+                while (rs.next()) {
+
+                    titulo = rs.getString("titulo");
+                    autor = rs.getString("autor");
+                    formato = Formato.valueOf(rs.getString("formato"));
+                    fechaAlquiler = LocalDate.parse(rs.getString("fechaAlquiler"));
+                    precio = rs.getInt("precio");
+                    nif = rs.getString("nifSocio");
+
+                    for (Multimedia mult: multimedias) {
+                        if (mult.getTitulo().equals(titulo) && mult.getAutor().equals(autor) && mult.getFormato() == formato) {
+                            for (Socio socio: socios) {
+                                if (socio.getNif().equals(nif)) {
+                                    GestionAlquilerMul.alquileres.add(new GestionAlquilerMul(mult, fechaAlquiler, precio, socio));
+                                }
+                            }
+                        }
+                    }
+                }
+                getConexion().close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void updateDisco(String titulo, String autor, Formato formato, int anio, String duracion) {
+        try {
             getConexion();
             try {
                 Statement st = conex.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-                String origin ="update monitor set ";
-                st.executeUpdate(origin + "titulo = '" + titulo+ "' where autor = '" + disco.getAutor() + "'");
-                st.executeUpdate(origin + "autor = '" + autor + "' where autor = '" + disco.getAutor() + "'");
-                st.executeUpdate(origin + "formato = '" + formato+ "' where autor = '" + autor+ "'");
-                st.executeUpdate(origin + "anio = '" + anio+ "' where autor = '" + anio + "'");
+                String origin = "update disco set ";
+                st.executeUpdate(origin + "titulo = '" + titulo + "' where autor = '" + autor + "'");
+                st.executeUpdate(origin + "autor = '" + autor + "' where autor = '" + autor + "'");
+                st.executeUpdate(origin + "formato = '" + formato + "' where autor = '" + autor + "'");
+                st.executeUpdate(origin + "anio = '" + anio + "' where autor = '" + autor + "'");
+                st.executeUpdate(origin + "duracion" + duracion + "' where autor = '" + autor + "'");
+
 
                 Objects.requireNonNull(getConexion()).close();
             } catch (Exception e2) {
@@ -74,22 +234,15 @@ public class GestionBasesDatos {
         }
     }
 
-    public static void aniadirSocios() {
-        String nif, nombre, poblacion;
-        //Date fecha_nac;
+    public static void insertDisco(String titulo, String autor, Formato formato, int anio, String duracion) {
         try {
             getConexion();
             try {
-                Statement st = Objects.requireNonNull(getConexion()).createStatement();
-                ResultSet rs = st.executeQuery("SELECT * FROM  SOCIO");
-                while (rs.next()) {
-                    nif = rs.getString("nif");
-                    nombre = rs.getString("nombre");
-                    poblacion = rs.getString("poblacion");
-                    GestionSocioVideoClub.socios.add(new Socio(nif, nombre, poblacion));
+                Statement st = conex.createStatement();
+                st.executeUpdate("insert into disco (titulo, autor, formato, anio, duracion) values "
+                        + "('" + titulo + "', '" + autor + "', '" + formato.toString() + "', " + anio + ", '" + duracion + "')");
 
-                }
-                getConexion().close();
+                Objects.requireNonNull(getConexion()).close();
             } catch (Exception e2) {
                 e2.printStackTrace();
             }
@@ -98,54 +251,83 @@ public class GestionBasesDatos {
         }
     }
 
+    public static void insertPelicula(String titulo, String autor, Formato formato,String genero, int anio, String duracion, String actorPrincipal, String atrizPrincipal) {
+        try {
+            getConexion();
+            try {
+                Statement st = conex.createStatement();
+                st.executeUpdate("insert into pelicula (titulo, autor, formato, genero,  anio, duracion, actorprincipal, actrinzprincipal) values "
+                        + "('" + titulo + "', '" + autor + "', '" + formato.toString() + "', " + "', "+ genero + "', " +  "', " + anio + ", '" +  "', " +duracion+ "', " + "', "  +actorPrincipal+ "', " + "', " + atrizPrincipal + "')");
 
-//    public static ArrayList<Multimedia> aniaadirDiscoAlArrayMultimedias() {
-//        ArrayList<Multimedia> monitimedia = new ArrayList<>();
-//        try {
-//            getConexion();
-//            try {
-//                Statement st = Objects.requireNonNull(getConexion()).createStatement();
-//                ResultSet rs = st.executeQuery("SELECT * FROM  DISCO ");
-//                while (rs.next()) {
-//                    String titulo = rs.getString("titulo");
-//                    String autor = rs.getString("autor");
-//                    Formato formato = Formato.valueOf(rs.getString("formato"));
-//                    int anio = rs.getInt("anio");
-//                    int duracion = rs.getInt("duracion");
-//                    int cantidad = rs.getInt("cantidad");
-//                    aniaadirDiscoAlArrayMultimedias().add(new Disco(titulo, autor, formato, anio));
-//                }
-//                getConexion().close();
-//                return aniaadirDiscoAlArrayMultimedias();
-//
-//            } catch (Exception e2) {
-//                e2.printStackTrace();
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return monitimedia;
-//    }
+                Objects.requireNonNull(getConexion()).close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-//    public static void updateMultimedia(, String numSerie, String tipo, int pulgadas, float precio, String id) {
-//        try {
-//            Multimedia monitoresfForm = new Multimedia();
-//            getConexion();
-//            try {
-//                Statement st = conex.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-//                String origin ="update monitor set ";
-//                st.executeUpdate(origin + "numserie = '" + numSerie + "' where id = '" + monitor.getId() + "'");
-//                st.executeUpdate(origin + "tipo = '" + tipo + "' where id = '" + monitor.getId() + "'");
-//                st.executeUpdate(origin + "pulgadas = '" + pulgadas + "' where id = '" + monitor.getId() + "'");
-//                st.executeUpdate(origin + "precio = '" + precio + "' where id = '" + monitor.getId() + "'");
-//                st.executeUpdate(origin + "id= '" + id + "' where id = '" + monitor.getId() + "'");
-//                monitoresfForm.rellenarComboBox();
-//                Objects.requireNonNull(getConexion()).close();
-//            } catch (Exception e2) {
-//                e2.printStackTrace();
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public static boolean comprobarDisponibilidad(String titulo, String tabla) {
+        int cantidad = 0;
+        try {
+            getConexion();
+            try {
+                Statement st = Objects.requireNonNull(getConexion()).createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM " + tabla + " WHERE TITULO = '" + titulo + "'");
+                if (rs.next()) {
+                    cantidad = rs.getInt("cantidad");
+                }
+                getConexion().close();
+            } catch (SQLException e) {
+            e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (cantidad > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void racalcularCantidadDev(String tabla, String titulo, String autor){
+        try {
+            getConexion();
+            try {
+                String consultaUpdate = "UPDATE " + tabla + " SET cantidad = cantidad + 1 WHERE titulo = ? AND autor = ?";
+                PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaUpdate);
+                statement.setString(1, titulo);
+                statement.setString(2, autor);
+                statement.executeUpdate();
+                getConexion().close();
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void recalcularCantidadAlquiler(String tabla, String titulo, String autor){
+        try {
+            getConexion();
+            try {
+                String consultaUpdate = "UPDATE " + tabla + " SET cantidad = cantidad - 1 WHERE titulo = ? AND autor = ?";
+                PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaUpdate);
+                statement.setString(1, titulo);
+                statement.setString(2, autor);
+                statement.executeUpdate();
+                getConexion().close();
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
+
+
