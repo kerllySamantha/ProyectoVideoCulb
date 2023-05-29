@@ -34,3 +34,7 @@
 [29-05-2023 16:15:29] Se ha cerrado el programa
 [29-05-2023 16:18:57] Se ha iniciado el programa
 [29-05-2023 16:19:43] Se ha cerrado el programa
+[29-05-2023 16:51:22] Se ha iniciado el programa
+[29-05-2023 16:51:48] Se ha cerrado el programa
+[29-05-2023 16:54:52] Se ha iniciado el programa
+[29-05-2023 16:55:11] Se ha cerrado el programa

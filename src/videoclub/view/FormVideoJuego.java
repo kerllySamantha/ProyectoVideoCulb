@@ -1,5 +1,7 @@
 package view;
 
+import controller.GestionBasesDatos;
+import controller.GestionLogs;
 import model.Formato;
 import model.Multimedia;
 import model.Plataforma;
@@ -69,6 +71,8 @@ public class FormVideoJuego extends JFrame {
                     } else {
                         juego = new Videojuego(tituloVideoJuego,autorVideoJuego,Formato.BLUERAY,anioVideoJuego,Plataforma.PC);
                         visualizarDatos.setText(juego.toString());
+                        GestionBasesDatos.insertViedeojuego(juego.getTitulo(), juego.getAutor(), juego.getFormato(), juego.getAnio(), juego.getPlataforma());
+                        GestionLogs.escribirRegistro(GestionLogs.registroAltaVideojuego(juego.getTitulo()));
                     }
 
                     textTitulo.setText(" ");
