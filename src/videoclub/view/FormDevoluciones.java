@@ -1,12 +1,15 @@
 package view;
 
+import controller.GestionLogs;
 import controller.GestionSocioVideoClub;
-
+import model.Multimedia;
+import model.Socio;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class FormDevoluciones extends JFrame{
 
@@ -26,18 +29,25 @@ public class FormDevoluciones extends JFrame{
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
 
-
         btnComprobarSocio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                socioNIF = txtFieldNifSocio.getText().toUpperCase();
-                existeNif = GestionSocioVideoClub.comprobarNif(GestionSocioVideoClub.socios,socioNIF);
-                if(existeNif) {
-                    JOptionPane.showMessageDialog(null,"No existe el NIF introducido");
-                } else {
-                    listaDevolver.setModel(GestionSocioVideoClub.mostarMultAlquiladosSocio(txtFieldNifSocio.getText()));
-                }
+                try {
+                    socioNIF = txtFieldNifSocio.getText().toUpperCase();
+                    existeNif = GestionSocioVideoClub.comprobarNif(GestionSocioVideoClub.socios,socioNIF);
 
+                    if (socioNIF.equalsIgnoreCase("")) {
+                        JOptionPane.showMessageDialog(null,"El campo NIF Socio está vacio");
+
+                    } else if (!existeNif) {
+                        JOptionPane.showMessageDialog(null,"No existe el NIF introducido");
+
+                    } else {
+                        listaDevolver.setModel(GestionSocioVideoClub.mostarMultSocio(txtFieldNifSocio.getText()));
+                    }
+                }catch (Exception e1){
+                    e1.printStackTrace();
+                }
             }
         });
 
