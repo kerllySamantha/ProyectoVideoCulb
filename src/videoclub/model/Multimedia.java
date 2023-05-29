@@ -1,11 +1,17 @@
 package model;
 
 public abstract class Multimedia {
-    public static final Formato FORMATO_POR_DEFECTO = Formato.ARCHIVO;
     private String titulo;
     private String autor;
     private Formato formato;
     private int anio;
+
+    public Multimedia() {
+        titulo = "";
+        autor = "";
+        formato = Formato.CD;
+        anio = 0;
+    }
 
     public Multimedia(String titulo, String autor, Formato fromato, int anio) {
         setTitulo(titulo);
@@ -59,7 +65,7 @@ public abstract class Multimedia {
                 return Formato.values()[i];
             }
         }
-        return FORMATO_POR_DEFECTO;
+        return Formato.ARCHIVO;
     }
 
     @Override

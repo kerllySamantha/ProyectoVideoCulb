@@ -2,15 +2,12 @@ package view;
 
 import controller.GestionMultimedia;
 import controller.GestionSocioVideoClub;
-import model.Disco;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MenuBar {
     public static JMenuBar menuVideoClub;
-    public static JMenu altas, bajas, alquileres, devoluciones, listados, salir;
+    public static JMenu altas, bajas, alquileres, devoluciones, listados, salir, pagos;
     public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listaPelisOrden, listaVideojAnio,
             listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, listaDiscos, devolver, exit, alquiler;
     public static FormAltaSocio formAltaSocio = new FormAltaSocio();
@@ -22,6 +19,7 @@ public class MenuBar {
     public static FormAlquiler formAlquiler = new FormAlquiler();
     public static FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
 
+    public static FormPagoRecargo formPagoRecargo = new FormPagoRecargo();
 
     public static JMenuBar crearMenuBar() {
         menuVideoClub = new JMenuBar();
@@ -31,13 +29,16 @@ public class MenuBar {
         alquileres = new JMenu("Alquileres");
         devoluciones = new JMenu("Devoluciones");
         listados = new JMenu("Listados");
+        pagos = new JMenu("Pagos");
         salir = new JMenu("Salir");
+
 
         menuVideoClub.add(altas);
         //menuVideoClub.add(bajas);
         menuVideoClub.add(alquileres);
         menuVideoClub.add(devoluciones);
         menuVideoClub.add(listados);
+        menuVideoClub.add(pagos);
         menuVideoClub.add(salir);
 
         socio = new JMenuItem("Socio");
@@ -217,6 +218,15 @@ public class MenuBar {
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
+        });
+
+        pagos.addActionListener(e -> {
+            formPagoRecargo.setDefaultCloseOperation(formPagoRecargo.HIDE_ON_CLOSE);
+            formPagoRecargo.setBounds(100,100,600,300);
+            if(!formPagoRecargo.isVisible()) {
+                visivilidadVentanas();
+                formPagoRecargo.setVisible(true);
+            }
         });
 
         exit.addActionListener(e->{
