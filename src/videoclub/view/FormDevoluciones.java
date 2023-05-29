@@ -43,7 +43,7 @@ public class FormDevoluciones extends JFrame{
                         JOptionPane.showMessageDialog(null,"No existe el NIF introducido");
 
                     } else {
-                        listaDevolver.setModel(GestionSocioVideoClub.mostarMultSocio(txtFieldNifSocio.getText()));
+                        listaDevolver.setModel(GestionSocioVideoClub.mostarMultAlquiladosSocio(txtFieldNifSocio.getText()));
                     }
                 }catch (Exception e1){
                     e1.printStackTrace();
