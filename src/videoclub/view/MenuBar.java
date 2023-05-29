@@ -9,7 +9,7 @@ public class MenuBar {
     public static JMenuBar menuVideoClub;
     public static JMenu altas, bajas, alquileres, devoluciones, listados, salir, pagos;
     public static JMenuItem socio, videojuego, pelicula, disco, listMultimedia, listaPelisOrden, listaVideojAnio,
-            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, listaDiscos, devolver, exit, alquiler;
+            listHistorialAlqSocioFecha, listActualSocio, listRecargosPendSocio, listaDiscos, devolver, exit, alquiler, pagoRecargos;
     public static FormAltaSocio formAltaSocio = new FormAltaSocio();
     public static FormAltaDisco formAltaDisco = new FormAltaDisco();
     public static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
@@ -73,6 +73,9 @@ public class MenuBar {
         listados.add(listHistorialAlqSocioFecha);
         listados.add(listActualSocio);
         listados.add(listRecargosPendSocio);
+
+        pagoRecargos = new JMenuItem("Pagos Reacrgos");
+        pagos.add(pagoRecargos);
 
         exit = new JMenuItem("Exit");
         salir.add(exit);
@@ -220,7 +223,7 @@ public class MenuBar {
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
         });
 
-        pagos.addActionListener(e -> {
+        pagoRecargos.addActionListener(e -> {
             formPagoRecargo.setDefaultCloseOperation(formPagoRecargo.HIDE_ON_CLOSE);
             formPagoRecargo.setBounds(100,100,600,300);
             if(!formPagoRecargo.isVisible()) {
