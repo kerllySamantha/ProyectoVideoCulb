@@ -19,7 +19,6 @@ public class FormPrincipalVideoClub extends JFrame {
     FormDevoluciones formDevoluciones = new FormDevoluciones();
     FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
 
-
     public FormPrincipalVideoClub() {
         super.setResizable(false);
         super.setLayout(null);
@@ -66,7 +65,6 @@ public class FormPrincipalVideoClub extends JFrame {
         btnDevolucion.setMaximumSize(new Dimension(250, 60));
         btnDevolucion.setPreferredSize(new Dimension(200, 30));
         panelPrincipal.add(btnDevolucion);
-
 
         btnListados = new JButton("Listar");
         btnListados.setMinimumSize(new Dimension(20, 20));

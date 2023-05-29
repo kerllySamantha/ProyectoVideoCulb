@@ -41,7 +41,6 @@ public class FormDevoluciones extends JFrame{
                     //listaDevolver.setListData(lista.devolverMult(multimedia,socios));
                     listaDevolver.setModel(GestionSocioVideoClub.mostarMultSocio(txtFieldNifSocio.getText()));
                 }
-
             }
         });
 
