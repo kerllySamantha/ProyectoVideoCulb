@@ -54,7 +54,7 @@ public class FormAlquiler extends JFrame {
                     multimediaAlquilada = multimedia;
                     for (Socio socio : alquilerSocio) {
                         if (socio.getNif().equalsIgnoreCase(nifSocio)) {
-                            new GestionAlquilerMul(multimediaAlquilada, socio);
+                            socio.getAlquilerActual().add(new GestionAlquilerMul(multimediaAlquilada, socio));
                             encontrado = true;
                             JOptionPane.showMessageDialog(null,
                                     "El aquiler del socio con identificacion "
