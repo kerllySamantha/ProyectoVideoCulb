@@ -217,7 +217,7 @@ public class MenuBar {
             formListadosMultimedia.setBounds(100,100,600,300);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
-                //formListadosMultimedia.setVisible(true);
+                formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();

@@ -12,7 +12,7 @@ public class GestionBasesDatos {
     private static final String DB = "videoclub";
     private static final String DRIVER = "org.postgresql.Driver";
     private static final String USER = "postgres";
-    private static final String PASS = "1202";
+    private static final String PASS = "130420";
     static Connection conex = null;
 
     public static Connection getConexion() {
