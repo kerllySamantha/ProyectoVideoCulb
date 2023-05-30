@@ -91,4 +91,9 @@ public class GestionAlquilerMul {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return "multimedia: "+ multimediaAlquilado.getTitulo();
+    }
 }

@@ -10,7 +10,7 @@ public class FormPrincipalVideoClub extends JFrame {
     JPanel panelPrincipal;
     JButton botonAltas;
     JButton btnAlquiler;
-    JButton btnBajas;
+    //JButton btnBajas;
     JButton btnDevolucion;
     JButton btnListados;
     JButton btnPagos;
