@@ -62,7 +62,7 @@ public class MenuBar {
         listaDiscos = new JMenuItem("Discos");
         listaPelisOrden = new JMenuItem("Peliculas en Orden");
         listaVideojAnio = new JMenuItem("Videojuego por año");
-        listHistorialAlqSocioFecha = new JMenuItem("Historial de alquiler del Socio por fecha");
+        //listHistorialAlqSocioFecha = new JMenuItem("Historial de alquiler del Socio por fecha");
         listActualSocio = new JMenuItem("Actual del Socio");
         listRecargosPendSocio = new JMenuItem("Recargos pendientes");
 
@@ -70,7 +70,7 @@ public class MenuBar {
         listados.add(listaPelisOrden);
         listados.add(listaVideojAnio);
         listados.add(listaDiscos);
-        listados.add(listHistorialAlqSocioFecha);
+        //listados.add(listHistorialAlqSocioFecha);
         listados.add(listActualSocio);
         listados.add(listRecargosPendSocio);
 
