@@ -58,30 +58,6 @@ public class FormAlquiler extends JFrame {
                             if (socio.getNif().equalsIgnoreCase(nifSocio)) {
                                 GestionSocioVideoClub.alquilarMultimedia(multimediaAlquilada, socio);
                             }
-
-//                            if (socio.getNif().equalsIgnoreCase(nifSocio)) {
-//                                if (socio.getRecargo() == 0) {
-//                                    alquiler = new GestionAlquilerMul(multimediaAlquilada, socio);
-//                                    socio.getAlquilerActual().add(alquiler);
-//                                    GestionAlquilerMul.alquileres.add(alquiler);
-//
-//                                    GestionLogs.escribirRegistro(GestionLogs.registroAlquilerMult(socio.getNif(),
-//                                            multimediaAlquilada.getTitulo(),
-//                                            multimediaAlquilada.getClass().getName().substring(6)));
-//
-//                                    GestionBasesDatos.recalcularCantidadAlquiler(multimediaAlquilada.getClass().getName().substring(6).toLowerCase(),
-//                                            multimediaAlquilada.getTitulo(), multimediaAlquilada.getAutor());
-//
-//                                    encontrado = true;
-//                                    JOptionPane.showMessageDialog(null,
-//                                            "El aquiler del socio con identificacion "
-//                                                    + nifSocio + "se ha realiado correctamente"
-//                                                    + "\nPrecio a pagar: " + alquiler.getPrecio());
-//                                } else {
-//                                    JOptionPane.showMessageDialog(null, "El socio tiene recargos, no puede alquilar");
-//                                }
-//                            }
-                            System.out.println(socio.toString());
                         }
                     } else {
                         JOptionPane.showMessageDialog(null, "No quedan ejemplares disponibles");

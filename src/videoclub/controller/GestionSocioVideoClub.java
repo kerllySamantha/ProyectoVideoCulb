@@ -41,6 +41,12 @@ public class GestionSocioVideoClub {
                             socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo(),
                             socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getAutor());
 
+                    GestionBasesDatos.eliminarAlquiler(socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getClass().getName().substring(6),
+                            socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo(),
+                            socios.get(index).getAlquilerActual().get(i).getSocio().getNif(),
+                            socios.get(index).getAlquilerActual().get(i).getPrecio(),
+                            socios.get(index).getAlquilerActual().get(i).getFechaAlquiler());
+
                     socios.get(index).getAlquilerActual().remove(i);
                     GestionAlquilerMul.eliminarAlquiler(socios.get(index), socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado());
                     break;
@@ -71,6 +77,9 @@ public class GestionSocioVideoClub {
 
             GestionBasesDatos.recalcularCantidadAlquiler(multimediaAlquilado.getClass().getName().substring(6).toLowerCase(),
                     multimediaAlquilado.getTitulo(), multimediaAlquilado.getAutor());
+
+            GestionBasesDatos.insertAlquiler(alquiler.getMultimediaAlquilado().getTitulo(), alquiler.getMultimediaAlquilado().getFormato(),
+                    alquiler.getFechaAlquiler(), alquiler.getPrecio(), alquiler.getSocio().getNif());
 
             JOptionPane.showMessageDialog(null,
                     "El aquiler del socio con identificacion "

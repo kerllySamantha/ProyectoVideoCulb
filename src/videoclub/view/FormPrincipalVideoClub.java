@@ -45,7 +45,7 @@ public class FormPrincipalVideoClub extends JFrame {
         GestionBasesDatos.aniadirVideojuego();
         GestionBasesDatos.aniadirPelicula();
 
-
+        GestionBasesDatos.aniadirAlquiler(GestionMultimedia.multimedias, GestionSocioVideoClub.socios);
         Disco.agregarCancion(GestionMultimedia.multimedias, GestionBasesDatos.aniadirCancionArrayDisco());
 
 
