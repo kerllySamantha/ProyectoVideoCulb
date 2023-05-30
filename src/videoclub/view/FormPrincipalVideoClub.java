@@ -13,11 +13,13 @@ public class FormPrincipalVideoClub extends JFrame {
     //JButton btnBajas;
     JButton btnDevolucion;
     JButton btnListados;
+    JButton btnPagos;
 
     FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
     FormAlquiler formAlquiler = new FormAlquiler();
     FormDevoluciones formDevoluciones = new FormDevoluciones();
     FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
+    FormPagoRecargo formPagoRecargo = new FormPagoRecargo();
 
     public FormPrincipalVideoClub() {
         super.setResizable(false);
@@ -72,6 +74,12 @@ public class FormPrincipalVideoClub extends JFrame {
         btnListados.setPreferredSize(new Dimension(200, 30));
         panelPrincipal.add(btnListados);
 
+        btnPagos = new JButton("Pagos");
+        btnPagos.setMinimumSize(new Dimension(20, 20));
+        btnPagos.setMaximumSize(new Dimension(250, 60));
+        btnPagos.setPreferredSize(new Dimension(200, 30));
+        panelPrincipal.add(btnPagos);
+
 
         botonAltas.addActionListener(e -> {
             formPrincipalAltas.setDefaultCloseOperation(formPrincipalAltas.HIDE_ON_CLOSE);
@@ -102,6 +110,14 @@ public class FormPrincipalVideoClub extends JFrame {
             formListadosMultimedia.setBounds(100,100,600,300);
             if (!formListadosMultimedia.isVisible()) {
                 formListadosMultimedia.setVisible(true);
+            }
+        });
+
+        btnPagos.addActionListener(e -> {
+            formPagoRecargo.setDefaultCloseOperation(formPagoRecargo.HIDE_ON_CLOSE);
+            formPagoRecargo.setBounds(100,100,600,300);
+            if (!formPagoRecargo.isVisible()) {
+                formPagoRecargo.setVisible(true);
             }
         });
     }

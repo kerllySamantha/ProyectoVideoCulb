@@ -1,12 +1,14 @@
 package view;
 
 import model.Formato;
+import model.Multimedia;
 import model.Plataforma;
 import model.Videojuego;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class FormVideoJuego extends JFrame {
 

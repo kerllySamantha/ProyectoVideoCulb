@@ -2,8 +2,6 @@ package controller;
 
 import model.*;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.*;
@@ -14,7 +12,7 @@ public class GestionBasesDatos {
     private static final String DB = "videoclub";
     private static final String DRIVER = "org.postgresql.Driver";
     private static final String USER = "postgres";
-    private static final String PASS = "1202";
+    private static final String PASS = "123456";
     static Connection conex = null;
 
     public static Connection getConexion() {
@@ -30,10 +28,9 @@ public class GestionBasesDatos {
     }
 
     public static void aniadiscoArrayMultimedia() {
-        String titulo, autor, duracion;
+        String titulo, autor;
         Formato formato;
-        int anio, cantidad;
-        Disco disco;
+        int anio;
         try {
             getConexion();
             try {
@@ -44,11 +41,10 @@ public class GestionBasesDatos {
                     autor = rs.getString("autor");
                     formato = Formato.valueOf(rs.getString("formato"));
                     anio = rs.getInt("anio");
-                    duracion = rs.getString("duracion");
-                    cantidad = rs.getInt("cantidad");
+//                    duracion = rs.getString("duracion");
+//                    cantidad = rs.getInt("cantidad");
 
                     GestionMultimedia.multimedias.add(new Disco(titulo, autor, formato, anio));
-                    //disco.agregarCancion(aniadirCancionArrayDisco());
                 }
                 getConexion().close();
             } catch (Exception e2) {
