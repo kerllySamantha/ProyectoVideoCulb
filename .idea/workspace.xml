@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Poner nombre objetos enum en mayúscula">
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Terminado el form de devoluciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Plataforma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Plataforma.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormDevoluciones.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Plataforma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Plataforma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Videojuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Videojuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +27,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/kerlly" />
+    <option name="BRANCH" value="aineNew" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -64,7 +66,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1685556610" />
+                    <option name="lastUsedInstant" value="1685299036" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
@@ -111,7 +113,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/kerll/IdeaProjects/ProyectoVideoClub/src/postgresql-42.6.0.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -166,7 +168,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio" />
+      <changelist id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Terminado el form de devoluciones" />
       <created>1680113213206</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -319,28 +321,7 @@
       <option name="project" value="LOCAL" />
       <updated>1685095554600</updated>
     </task>
-    <task id="LOCAL-00022" summary="Crear Form y funcionalidad de FormPagoRecargo y modificar metodos de devolución y alquiler.">
-      <created>1685309250742</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1685309250742</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Añadir menuItem de pagos">
-      <created>1685370211473</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1685370211473</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Poner nombre objetos enum en mayúscula">
-      <created>1685556723847</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1685556723847</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,7 +329,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/kerlly" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -372,9 +365,7 @@
     <MESSAGE value="Añadir clase GestionAlquilerMultimedia y métodos de devolución de multimedia / calcular recargo" />
     <MESSAGE value="Solucionar error lista videojuegos" />
     <MESSAGE value="Metodos para actualizar cantidad en la base de datos y escritura de logs" />
-    <MESSAGE value="Crear Form y funcionalidad de FormPagoRecargo y modificar metodos de devolución y alquiler." />
-    <MESSAGE value="Añadir menuItem de pagos" />
-    <MESSAGE value="Poner nombre objetos enum en mayúscula" />
-    <option name="LAST_COMMIT_MESSAGE" value="Poner nombre objetos enum en mayúscula" />
+    <MESSAGE value="Terminado el form de devoluciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminado el form de devoluciones" />
   </component>
 </project>
