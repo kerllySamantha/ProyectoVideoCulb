@@ -2,6 +2,7 @@ package view;
 
 import controller.GestionBasesDatos;
 import controller.GestionLogs;
+import controller.GestionMultimedia;
 import model.Formato;
 import model.Multimedia;
 import model.Plataforma;
@@ -51,6 +52,8 @@ public class FormVideoJuego extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
+                    Formato formato = null;
+                    Plataforma plataforma = null;
                     tituloVideoJuego = textTitulo.getText().toUpperCase();
                     autorVideoJuego = textAutor.getText().toUpperCase();
                     anioVideoJuego = Integer.parseInt(Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
@@ -69,8 +72,30 @@ public class FormVideoJuego extends JFrame {
                         visualizarDatos.setText("");
 
                     } else {
-                        juego = new Videojuego(tituloVideoJuego,autorVideoJuego,Formato.BLUERAY,anioVideoJuego,Plataforma.PC);
+                        if (CDRadioButton.isSelected()) {
+                            formato = Formato.CD;
+
+                        } else if (DVDRadioButton.isSelected()) {
+                            formato = Formato.DVD;
+                        } else if (BLURAYRadioButton.isSelected()) {
+                            formato = Formato.BLUERAY;
+
+                        } else if (ARCHIVORadioButton.isSelected()) {
+                            formato = Formato.ARCHIVO;
+                        }
+
+                        if(playRadioButton.isSelected()){
+                            plataforma = Plataforma.PlayStation5;
+                        } else if (XBoxRadioButton.isSelected()) {
+                            plataforma = Plataforma.XBox;
+                        } else if (nintendoRadioButton.isSelected()) {
+                            plataforma = Plataforma.NintendoSwitch;
+                        } else if (PCRadioButton.isSelected()) {
+                            plataforma=Plataforma.PC;
+                        }
+                        juego = new Videojuego(tituloVideoJuego,autorVideoJuego,formato,anioVideoJuego,plataforma);
                         visualizarDatos.setText(juego.toString());
+                        GestionMultimedia.multimedias.add(new Videojuego(tituloVideoJuego, autorVideoJuego, formato, anioVideoJuego, plataforma));
                         GestionBasesDatos.insertViedeojuego(juego.getTitulo(), juego.getAutor(), juego.getFormato(), juego.getAnio(), juego.getPlataforma());
                         GestionLogs.escribirRegistro(GestionLogs.registroAltaVideojuego(juego.getTitulo()));
                     }

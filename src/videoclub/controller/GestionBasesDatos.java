@@ -2,8 +2,6 @@ package controller;
 
 import model.*;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.*;
@@ -30,10 +28,9 @@ public class GestionBasesDatos {
     }
 
     public static void aniadiscoArrayMultimedia() {
-        String titulo, autor, duracion;
+        String titulo, autor;
         Formato formato;
-        int anio, cantidad;
-        Disco disco;
+        int anio;
         try {
             getConexion();
             try {
@@ -44,11 +41,10 @@ public class GestionBasesDatos {
                     autor = rs.getString("autor");
                     formato = Formato.valueOf(rs.getString("formato"));
                     anio = rs.getInt("anio");
-                    duracion = rs.getString("duracion");
-                    cantidad = rs.getInt("cantidad");
+//                    duracion = rs.getString("duracion");
+//                    cantidad = rs.getInt("cantidad");
 
                     GestionMultimedia.multimedias.add(new Disco(titulo, autor, formato, anio));
-                    //disco.agregarCancion(aniadirCancionArrayDisco());
                 }
                 getConexion().close();
             } catch (Exception e2) {
