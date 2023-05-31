@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Comprobar el correcto funcionamiento del FormVideoJuego" />
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Poner nombre objetos enum en mayúscula">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Plataforma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Plataforma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Plataforma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Plataforma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="marta" />
+    <option name="BRANCH" value="origin/kerlly" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -29,7 +36,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="kerlly" />
+        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +64,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1685478850" />
+                    <option name="lastUsedInstant" value="1685556610" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
@@ -326,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685370211473</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Poner nombre objetos enum en mayúscula">
+      <created>1685556723847</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1685556723847</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -360,6 +374,7 @@
     <MESSAGE value="Metodos para actualizar cantidad en la base de datos y escritura de logs" />
     <MESSAGE value="Crear Form y funcionalidad de FormPagoRecargo y modificar metodos de devolución y alquiler." />
     <MESSAGE value="Añadir menuItem de pagos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir menuItem de pagos" />
+    <MESSAGE value="Poner nombre objetos enum en mayúscula" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poner nombre objetos enum en mayúscula" />
   </component>
 </project>
