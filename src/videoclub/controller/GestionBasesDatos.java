@@ -3,16 +3,16 @@ package controller;
 import model.*;
 
 import java.sql.*;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.*;
 
 public class GestionBasesDatos {
-    private static final StringBuilder TOTAL = new StringBuilder();
     private static final String URL = "jdbc:postgresql://localhost:5432/";
     private static final String DB = "videoclub";
     private static final String DRIVER = "org.postgresql.Driver";
     private static final String USER = "postgres";
-    private static final String PASS = "123456";
+    private static final String PASS = "130420";
     static Connection conex = null;
 
     public static Connection getConexion() {
@@ -41,8 +41,6 @@ public class GestionBasesDatos {
                     autor = rs.getString("autor");
                     formato = Formato.valueOf(rs.getString("formato"));
                     anio = rs.getInt("anio");
-//                    duracion = rs.getString("duracion");
-//                    cantidad = rs.getInt("cantidad");
 
                     GestionMultimedia.multimedias.add(new Disco(titulo, autor, formato, anio));
                 }
@@ -113,7 +111,7 @@ public class GestionBasesDatos {
         String titulo, autor;
         Plataforma plataforma;
         Formato formato;
-        int anio, cantidad;
+        int anio;
         try {
             getConexion();
             try {
@@ -126,7 +124,6 @@ public class GestionBasesDatos {
                     formato = Formato.valueOf(rs.getString("formato"));
                     anio = rs.getInt("anio");
                     plataforma = Plataforma.valueOf(rs.getString("plataforma"));
-                    cantidad = rs.getInt("cantidad");
                     GestionMultimedia.multimedias.add(new Videojuego(titulo, autor, formato, anio, plataforma));
                 }
                 getConexion().close();
@@ -141,7 +138,7 @@ public class GestionBasesDatos {
     public static void aniadirPelicula() {
         String titulo, autor, genero, duracion,actorPrincipal, actrizPrincipal;
         Formato formato;
-        int anio, cantidad;
+        int anio;
         try {
             getConexion();
             try {
@@ -157,7 +154,7 @@ public class GestionBasesDatos {
                     duracion = rs.getString("duracion");
                     actorPrincipal = rs.getString("actorprincipal");
                     actrizPrincipal = rs.getString("actrizprincipal");
-                    cantidad = rs.getInt("cantidad");
+
                     GestionMultimedia.multimedias.add(new Pelicula(titulo, autor, formato, anio, duracion, actorPrincipal, actrizPrincipal, genero));
                 }
                 getConexion().close();
@@ -170,7 +167,7 @@ public class GestionBasesDatos {
     }
 
     public static void aniadirAlquiler(ArrayList<Multimedia>multimedias, ArrayList<Socio>socios) {
-        String titulo, autor, nif;
+        String titulo, nif, tipo;
         LocalDate fechaAlquiler;
         int precio;
         Formato formato;
@@ -182,14 +179,15 @@ public class GestionBasesDatos {
                 while (rs.next()) {
 
                     titulo = rs.getString("titulo");
-                    autor = rs.getString("autor");
+                    tipo = rs.getString("tipo");
                     formato = Formato.valueOf(rs.getString("formato"));
                     fechaAlquiler = LocalDate.parse(rs.getString("fechaAlquiler"));
                     precio = rs.getInt("precio");
                     nif = rs.getString("nifSocio");
 
                     for (Multimedia mult: multimedias) {
-                        if (mult.getTitulo().equals(titulo) && mult.getAutor().equals(autor) && mult.getFormato() == formato) {
+                        if (mult.getTitulo().equals(titulo) && mult.getFormato() == formato
+                                && mult.getClass().getName().substring(6).equals(tipo)) {
                             for (Socio socio: socios) {
                                 if (socio.getNif().equals(nif)) {
                                     GestionAlquilerMul.alquileres.add(new GestionAlquilerMul(mult, fechaAlquiler, precio, socio));
@@ -201,6 +199,45 @@ public class GestionBasesDatos {
                 getConexion().close();
             } catch (Exception e2) {
                 e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertAlquiler(String titulo, Formato formato, LocalDate fecha, int precio, String nif) {
+        try {
+            getConexion();
+            try {
+                Statement st = conex.createStatement();
+                st.executeUpdate("insert into alquiler values "
+                        + "('" + nif + "', '" + titulo + "', '" + formato.toString() + "', '" + fecha + "', " + precio + ")");
+
+                Objects.requireNonNull(getConexion()).close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void eliminarAlquiler(String tipo, String titulo, String nif, int precio, LocalDate fecha) {
+        try {
+            getConexion();
+            try {
+                String consultaDelete = "DELETE FROM ALQUILER WHERE tituloMultimedia = ? AND nifSocio = ? " +
+                        "AND fecha_alquiler = ? AND tipo = ? AND precio = ?";
+                PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaDelete);
+                statement.setString(1, titulo);
+                statement.setString(2, nif);
+                statement.setDate(3, Date.valueOf(fecha));
+                statement.setString(4, tipo);
+                statement.setInt(5, precio);
+                statement.executeUpdate();
+                getConexion().close();
+            }catch (SQLException e) {
+                e.printStackTrace();
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,8 +1,6 @@
 package model;
 
 public class Videojuego extends Multimedia {
-    private static final String [] plataformasDisponibles = {"PlayStation" , "Nintendo Switch", "XBox", "PC"};
-    //private String plataforma;
     private Plataforma plataforma;
 
 
@@ -18,13 +16,13 @@ public class Videojuego extends Multimedia {
         return plataforma;
     }
 
-    public String comprobarPlataforma(Plataforma plataforma) {
-        for (int i = 0; i < plataformasDisponibles.length; i++) {
-            if (plataformasDisponibles[i].equalsIgnoreCase(String.valueOf(plataforma))) {
-                return plataformasDisponibles[i];
+    public Plataforma comprobarPlataforma(Plataforma plataforma) {
+        for (int i = 0; i < Plataforma.values().length; i++) {
+            if (Plataforma.values()[i].equals(plataforma)) {
+                return Plataforma.values()[i];
             }
         }
-        return "PC";
+        return Plataforma.PC;
     }
 
     @Override

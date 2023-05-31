@@ -10,7 +10,7 @@ public class FormPrincipalVideoClub extends JFrame {
     JPanel panelPrincipal;
     JButton botonAltas;
     JButton btnAlquiler;
-    JButton btnBajas;
+    //JButton btnBajas;
     JButton btnDevolucion;
     JButton btnListados;
     JButton btnPagos;
@@ -45,7 +45,7 @@ public class FormPrincipalVideoClub extends JFrame {
         GestionBasesDatos.aniadirVideojuego();
         GestionBasesDatos.aniadirPelicula();
 
-
+        GestionBasesDatos.aniadirAlquiler(GestionMultimedia.multimedias, GestionSocioVideoClub.socios);
         Disco.agregarCancion(GestionMultimedia.multimedias, GestionBasesDatos.aniadirCancionArrayDisco());
 
 
