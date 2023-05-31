@@ -1,5 +1,5 @@
 package model;
 
 public enum Plataforma {
-    PlayStation5, XBox, NintendoSwitch, PC
+    PLAYSTATIO5, XBOX, NINTENDOSWITCH, PC
 }
