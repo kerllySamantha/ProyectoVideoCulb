@@ -18,7 +18,6 @@ public class MenuBar {
     public static FormDevoluciones formDevoluciones = new FormDevoluciones();
     public static FormAlquiler formAlquiler = new FormAlquiler();
     public static FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
-
     public static FormPagoRecargo formPagoRecargo = new FormPagoRecargo();
 
     public static JMenuBar crearMenuBar() {
@@ -74,7 +73,7 @@ public class MenuBar {
         listados.add(listActualSocio);
         listados.add(listRecargosPendSocio);
 
-        pagoRecargos = new JMenuItem("Pagos Reacrgos");
+        pagoRecargos = new JMenuItem("Pagos Recargos");
         pagos.add(pagoRecargos);
 
         exit = new JMenuItem("Exit");
@@ -93,6 +92,7 @@ public class MenuBar {
         formListadosMultimedia.setVisible(false);
         formAlquiler.setVisible(false);
         formListadosMultimedia.setVisible(false);
+        formPagoRecargo.setVisible(false);
 
     }
 
@@ -156,7 +156,7 @@ public class MenuBar {
             formListadosMultimedia.setBounds(100,100,600,300);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
-//                formListadosMultimedia.setVisible(true);
+                formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
@@ -169,7 +169,7 @@ public class MenuBar {
             formListadosMultimedia.setBounds(100,100,600,300);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
-//                formListadosMultimedia.setVisible(true);
+                formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
@@ -180,7 +180,7 @@ public class MenuBar {
             formListadosMultimedia.setBounds(100,100,600,300);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
-//                formListadosMultimedia.setVisible(true);
+                formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.listaAlquileresCLiente();
 
@@ -192,7 +192,7 @@ public class MenuBar {
             formListadosMultimedia.setBounds(100,100,600,300);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
-//                formListadosMultimedia.setVisible(true);
+                formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
@@ -204,7 +204,7 @@ public class MenuBar {
             formListadosMultimedia.setBounds(100,100,600,300);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
-//                formListadosMultimedia.setVisible(true);
+                formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.listaVideojuegos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
@@ -217,7 +217,7 @@ public class MenuBar {
             formListadosMultimedia.setBounds(100,100,600,300);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
-                //formListadosMultimedia.setVisible(true);
+                formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();

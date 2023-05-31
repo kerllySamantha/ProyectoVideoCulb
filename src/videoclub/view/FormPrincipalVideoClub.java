@@ -15,11 +15,11 @@ public class FormPrincipalVideoClub extends JFrame {
     JButton btnListados;
     JButton btnPagos;
 
-    FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
-    FormAlquiler formAlquiler = new FormAlquiler();
-    FormDevoluciones formDevoluciones = new FormDevoluciones();
-    FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
-    FormPagoRecargo formPagoRecargo = new FormPagoRecargo();
+//    public static FormPrincipalAltas formPrincipalAltas = new FormPrincipalAltas();
+//    public  static FormAlquiler formAlquiler = new FormAlquiler();
+//    public static FormDevoluciones formDevoluciones = new FormDevoluciones();
+//    public static FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
+//    public static  FormPagoRecargo formPagoRecargo = new FormPagoRecargo();
 
     public FormPrincipalVideoClub() {
         super.setResizable(false);
@@ -82,42 +82,42 @@ public class FormPrincipalVideoClub extends JFrame {
 
 
         botonAltas.addActionListener(e -> {
-            formPrincipalAltas.setDefaultCloseOperation(formPrincipalAltas.HIDE_ON_CLOSE);
-            formPrincipalAltas.setBounds(100, 100, 600, 300);
-            if (!formPrincipalAltas.isVisible()) {
-                formPrincipalAltas.setVisible(true);
+            MenuBar.formPrincipalAltas.setDefaultCloseOperation(MenuBar.formPrincipalAltas.HIDE_ON_CLOSE);
+            MenuBar.formPrincipalAltas.setBounds(100, 100, 600, 300);
+            if (!MenuBar.formPrincipalAltas.isVisible()) {
+                MenuBar.formPrincipalAltas.setVisible(true);
             }
         });
 
         btnAlquiler.addActionListener(e -> {
-            formAlquiler.setDefaultCloseOperation(formAlquiler.HIDE_ON_CLOSE);
-            formAlquiler.setBounds(100,100,600,300);
-            if(!formAlquiler.isVisible()) {
-                formAlquiler.setVisible(true);
+            MenuBar.formAlquiler.setDefaultCloseOperation(MenuBar.formAlquiler.HIDE_ON_CLOSE);
+            MenuBar.formAlquiler.setBounds(100,100,600,300);
+            if(!MenuBar.formAlquiler.isVisible()) {
+                MenuBar.formAlquiler.setVisible(true);
             }
         });
 
         btnDevolucion.addActionListener(e -> {
-            formDevoluciones.setDefaultCloseOperation(formDevoluciones.HIDE_ON_CLOSE);
-            formDevoluciones.setBounds(100,100,600,300);
-            if (!formDevoluciones.isVisible()) {
-                formDevoluciones.setVisible(true);
+            MenuBar.formDevoluciones.setDefaultCloseOperation(MenuBar.formDevoluciones.HIDE_ON_CLOSE);
+            MenuBar.formDevoluciones.setBounds(100,100,600,300);
+            if (!MenuBar.formDevoluciones.isVisible()) {
+                MenuBar.formDevoluciones.setVisible(true);
             }
         });
 
         btnListados.addActionListener(e -> {
-            formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
-            if (!formListadosMultimedia.isVisible()) {
-                formListadosMultimedia.setVisible(true);
+            MenuBar.formListadosMultimedia.setDefaultCloseOperation(MenuBar.formListadosMultimedia.HIDE_ON_CLOSE);
+            MenuBar.formListadosMultimedia.setBounds(100,100,600,300);
+            if (!MenuBar.formListadosMultimedia.isVisible()) {
+                MenuBar.formListadosMultimedia.setVisible(true);
             }
         });
 
         btnPagos.addActionListener(e -> {
-            formPagoRecargo.setDefaultCloseOperation(formPagoRecargo.HIDE_ON_CLOSE);
-            formPagoRecargo.setBounds(100,100,600,300);
-            if (!formPagoRecargo.isVisible()) {
-                formPagoRecargo.setVisible(true);
+            MenuBar.formPagoRecargo.setDefaultCloseOperation(MenuBar.formPagoRecargo.HIDE_ON_CLOSE);
+            MenuBar.formPagoRecargo.setBounds(100,100,600,300);
+            if (!MenuBar.formPagoRecargo.isVisible()) {
+                MenuBar.formPagoRecargo.setVisible(true);
             }
         });
     }
