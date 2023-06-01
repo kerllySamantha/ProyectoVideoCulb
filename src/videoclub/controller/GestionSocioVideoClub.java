@@ -6,18 +6,21 @@ import javax.swing.*;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class GestionSocioVideoClub {
 
     public static ArrayList<Socio> socios = new ArrayList<>();
 
 
-    public static DefaultListModel<String> mostarMultAlquiladosSocio(String nif) {
-        DefaultListModel<String> listaMultimedia = new DefaultListModel<>();
+    public static Set<String> mostarMultAlquiladosSocio(String nif) {
+        Set<String> listaMultimedia = new HashSet<>();
+        //DefaultListModel<String> listaMultimedia = new DefaultListModel<>();
         if (buscarSocio(nif, socios) != -1) {
             int index = buscarSocio(nif, socios);
             for (int i = 0; i < socios.get(index).getAlquilerActual().size(); i++) {
-                listaMultimedia.addElement(socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo());
+                listaMultimedia.add(socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo());
             }
         }
         return listaMultimedia;
@@ -48,7 +51,6 @@ public class GestionSocioVideoClub {
                             socios.get(index).getAlquilerActual().get(i).getFechaAlquiler());
 
                     socios.get(index).getAlquilerActual().remove(i);
-                    GestionAlquilerMul.eliminarAlquiler(socios.get(index), socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado());
                     break;
                 }
             }
@@ -79,7 +81,8 @@ public class GestionSocioVideoClub {
                     multimediaAlquilado.getTitulo(), multimediaAlquilado.getAutor());
 
             GestionBasesDatos.insertAlquiler(alquiler.getMultimediaAlquilado().getTitulo(), alquiler.getMultimediaAlquilado().getFormato(),
-                    alquiler.getFechaAlquiler(), alquiler.getPrecio(), alquiler.getSocio().getNif());
+                    alquiler.getFechaAlquiler(), alquiler.getPrecio(), alquiler.getSocio().getNif(),
+                    alquiler.getMultimediaAlquilado().getClass().getName().substring(6).toUpperCase());
 
             JOptionPane.showMessageDialog(null,
                     "El aquiler del socio con identificacion "
@@ -105,8 +108,12 @@ public class GestionSocioVideoClub {
 
     public static void pagarRecargo(String nif) {
         if (buscarSocio(nif, socios) != -1) {
-            socios.get(buscarSocio(nif, socios)).setRecargo(0);
-            JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " ha realizado el pago de los recargos");
+            int index = buscarSocio(nif, socios);
+            if (socios.get(index).getRecargo() > 0) {
+                socios.get(buscarSocio(nif, socios)).setRecargo(0);
+                JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " ha realizado el pago de los recargos");
+            }
+            JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " no tiene recargos pendiente");
         }
     }
 

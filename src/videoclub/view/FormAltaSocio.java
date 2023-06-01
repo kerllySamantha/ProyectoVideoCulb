@@ -44,6 +44,7 @@ public class FormAltaSocio extends JFrame {
             //txtPoblacionSocioAlta.setText("");
             cmbProvincias.setSelectedIndex(0);
             txtDatosSocio.setText("");
+            txtFechaNac.setText("");
         });
     }
 
@@ -56,15 +57,16 @@ public class FormAltaSocio extends JFrame {
                 nifSocio = txtNIFSocioAlta.getText().toUpperCase();
                 existeNif = GestionSocioVideoClub.comprobarNif(GestionSocioVideoClub.socios, nifSocio);
                 nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
-                poblacionSocio = Objects.requireNonNull(cmbProvincias.getSelectedItem()).toString();
+                poblacionSocio = Objects.requireNonNull(cmbProvincias.getSelectedItem()).toString().toUpperCase();
                 if (existeNif) {
                     txtDatosSocio.setText("");
                     JOptionPane.showMessageDialog(null, "El NIf ya existe");
 
                     // } while (existeNif);
                     //poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
-                }
-                else if ((nombreSocio.equalsIgnoreCase("") && nifSocio.equalsIgnoreCase(""))) {
+                } else if (nifSocio.length() > 9) {
+                    JOptionPane.showMessageDialog(null, "La longitudud del nif no puede ser mayor de 10 ");
+                } else if ((nombreSocio.equalsIgnoreCase("") && nifSocio.equalsIgnoreCase(""))) {
                     JOptionPane.showMessageDialog(null, "No puedes dejar los campos vacios ");
                     //socios.remove(this.socio);
                     txtDatosSocio.setText("");
@@ -84,9 +86,10 @@ public class FormAltaSocio extends JFrame {
 
                 } else if (!Socio.calcularEdad(txtFechaNac.getText())) {
                     JOptionPane.showMessageDialog(null, "Debe ser mayor de 18 años para darse de alta");
-                }else {
+                } else {
                     socio = new Socio(nifSocio, nombreSocio, convertirADate(), poblacionSocio);
                     GestionSocioVideoClub.socios.add(socio);
+                    GestionBasesDatos.insertNuevoSocio(nifSocio, nombreSocio,convertirADate(), poblacionSocio );
                     JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo Socio");
                     txtDatosSocio.setText(socio.toString());
                     txtNIFSocioAlta.setText("");
@@ -101,7 +104,7 @@ public class FormAltaSocio extends JFrame {
     }
 
     public LocalDate convertirADate() {
-        String [] partesFecha = txtFechaNac.getText().split("/");
+        String[] partesFecha = txtFechaNac.getText().split("/");
         LocalDate fechaNac = LocalDate.of(Integer.parseInt(partesFecha[2]), Integer.parseInt(partesFecha[1]), Integer.parseInt(partesFecha[0]));
         return fechaNac;
     }

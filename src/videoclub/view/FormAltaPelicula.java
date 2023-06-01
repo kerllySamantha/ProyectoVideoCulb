@@ -32,6 +32,7 @@ public class FormAltaPelicula extends JFrame {
     private JLabel actrizPelicula;
     private JLabel actorPelicula;
     private JComboBox<Integer> cbAnioPelicula;
+    private JLabel lblgenero;
     private JTextField txtGenero;
     private JLabel btnGenero;
     private Pelicula pelicula;
@@ -63,119 +64,15 @@ public class FormAltaPelicula extends JFrame {
                 Formato formato = null;
                 boolean datosCorrectos = true;
 
-//                if (txtTituloPelicula.getText().equals("") && txtAutorPelicula.getText().equals("")) {
-//                    JOptionPane.showMessageDialog(null, "El titulo de la perlicula ");
-//                }
-
-//                if (!txtTituloPelicula.getText().equals("")) {
-//                    tituloPelicula = txtTituloPelicula.getText().toUpperCase();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El titulo de la pelicula no puede estar vacia.");
-//                }
-//                if (!txtAutorPelicula.getText().equals("")) {
-//                    autorPelicula = txtAutorPelicula.getText().toUpperCase();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El Autor de la pelicula no puede estar vacio.");
-//                }
-//                if (Integer.parseInt(Objects.requireNonNull(cbAnioPelicula.getSelectedItem()).toString()) >= 1895) {
-//                    anioPelicula = Integer.parseInt(String.valueOf(cbAnioPelicula.getSelectedIndex()));
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El anio de la Pelicula no puede ser vacio ni menor de 1895");
-//                }
-//                if (Integer.parseInt(txtDuracionPelicula.getText()) != 0) {
-//                    duracionPelicula = txtDuracionPelicula.getText();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "La duración de la pelicula no puede ser 0, ni estar el campo vacio");
-//                }
-//                if (!txtActriz.getText().equals("")) {
-//                    actrizPrincipal = txtActriz.getText().toUpperCase();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El campo de actriz principal no puede estar vacio");
-//                }
-//                if (!txtActor.getText().equals("")) {
-//                    actorPrincipal = txtActor.getText().toUpperCase();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El campo de actor principal no puede estar vacio");
-//                }
-//                if(!txtGenero.getText().equals("")){
-//                    genero = txtGenero.getText().toUpperCase();
-//                }else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El campo del genero de la pelicula no puede estar vacio");
-//                }
-
-//                if (txtTituloPelicula.getText().equals("") && txtAutorPelicula.getText().equals("")) {
-//                  JOptionPane.showMessageDialog(null, "El titulo de la perlicula ");
-//                }
-
-//                if (!txtTituloPelicula.getText().equals("")) {
-//                    tituloPelicula = txtTituloPelicula.getText().toUpperCase();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El titulo de la pelicula no puede estar vacia.");
-//                }
-//                if (!txtAutorPelicula.getText().equals("")) {
-//                    autorPelicula = txtAutorPelicula.getText().toUpperCase();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El Autor de la pelicula no puede estar vacio.");
-//                }
-//                if (Integer.parseInt(Objects.requireNonNull(cbAnioPelicula.getSelectedItem()).toString()) >= 1895) {
-//                    anioPelicula = Integer.parseInt(String.valueOf(cbAnioPelicula.getSelectedIndex()));
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El anio de la Pelicula no puede ser vacio ni menor de 1895");
-//                }
-//                if (Integer.parseInt(txtDuracionPelicula.getText()) != 0) {
-//                    duracionPelicula = txtDuracionPelicula.getText();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "La duración de la pelicula no puede ser 0, ni estar el campo vacio");
-//                }
-//                if (!txtActriz.getText().equals("")) {
-//                    actrizPrincipal = txtActriz.getText().toUpperCase();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El campo de actriz principal no puede estar vacio");
-//                }
-//                if (!txtActor.getText().equals("")) {
-//                    actorPrincipal = txtActor.getText().toUpperCase();
-//                } else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El campo de actor principal no puede estar vacio");
-//                }
-//                if(!txtGenero.getText().equals("")){
-//                    genero = txtGenero.getText().toUpperCase();
-//                }else {
-//                    datosCorrectos = false;
-//                    JOptionPane.showMessageDialog(null, "El campo del genero de la pelicula no puede estar vacio");
-//                }
-
-
                 if (txtTituloPelicula.getText().equals("")) {
                     datosCorrectos = false;
                     JOptionPane.showMessageDialog(null, "El titulo de la pelicula no puede estar vacia.");
                 } else if (txtAutorPelicula.getText().equals("")) {
                     datosCorrectos = false;
                     JOptionPane.showMessageDialog(null, "El Autor de la pelicula no puede estar vacio.");
-                } else if (Integer.parseInt(Objects.requireNonNull(cbAnioPelicula.getSelectedItem()).toString()) >= 1895) {
-                    datosCorrectos = false;
-                    JOptionPane.showMessageDialog(null, "El anio de la Pelicula no puede ser vacio ni menor de 1895");
-                } else if (Integer.parseInt(txtDuracionPelicula.getText()) != 0) {
+                } else if (Integer.parseInt(txtDuracionPelicula.getText()) == 0) {
                     datosCorrectos = false;
                     JOptionPane.showMessageDialog(null, "La duración de la pelicula no puede ser 0, ni estar el campo vacio");
-                } else if (txtActriz.getText().equals("")) {
-                    datosCorrectos = false;
-                    JOptionPane.showMessageDialog(null, "El campo de actriz principal no puede estar vacio");
-                } else if (txtActor.getText().equals("")) {
-                    datosCorrectos = false;
-                    JOptionPane.showMessageDialog(null, "El campo de actor principal no puede estar vacio");
                 } else if (txtGenero.getText().equals("")) {
                     datosCorrectos = false;
                     JOptionPane.showMessageDialog(null, "El campo del genero de la pelicula no puede estar vacio");
