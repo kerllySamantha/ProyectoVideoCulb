@@ -12,6 +12,7 @@ public class Pelicula extends Multimedia {
         setDuracionPelicula(duracion);
         setActorPrincipal(actor);
         setActrizPrincipal(actriz);
+        setGenero(genero);
     }
 
     public String getDuracionPelicula() {

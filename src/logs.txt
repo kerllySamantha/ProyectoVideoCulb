@@ -28,7 +28,183 @@
 [28-05-2023 21:07:35] Se ha cerrado el programa
 [28-05-2023 21:07:41] Se ha iniciado el programa
 [28-05-2023 21:08:55] Se ha cerrado el programa
-[29-05-2023 15:46:33] Se ha iniciado el programa
-[29-05-2023 15:47:11] Se ha cerrado el programa
-[29-05-2023 16:00:42] Se ha iniciado el programa
-[29-05-2023 16:00:54] Se ha cerrado el programa
+[29-05-2023 12:14:15] Se ha iniciado el programa
+[29-05-2023 12:14:24] Se ha cerrado el programa
+[29-05-2023 16:14:59] Se ha iniciado el programa
+[29-05-2023 16:15:29] Se ha cerrado el programa
+[29-05-2023 16:18:57] Se ha iniciado el programa
+[29-05-2023 16:19:43] Se ha cerrado el programa
+[29-05-2023 16:51:22] Se ha iniciado el programa
+[29-05-2023 16:51:48] Se ha cerrado el programa
+[29-05-2023 16:54:52] Se ha iniciado el programa
+[29-05-2023 16:55:11] Se ha cerrado el programa
+[29-05-2023 16:57:38] Se ha iniciado el programa
+[29-05-2023 16:57:45] Se ha cerrado el programa
+[30-05-2023 20:13:02] Se ha iniciado el programa
+[30-05-2023 20:13:22] Se ha cerrado el programa
+[30-05-2023 20:18:15] Se ha iniciado el programa
+[30-05-2023 20:18:29] Se ha cerrado el programa
+[30-05-2023 20:19:03] Se ha iniciado el programa
+[30-05-2023 20:19:12] Se ha cerrado el programa
+[31-05-2023 00:10:17] Se ha iniciado el programa
+[31-05-2023 00:15:33] Se ha cerrado el programa
+[31-05-2023 15:51:50] Se ha iniciado el programa
+[31-05-2023 15:53:56] Se ha cerrado el programa
+[31-05-2023 19:11:27] Se ha iniciado el programa
+[31-05-2023 19:12:37] Se ha cerrado el programa
+[31-05-2023 19:13:27] Se ha iniciado el programa
+[31-05-2023 19:14:10] Se ha cerrado el programa
+[31-05-2023 19:15:28] Se ha iniciado el programa
+[31-05-2023 19:16:57] Se ha cerrado el programa
+[31-05-2023 19:18:44] Se ha iniciado el programa
+[31-05-2023 19:20:01] Se ha cerrado el programa
+[31-05-2023 19:22:45] Se ha iniciado el programa
+[31-05-2023 19:23:13] Se ha cerrado el programa
+[31-05-2023 19:23:30] Se ha iniciado el programa
+[31-05-2023 19:24:57] Se ha cerrado el programa
+[31-05-2023 19:33:22] Se ha iniciado el programa
+[31-05-2023 19:33:59] Se ha cerrado el programa
+[31-05-2023 19:34:38] Se ha iniciado el programa
+[31-05-2023 19:35:44] Se ha cerrado el programa
+[31-05-2023 19:40:02] Se ha iniciado el programa
+[31-05-2023 19:40:41] Se ha cerrado el programa
+[31-05-2023 19:41:10] Se ha iniciado el programa
+[31-05-2023 19:41:14] Se ha cerrado el programa
+[31-05-2023 19:42:08] Se ha iniciado el programa
+[31-05-2023 19:43:23] Se ha cerrado el programa
+[31-05-2023 19:47:51] Se ha iniciado el programa
+[31-05-2023 20:07:20] Se ha cerrado el programa
+[31-05-2023 20:09:32] Se ha iniciado el programa
+[31-05-2023 20:09:43] Se ha cerrado el programa
+[31-05-2023 20:12:43] Se ha iniciado el programa
+[31-05-2023 20:12:50] Se ha cerrado el programa
+[31-05-2023 20:15:29] Se ha iniciado el programa
+[31-05-2023 20:15:45] Se ha cerrado el programa
+[31-05-2023 20:17:24] Se ha iniciado el programa
+[31-05-2023 20:17:56] Se ha cerrado el programa
+[31-05-2023 20:19:37] Se ha iniciado el programa
+[31-05-2023 20:21:17] Se ha cerrado el programa
+[31-05-2023 20:25:04] Se ha iniciado el programa
+[31-05-2023 20:26:44] Se ha cerrado el programa
+[31-05-2023 20:27:20] Se ha iniciado el programa
+[31-05-2023 20:29:49] Se ha cerrado el programa
+[31-05-2023 20:31:18] Se ha iniciado el programa
+[31-05-2023 20:32:28] Se ha cerrado el programa
+[31-05-2023 20:43:54] Se ha iniciado el programa
+[31-05-2023 20:45:08] Se ha cerrado el programa
+[31-05-2023 20:45:14] Se ha iniciado el programa
+[31-05-2023 20:45:56] Se ha dado de alta la pelicula 'MADAGASCAR'
+[31-05-2023 20:46:27] Se ha cerrado el programa
+[01-06-2023 11:52:38] Se ha iniciado el programa
+[01-06-2023 11:54:39] Se ha cerrado el programa
+[01-06-2023 12:05:22] Se ha iniciado el programa
+[01-06-2023 12:05:48] Se ha cerrado el programa
+[01-06-2023 12:10:57] Se ha iniciado el programa
+[01-06-2023 12:12:59] Se ha cerrado el programa
+[01-06-2023 12:13:02] Se ha iniciado el programa
+[01-06-2023 12:13:43] Se ha cerrado el programa
+[01-06-2023 12:13:50] Se ha iniciado el programa
+[01-06-2023 12:21:36] Se ha cerrado el programa
+[01-06-2023 12:23:16] Se ha iniciado el programa
+[01-06-2023 12:23:48] Se ha dado de alta al socio SFSF, con NIF 51784924X6
+[01-06-2023 12:23:51] Se ha cerrado el programa
+[01-06-2023 12:30:20] Se ha iniciado el programa
+[01-06-2023 12:30:56] Se ha dado de alta al socio KERLLY SAMANTHA CHANGO RAMIREZ, con NIF 51784924B
+[01-06-2023 12:32:43] Se ha cerrado el programa
+[01-06-2023 12:32:51] Se ha iniciado el programa
+[01-06-2023 12:33:29] Se ha dado de alta al socio KERLLY SAMANTHA, con NIF 51784924NL
+[01-06-2023 12:34:58] Se ha cerrado el programa
+[01-06-2023 12:35:06] Se ha iniciado el programa
+[01-06-2023 12:36:39] Se ha dado de alta al socio CARLOS GARCIA, con NIF 45692524C
+[01-06-2023 12:38:02] Se ha cerrado el programa
+[01-06-2023 12:38:30] Se ha iniciado el programa
+[01-06-2023 12:39:09] Se ha dado de alta al socio CARLOS GARCIA, con NIF 45159785C
+[01-06-2023 12:44:46] Se ha cerrado el programa
+[01-06-2023 12:44:57] Se ha iniciado el programa
+[01-06-2023 12:45:38] Se ha cerrado el programa
+[01-06-2023 12:46:49] Se ha iniciado el programa
+[01-06-2023 12:47:04] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 12:49:06] Se ha cerrado el programa
+[01-06-2023 12:49:12] Se ha iniciado el programa
+[01-06-2023 12:49:36] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 12:53:05] Se ha cerrado el programa
+[01-06-2023 13:02:37] Se ha iniciado el programa
+[01-06-2023 13:03:09] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 13:07:26] Se ha cerrado el programa
+[01-06-2023 15:25:48] Se ha iniciado el programa
+[01-06-2023 15:26:03] Se ha alquilado el multimedia 'DIVIDE' (Disco) a socio con NIF 51784924X
+[01-06-2023 15:27:11] Se ha cerrado el programa
+[01-06-2023 15:27:58] Se ha iniciado el programa
+[01-06-2023 15:28:15] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 15:29:25] Se ha cerrado el programa
+[01-06-2023 15:31:48] Se ha iniciado el programa
+[01-06-2023 15:32:01] Se ha alquilado el multimedia 'DIVIDE' (Disco) a socio con NIF 51784924X
+[01-06-2023 15:32:52] Se ha cerrado el programa
+[01-06-2023 15:32:59] Se ha iniciado el programa
+[01-06-2023 15:36:58] Se ha cerrado el programa
+[01-06-2023 15:38:58] Se ha iniciado el programa
+[01-06-2023 15:39:44] Se ha cerrado el programa
+[01-06-2023 15:40:27] Se ha iniciado el programa
+[01-06-2023 15:40:51] Se ha alquilado el multimedia 'SUPER SMASH BROS' (Videojuego) a socio con NIF 51784924X
+[01-06-2023 15:42:05] Se ha cerrado el programa
+[01-06-2023 15:42:10] Se ha iniciado el programa
+[01-06-2023 15:42:37] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 15:42:44] Se ha cerrado el programa
+[01-06-2023 15:47:06] Se ha iniciado el programa
+[01-06-2023 15:47:27] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 15:56:14] Se ha cerrado el programa
+[01-06-2023 16:08:42] Se ha iniciado el programa
+[01-06-2023 16:10:21] Se ha cerrado el programa
+[01-06-2023 16:10:26] Se ha iniciado el programa
+[01-06-2023 16:11:07] Se ha alquilado el multimedia 'LA FORMA DEL AGUA' (Pelicula) a socio con NIF 51784924X
+[01-06-2023 16:11:26] Socio con NIF 51784924X ha devuelto el multimedia'LA FORMA DEL AGUA' (Pelicula)
+[01-06-2023 16:11:36] Se ha cerrado el programa
+[01-06-2023 16:13:18] Se ha iniciado el programa
+[01-06-2023 16:13:49] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 16:14:04] Socio con NIF 51784924X ha devuelto el multimedia'FUTURE NOSTALGIA' (Disco)
+[01-06-2023 16:14:09] Se ha cerrado el programa
+[01-06-2023 16:15:22] Se ha iniciado el programa
+[01-06-2023 16:15:34] Se ha alquilado el multimedia 'DIVIDE' (Disco) a socio con NIF 51784924X
+[01-06-2023 16:15:47] Socio con NIF 51784924X ha devuelto el multimedia'DIVIDE' (Disco)
+[01-06-2023 16:15:50] Se ha cerrado el programa
+[01-06-2023 16:16:30] Se ha iniciado el programa
+[01-06-2023 16:16:45] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 16:16:58] Socio con NIF 51784924X ha devuelto el multimedia'FUTURE NOSTALGIA' (Disco)
+[01-06-2023 16:17:01] Se ha cerrado el programa
+[01-06-2023 16:19:57] Se ha iniciado el programa
+[01-06-2023 16:20:13] Se ha cerrado el programa
+[01-06-2023 16:20:19] Se ha iniciado el programa
+[01-06-2023 16:20:58] Se ha alquilado el multimedia 'DIVIDE' (Disco) a socio con NIF 51784924X
+[01-06-2023 16:21:17] Socio con NIF 51784924X ha devuelto el multimedia'DIVIDE' (Disco)
+[01-06-2023 16:21:20] Se ha cerrado el programa
+[01-06-2023 16:25:37] Se ha iniciado el programa
+[01-06-2023 16:26:01] Se ha alquilado el multimedia 'AVENGERS' (Pelicula) a socio con NIF 51784924X
+[01-06-2023 16:26:20] Socio con NIF 51784924X ha devuelto el multimedia'AVENGERS' (Pelicula)
+[01-06-2023 16:26:24] Se ha cerrado el programa
+[01-06-2023 16:28:13] Se ha iniciado el programa
+[01-06-2023 16:28:36] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 16:28:55] Socio con NIF 51784924X ha devuelto el multimedia'FUTURE NOSTALGIA' (Disco)
+[01-06-2023 16:28:59] Se ha cerrado el programa
+[01-06-2023 16:30:51] Se ha iniciado el programa
+[01-06-2023 16:31:07] Se ha alquilado el multimedia 'ANIMAL CROSSING: NEW HORIZONS' (Videojuego) a socio con NIF 51784924X
+[01-06-2023 16:31:16] Socio con NIF 51784924X ha devuelto el multimedia'ANIMAL CROSSING: NEW HORIZONS' (Videojuego)
+[01-06-2023 16:31:31] Se ha cerrado el programa
+[01-06-2023 16:31:48] Se ha iniciado el programa
+[01-06-2023 16:32:06] Se ha alquilado el multimedia 'MADAGASCAR' (Pelicula) a socio con NIF 51784924X
+[01-06-2023 16:32:15] Socio con NIF 51784924X ha devuelto el multimedia'MADAGASCAR' (Pelicula)
+[01-06-2023 16:32:50] Se ha cerrado el programa
+[01-06-2023 16:33:20] Se ha iniciado el programa
+[01-06-2023 16:33:35] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[01-06-2023 16:33:45] Socio con NIF 51784924X ha devuelto el multimedia'FUTURE NOSTALGIA' (Disco)
+[01-06-2023 16:33:51] Se ha cerrado el programa
+[01-06-2023 16:34:30] Se ha iniciado el programa
+[01-06-2023 16:34:48] Se ha alquilado el multimedia 'ANIMAL CROSSING: NEW HORIZONS' (Videojuego) a socio con NIF 51784924X
+[01-06-2023 16:34:59] Socio con NIF 51784924X ha devuelto el multimedia'ANIMAL CROSSING: NEW HORIZONS' (Videojuego)
+[01-06-2023 16:35:43] Se ha cerrado el programa
+[01-06-2023 16:40:09] Se ha iniciado el programa
+[01-06-2023 16:40:28] Se ha cerrado el programa
+[01-06-2023 16:42:27] Se ha iniciado el programa
+[01-06-2023 16:42:45] Se ha alquilado el multimedia 'SUPER MARIO BROS' (Pelicula) a socio con NIF 51784924X
+[01-06-2023 16:42:52] Se ha alquilado el multimedia 'SUPER MARIO BROS' (Pelicula) a socio con NIF 51784924X
+[01-06-2023 16:42:54] Se ha alquilado el multimedia 'SUPER MARIO BROS' (Pelicula) a socio con NIF 51784924X
+[01-06-2023 16:43:03] Se ha cerrado el programa

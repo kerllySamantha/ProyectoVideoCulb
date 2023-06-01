@@ -13,7 +13,8 @@ public class GestionAlquilerMul {
     private LocalDate fechaAlquiler;
     private int precio;
 
-    public static ArrayList<GestionAlquilerMul>alquileres;
+
+    public static ArrayList<GestionAlquilerMul>alquileres = new ArrayList<>();
 
     public GestionAlquilerMul(Multimedia multimedia, Socio socio) {
 
@@ -82,14 +83,6 @@ public class GestionAlquilerMul {
             }
         }
         return precio;
-    }
-
-    public static void eliminarAlquiler(Socio socio, Multimedia multimedia) {
-        for (GestionAlquilerMul alquiler: alquileres) {
-            if (alquiler.getMultimediaAlquilado().equals(multimedia) && alquiler.getSocio().equals(socio)) {
-                alquileres.remove(alquiler);
-            }
-        }
     }
 
     @Override
