@@ -1,5 +1,8 @@
 package view;
 
+import controller.GestionBasesDatos;
+import controller.GestionLogs;
+import controller.GestionMultimedia;
 import model.Formato;
 import model.Plataforma;
 import model.Videojuego;

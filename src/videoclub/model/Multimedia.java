@@ -6,12 +6,6 @@ public abstract class Multimedia {
     private Formato formato;
     private int anio;
 
-    public Multimedia() {
-        titulo = "";
-        autor = "";
-        formato = Formato.CD;
-        anio = 0;
-    }
 
     public Multimedia(String titulo, String autor, Formato fromato, int anio) {
         setTitulo(titulo);

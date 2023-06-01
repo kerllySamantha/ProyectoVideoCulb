@@ -50,6 +50,7 @@ public class FormListadosMultimedia extends JFrame {
         JScrollPane scrollPane = new JScrollPane(txtListaMultimedia);
         scrollPane.setBounds(200, 50, 430, 210);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
         panel.add(scrollPane);
 
         crearBotones();
@@ -99,6 +100,7 @@ public class FormListadosMultimedia extends JFrame {
                 txtNif.setVisible(false);
                 btnBuscarNif.setVisible(false);
                 txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia());
+                txtListaMultimedia.setCaretPosition(0);
             }
         });
 
@@ -108,7 +110,7 @@ public class FormListadosMultimedia extends JFrame {
                 txtNif.setVisible(false);
                 btnBuscarNif.setVisible(false);
                 txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
-
+                txtListaMultimedia.setCaretPosition(0);
             }
         });
 
@@ -118,6 +120,7 @@ public class FormListadosMultimedia extends JFrame {
                 txtNif.setVisible(false);
                 btnBuscarNif.setVisible(false);
                 txtListaMultimedia.setText(GestionMultimedia.listaVideojuegos());
+                txtListaMultimedia.setCaretPosition(0);
             }
         });
 
@@ -127,22 +130,17 @@ public class FormListadosMultimedia extends JFrame {
                 txtNif.setVisible(false);
                 btnBuscarNif.setVisible(false);
                 txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
+                txtListaMultimedia.setCaretPosition(0);
             }
         });
 
         btnListaAlquileres.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                txtListaMultimedia.setText("");
                 txtNif.setVisible(true);
                 btnBuscarNif.setVisible(true);
-            }
-        });
-        btnListaAlquileres.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                txtListaMultimedia.setText("");
-                txtNif.setVisible(false);
-                btnBuscarNif.setVisible(false);
+                txtListaMultimedia.setCaretPosition(0);
             }
         });
 
@@ -150,6 +148,7 @@ public class FormListadosMultimedia extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 txtListaMultimedia.setText(GestionSocioVideoClub.listaAlquilerActual(txtNif.getText()));
+                txtListaMultimedia.setCaretPosition(0);
             }
         });
 
@@ -157,6 +156,7 @@ public class FormListadosMultimedia extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos());
+                txtListaMultimedia.setCaretPosition(0);
             }
         });
     }
