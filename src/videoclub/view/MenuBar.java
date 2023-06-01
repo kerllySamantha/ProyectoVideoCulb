@@ -4,6 +4,7 @@ import controller.GestionMultimedia;
 import controller.GestionSocioVideoClub;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class MenuBar {
     public static JMenuBar menuVideoClub;
@@ -21,7 +22,11 @@ public class MenuBar {
     public static FormPagoRecargo formPagoRecargo = new FormPagoRecargo();
 
     public static JMenuBar crearMenuBar() {
+        Color fondo = new Color(143,151,203);
+        Color fondoBotones = new Color(214,220,255);
+
         menuVideoClub = new JMenuBar();
+        menuVideoClub.setBackground(fondo);
 
         altas = new JMenu("Altas");
         //bajas = new JMenu("Bajas");
@@ -78,6 +83,21 @@ public class MenuBar {
 
         exit = new JMenuItem("Exit");
         salir.add(exit);
+
+        socio.setBackground(fondo);
+        pelicula.setBackground(fondo);
+        videojuego.setBackground(fondo);
+        disco.setBackground(fondo);
+        alquiler.setBackground(fondo);
+        devolver.setBackground(fondo);
+        listMultimedia.setBackground(fondo);
+        listaDiscos.setBackground(fondo);
+        listaPelisOrden.setBackground(fondo);
+        listaVideojAnio.setBackground(fondo);
+        listActualSocio.setBackground(fondo);
+        listRecargosPendSocio.setBackground(fondo);
+        pagoRecargos.setBackground(fondo);
+        exit.setBackground(fondo);
 
         return menuVideoClub;
     }

@@ -16,6 +16,8 @@ public class FormPrincipalAltas extends JFrame {
 //    static FormVideoJuego formAVideoJuego = new FormVideoJuego();
 
     public FormPrincipalAltas() {
+        Color fondo = new Color(143,151,203);
+        Color fondoBotones = new Color(214,220,255);
 
         super.setLayout(null);
         super.setResizable(false);
@@ -23,30 +25,35 @@ public class FormPrincipalAltas extends JFrame {
         super.setBounds(100, 100, 250, 500);
 
         panelPrincipalAltas = new JPanel();
+        panelPrincipalAltas.setBackground(fondo);
         super.setContentPane(panelPrincipalAltas);
 
         altaSocio = new JButton("Socio");
         altaSocio.setMinimumSize(new Dimension(20, 20));
         altaSocio.setMaximumSize(new Dimension(150, 60));
         altaSocio.setPreferredSize(new Dimension(120, 30));
+        altaSocio.setBackground(fondoBotones);
         panelPrincipalAltas.add(altaSocio);
 
         altaVideojuego = new JButton("Videojuego");
         altaVideojuego.setMinimumSize(new Dimension(20, 20));
         altaVideojuego.setMaximumSize(new Dimension(150, 60));
         altaVideojuego.setPreferredSize(new Dimension(120, 30));
+        altaVideojuego.setBackground(fondoBotones);
         panelPrincipalAltas.add(altaVideojuego);
 
         altaPelicula = new JButton("Peliculas");
         altaPelicula.setMinimumSize(new Dimension(20, 20));
         altaPelicula.setMaximumSize(new Dimension(150, 60));
         altaPelicula.setPreferredSize(new Dimension(120, 30));
+        altaPelicula.setBackground(fondoBotones);
         panelPrincipalAltas.add(altaPelicula);
 
         altaDisco = new JButton("Disco");
         altaDisco.setMinimumSize(new Dimension(20, 20));
         altaDisco.setMaximumSize(new Dimension(150, 60));
         altaDisco.setPreferredSize(new Dimension(120, 30));
+        altaDisco.setBackground(fondoBotones);
         panelPrincipalAltas.add(altaDisco);
 
         altaSocio.addActionListener(e -> {

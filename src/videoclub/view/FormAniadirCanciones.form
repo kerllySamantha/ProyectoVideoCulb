@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-7366709"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="de484" class="javax.swing.JLabel" binding="lblTituloCancion">
@@ -13,6 +15,7 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-1"/>
           <text value="Título"/>
         </properties>
       </component>
@@ -21,6 +24,7 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-1"/>
           <text value="Duración"/>
         </properties>
       </component>
@@ -30,7 +34,10 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-2695937"/>
+          <foreground color="-8228421"/>
+        </properties>
       </component>
       <component id="42683" class="javax.swing.JTextField" binding="txtDuracionCancion">
         <constraints>
@@ -38,13 +45,18 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-2695937"/>
+          <foreground color="-8228421"/>
+        </properties>
       </component>
       <component id="79b02" class="javax.swing.JButton" binding="btnAniadirCancion">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-2695937"/>
+          <foreground color="-8228421"/>
           <text value="Añadir Canción"/>
         </properties>
       </component>
@@ -54,13 +66,18 @@
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-2695937"/>
+          <foreground color="-8228421"/>
+        </properties>
       </component>
       <component id="1ed4" class="javax.swing.JButton" binding="btnTerminar">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-2695937"/>
+          <foreground color="-8228421"/>
           <text value="Terminar"/>
         </properties>
       </component>
