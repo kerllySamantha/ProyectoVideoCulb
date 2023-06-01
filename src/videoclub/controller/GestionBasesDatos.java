@@ -80,10 +80,10 @@ public class GestionBasesDatos {
 
     public static ArrayList<Cancion> aniadirCancionArrayDisco() {
         ArrayList<Cancion> canciones = new ArrayList<>();
-        Cancion cancion  ;
-        String autor, nombre ;
+        Cancion cancion;
+        String autor, nombre;
         int duracion;
-        String newDuracion ;
+        String newDuracion;
         try {
             getConexion();
             try {
@@ -136,7 +136,7 @@ public class GestionBasesDatos {
     }
 
     public static void aniadirPelicula() {
-        String titulo, autor, genero, duracion,actorPrincipal, actrizPrincipal;
+        String titulo, autor, genero, duracion, actorPrincipal, actrizPrincipal;
         Formato formato;
         int anio;
         try {
@@ -166,7 +166,7 @@ public class GestionBasesDatos {
         }
     }
 
-    public static void aniadirAlquiler(ArrayList<Multimedia>multimedias, ArrayList<Socio>socios) {
+    public static void aniadirAlquiler(ArrayList<Multimedia> multimedias, ArrayList<Socio> socios) {
         String titulo, nif, tipo;
         LocalDate fechaAlquiler;
         int precio;
@@ -177,18 +177,17 @@ public class GestionBasesDatos {
                 Statement st = Objects.requireNonNull(getConexion()).createStatement();
                 ResultSet rs = st.executeQuery("SELECT * FROM  ALQUILER");
                 while (rs.next()) {
-
-                    titulo = rs.getString("titulo");
-                    tipo = rs.getString("tipo");
-                    formato = Formato.valueOf(rs.getString("formato"));
-                    fechaAlquiler = LocalDate.parse(rs.getString("fechaAlquiler"));
-                    precio = rs.getInt("precio");
+                    titulo = rs.getString("titulo_multimedia");
+                    tipo = rs.getString("tipo_multimedia");
+                    formato = Formato.valueOf(rs.getString("formato_multimedia"));
+                    fechaAlquiler = LocalDate.parse(rs.getString("fecha_alquiler"));
+                    precio = rs.getInt("precio_alquiler");
                     nif = rs.getString("nifSocio");
 
-                    for (Multimedia mult: multimedias) {
+                    for (Multimedia mult : multimedias) {
                         if (mult.getTitulo().equals(titulo) && mult.getFormato() == formato
                                 && mult.getClass().getName().substring(6).equals(tipo)) {
-                            for (Socio socio: socios) {
+                            for (Socio socio : socios) {
                                 if (socio.getNif().equals(nif)) {
                                     GestionAlquilerMul.alquileres.add(new GestionAlquilerMul(mult, fechaAlquiler, precio, socio));
                                 }
@@ -205,13 +204,13 @@ public class GestionBasesDatos {
         }
     }
 
-    public static void insertAlquiler(String titulo, Formato formato, LocalDate fecha, int precio, String nif) {
+    public static void insertAlquiler(String titulo, Formato formato, LocalDate fecha, int precio, String nif, String tipo_multimedia) {
         try {
             getConexion();
             try {
                 Statement st = conex.createStatement();
                 st.executeUpdate("insert into alquiler values "
-                        + "('" + nif + "', '" + titulo + "', '" + formato.toString() + "', '" + fecha + "', " + precio + ")");
+                        + "('" + nif + "', '" + titulo + "', '" + tipo_multimedia + "', '" + formato.toString() + "', '" + fecha  + "', " + precio  + ")");
 
                 Objects.requireNonNull(getConexion()).close();
             } catch (Exception e2) {
@@ -226,8 +225,8 @@ public class GestionBasesDatos {
         try {
             getConexion();
             try {
-                String consultaDelete = "DELETE FROM ALQUILER WHERE tituloMultimedia = ? AND nifSocio = ? " +
-                        "AND fecha_alquiler = ? AND tipo = ? AND precio = ?";
+                String consultaDelete = "DELETE FROM ALQUILER WHERE titulo_multimedia = ? AND nifSocio = ? " +
+                        "AND fecha_alquiler = ? AND tipo_multimedia = ? AND precio_alquiler = ?";
                 PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaDelete);
                 statement.setString(1, titulo);
                 statement.setString(2, nif);
@@ -236,7 +235,7 @@ public class GestionBasesDatos {
                 statement.setInt(5, precio);
                 statement.executeUpdate();
                 getConexion().close();
-            }catch (SQLException e) {
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         } catch (Exception e) {
@@ -284,13 +283,13 @@ public class GestionBasesDatos {
         }
     }
 
-    public static void insertPelicula(String titulo, String autor, Formato formato,String genero, int anio, String duracion, String actorPrincipal, String atrizPrincipal) {
+    public static void insertPelicula(String titulo, String autor, Formato formato, String genero, int anio, String duracion, String actorPrincipal, String atrizPrincipal) {
         try {
             getConexion();
             try {
                 Statement st = conex.createStatement();
-                st.executeUpdate("insert into pelicula (titulo, autor, formato, genero,  anio, duracion, actorprincipal, actrinzprincipal) values "
-                        + "('" + titulo + "', '" + autor + "', '" + formato.toString() + "', '" + genero + "', " + anio + ", '" +duracion+ "', '" + actorPrincipal+ "', '" + atrizPrincipal + "')");
+                st.executeUpdate("insert into pelicula (titulo, autor, formato, genero,  anio, duracion, actorprincipal, actrizprincipal) values "
+                        + "('" + titulo + "', '" + autor + "', '" + formato.toString() + "', '" + genero + "', " + anio + ", '" + duracion + "', '" + actorPrincipal + "', '" + atrizPrincipal + "')");
 
                 Objects.requireNonNull(getConexion()).close();
             } catch (Exception e2) {
@@ -319,6 +318,23 @@ public class GestionBasesDatos {
         }
     }
 
+    public static void insertNuevoSocio(String nif, String nombre, LocalDate fechaNac, String poblacion) {
+        try {
+            getConexion();
+            try {
+                Statement st = conex.createStatement();
+                st.executeUpdate("insert into socio (nif, nombre, fecha_nac, poblacion) values "
+                        + "('" + nif + "', '" + nombre + "', '" + fechaNac + "', '" + poblacion + "')");
+                Objects.requireNonNull(getConexion()).close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public static boolean comprobarDisponibilidad(String titulo, String tabla) {
         int cantidad = 0;
         try {
@@ -331,18 +347,15 @@ public class GestionBasesDatos {
                 }
                 getConexion().close();
             } catch (SQLException e) {
-            e.printStackTrace();
+                e.printStackTrace();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if (cantidad > 0) {
-            return true;
-        }
-        return false;
+        return cantidad > 0;
     }
 
-    public static void racalcularCantidadDev(String tabla, String titulo, String autor){
+    public static void racalcularCantidadDev(String tabla, String titulo, String autor) {
         try {
             getConexion();
             try {
@@ -352,7 +365,7 @@ public class GestionBasesDatos {
                 statement.setString(2, autor);
                 statement.executeUpdate();
                 getConexion().close();
-            }catch (SQLException e) {
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         } catch (Exception e) {
@@ -360,7 +373,7 @@ public class GestionBasesDatos {
         }
     }
 
-    public static void recalcularCantidadAlquiler(String tabla, String titulo, String autor){
+    public static void recalcularCantidadAlquiler(String tabla, String titulo, String autor) {
         try {
             getConexion();
             try {
@@ -370,7 +383,7 @@ public class GestionBasesDatos {
                 statement.setString(2, autor);
                 statement.executeUpdate();
                 getConexion().close();
-            }catch (SQLException e) {
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         } catch (Exception e) {

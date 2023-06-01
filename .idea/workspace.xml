@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Poner nombre objetos enum en mayúscula">
+    <list default="true" id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Gestionar errores otra vez :D">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Plataforma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Plataforma.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Pelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Pelicula.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Plataforma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Plataforma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionAlquilerMul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionAlquilerMul.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Pelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaSocio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaSocio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +73,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1685556610" />
+                    <option name="lastUsedInstant" value="1685557107" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />

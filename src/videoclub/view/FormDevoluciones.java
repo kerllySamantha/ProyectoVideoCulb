@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Set;
 
 public class FormDevoluciones extends JFrame{
 
@@ -18,10 +19,11 @@ public class FormDevoluciones extends JFrame{
     private JTextField txtFieldNifSocio;
     private JButton btnComprobarSocio;
     private JLabel lblNifSocio;
-    private JList listaDevolver;
+    private JList<String>  listaDevolver;
     private JButton btnDevolver;
     private String socioNIF;
     private boolean existeNif;
+    DefaultListModel<String> model = new DefaultListModel<>();
 
     public FormDevoluciones() {
         super.setContentPane(panelDevoluciones);
@@ -43,7 +45,11 @@ public class FormDevoluciones extends JFrame{
                         JOptionPane.showMessageDialog(null,"No existe el NIF introducido");
 
                     } else {
-                        listaDevolver.setModel(GestionSocioVideoClub.mostarMultAlquiladosSocio(txtFieldNifSocio.getText()));
+                        Set<String> titulos = GestionSocioVideoClub.mostarMultAlquiladosSocio(socioNIF);
+                        for (String titulo : titulos) {
+                            model.addElement(titulo);
+                            listaDevolver.setModel(model);
+                        }
                     }
                 }catch (Exception e1){
                     e1.printStackTrace();
@@ -51,12 +57,16 @@ public class FormDevoluciones extends JFrame{
             }
         });
 
+
+
         btnDevolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int respuesta = JOptionPane.showConfirmDialog(null,"Estás seguro que quieres devolver-lo?","Alerta!",JOptionPane.YES_NO_OPTION);
                 if (respuesta == JOptionPane.YES_OPTION) {
-                    GestionSocioVideoClub.devolverMultimedia(txtFieldNifSocio.getText(), listaDevolver.getSelectedValue().toString());
+                    System.out.println(GestionSocioVideoClub.socios.get(0).getAlquilerActual().get(0).getMultimediaAlquilado().getTitulo());
+                    GestionSocioVideoClub.devolverMultimedia(txtFieldNifSocio.getText(), listaDevolver.getSelectedValue());
+                    model.clear();
                 }
             }
         });

@@ -20,15 +20,14 @@ public class FormAlquiler extends JFrame {
     private JLabel lblNIF;
     private JLabel lblBuscar;
     private JTextField txtNifSocio;
-    private JComboBox<String> cmbNif;
-    private GestionAlquilerMul alquiler;
+    private ButtonGroup grup = new ButtonGroup();
+
     private final ArrayList<Multimedia> filtroMultimedias = new ArrayList<>();
     DefaultListModel<String> model = new DefaultListModel<>();
     private boolean existeNif;
 
 
     public FormAlquiler() {
-        ButtonGroup grup = new ButtonGroup();
         super.setContentPane(panelAlquiler);
         super.setLocationRelativeTo(null);
         super.setJMenuBar(MenuBar.crearMenuBar());
@@ -40,16 +39,13 @@ public class FormAlquiler extends JFrame {
 
 
         btnAlquilar.addActionListener(e -> {
-
             ArrayList<Socio> alquilerSocio = GestionSocioVideoClub.socios;
             ArrayList<Multimedia> alquilerMultimedia = GestionMultimedia.multimedias;
-
             String nifSocio = txtNifSocio.getText().toUpperCase();
             GestionSocioVideoClub.buscarSocio(nifSocio, alquilerSocio);
             String tituloSeleccionado = listarAlquiler.getSelectedValue();
             Multimedia multimediaAlquilada;
             boolean encontrado = false;
-
             for (Multimedia multimedia : alquilerMultimedia) {
                 if (multimedia.getTitulo().equalsIgnoreCase(tituloSeleccionado)) {
                     multimediaAlquilada = multimedia;
@@ -57,6 +53,7 @@ public class FormAlquiler extends JFrame {
                         for (Socio socio : GestionSocioVideoClub.socios) {
                             if (socio.getNif().equalsIgnoreCase(nifSocio)) {
                                 GestionSocioVideoClub.alquilarMultimedia(multimediaAlquilada, socio);
+                                encontrado = true;
                             }
                         }
                     } else {
@@ -65,12 +62,8 @@ public class FormAlquiler extends JFrame {
                 }
             }
             if (!encontrado) {
-                JOptionPane.showMessageDialog(null, "No exixte ningun Socio con ese nif");
+                JOptionPane.showMessageDialog(null, "No existe ningun Socio con ese nif");
             }
-
-
-//            JOptionPane.showMessageDialog(null, "Quiere alquilar-lo?", "Alerta!", JOptionPane.YES_NO_OPTION);
-//
         });
         btnBuscar.addActionListener(e -> {
 
@@ -79,14 +72,8 @@ public class FormAlquiler extends JFrame {
                 model.addElement(titulo);
                 listarAlquiler.setModel(model);
             }
-
-            DVDRadioButton.setSelected(false);
-            ARCHIVORadioButton.setSelected(false);
-            BLUERAYRadioButton.setSelected(false);
-            CDRadioButton.setSelected(false);
-
-
         });
+        grup.clearSelection();
     }
 
     public ArrayList<Multimedia> filtroAlquiler() {
