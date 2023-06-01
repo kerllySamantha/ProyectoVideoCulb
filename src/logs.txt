@@ -208,3 +208,5 @@
 [01-06-2023 16:42:52] Se ha alquilado el multimedia 'SUPER MARIO BROS' (Pelicula) a socio con NIF 51784924X
 [01-06-2023 16:42:54] Se ha alquilado el multimedia 'SUPER MARIO BROS' (Pelicula) a socio con NIF 51784924X
 [01-06-2023 16:43:03] Se ha cerrado el programa
+[01-06-2023 16:54:52] Se ha iniciado el programa
+[01-06-2023 16:55:15] Se ha cerrado el programa

@@ -22,12 +22,16 @@ public class FormPrincipalVideoClub extends JFrame {
 //    public static  FormPagoRecargo formPagoRecargo = new FormPagoRecargo();
 
     public FormPrincipalVideoClub() {
+        Color fondo = new Color(143,151,203);
+        Color fondoBotones = new Color(214,220,255);
+
         super.setResizable(false);
         super.setLayout(null);
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setBounds(100, 100, 250, 500);
 
         panelPrincipal = new JPanel();
+        panelPrincipal.setBackground(fondo);
         super.setContentPane(panelPrincipal);
         //add(panelPrincipal, BorderLayout.CENTER);
         super.setLocationRelativeTo(null);
@@ -37,6 +41,7 @@ public class FormPrincipalVideoClub extends JFrame {
         botonAltas.setMinimumSize(new Dimension(20, 20));
         botonAltas.setMaximumSize(new Dimension(250, 60));
         botonAltas.setPreferredSize(new Dimension(200, 30));
+        botonAltas.setBackground(fondoBotones);
         panelPrincipal.add(botonAltas);
 
 
@@ -60,24 +65,28 @@ public class FormPrincipalVideoClub extends JFrame {
         btnAlquiler.setMinimumSize(new Dimension(20, 20));
         btnAlquiler.setMaximumSize(new Dimension(250, 60));
         btnAlquiler.setPreferredSize(new Dimension(200, 30));
+        btnAlquiler.setBackground(fondoBotones);
         panelPrincipal.add(btnAlquiler);
 
         btnDevolucion = new JButton("Devolución");
         btnDevolucion.setMinimumSize(new Dimension(20, 20));
         btnDevolucion.setMaximumSize(new Dimension(250, 60));
         btnDevolucion.setPreferredSize(new Dimension(200, 30));
+        btnDevolucion.setBackground(fondoBotones);
         panelPrincipal.add(btnDevolucion);
 
         btnListados = new JButton("Listar");
         btnListados.setMinimumSize(new Dimension(20, 20));
         btnListados.setMaximumSize(new Dimension(250, 60));
         btnListados.setPreferredSize(new Dimension(200, 30));
+        btnListados.setBackground(fondoBotones);
         panelPrincipal.add(btnListados);
 
         btnPagos = new JButton("Pagos");
         btnPagos.setMinimumSize(new Dimension(20, 20));
         btnPagos.setMaximumSize(new Dimension(250, 60));
         btnPagos.setPreferredSize(new Dimension(200, 30));
+        btnPagos.setBackground(fondoBotones);
         panelPrincipal.add(btnPagos);
 
 

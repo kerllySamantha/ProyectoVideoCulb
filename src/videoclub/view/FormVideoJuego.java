@@ -1,5 +1,8 @@
 package view;
 
+import controller.GestionBasesDatos;
+import controller.GestionLogs;
+import controller.GestionMultimedia;
 import model.Formato;
 import model.Plataforma;
 import model.Videojuego;
@@ -77,11 +80,11 @@ public class FormVideoJuego extends JFrame {
                     }
 
                     if (playRadioButton.isSelected()) {
-                        plataforma = Plataforma.PlayStation5;
+                        plataforma = Plataforma.PLAYSTATION5;
                     } else if (XBoxRadioButton.isSelected()) {
-                        plataforma = Plataforma.XBox;
+                        plataforma = Plataforma.XBOX;
                     } else if (nintendoRadioButton.isSelected()) {
-                        plataforma = Plataforma.NintendoSwitch;
+                        plataforma = Plataforma.NINTENDOSWITCH;
                     } else if (PCRadioButton.isSelected()) {
                         plataforma = Plataforma.PC;
                     }
