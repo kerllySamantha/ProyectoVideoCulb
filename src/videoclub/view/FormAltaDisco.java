@@ -73,9 +73,6 @@ public class FormAltaDisco extends JFrame{
                     anioDisco = Integer.parseInt(cbAnioDisco.getSelectedItem().toString());
                 }
 
-//                if (Integer.parseInt(txtAnioDisco.getText()) >= 1887) {
-//
-//                }
 
                 if (datosCorrectos) {
                     disco = new Disco(tituloDisco, autorDisco, formato, anioDisco);
@@ -102,6 +99,8 @@ public class FormAltaDisco extends JFrame{
                     limpiarCampos();
                     GestionBasesDatos.insertDisco(disco.getTitulo(), disco.getAutor(), disco.getFormato(), disco.getAnio(), disco.duracionDisco());
                     GestionLogs.escribirRegistro(GestionLogs.registroAltaDisco(disco.getTitulo()));
+                } else {
+                    JOptionPane.showMessageDialog(null, "Antes de dar de alta el disco se deben añadir canciones");
                 }
             }
         });
