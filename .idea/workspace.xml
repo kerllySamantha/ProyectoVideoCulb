@@ -6,13 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="Hacer que todos los forms tengan el mismo tamaño">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionSocioVideoClub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Socio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Socio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormDevoluciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPagoRecargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormPagoRecargo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -344,14 +347,7 @@
       <option name="project" value="LOCAL" />
       <updated>1685556723847</updated>
     </task>
-    <task id="LOCAL-00025" summary="Cambios FormAltaVideojuego">
-      <created>1685735116840</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1685735116840</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
