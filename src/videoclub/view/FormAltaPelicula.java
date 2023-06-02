@@ -34,6 +34,7 @@ public class FormAltaPelicula extends JFrame {
     private JComboBox<Integer> cbAnioPelicula;
     private JLabel lblgenero;
     private JTextField txtGenero;
+    private JTextArea txtDatosPelicula;
     private JLabel btnGenero;
     private Pelicula pelicula;
 
@@ -94,6 +95,7 @@ public class FormAltaPelicula extends JFrame {
                 if (datosCorrectos) {
                     pelicula = new Pelicula(tituloPelicula, autorPelicula, formato, anioPelicula, duracionPelicula, actrizPrincipal, actorPrincipal, genero);
                     GestionMultimedia.multimedias.add(pelicula);
+                    txtDatosPelicula.setText(pelicula.toString());
                     GestionBasesDatos.insertPelicula(pelicula.getTitulo(), pelicula.getAutor(), pelicula.getFormato(), pelicula.getGenero(), pelicula.getAnio(), pelicula.getDuracionPelicula(), pelicula.getActorPrincipal(), pelicula.getActrizPrincipal());
                     JOptionPane.showMessageDialog(null, "Se ha añadido una nueva pelicula");
                     GestionLogs.escribirRegistro(GestionLogs.registroAltaPelicula(pelicula.getTitulo()));
