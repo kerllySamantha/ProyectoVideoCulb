@@ -83,7 +83,7 @@ public class GestionBasesDatos {
     public static ArrayList<Cancion> aniadirCancionArrayDisco() {
         ArrayList<Cancion> canciones = new ArrayList<>();
         Cancion cancion;
-        String autor, nombre;
+        String autor, nombre, duracionMinSeg;
         int duracion;
         String newDuracion;
         try {
@@ -95,8 +95,9 @@ public class GestionBasesDatos {
                     nombre = rs.getString("nombre");
                     autor = rs.getString("autor");
                     duracion = rs.getInt("duracion");
-                    newDuracion = String.valueOf(duracion);
-                    cancion = new Cancion(nombre, newDuracion, autor);
+                    duracionMinSeg = rs.getString("duracionminseg");
+
+                    cancion = new Cancion(nombre, duracion, duracionMinSeg, autor);
                     canciones.add(cancion);
                 }
                 getConexion().close();
@@ -271,6 +272,23 @@ public class GestionBasesDatos {
                 Statement st = conex.createStatement();
                 st.executeUpdate("insert into pelicula (titulo, autor, formato, genero,  anio, duracion, actorprincipal, actrizprincipal) values "
                         + "('" + titulo + "', '" + autor + "', '" + formato.toString() + "', '" + genero + "', " + anio + ", '" + duracion + "', '" + actorPrincipal + "', '" + atrizPrincipal + "')");
+
+                Objects.requireNonNull(getConexion()).close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertCancion(String titulo, String autor, String duracionMinSeg, int duracion, String nombreDisco) {
+        try {
+            getConexion();
+            try {
+                Statement st = conex.createStatement();
+                st.executeUpdate("INSERT INTO CANCIONES(NOMBRE, DURACION, DURACIONMINSEG, TITULODISCO, AUTOR) VALUES "
+                        + "('" + titulo + "', '" + duracion + "', '" + duracionMinSeg + "', '" + nombreDisco + "', '" + autor + "')");
 
                 Objects.requireNonNull(getConexion()).close();
             } catch (Exception e2) {

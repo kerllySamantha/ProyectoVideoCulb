@@ -1,4 +1,5 @@
 package view;
+import controller.GestionBasesDatos;
 import model.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -16,6 +17,7 @@ public class FormAniadirCanciones extends JFrame{
     private JTextArea txtListaCanciones;
     private JButton btnTerminar;
     private ArrayList<Cancion>canciones = new ArrayList<>();
+    public static Cancion cancion;
 
     public FormAniadirCanciones() {
         super.setContentPane(panelCancion);
@@ -31,7 +33,7 @@ public class FormAniadirCanciones extends JFrame{
         btnAniadirCancion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String tituloCancion = "", autor = null;
+                String tituloCancion = "";
                 String duracion = "";
                 String patron = "^(3[0]|[12]?\\d):([0-5]\\d)$";
 
@@ -46,13 +48,14 @@ public class FormAniadirCanciones extends JFrame{
                     } else {
                         tituloCancion = txtTituloCancion.getText().toUpperCase();
                         duracion = txtDuracionCancion.getText();
-                        canciones.add(new Cancion(tituloCancion, duracion,autor));
+                        cancion = new Cancion(tituloCancion, duracion, FormAltaDisco.disco.getAutor());
+                        canciones.add(cancion);
                         txtListaCanciones.setText(mostrarCanciones());
                         limpiarCampos();
 
                     }
                 } catch (Exception exception) {
-                    System.out.println(exception);
+                    exception.printStackTrace();
                 }
             }
         });
@@ -66,6 +69,7 @@ public class FormAniadirCanciones extends JFrame{
                 FormAltaDisco.recibirCanciones(canciones);
                 FormAltaDisco.disco.setDuracion(FormAltaDisco.disco.duracionDisco());
 
+
             }
         });
     }
@@ -77,9 +81,14 @@ public class FormAniadirCanciones extends JFrame{
 
     public String mostrarCanciones() {
         String listaCaciones = "";
-        for (Cancion cancion : canciones) {
-            listaCaciones += cancion.getTituloCancion() + " - " + cancion.getDuracionMinSeg() + "\n";
+        try {
+            for (Cancion cancion : canciones) {
+                listaCaciones += cancion.getTituloCancion() + " - " + cancion.getDuracionMinSeg() + "\n";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
         return listaCaciones;
     }
 }

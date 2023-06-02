@@ -183,7 +183,7 @@ public class MenuBar {
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
 
@@ -196,6 +196,7 @@ public class MenuBar {
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
         listActualSocio.addActionListener(e ->{
@@ -206,7 +207,7 @@ public class MenuBar {
                 formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.listaAlquileresCLiente();
-
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
 
@@ -219,7 +220,7 @@ public class MenuBar {
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
         listaVideojAnio.addActionListener(e ->{
@@ -231,7 +232,7 @@ public class MenuBar {
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.listaVideojuegos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
 
@@ -244,6 +245,7 @@ public class MenuBar {
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
         pagoRecargos.addActionListener(e -> {

@@ -164,34 +164,34 @@ public class GestionSocioVideoClub {
 
 
     public static String listaSociosRecargos() {
-        String listasSocios = "Socios con recargos pendientes: \n";
+        StringBuilder listasSocios = new StringBuilder("Socios con recargos pendientes: \n");
 
         for (Socio s : socios) {
             if (s.getRecargo() >  0) {
-                listasSocios += "NIF: " + s.getNif() + "\nNombre: " + s.getNombre() + "\nRecargo: " + s.getRecargo();
+                listasSocios.append("\nNIF: ").append(s.getNif()).append("\nNombre: ").append(s.getNombre()).append("\nRecargo: ").append(s.getRecargo()).append("\n");
             }
         }
-        return listasSocios;
+        return listasSocios.toString();
     }
 
     public static String listaAlquilerActual(String nif) {
-        String listaAlquileres = "";
+        StringBuilder listaAlquileres = new StringBuilder();
         if (buscarSocio(nif, socios) != -1) {
             try {
                 int indexSocio = buscarSocio(nif, socios);
-                listaAlquileres += "Nombre: " + socios.get(indexSocio).getNombre() +
-                        "\nAlquileres actuales del socio:";
+                listaAlquileres.append("Nombre: ").append(socios.get(indexSocio).getNombre()).append("\nAlquileres actuales del socio:");
 
                 for (int i = 0; i < socios.get(indexSocio).getAlquilerActual().size(); i++) {
-                    listaAlquileres += "\t" + socios.get(indexSocio).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo();
+                    listaAlquileres.append("\n  -").append(socios.get(indexSocio).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo());
                 }
+                listaAlquileres.append("\n");
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "El socio introducido no tiene ningún alquiler actualmente");
             }
         } else {
             JOptionPane.showMessageDialog(null, "El NIF introducido no coincide con ningú socio registrado");
         }
-        return listaAlquileres;
+        return listaAlquileres.toString();
     }
 }
 
