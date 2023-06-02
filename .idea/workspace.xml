@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="Hacer que todos los forms tengan el mismo tamaño">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaDisco.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAniadirCanciones.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormVideoJuego.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormVideoJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +36,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="kerlly" />
+        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,12 +63,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="ramaPrincipal" />
-                    <option name="lastUsedInstant" value="1685713007" />
+                    <option name="branchName" value="kerlly" />
+                    <option name="lastUsedInstant" value="1685740272" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1685712990" />
+                    <option name="branchName" value="ramaPrincipal" />
+                    <option name="lastUsedInstant" value="1685740144" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
