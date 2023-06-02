@@ -51,17 +51,20 @@ public class FormVideoJuego extends JFrame {
                 try {
                     String tituloVideoJuego = textTitulo.getText().toUpperCase();
                     String autorVideoJuego = textAutor.getText().toUpperCase();
-                    int anioVideoJuego ;
+                    int anioVideoJuego = Integer.parseInt(Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
                     Formato formato = null;
                     Plataforma plataforma = null;
-                    boolean datos = false;
+                    boolean datos = true;
 
-                    if (textTitulo.getText().equals("") && textAnio.getText().equals("")) {
+                    if (textTitulo.getText().equals("") && textAutor.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Los campos Titulo y Autor están vacíos.");
+                        datos = false;
                     } else if (textTitulo.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "El campo título está vacío.");
+                        datos = false;
                     } else if (textAutor.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "El campo autor está vacío.");
+                        datos = false;
                     }
                     if (CDRadioButton.isSelected()) {
                         formato = Formato.CD;
@@ -73,6 +76,7 @@ public class FormVideoJuego extends JFrame {
                         formato = Formato.ARCHIVO;
                     } else if (!CDRadioButton.isSelected() || !DVDRadioButton.isSelected() || !BLURAYRadioButton.isSelected() || !ARCHIVORadioButton.isSelected()) {
                         JOptionPane.showMessageDialog(null, "Debes seleccionar un formato");
+                        datos = false;
                     }
                     if (playRadioButton.isSelected()) {
                         plataforma = Plataforma.PLAYSTATION5;
@@ -84,14 +88,16 @@ public class FormVideoJuego extends JFrame {
                         plataforma = Plataforma.PC;
                     } else if (!playRadioButton.isSelected() || !XBoxRadioButton.isSelected() || !nintendoRadioButton.isSelected() || !PCRadioButton.isSelected()) {
                         JOptionPane.showMessageDialog(null, "Debes seleccionar una plataforma");
+                        datos = false;
                     }
-                    if (!datos) {
-                        anioVideoJuego = Integer.parseInt(Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
+                    if (datos) {
+
                         juego = new Videojuego(tituloVideoJuego, autorVideoJuego, formato, anioVideoJuego, plataforma);
                         visualizarDatos.setText(juego.toString());
                         GestionMultimedia.multimedias.add(juego);
                         GestionBasesDatos.insertViedeojuego(juego.getTitulo(), juego.getAutor(), juego.getFormato(), juego.getAnio(), juego.getPlataforma());
                         GestionLogs.escribirRegistro(GestionLogs.registroAltaVideojuego(juego.getTitulo()));
+                        JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo videojuego");
                     }
                 } catch (Exception e1) {
                     e1.printStackTrace();

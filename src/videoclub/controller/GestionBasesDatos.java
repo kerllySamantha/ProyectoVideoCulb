@@ -390,6 +390,24 @@ public class GestionBasesDatos {
         }
     }
 
+    public static void actualizarRecargo(String nif, int recargo) {
+        try {
+            getConexion();
+            try {
+                String consultaUpdate = "UPDATE SOCIO SET RECARGO = ? WHERE NIF = ?";
+                PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaUpdate);
+                statement.setInt(1, recargo);
+                statement.setString(2, nif);
+                statement.executeUpdate();
+                getConexion().close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }
 

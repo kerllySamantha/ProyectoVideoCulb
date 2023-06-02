@@ -60,10 +60,11 @@ public class GestionSocioVideoClub {
 
                 if (respuesta == JOptionPane.YES_OPTION) {
                     socios.get(index).setRecargo(0);
+                } else {
+                    GestionBasesDatos.actualizarRecargo(socios.get(index).getNif(), socios.get(index).getRecargo());
                 }
             }
         }
-
     }
 
     public static void alquilarMultimedia(Multimedia multimediaAlquilado, Socio socio) {
@@ -112,6 +113,7 @@ public class GestionSocioVideoClub {
                 socios.get(buscarSocio(nif, socios)).setRecargo(0);
                 GestionBasesDatos.eliminarRecargo(socios.get(index).getNif());
                 JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " ha realizado el pago de los recargos");
+                GestionLogs.escribirRegistro(GestionLogs.registroPagos(socios.get(index).getNif()));
             } else {
                 JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " no tiene recargos pendiente");
             }

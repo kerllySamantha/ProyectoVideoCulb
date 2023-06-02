@@ -99,6 +99,7 @@ public class FormAltaDisco extends JFrame{
                     limpiarCampos();
                     GestionBasesDatos.insertDisco(disco.getTitulo(), disco.getAutor(), disco.getFormato(), disco.getAnio(), disco.duracionDisco());
                     GestionLogs.escribirRegistro(GestionLogs.registroAltaDisco(disco.getTitulo()));
+                    JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo disco");
                 } else {
                     JOptionPane.showMessageDialog(null, "Antes de dar de alta el disco se deben añadir canciones");
                 }
