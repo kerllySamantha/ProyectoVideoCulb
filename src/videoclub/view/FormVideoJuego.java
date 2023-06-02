@@ -1,15 +1,12 @@
 package view;
 
-import controller.GestionBasesDatos;
-import controller.GestionLogs;
-import controller.GestionMultimedia;
-import model.Formato;
-import model.Plataforma;
-import model.Videojuego;
+import model.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class FormVideoJuego extends JFrame {
 
@@ -74,17 +71,17 @@ public class FormVideoJuego extends JFrame {
                     } else if (DVDRadioButton.isSelected()) {
                         formato = Formato.DVD;
                     } else if (BLURAYRadioButton.isSelected()) {
-                        formato = Formato.BLUERAY;
+                        formato = Formato.BLURAY;
                     } else if (ARCHIVORadioButton.isSelected()) {
                         formato = Formato.ARCHIVO;
                     }
 
                     if (playRadioButton.isSelected()) {
-                        plataforma = Plataforma.PLAYSTATION5;
+                        plataforma = Plataforma.PlayStation5;
                     } else if (XBoxRadioButton.isSelected()) {
-                        plataforma = Plataforma.XBOX;
+                        plataforma = Plataforma.XBox;
                     } else if (nintendoRadioButton.isSelected()) {
-                        plataforma = Plataforma.NINTENDOSWITCH;
+                        plataforma = Plataforma.NintendoSwitch;
                     } else if (PCRadioButton.isSelected()) {
                         plataforma = Plataforma.PC;
                     }
