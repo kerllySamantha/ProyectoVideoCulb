@@ -8,9 +8,21 @@ import java.util.Comparator;
 public class GestionMultimedia {
     public static ArrayList<Multimedia>multimedias = new ArrayList<>();
 
+    public static boolean comprobarMultiemdia(ArrayList<Multimedia> mutimediasTitulo, String tituloMultimedia) {
+        for (Multimedia multimedia: mutimediasTitulo){
+            if (tituloMultimedia.equalsIgnoreCase(multimedia.getTitulo())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static String ordenarMultimedia() {
 
+
         StringBuilder listaMultimedia = new StringBuilder();
+
+
         GestionMultimedia.multimedias.sort(new Comparator<Multimedia>() {
             public int compare(Multimedia p1, Multimedia p2) {
 
