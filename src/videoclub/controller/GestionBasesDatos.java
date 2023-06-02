@@ -244,28 +244,6 @@ public class GestionBasesDatos {
     }
 
 
-//    public static void updateDisco(String titulo, String autor, Formato formato, int anio, String duracion) {
-//        try {
-//            getConexion();
-//            try {
-//                Statement st = conex.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-//                String origin = "update disco set ";
-//                st.executeUpdate(origin + "titulo = '" + titulo + "' where autor = '" + autor + "'");
-//                st.executeUpdate(origin + "autor = '" + autor + "' where autor = '" + autor + "'");
-//                st.executeUpdate(origin + "formato = '" + formato + "' where autor = '" + autor + "'");
-//                st.executeUpdate(origin + "anio = '" + anio + "' where autor = '" + autor + "'");
-//                st.executeUpdate(origin + "duracion" + duracion + "' where autor = '" + autor + "'");
-//
-//
-//                Objects.requireNonNull(getConexion()).close();
-//            } catch (Exception e2) {
-//                e2.printStackTrace();
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     public static void insertDisco(String titulo, String autor, Formato formato, int anio, String duracion) {
         try {
             getConexion();

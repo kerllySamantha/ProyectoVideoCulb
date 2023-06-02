@@ -560,3 +560,54 @@
 [02-06-2023 21:49:16] Se ha cerrado el programa
 [02-06-2023 21:49:40] Se ha iniciado el programa
 [02-06-2023 21:50:45] Se ha cerrado el programa
+[02-06-2023 21:56:57] Se ha iniciado el programa
+[02-06-2023 21:57:13] Se ha dado de alta el videojuego 'FF'
+[02-06-2023 21:57:17] Se ha dado de alta el videojuego 'FF'
+[02-06-2023 21:57:54] Se ha cerrado el programa
+[02-06-2023 22:01:18] Se ha iniciado el programa
+[02-06-2023 22:01:39] Se ha dado de alta el videojuego 'HOLA'
+[02-06-2023 22:01:47] Se ha dado de alta el videojuego 'HOLA'
+[02-06-2023 22:01:48] Se ha dado de alta el videojuego 'HOLA'
+[02-06-2023 22:01:49] Se ha dado de alta el videojuego 'HOLA'
+[02-06-2023 22:01:52] Se ha cerrado el programa
+[02-06-2023 22:03:14] Se ha iniciado el programa
+[02-06-2023 22:03:43] Se ha dado de alta el videojuego 'MADAGASCAR'
+[02-06-2023 22:03:49] Se ha cerrado el programa
+[02-06-2023 22:05:51] Se ha iniciado el programa
+[02-06-2023 22:06:09] Se ha dado de alta el videojuego 'FSDFS'
+[02-06-2023 22:06:16] Se ha cerrado el programa
+[02-06-2023 22:06:28] Se ha iniciado el programa
+[02-06-2023 22:06:48] Se ha cerrado el programa
+[02-06-2023 22:11:49] Se ha iniciado el programa
+[02-06-2023 22:12:22] Se ha cerrado el programa
+[02-06-2023 22:15:42] Se ha iniciado el programa
+[02-06-2023 22:16:18] Se ha dado de alta al socio ´ÑLKJHG, con NIF 123456789
+[02-06-2023 22:17:34] Se ha dado de alta el videojuego 'JHGVF'
+[02-06-2023 22:17:43] Se ha cerrado el programa
+[02-06-2023 22:18:05] Se ha iniciado el programa
+[02-06-2023 22:18:26] Se ha cerrado el programa
+[02-06-2023 22:28:53] Se ha iniciado el programa
+[02-06-2023 22:29:12] Se ha dado de alta el videojuego 'DEDSAD'
+[02-06-2023 22:31:55] Se ha cerrado el programa
+[02-06-2023 22:32:00] Se ha iniciado el programa
+[02-06-2023 22:32:15] Se ha dado de alta el videojuego 'DDD'
+[02-06-2023 22:32:19] Se ha cerrado el programa
+[02-06-2023 22:33:23] Se ha iniciado el programa
+[02-06-2023 22:33:31] Se ha dado de alta el videojuego 'DFSF'
+[02-06-2023 22:33:35] Se ha cerrado el programa
+[02-06-2023 22:45:41] Se ha iniciado el programa
+[02-06-2023 22:46:33] Se ha cerrado el programa
+[02-06-2023 22:47:00] Se ha iniciado el programa
+[02-06-2023 22:47:15] Se ha cerrado el programa
+[02-06-2023 22:47:40] Se ha iniciado el programa
+[02-06-2023 22:47:49] Se ha cerrado el programa
+[02-06-2023 22:50:22] Se ha iniciado el programa
+[02-06-2023 22:50:48] Se ha cerrado el programa
+[02-06-2023 22:52:08] Se ha iniciado el programa
+[02-06-2023 22:52:16] Se ha dado de alta el videojuego 'DCDF'
+[02-06-2023 22:52:21] Se ha cerrado el programa
+[02-06-2023 22:54:21] Se ha iniciado el programa
+[02-06-2023 22:54:52] Se ha cerrado el programa
+[02-06-2023 22:56:03] Se ha iniciado el programa
+[02-06-2023 22:56:16] Se ha dado de alta el videojuego 'KJHGFGHJK'
+[02-06-2023 22:56:36] Se ha cerrado el programa

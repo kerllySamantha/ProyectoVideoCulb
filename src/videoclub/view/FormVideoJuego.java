@@ -3,10 +3,7 @@ package view;
 import controller.GestionBasesDatos;
 import controller.GestionLogs;
 import controller.GestionMultimedia;
-import model.Formato;
-import model.Multimedia;
-import model.Plataforma;
-import model.Videojuego;
+import model.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -46,31 +43,26 @@ public class FormVideoJuego extends JFrame {
         MenuBar.gestionDeVentanas();
         altaVideoJuego();
     }
-    public void altaVideoJuego(){
+
+    public void altaVideoJuego() {
         btnCrear.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     String tituloVideoJuego = textTitulo.getText().toUpperCase();
                     String autorVideoJuego = textAutor.getText().toUpperCase();
-                    int anioVideoJuego = 0;
+                    int anioVideoJuego ;
                     Formato formato = null;
                     Plataforma plataforma = null;
-                    boolean datos = true;
+                    boolean datos = false;
 
-                    if (textTitulo.getText().equals("") && textAnio.getText().equals("")){
-                        datos = false;
-                        JOptionPane.showMessageDialog(null,"Los campos Titulo y Autor están vacíos.");
+                    if (textTitulo.getText().equals("") && textAnio.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Los campos Titulo y Autor están vacíos.");
                     } else if (textTitulo.getText().equals("")) {
-                        datos = false;
-                        JOptionPane.showMessageDialog(null,"El campo título está vacío.");
+                        JOptionPane.showMessageDialog(null, "El campo título está vacío.");
                     } else if (textAutor.getText().equals("")) {
-                        datos = false;
-                        JOptionPane.showMessageDialog(null,"El campo autor está vacío.");
-                    } else {
-                        anioVideoJuego=Integer.parseInt(comboBox1.getSelectedItem().toString());
+                        JOptionPane.showMessageDialog(null, "El campo autor está vacío.");
                     }
-
                     if (CDRadioButton.isSelected()) {
                         formato = Formato.CD;
                     } else if (DVDRadioButton.isSelected()) {
@@ -79,8 +71,9 @@ public class FormVideoJuego extends JFrame {
                         formato = Formato.BLUERAY;
                     } else if (ARCHIVORadioButton.isSelected()) {
                         formato = Formato.ARCHIVO;
+                    } else if (!CDRadioButton.isSelected() || !DVDRadioButton.isSelected() || !BLURAYRadioButton.isSelected() || !ARCHIVORadioButton.isSelected()) {
+                        JOptionPane.showMessageDialog(null, "Debes seleccionar un formato");
                     }
-
                     if (playRadioButton.isSelected()) {
                         plataforma = Plataforma.PLAYSTATION5;
                     } else if (XBoxRadioButton.isSelected()) {
@@ -89,10 +82,12 @@ public class FormVideoJuego extends JFrame {
                         plataforma = Plataforma.NINTENDOSWITCH;
                     } else if (PCRadioButton.isSelected()) {
                         plataforma = Plataforma.PC;
+                    } else if (!playRadioButton.isSelected() || !XBoxRadioButton.isSelected() || !nintendoRadioButton.isSelected() || !PCRadioButton.isSelected()) {
+                        JOptionPane.showMessageDialog(null, "Debes seleccionar una plataforma");
                     }
-
-                    if (datos) {
-                        juego = new Videojuego(tituloVideoJuego,autorVideoJuego,formato,anioVideoJuego,plataforma);
+                    if (!datos) {
+                        anioVideoJuego = Integer.parseInt(Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
+                        juego = new Videojuego(tituloVideoJuego, autorVideoJuego, formato, anioVideoJuego, plataforma);
                         visualizarDatos.setText(juego.toString());
                         GestionMultimedia.multimedias.add(juego);
                         GestionBasesDatos.insertViedeojuego(juego.getTitulo(), juego.getAutor(), juego.getFormato(), juego.getAnio(), juego.getPlataforma());

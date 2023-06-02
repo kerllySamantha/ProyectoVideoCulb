@@ -266,4 +266,18 @@
       </vspacer>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="groupFormato">
+      <member id="8a206"/>
+      <member id="fe15e"/>
+      <member id="e8f32"/>
+      <member id="5d292"/>
+    </group>
+    <group name="groupPlataforma">
+      <member id="d29e2"/>
+      <member id="e80f5"/>
+      <member id="489ce"/>
+      <member id="d3c75"/>
+    </group>
+  </buttonGroups>
 </form>
