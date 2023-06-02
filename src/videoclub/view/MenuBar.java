@@ -119,6 +119,7 @@ public class MenuBar {
     public static void gestionDeVentanas() {
         socio.addActionListener(e -> {
             formAltaSocio.setDefaultCloseOperation(formAltaSocio.HIDE_ON_CLOSE);
+            formAltaSocio.setResizable(false);
             formAltaSocio.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAltaSocio.isVisible()) {
                 visivilidadVentanas();
@@ -128,6 +129,7 @@ public class MenuBar {
         });
         disco.addActionListener(e -> {
             formAltaDisco.setDefaultCloseOperation(formAltaDisco.HIDE_ON_CLOSE);
+            formAltaDisco.setResizable(false);
             formAltaDisco.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAltaDisco.isVisible()) {
                 visivilidadVentanas();
@@ -136,6 +138,7 @@ public class MenuBar {
         });
         pelicula.addActionListener(e -> {
             formAltaPelicula.setDefaultCloseOperation(formAltaPelicula.HIDE_ON_CLOSE);
+            formAltaPelicula.setResizable(false);
             formAltaPelicula.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAltaPelicula.isVisible()) {
                 visivilidadVentanas();
@@ -155,7 +158,7 @@ public class MenuBar {
 
         devolver.addActionListener(e -> {
             formDevoluciones.setDefaultCloseOperation(formDevoluciones.HIDE_ON_CLOSE);
-            formDevoluciones.setBounds(100,100,600,300);
+            formDevoluciones.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formDevoluciones.isVisible()) {
                 visivilidadVentanas();
                 formDevoluciones.setVisible(true);
@@ -164,7 +167,7 @@ public class MenuBar {
 
         alquiler.addActionListener(e -> {
             formAlquiler.setDefaultCloseOperation(formDevoluciones.HIDE_ON_CLOSE);
-            formAlquiler.setBounds(100,100,600,300);
+            formAlquiler.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formAlquiler.isVisible()) {
                 visivilidadVentanas();
                 formAlquiler.setVisible(true);
@@ -173,7 +176,7 @@ public class MenuBar {
 
         listMultimedia.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
@@ -186,7 +189,7 @@ public class MenuBar {
 
         listaPelisOrden.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
@@ -197,7 +200,7 @@ public class MenuBar {
 
         listActualSocio.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
@@ -209,7 +212,7 @@ public class MenuBar {
 
         listRecargosPendSocio.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
@@ -221,7 +224,7 @@ public class MenuBar {
 
         listaVideojAnio.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
@@ -234,7 +237,7 @@ public class MenuBar {
 
         listaDiscos.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
@@ -245,7 +248,7 @@ public class MenuBar {
 
         pagoRecargos.addActionListener(e -> {
             formPagoRecargo.setDefaultCloseOperation(formPagoRecargo.HIDE_ON_CLOSE);
-            formPagoRecargo.setBounds(100,100,600,300);
+            formPagoRecargo.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formPagoRecargo.isVisible()) {
                 visivilidadVentanas();
                 formPagoRecargo.setVisible(true);

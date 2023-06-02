@@ -76,7 +76,6 @@ public class FormPrincipalVideoClub extends JFrame {
 
         botonAltas.addActionListener(e -> {
             MenuBar.formPrincipalAltas.setDefaultCloseOperation(MenuBar.formPrincipalAltas.HIDE_ON_CLOSE);
-//            MenuBar.formPrincipalAltas.setBounds(100, 100, 600, 300);
             if (!MenuBar.formPrincipalAltas.isVisible()) {
                 MenuBar.formPrincipalAltas.setVisible(true);
             }
@@ -84,7 +83,7 @@ public class FormPrincipalVideoClub extends JFrame {
 
         btnAlquiler.addActionListener(e -> {
             MenuBar.formAlquiler.setDefaultCloseOperation(MenuBar.formAlquiler.HIDE_ON_CLOSE);
-            MenuBar.formAlquiler.setBounds(100, 100, 600, 300);
+            MenuBar.formAlquiler.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-275, 500,500);
             if (!MenuBar.formAlquiler.isVisible()) {
                 MenuBar.formAlquiler.setVisible(true);
             }
@@ -92,7 +91,7 @@ public class FormPrincipalVideoClub extends JFrame {
 
         btnDevolucion.addActionListener(e -> {
             MenuBar.formDevoluciones.setDefaultCloseOperation(MenuBar.formDevoluciones.HIDE_ON_CLOSE);
-            MenuBar.formDevoluciones.setBounds(100, 100, 600, 300);
+            MenuBar.formDevoluciones.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-275, 500,500);
             if (!MenuBar.formDevoluciones.isVisible()) {
                 MenuBar.formDevoluciones.setVisible(true);
             }
@@ -100,7 +99,7 @@ public class FormPrincipalVideoClub extends JFrame {
 
         btnListados.addActionListener(e -> {
             MenuBar.formListadosMultimedia.setDefaultCloseOperation(MenuBar.formListadosMultimedia.HIDE_ON_CLOSE);
-            MenuBar.formListadosMultimedia.setBounds(100, 100, 600, 300);
+            MenuBar.formListadosMultimedia.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-275, 500,500);
             if (!MenuBar.formListadosMultimedia.isVisible()) {
                 MenuBar.formListadosMultimedia.setVisible(true);
             }
@@ -108,7 +107,7 @@ public class FormPrincipalVideoClub extends JFrame {
 
         btnPagos.addActionListener(e -> {
             MenuBar.formPagoRecargo.setDefaultCloseOperation(MenuBar.formPagoRecargo.HIDE_ON_CLOSE);
-            MenuBar.formPagoRecargo.setBounds(100, 100, 600, 300);
+            MenuBar.formPagoRecargo.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-275, 500,500);
             if (!MenuBar.formPagoRecargo.isVisible()) {
                 MenuBar.formPagoRecargo.setVisible(true);
             }
