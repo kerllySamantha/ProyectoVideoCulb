@@ -119,7 +119,7 @@ public class MenuBar {
     public static void gestionDeVentanas() {
         socio.addActionListener(e -> {
             formAltaSocio.setDefaultCloseOperation(formAltaSocio.HIDE_ON_CLOSE);
-            formAltaSocio.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-225, 500,400);
+            formAltaSocio.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAltaSocio.isVisible()) {
                 visivilidadVentanas();
                 formAltaSocio.setVisible(true);
@@ -128,7 +128,7 @@ public class MenuBar {
         });
         disco.addActionListener(e -> {
             formAltaDisco.setDefaultCloseOperation(formAltaDisco.HIDE_ON_CLOSE);
-            formAltaDisco.setBounds(100, 100, 600, 300);
+            formAltaDisco.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAltaDisco.isVisible()) {
                 visivilidadVentanas();
                 formAltaDisco.setVisible(true);
@@ -136,7 +136,7 @@ public class MenuBar {
         });
         pelicula.addActionListener(e -> {
             formAltaPelicula.setDefaultCloseOperation(formAltaPelicula.HIDE_ON_CLOSE);
-            formAltaPelicula.setBounds(100, 100, 600, 300);
+            formAltaPelicula.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAltaPelicula.isVisible()) {
                 visivilidadVentanas();
                 formAltaPelicula.setVisible(true);
@@ -144,7 +144,7 @@ public class MenuBar {
         });
         videojuego.addActionListener(e -> {
             formAVideoJuego.setDefaultCloseOperation(formAVideoJuego.HIDE_ON_CLOSE);
-            formAVideoJuego.setBounds(100, 100, 600, 300);
+            formAVideoJuego.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAVideoJuego.isVisible()) {
                 visivilidadVentanas();
                 formAVideoJuego.setVisible(true);
