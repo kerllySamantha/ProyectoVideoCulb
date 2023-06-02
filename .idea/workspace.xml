@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="Poner nombre objetos enum en mayúscula">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAniadirCanciones.form" afterDir="false" />
-    </list>
+    <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="Cmabios FormAltaDisco" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/kerlly" />
+    <option name="BRANCH" value="origin/marta" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -34,7 +29,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ramaPrincipal" />
+        <entry key="$PROJECT_DIR$" value="marta" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

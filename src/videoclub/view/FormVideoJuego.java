@@ -4,12 +4,14 @@ import controller.GestionBasesDatos;
 import controller.GestionLogs;
 import controller.GestionMultimedia;
 import model.Formato;
+import model.Multimedia;
 import model.Plataforma;
 import model.Videojuego;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class FormVideoJuego extends JFrame {
 
@@ -92,6 +94,9 @@ public class FormVideoJuego extends JFrame {
                     if (datos) {
                         juego = new Videojuego(tituloVideoJuego,autorVideoJuego,formato,anioVideoJuego,plataforma);
                         visualizarDatos.setText(juego.toString());
+                        GestionMultimedia.multimedias.add(juego);
+                        GestionBasesDatos.insertViedeojuego(juego.getTitulo(), juego.getAutor(), juego.getFormato(), juego.getAnio(), juego.getPlataforma());
+                        GestionLogs.escribirRegistro(GestionLogs.registroAltaVideojuego(juego.getTitulo()));
                     }
                 } catch (Exception e1) {
                     e1.printStackTrace();
