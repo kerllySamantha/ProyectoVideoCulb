@@ -622,3 +622,25 @@
 [02-06-2023 23:35:15] Se ha iniciado el programa
 [02-06-2023 23:35:57] Se ha dado de alta el videojuego 'SIMS 4'
 [02-06-2023 23:47:59] Se ha cerrado el programa
+[03-06-2023 00:12:12] Se ha iniciado el programa
+[03-06-2023 00:12:18] Se ha cerrado el programa
+[03-06-2023 00:17:48] Se ha iniciado el programa
+[03-06-2023 00:22:21] Se ha cerrado el programa
+[03-06-2023 00:22:25] Se ha iniciado el programa
+[03-06-2023 00:22:58] Se ha cerrado el programa
+[03-06-2023 00:24:49] Se ha iniciado el programa
+[03-06-2023 00:25:09] Se ha cerrado el programa
+[03-06-2023 00:28:26] Se ha iniciado el programa
+[03-06-2023 00:28:49] Se ha cerrado el programa
+[03-06-2023 00:29:38] Se ha iniciado el programa
+[03-06-2023 00:29:56] Se ha cerrado el programa
+[03-06-2023 00:33:30] Se ha iniciado el programa
+[03-06-2023 00:33:53] Se ha cerrado el programa
+[03-06-2023 00:34:24] Se ha iniciado el programa
+[03-06-2023 00:34:51] Se ha cerrado el programa
+[03-06-2023 00:36:57] Se ha iniciado el programa
+[03-06-2023 00:37:27] Se ha cerrado el programa
+[03-06-2023 00:37:41] Se ha iniciado el programa
+[03-06-2023 00:38:10] Se ha dado de alta la pelicula 'MADAGASCAR'
+[03-06-2023 00:38:29] Se ha dado de alta la pelicula 'FSDFSDFSF'
+[03-06-2023 00:38:36] Se ha cerrado el programa
