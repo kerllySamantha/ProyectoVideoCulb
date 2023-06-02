@@ -86,13 +86,16 @@ public class FormAltaPelicula extends JFrame {
                     formato = Formato.CD;
                 } else if (rbtnDVD.isSelected()) {
                     formato = Formato.DVD;
+                } else if (!rbtnCd.isSelected() || !rbtnDVD.isSelected() || !rbtnBlueray.isSelected() || !rbtnArchivo.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Debes seleccionar un formato");
+                    datosCorrectos = false;
                 }
 
                 if (datosCorrectos) {
                     pelicula = new Pelicula(tituloPelicula, autorPelicula, formato, anioPelicula, duracionPelicula, actrizPrincipal, actorPrincipal, genero);
                     GestionMultimedia.multimedias.add(pelicula);
                     GestionBasesDatos.insertPelicula(pelicula.getTitulo(), pelicula.getAutor(), pelicula.getFormato(), pelicula.getGenero(), pelicula.getAnio(), pelicula.getDuracionPelicula(), pelicula.getActorPrincipal(), pelicula.getActrizPrincipal());
-                    JOptionPane.showMessageDialog(null, "Se ha dado  de alta correctamente la pelicula");
+                    JOptionPane.showMessageDialog(null, "Se ha añadido una nueva pelicula");
                     GestionLogs.escribirRegistro(GestionLogs.registroAltaPelicula(pelicula.getTitulo()));
                 }
             } catch (Exception e) {

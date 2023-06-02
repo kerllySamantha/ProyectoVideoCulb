@@ -12,7 +12,7 @@ public class Socio {
     private String nombre;
     private LocalDate fechaNac;
     private String poblacion;
-    private double recargo;
+    private int recargo;
     private ArrayList <GestionAlquilerMul> historial;
     private ArrayList <GestionAlquilerMul> alquilerActual;
 
@@ -21,7 +21,16 @@ public class Socio {
         setNombre(nombre);
         setFechaNac(fechaNac);
         setPoblacion(poblacion);
-        recargo = RECARGO_POR_DEFECTO;
+        setRecargo(RECARGO_POR_DEFECTO);
+        historial = new ArrayList<>();
+        alquilerActual = new ArrayList<>();
+    }
+    public Socio(String nif, String nombre, LocalDate fechaNac, String poblacion, int recargo) {
+        setNif(nif);
+        setNombre(nombre);
+        setFechaNac(fechaNac);
+        setPoblacion(poblacion);
+        setRecargo(recargo);
         historial = new ArrayList<>();
         alquilerActual = new ArrayList<>();
     }
@@ -59,17 +68,17 @@ public class Socio {
         this.poblacion = poblacion;
     }
 
-    public double getRecargo() {
+    public int getRecargo() {
         return recargo;
     }
 
-    public void setRecargo(double recargo) {
+    public void setRecargo(int recargo) {
         this.recargo = recargo;
     }
 
-    public ArrayList<GestionAlquilerMul> getHistorial() {
-        return historial;
-    }
+//    public ArrayList<GestionAlquilerMul> getHistorial() {
+//        return historial;
+//    }
 
     public ArrayList<GestionAlquilerMul> getAlquilerActual() {
         return alquilerActual;

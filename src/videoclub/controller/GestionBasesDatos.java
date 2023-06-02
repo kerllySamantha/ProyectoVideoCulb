@@ -12,7 +12,7 @@ public class GestionBasesDatos {
     private static final String DB = "videoclub";
     private static final String DRIVER = "org.postgresql.Driver";
     private static final String USER = "postgres";
-    private static final String PASS = "123456";
+    private static final String PASS = "130420";
     static Connection conex = null;
 
     public static Connection getConexion() {
@@ -57,6 +57,7 @@ public class GestionBasesDatos {
     public static void aniadirSocios() {
         String nif, nombre, poblacion;
         LocalDate fecha_nac;
+        int recargo;
         try {
             getConexion();
             try {
@@ -67,7 +68,8 @@ public class GestionBasesDatos {
                     nombre = rs.getString("nombre");
                     fecha_nac = LocalDate.parse(rs.getString("fecha_nac"));
                     poblacion = rs.getString("poblacion");
-                    GestionSocioVideoClub.socios.add(new Socio(nif, nombre, fecha_nac, poblacion));
+                    recargo = rs.getInt("recargo");
+                    GestionSocioVideoClub.socios.add(new Socio(nif, nombre, fecha_nac, poblacion, recargo));
                 }
                 getConexion().close();
             } catch (Exception e2) {
@@ -185,10 +187,11 @@ public class GestionBasesDatos {
                     nif = rs.getString("nifSocio");
 
                     for (Multimedia mult : multimedias) {
-                        if (mult.getTitulo().equals(titulo) && mult.getFormato() == formato
-                                && mult.getClass().getName().substring(6).equals(tipo)) {
+                        if (mult.getTitulo().equalsIgnoreCase(titulo) && formato == mult.getFormato() &&
+                                mult.getClass().getName().substring(6).equalsIgnoreCase(tipo)) {
                             for (Socio socio : socios) {
                                 if (socio.getNif().equals(nif)) {
+                                    socio.getAlquilerActual().add(new GestionAlquilerMul(mult, fechaAlquiler, precio, socio));
                                     GestionAlquilerMul.alquileres.add(new GestionAlquilerMul(mult, fechaAlquiler, precio, socio));
                                 }
                             }
@@ -359,6 +362,42 @@ public class GestionBasesDatos {
                 PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaUpdate);
                 statement.setString(1, titulo);
                 statement.setString(2, autor);
+                statement.executeUpdate();
+                getConexion().close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void eliminarRecargo(String nif) {
+        try {
+            getConexion();
+            try {
+                String consultaUpdate = "UPDATE SOCIO SET RECARGO = 0 WHERE NIF = ?";
+                PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaUpdate);
+                statement.setString(1, nif);
+                statement.executeUpdate();
+                getConexion().close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void actualizarRecargo(String nif, int recargo) {
+        try {
+            getConexion();
+            try {
+                String consultaUpdate = "UPDATE SOCIO SET RECARGO = ? WHERE NIF = ?";
+                PreparedStatement statement = Objects.requireNonNull(getConexion()).prepareStatement(consultaUpdate);
+                statement.setInt(1, recargo);
+                statement.setString(2, nif);
                 statement.executeUpdate();
                 getConexion().close();
             } catch (SQLException e) {

@@ -560,100 +560,65 @@
 [02-06-2023 21:49:16] Se ha cerrado el programa
 [02-06-2023 21:49:40] Se ha iniciado el programa
 [02-06-2023 21:50:45] Se ha cerrado el programa
-[02-06-2023 21:56:57] Se ha iniciado el programa
-[02-06-2023 21:57:13] Se ha dado de alta el videojuego 'FF'
-[02-06-2023 21:57:17] Se ha dado de alta el videojuego 'FF'
-[02-06-2023 21:57:54] Se ha cerrado el programa
-[02-06-2023 22:01:18] Se ha iniciado el programa
-[02-06-2023 22:01:39] Se ha dado de alta el videojuego 'HOLA'
-[02-06-2023 22:01:47] Se ha dado de alta el videojuego 'HOLA'
-[02-06-2023 22:01:48] Se ha dado de alta el videojuego 'HOLA'
-[02-06-2023 22:01:49] Se ha dado de alta el videojuego 'HOLA'
-[02-06-2023 22:01:52] Se ha cerrado el programa
-[02-06-2023 22:03:14] Se ha iniciado el programa
-[02-06-2023 22:03:43] Se ha dado de alta el videojuego 'MADAGASCAR'
-[02-06-2023 22:03:49] Se ha cerrado el programa
-[02-06-2023 22:05:51] Se ha iniciado el programa
-[02-06-2023 22:06:09] Se ha dado de alta el videojuego 'FSDFS'
-[02-06-2023 22:06:16] Se ha cerrado el programa
-[02-06-2023 22:06:28] Se ha iniciado el programa
-[02-06-2023 22:06:48] Se ha cerrado el programa
-[02-06-2023 22:11:49] Se ha iniciado el programa
-[02-06-2023 22:12:22] Se ha cerrado el programa
-[02-06-2023 22:15:42] Se ha iniciado el programa
-[02-06-2023 22:16:18] Se ha dado de alta al socio ´ÑLKJHG, con NIF 123456789
-[02-06-2023 22:17:34] Se ha dado de alta el videojuego 'JHGVF'
-[02-06-2023 22:17:43] Se ha cerrado el programa
-[02-06-2023 22:18:05] Se ha iniciado el programa
-[02-06-2023 22:18:26] Se ha cerrado el programa
-[02-06-2023 22:28:53] Se ha iniciado el programa
-[02-06-2023 22:29:12] Se ha dado de alta el videojuego 'DEDSAD'
-[02-06-2023 22:31:55] Se ha cerrado el programa
-[02-06-2023 22:32:00] Se ha iniciado el programa
-[02-06-2023 22:32:15] Se ha dado de alta el videojuego 'DDD'
-[02-06-2023 22:32:19] Se ha cerrado el programa
-[02-06-2023 22:33:23] Se ha iniciado el programa
-[02-06-2023 22:33:31] Se ha dado de alta el videojuego 'DFSF'
-[02-06-2023 22:33:35] Se ha cerrado el programa
-[02-06-2023 22:45:41] Se ha iniciado el programa
-[02-06-2023 22:46:33] Se ha cerrado el programa
-[02-06-2023 22:47:00] Se ha iniciado el programa
-[02-06-2023 22:47:15] Se ha cerrado el programa
-[02-06-2023 22:47:40] Se ha iniciado el programa
-[02-06-2023 22:47:49] Se ha cerrado el programa
-[02-06-2023 22:50:22] Se ha iniciado el programa
-[02-06-2023 22:50:48] Se ha cerrado el programa
-[02-06-2023 22:52:08] Se ha iniciado el programa
-[02-06-2023 22:52:16] Se ha dado de alta el videojuego 'DCDF'
-[02-06-2023 22:52:21] Se ha cerrado el programa
-[02-06-2023 22:54:21] Se ha iniciado el programa
-[02-06-2023 22:54:52] Se ha cerrado el programa
-[02-06-2023 22:56:03] Se ha iniciado el programa
-[02-06-2023 22:56:16] Se ha dado de alta el videojuego 'KJHGFGHJK'
-[02-06-2023 22:56:36] Se ha cerrado el programa
-[02-06-2023 23:11:30] Se ha iniciado el programa
-[02-06-2023 23:17:00] Se ha cerrado el programa
-[02-06-2023 23:19:10] Se ha iniciado el programa
-[02-06-2023 23:19:30] Se ha cerrado el programa
-[02-06-2023 23:20:26] Se ha iniciado el programa
-[02-06-2023 23:20:44] Se ha cerrado el programa
-[02-06-2023 23:21:23] Se ha iniciado el programa
-[02-06-2023 23:21:42] Se ha cerrado el programa
-[02-06-2023 23:22:33] Se ha iniciado el programa
-[02-06-2023 23:23:25] Se ha cerrado el programa
-[02-06-2023 23:23:32] Se ha iniciado el programa
-[02-06-2023 23:24:24] Se ha cerrado el programa
-[02-06-2023 23:24:55] Se ha iniciado el programa
-[02-06-2023 23:25:33] Se ha cerrado el programa
-[02-06-2023 23:25:55] Se ha iniciado el programa
-[02-06-2023 23:26:12] Se ha cerrado el programa
-[02-06-2023 23:26:36] Se ha iniciado el programa
-[02-06-2023 23:26:51] Se ha cerrado el programa
-[02-06-2023 23:27:17] Se ha iniciado el programa
-[02-06-2023 23:27:33] Se ha cerrado el programa
-[02-06-2023 23:27:45] Se ha iniciado el programa
-[02-06-2023 23:27:56] Se ha cerrado el programa
-[02-06-2023 23:28:20] Se ha iniciado el programa
-[02-06-2023 23:28:29] Se ha cerrado el programa
-[02-06-2023 23:28:42] Se ha iniciado el programa
-[02-06-2023 23:29:02] Se ha cerrado el programa
-[02-06-2023 23:29:53] Se ha iniciado el programa
-[02-06-2023 23:31:15] Se ha cerrado el programa
-[02-06-2023 23:31:21] Se ha iniciado el programa
-[02-06-2023 23:32:15] Se ha cerrado el programa
-[02-06-2023 23:32:22] Se ha iniciado el programa
-[02-06-2023 23:32:56] Se ha cerrado el programa
-[02-06-2023 23:34:17] Se ha iniciado el programa
-[02-06-2023 23:34:35] Se ha cerrado el programa
-[02-06-2023 23:43:19] Se ha iniciado el programa
-[02-06-2023 23:43:35] Se ha dado de alta el videojuego 'XDFSF'
-[02-06-2023 23:43:42] Se ha cerrado el programa
-[02-06-2023 23:43:45] Se ha iniciado el programa
-[02-06-2023 23:43:58] Se ha dado de alta el videojuego 'SDADSD'
-[02-06-2023 23:45:29] Se ha cerrado el programa
-[02-06-2023 23:48:15] Se ha iniciado el programa
-[02-06-2023 23:49:02] Se ha cerrado el programa
-[02-06-2023 23:50:26] Se ha iniciado el programa
-[02-06-2023 23:51:41] Se ha cerrado el programa
-[02-06-2023 23:53:28] Se ha iniciado el programa
-[02-06-2023 23:53:52] Se ha cerrado el programa
+[02-06-2023 21:55:13] Se ha iniciado el programa
+[02-06-2023 21:55:50] Se ha cerrado el programa
+[02-06-2023 22:03:29] Se ha iniciado el programa
+[02-06-2023 22:03:43] Se ha cerrado el programa
+[02-06-2023 22:04:22] Se ha iniciado el programa
+[02-06-2023 22:04:49] Se ha alquilado el multimedia 'Super Mario Bros' (Pelicula) a socio con NIF 12345678X
+[02-06-2023 22:05:18] Se ha cerrado el programa
+[02-06-2023 22:06:48] Se ha iniciado el programa
+[02-06-2023 22:07:38] Se ha alquilado el multimedia 'Super Mario Bros' (Pelicula) a socio con NIF 12345678X
+[02-06-2023 22:08:13] Se ha cerrado el programa
+[02-06-2023 22:28:29] Se ha iniciado el programa
+[02-06-2023 22:30:03] Se ha alquilado el multimedia 'DIVIDE' (Disco) a socio con NIF 12345678X
+[02-06-2023 22:30:09] Se ha cerrado el programa
+[02-06-2023 22:35:57] Se ha iniciado el programa
+[02-06-2023 22:36:41] Se ha cerrado el programa
+[02-06-2023 22:40:14] Se ha iniciado el programa
+[02-06-2023 22:40:57] Se ha cerrado el programa
+[02-06-2023 22:45:45] Se ha iniciado el programa
+[02-06-2023 22:45:56] Se ha cerrado el programa
+[02-06-2023 22:46:48] Se ha iniciado el programa
+[02-06-2023 22:47:49] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 12345678X
+[02-06-2023 22:48:43] Se ha cerrado el programa
+[02-06-2023 22:49:23] Se ha iniciado el programa
+[02-06-2023 22:49:47] Se ha alquilado el multimedia 'DIVIDE' (Disco) a socio con NIF 12345678X
+[02-06-2023 22:50:02] Socio con NIF 12345678X ha devuelto el multimedia'DIVIDE' (Disco)
+[02-06-2023 22:50:10] Se ha cerrado el programa
+[02-06-2023 22:51:47] Se ha iniciado el programa
+[02-06-2023 22:52:24] Se ha cerrado el programa
+[02-06-2023 22:54:42] Se ha iniciado el programa
+[02-06-2023 22:54:56] Socio con NIF 12345678X ha devuelto el multimedia'COCO' (Pelicula)
+[02-06-2023 22:55:51] Se ha alquilado el multimedia 'DIVIDE' (Disco) a socio con NIF 12345678X
+[02-06-2023 22:57:25] Socio con NIF 12345678X ha devuelto el multimedia'FUTURE NOSTALGIA' (Disco)
+[02-06-2023 22:57:33] Socio con NIF 12345678X ha devuelto el multimedia'DIVIDE' (Disco)
+[02-06-2023 22:58:50] Se ha cerrado el programa
+[02-06-2023 22:58:55] Se ha iniciado el programa
+[02-06-2023 22:59:29] Socio con NIF 12345678X ha devuelto el multimedia'COCO' (Pelicula)
+[02-06-2023 22:59:54] Se ha cerrado el programa
+[02-06-2023 23:01:50] Se ha iniciado el programa
+[02-06-2023 23:02:08] Socio con NIF 12345678X ha devuelto el multimedia'COCO' (Pelicula)
+[02-06-2023 23:05:10] Se ha cerrado el programa
+[02-06-2023 23:06:47] Se ha iniciado el programa
+[02-06-2023 23:09:53] Se ha dado de alta al socio NAME, con NIF 12347854D
+[02-06-2023 23:10:20] Se ha dado de alta la pelicula 'MADAGASCAR'
+[02-06-2023 23:11:19] Se ha dado de alta el disco 'FACE'
+[02-06-2023 23:11:37] Se ha cerrado el programa
+[02-06-2023 23:19:56] Se ha iniciado el programa
+[02-06-2023 23:20:43] Se ha dado de alta el videojuego 'POKEMON'
+[02-06-2023 23:20:54] Se ha cerrado el programa
+[02-06-2023 23:21:45] Se ha iniciado el programa
+[02-06-2023 23:23:55] Se ha cerrado el programa
+[02-06-2023 23:24:02] Se ha iniciado el programa
+[02-06-2023 23:24:26] Se ha cerrado el programa
+[02-06-2023 23:24:52] Se ha iniciado el programa
+[02-06-2023 23:25:32] Se ha cerrado el programa
+[02-06-2023 23:26:03] Se ha iniciado el programa
+[02-06-2023 23:27:04] Se ha cerrado el programa
+[02-06-2023 23:27:37] Se ha iniciado el programa
+[02-06-2023 23:27:48] Se ha dado de alta el videojuego ''
+[02-06-2023 23:27:55] Se ha cerrado el programa
+[02-06-2023 23:35:15] Se ha iniciado el programa
+[02-06-2023 23:35:57] Se ha dado de alta el videojuego 'SIMS 4'
+[02-06-2023 23:47:59] Se ha cerrado el programa

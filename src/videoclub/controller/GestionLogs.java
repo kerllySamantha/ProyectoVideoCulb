@@ -51,4 +51,8 @@ public class GestionLogs {
     public static String registroDevolucionMuolt(String nif, String titulo, String tipo) {
         return "Socio con NIF " + nif + " ha devuelto el multimedia'" + titulo + "' (" + tipo + ")";
     }
+
+    public static String registroPagos(String nif) {
+        return "Socio con NIF " + nif + " ha pagado los recargos";
+    }
 }

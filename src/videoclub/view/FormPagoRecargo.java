@@ -32,6 +32,8 @@ public class FormPagoRecargo extends JFrame{
                 if (GestionSocioVideoClub.comprobarNif(GestionSocioVideoClub.socios, txtNif.getText())) {
                     int index = GestionSocioVideoClub.buscarSocio(txtNif.getText(), GestionSocioVideoClub.socios);
                     txtDatosSocio.setText(GestionSocioVideoClub.socios.get(index).toString());
+                } else {
+                    JOptionPane.showMessageDialog(null, "NIF no encontrado");
                 }
             }
         });
