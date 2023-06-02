@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="Poner nombre objetos enum en mayúscula" />
+    <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="Poner nombre objetos enum en mayúscula">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalAltas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalAltas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaSocio.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaSocio.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormListadosMultimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormListadosMultimedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalAltas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalAltas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +172,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5bc2005c-e381-4703-97ef-9fa9c2aea40d" name="Changes" comment="Modificar el Main&#10;Crear una nueva ventana para dar de alta a un Socio" />
+      <changelist id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="Poner nombre objetos enum en mayúscula" />
       <created>1680113213206</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

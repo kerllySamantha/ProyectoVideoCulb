@@ -20,6 +20,8 @@ public class MenuBar {
     public static FormAlquiler formAlquiler = new FormAlquiler();
     public static FormListadosMultimedia formListadosMultimedia = new FormListadosMultimedia();
     public static FormPagoRecargo formPagoRecargo = new FormPagoRecargo();
+    public static final int ANCHO_PANTALLA = Toolkit.getDefaultToolkit().getScreenSize().width;
+    public static final int ALTO_PANTALLA = Toolkit.getDefaultToolkit().getScreenSize().height;
 
     public static JMenuBar crearMenuBar() {
         Color fondo = new Color(143,151,203);
@@ -29,7 +31,6 @@ public class MenuBar {
         menuVideoClub.setBackground(fondo);
 
         altas = new JMenu("Altas");
-        //bajas = new JMenu("Bajas");
         alquileres = new JMenu("Alquileres");
         devoluciones = new JMenu("Devoluciones");
         listados = new JMenu("Listados");
@@ -38,7 +39,6 @@ public class MenuBar {
 
 
         menuVideoClub.add(altas);
-        //menuVideoClub.add(bajas);
         menuVideoClub.add(alquileres);
         menuVideoClub.add(devoluciones);
         menuVideoClub.add(listados);
@@ -119,7 +119,7 @@ public class MenuBar {
     public static void gestionDeVentanas() {
         socio.addActionListener(e -> {
             formAltaSocio.setDefaultCloseOperation(formAltaSocio.HIDE_ON_CLOSE);
-            formAltaSocio.setBounds(100, 100, 600, 300);
+            formAltaSocio.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-225, 500,400);
             if (!formAltaSocio.isVisible()) {
                 visivilidadVentanas();
                 formAltaSocio.setVisible(true);

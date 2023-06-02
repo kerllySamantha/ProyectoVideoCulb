@@ -24,7 +24,6 @@ public class FormListadosMultimedia extends JFrame {
         //this.setResizable(false);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
-
         panel = new JPanel();
         panel.setBounds(0, 0, 450, 500);
         this.setContentPane(panel);

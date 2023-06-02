@@ -1,6 +1,7 @@
 package view;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class FormPrincipalAltas extends JFrame {
@@ -10,10 +11,7 @@ public class FormPrincipalAltas extends JFrame {
     JButton altaPelicula;
     JButton altaDisco;
 
-//    static FormAltaSocio formAltaSocio = new FormAltaSocio();
-//    static FormAltaDisco formAltaDisco = new FormAltaDisco();
-//    static FormAltaPelicula formAltaPelicula = new FormAltaPelicula();
-//    static FormVideoJuego formAVideoJuego = new FormVideoJuego();
+
 
     public FormPrincipalAltas() {
         Color fondo = new Color(143,151,203);
@@ -21,44 +19,42 @@ public class FormPrincipalAltas extends JFrame {
 
         super.setLayout(null);
         super.setResizable(false);
-        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        super.setBounds(100, 100, 250, 500);
+        super.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-225, 400,400);
+        super.setLocationRelativeTo(null);
 
         panelPrincipalAltas = new JPanel();
+
         panelPrincipalAltas.setBackground(fondo);
         super.setContentPane(panelPrincipalAltas);
+        panelPrincipalAltas.setLayout(null);
 
         altaSocio = new JButton("Socio");
-        altaSocio.setMinimumSize(new Dimension(20, 20));
-        altaSocio.setMaximumSize(new Dimension(150, 60));
-        altaSocio.setPreferredSize(new Dimension(120, 30));
+        altaSocio.setBounds((super.getWidth()/2)-125, 20, 250,50);
+        altaSocio.setFont(new Font("Arial", Font.BOLD, 20));
         altaSocio.setBackground(fondoBotones);
         panelPrincipalAltas.add(altaSocio);
 
         altaVideojuego = new JButton("Videojuego");
-        altaVideojuego.setMinimumSize(new Dimension(20, 20));
-        altaVideojuego.setMaximumSize(new Dimension(150, 60));
-        altaVideojuego.setPreferredSize(new Dimension(120, 30));
+        altaVideojuego.setFont(new Font("Arial", Font.BOLD, 20));
+        altaVideojuego.setBounds((super.getWidth()/2)-125, 90, 250,50);
         altaVideojuego.setBackground(fondoBotones);
         panelPrincipalAltas.add(altaVideojuego);
 
         altaPelicula = new JButton("Peliculas");
-        altaPelicula.setMinimumSize(new Dimension(20, 20));
-        altaPelicula.setMaximumSize(new Dimension(150, 60));
-        altaPelicula.setPreferredSize(new Dimension(120, 30));
+        altaPelicula.setFont(new Font("Arial", Font.BOLD, 20));
+        altaPelicula.setBounds((super.getWidth()/2)-125, 160, 250,50);
         altaPelicula.setBackground(fondoBotones);
         panelPrincipalAltas.add(altaPelicula);
 
         altaDisco = new JButton("Disco");
-        altaDisco.setMinimumSize(new Dimension(20, 20));
-        altaDisco.setMaximumSize(new Dimension(150, 60));
-        altaDisco.setPreferredSize(new Dimension(120, 30));
+        altaDisco.setFont(new Font("Arial", Font.BOLD, 20));
+        altaDisco.setBounds((super.getWidth()/2)-125, 230, 250,50);
         altaDisco.setBackground(fondoBotones);
         panelPrincipalAltas.add(altaDisco);
 
         altaSocio.addActionListener(e -> {
             MenuBar.formAltaSocio.setDefaultCloseOperation(MenuBar.formAltaSocio.HIDE_ON_CLOSE);
-            MenuBar.formAltaSocio.setBounds(100, 100, 600, 300);
+            MenuBar.formAltaSocio.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-225, 500,400);
             if (!MenuBar.formAltaSocio.isVisible()) {
                 MenuBar.formAltaSocio.setVisible(true);
             }
