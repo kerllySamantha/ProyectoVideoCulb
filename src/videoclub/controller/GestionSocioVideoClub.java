@@ -16,7 +16,6 @@ public class GestionSocioVideoClub {
 
     public static Set<String> mostarMultAlquiladosSocio(String nif) {
         Set<String> listaMultimedia = new HashSet<>();
-        //DefaultListModel<String> listaMultimedia = new DefaultListModel<>();
         if (buscarSocio(nif, socios) != -1) {
             int index = buscarSocio(nif, socios);
             for (int i = 0; i < socios.get(index).getAlquilerActual().size(); i++) {
@@ -44,7 +43,7 @@ public class GestionSocioVideoClub {
                             socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo(),
                             socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getAutor());
 
-                    GestionBasesDatos.eliminarAlquiler(socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getClass().getName().substring(6),
+                    GestionBasesDatos.eliminarAlquiler(socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getClass().getName().substring(6).toUpperCase(),
                             socios.get(index).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo(),
                             socios.get(index).getAlquilerActual().get(i).getSocio().getNif(),
                             socios.get(index).getAlquilerActual().get(i).getPrecio(),
@@ -61,10 +60,11 @@ public class GestionSocioVideoClub {
 
                 if (respuesta == JOptionPane.YES_OPTION) {
                     socios.get(index).setRecargo(0);
+                } else {
+                    GestionBasesDatos.actualizarRecargo(socios.get(index).getNif(), socios.get(index).getRecargo());
                 }
             }
         }
-
     }
 
     public static void alquilarMultimedia(Multimedia multimediaAlquilado, Socio socio) {
@@ -111,9 +111,12 @@ public class GestionSocioVideoClub {
             int index = buscarSocio(nif, socios);
             if (socios.get(index).getRecargo() > 0) {
                 socios.get(buscarSocio(nif, socios)).setRecargo(0);
+                GestionBasesDatos.eliminarRecargo(socios.get(index).getNif());
                 JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " ha realizado el pago de los recargos");
+                GestionLogs.escribirRegistro(GestionLogs.registroPagos(socios.get(index).getNif()));
+            } else {
+                JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " no tiene recargos pendiente");
             }
-            JOptionPane.showMessageDialog(null, "El socio con NIF " + nif + " no tiene recargos pendiente");
         }
     }
 
@@ -161,34 +164,34 @@ public class GestionSocioVideoClub {
 
 
     public static String listaSociosRecargos() {
-        String listasSocios = "Socios con recargos pendientes: \n";
+        StringBuilder listasSocios = new StringBuilder("Socios con recargos pendientes: \n");
 
         for (Socio s : socios) {
             if (s.getRecargo() >  0) {
-                listasSocios += "NIF: " + s.getNif() + "\nNombre: " + s.getNombre() + "\nRecargo: " + s.getRecargo();
+                listasSocios.append("\nNIF: ").append(s.getNif()).append("\nNombre: ").append(s.getNombre()).append("\nRecargo: ").append(s.getRecargo()).append("\n");
             }
         }
-        return listasSocios;
+        return listasSocios.toString();
     }
 
     public static String listaAlquilerActual(String nif) {
-        String listaAlquileres = "";
+        StringBuilder listaAlquileres = new StringBuilder();
         if (buscarSocio(nif, socios) != -1) {
             try {
                 int indexSocio = buscarSocio(nif, socios);
-                listaAlquileres += "Nombre: " + socios.get(indexSocio).getNombre() +
-                        "\nAlquileres actuales del socio:";
+                listaAlquileres.append("Nombre: ").append(socios.get(indexSocio).getNombre()).append("\nAlquileres actuales del socio:");
 
                 for (int i = 0; i < socios.get(indexSocio).getAlquilerActual().size(); i++) {
-                    listaAlquileres += "\t" + socios.get(indexSocio).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo();
+                    listaAlquileres.append("\n  -").append(socios.get(indexSocio).getAlquilerActual().get(i).getMultimediaAlquilado().getTitulo());
                 }
+                listaAlquileres.append("\n");
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "El socio introducido no tiene ningún alquiler actualmente");
             }
         } else {
             JOptionPane.showMessageDialog(null, "El NIF introducido no coincide con ningú socio registrado");
         }
-        return listaAlquileres;
+        return listaAlquileres.toString();
     }
 }
 

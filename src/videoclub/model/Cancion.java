@@ -6,10 +6,12 @@ public class Cancion {
     private int duracionCancionSeg;
     private  String autor;
 
-//    public Cancion(String titulo, int duracion) {
-//        setNombreCancion(titulo);
-//        setDuracionCancion(duracion);
-//    }
+    public Cancion(String titulo, int duracion, String duracionMinSeg, String autor) {
+        setNombreCancion(titulo);
+        setDuracionCancion(duracion);
+        setDuracionMinSeg(duracionMinSeg);
+        setAutor(autor);
+    }
     public Cancion(String titulo, String duracion, String autor) {
         setNombreCancion(titulo);
         setDuracionMinSeg(duracion);
@@ -17,6 +19,7 @@ public class Cancion {
         String[] tiempo = duracion.split(":");
         setDuracionCancion(Integer.parseInt(tiempo[0]) * 60 + Integer.parseInt(tiempo[0]));
     }
+
 
     public String getDuracionMinSeg() {
         return duracionMinSeg;

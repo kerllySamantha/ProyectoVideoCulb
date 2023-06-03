@@ -8,9 +8,21 @@ import java.util.Comparator;
 public class GestionMultimedia {
     public static ArrayList<Multimedia>multimedias = new ArrayList<>();
 
+    public static boolean comprobarMultiemdia(ArrayList<Multimedia> mutimediasTitulo, String tituloMultimedia) {
+        for (Multimedia multimedia: mutimediasTitulo){
+            if (tituloMultimedia.equalsIgnoreCase(multimedia.getTitulo())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static String ordenarMultimedia() {
 
+
         StringBuilder listaMultimedia = new StringBuilder();
+
+
         GestionMultimedia.multimedias.sort(new Comparator<Multimedia>() {
             public int compare(Multimedia p1, Multimedia p2) {
 
@@ -22,8 +34,7 @@ public class GestionMultimedia {
             listaMultimedia.append("Título: ")
                     .append(multimedia1.getTitulo()).append("\nAño: ")
                     .append(multimedia1.getAnio()).append("\nTipo: ")
-                    .append(multimedia1.getClass().getName().substring(6)).append("\n");
-            //listaMultimedia.append(multimedia1.toString());
+                    .append(multimedia1.getClass().getName().substring(6)).append("\n\n");
         }
         return listaMultimedia.toString();
     }
@@ -44,7 +55,7 @@ public class GestionMultimedia {
 
         for (Pelicula p : peliculas) {
             listaPeliculas.append("Título: ").append(p.getTitulo()).append("\nAño: ").append(p.getAnio()).append("\nTipo: ")
-                    .append(p.getClass().getName().substring(6)).append("\n");
+                    .append(p.getClass().getName().substring(6)).append("\n\n");
 
         }
         return listaPeliculas.toString();
@@ -66,7 +77,7 @@ public class GestionMultimedia {
         });
         for (Videojuego v : videojuegos) {
             listaVideojuegos.append("Título: ").append(v.getTitulo()).append("\nAño: ").append(v.getAnio())
-                    .append("\nTipo: ").append(v.getClass().getName().substring(6));
+                    .append("\nTipo: ").append(v.getClass().getName().substring(6)).append("\n\n");
 
         }
         return listaVideojuegos.toString();
@@ -90,7 +101,7 @@ public class GestionMultimedia {
             listaDiscos.append("Nombre del disco: ").append(d.getTitulo()).append("\nAutor: ").append(d.getAutor()).append("\nCanciones: \n");
 
             for (Cancion c: d.getCanciones()) {
-                listaDiscos.append("\t").append(c.getTituloCancion()).append("\n");
+                listaDiscos.append("   -").append(c.getTituloCancion()). append(" - ").append(c.getDuracionMinSeg()).append("\n");
             }
             listaDiscos.append("\n");
         }

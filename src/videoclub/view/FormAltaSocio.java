@@ -109,5 +109,4 @@ public class FormAltaSocio extends JFrame {
         return fechaNac;
     }
 
-
 }

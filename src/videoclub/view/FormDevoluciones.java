@@ -64,7 +64,6 @@ public class FormDevoluciones extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 int respuesta = JOptionPane.showConfirmDialog(null,"Estás seguro que quieres devolver-lo?","Alerta!",JOptionPane.YES_NO_OPTION);
                 if (respuesta == JOptionPane.YES_OPTION) {
-                    System.out.println(GestionSocioVideoClub.socios.get(0).getAlquilerActual().get(0).getMultimediaAlquilado().getTitulo());
                     GestionSocioVideoClub.devolverMultimedia(txtFieldNifSocio.getText(), listaDevolver.getSelectedValue());
                     model.clear();
                 }

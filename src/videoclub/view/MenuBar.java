@@ -119,7 +119,8 @@ public class MenuBar {
     public static void gestionDeVentanas() {
         socio.addActionListener(e -> {
             formAltaSocio.setDefaultCloseOperation(formAltaSocio.HIDE_ON_CLOSE);
-            formAltaSocio.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-225, 500,400);
+            formAltaSocio.setResizable(false);
+            formAltaSocio.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAltaSocio.isVisible()) {
                 visivilidadVentanas();
                 formAltaSocio.setVisible(true);
@@ -128,7 +129,8 @@ public class MenuBar {
         });
         disco.addActionListener(e -> {
             formAltaDisco.setDefaultCloseOperation(formAltaDisco.HIDE_ON_CLOSE);
-            formAltaDisco.setBounds(100, 100, 600, 300);
+            formAltaDisco.setResizable(false);
+            formAltaDisco.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAltaDisco.isVisible()) {
                 visivilidadVentanas();
                 formAltaDisco.setVisible(true);
@@ -136,7 +138,8 @@ public class MenuBar {
         });
         pelicula.addActionListener(e -> {
             formAltaPelicula.setDefaultCloseOperation(formAltaPelicula.HIDE_ON_CLOSE);
-            formAltaPelicula.setBounds(100, 100, 600, 300);
+            formAltaPelicula.setResizable(false);
+            formAltaPelicula.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAltaPelicula.isVisible()) {
                 visivilidadVentanas();
                 formAltaPelicula.setVisible(true);
@@ -144,7 +147,7 @@ public class MenuBar {
         });
         videojuego.addActionListener(e -> {
             formAVideoJuego.setDefaultCloseOperation(formAVideoJuego.HIDE_ON_CLOSE);
-            formAVideoJuego.setBounds(100, 100, 600, 300);
+            formAVideoJuego.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if (!formAVideoJuego.isVisible()) {
                 visivilidadVentanas();
                 formAVideoJuego.setVisible(true);
@@ -155,7 +158,7 @@ public class MenuBar {
 
         devolver.addActionListener(e -> {
             formDevoluciones.setDefaultCloseOperation(formDevoluciones.HIDE_ON_CLOSE);
-            formDevoluciones.setBounds(100,100,600,300);
+            formDevoluciones.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formDevoluciones.isVisible()) {
                 visivilidadVentanas();
                 formDevoluciones.setVisible(true);
@@ -164,7 +167,7 @@ public class MenuBar {
 
         alquiler.addActionListener(e -> {
             formAlquiler.setDefaultCloseOperation(formDevoluciones.HIDE_ON_CLOSE);
-            formAlquiler.setBounds(100,100,600,300);
+            formAlquiler.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formAlquiler.isVisible()) {
                 visivilidadVentanas();
                 formAlquiler.setVisible(true);
@@ -173,79 +176,81 @@ public class MenuBar {
 
         listMultimedia.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarMultimedia());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
 
         listaPelisOrden.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarPeliculas());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
         listActualSocio.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.listaAlquileresCLiente();
-
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
 
         listRecargosPendSocio.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionSocioVideoClub.listaSociosRecargos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
         listaVideojAnio.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.listaVideojuegos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
-
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
 
         listaDiscos.addActionListener(e ->{
             formListadosMultimedia.setDefaultCloseOperation(formListadosMultimedia.HIDE_ON_CLOSE);
-            formListadosMultimedia.setBounds(100,100,600,300);
+            formListadosMultimedia.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formListadosMultimedia.isVisible()) {
                 visivilidadVentanas();
                 formListadosMultimedia.setVisible(true);
             }
             FormListadosMultimedia.txtListaMultimedia.setText(GestionMultimedia.ordenarDiscos());
             FormListadosMultimedia.ocultarBtnTxtAlquilerSocio();
+            FormListadosMultimedia.txtListaMultimedia.setCaretPosition(0);
         });
 
         pagoRecargos.addActionListener(e -> {
             formPagoRecargo.setDefaultCloseOperation(formPagoRecargo.HIDE_ON_CLOSE);
-            formPagoRecargo.setBounds(100,100,600,300);
+            formPagoRecargo.setBounds((ANCHO_PANTALLA/2)-250, (ALTO_PANTALLA/2)-275, 500,500);
             if(!formPagoRecargo.isVisible()) {
                 visivilidadVentanas();
                 formPagoRecargo.setVisible(true);

@@ -2,14 +2,16 @@ package view;
 
 import controller.GestionBasesDatos;
 import controller.GestionLogs;
+import controller.GestionMultimedia;
 import model.Formato;
 import model.*;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class FormAltaDisco extends JFrame{
+public class FormAltaDisco extends JFrame {
 
 
     private JPanel panelAltaDisco;
@@ -39,14 +41,17 @@ public class FormAltaDisco extends JFrame{
         mostrarDatos();
         MenuBar.gestionDeVentanas();
     }
+
     public void altaDisco() {
         btnAniadirCanciones.addActionListener(actionEvent -> {
             try {
-                String tituloDisco = "";
-                String autorDisco = "";
+                String tituloDisco = txtTituloDisco.getText().toUpperCase();
+                String autorDisco = txtAutorDisco.getText().toUpperCase();
                 int anioDisco = 0;
                 Formato formato = null;
                 boolean datosCorrectos = true;
+                boolean tituloCorrecto = GestionMultimedia.comprobarMultiemdia(GestionMultimedia.multimedias, tituloDisco);
+
 
                 if (rbArchivo.isSelected()) {
                     formato = Formato.ARCHIVO;
@@ -63,6 +68,9 @@ public class FormAltaDisco extends JFrame{
 
                 if (txtTituloDisco.getText().equals("") && txtAutorDisco.getText().equals("")) {
                     JOptionPane.showMessageDialog(null, "No puedes dejar los campos vacio");
+                } else if (tituloCorrecto) {
+                    JOptionPane.showMessageDialog(null, "El titulo del Disco ya exixte");
+                    datosCorrectos = false;
                 } else if (txtTituloDisco.getText().equals("")) {
                     JOptionPane.showMessageDialog(null, "No puedes dejar el título vacio");
                 } else if (txtAutorDisco.getText().equals("")) {
@@ -73,23 +81,20 @@ public class FormAltaDisco extends JFrame{
                     anioDisco = Integer.parseInt(cbAnioDisco.getSelectedItem().toString());
                 }
 
-//                if (Integer.parseInt(txtAnioDisco.getText()) >= 1887) {
-//
-//                }
 
                 if (datosCorrectos) {
                     disco = new Disco(tituloDisco, autorDisco, formato, anioDisco);
                     FormAniadirCanciones canciones = new FormAniadirCanciones();
-
                     canciones.setVisible(true);
-                    canciones.setSize(400,400);
+                    canciones.setSize(400, 400);
                 }
             } catch (Exception e) {
-                System.out.println(e);
+                e.printStackTrace();
             }
         });
     }
-    public static void recibirCanciones(ArrayList<Cancion>canciones) {
+
+    public static void recibirCanciones(ArrayList<Cancion> canciones) {
         disco.setCanciones(canciones);
     }
 
@@ -101,10 +106,26 @@ public class FormAltaDisco extends JFrame{
                     txtResumenAlta.setText(disco.toString());
                     limpiarCampos();
                     GestionBasesDatos.insertDisco(disco.getTitulo(), disco.getAutor(), disco.getFormato(), disco.getAnio(), disco.duracionDisco());
+                    aniadirCancionesBaseDatos();
                     GestionLogs.escribirRegistro(GestionLogs.registroAltaDisco(disco.getTitulo()));
+                    JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo disco");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Antes de dar de alta el disco se deben añadir canciones");
                 }
             }
         });
+    }
+
+    public void aniadirCancionesBaseDatos() {
+        try {
+            for (Cancion cancion: disco.getCanciones()) {
+                GestionBasesDatos.insertCancion(cancion.getTituloCancion(), cancion.getAutor(),
+                        cancion.getDuracionMinSeg(), cancion.getDuracionCancionSeg(), disco.getTitulo());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void limpiarCampos() {

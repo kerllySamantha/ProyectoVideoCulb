@@ -1,7 +1,6 @@
 package view;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class FormPrincipalAltas extends JFrame {
@@ -54,7 +53,7 @@ public class FormPrincipalAltas extends JFrame {
 
         altaSocio.addActionListener(e -> {
             MenuBar.formAltaSocio.setDefaultCloseOperation(MenuBar.formAltaSocio.HIDE_ON_CLOSE);
-            MenuBar.formAltaSocio.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-225, 500,400);
+            MenuBar.formAltaSocio.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-275, 500,500);
             if (!MenuBar.formAltaSocio.isVisible()) {
                 MenuBar.formAltaSocio.setVisible(true);
             }
@@ -62,21 +61,21 @@ public class FormPrincipalAltas extends JFrame {
 
         altaDisco.addActionListener(e -> {
             MenuBar.formAltaDisco.setDefaultCloseOperation(MenuBar.formAltaDisco.HIDE_ON_CLOSE);
-            MenuBar.formAltaDisco.setBounds(100, 100, 600, 300);
+            MenuBar.formAltaDisco.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-275, 500,500);
             if (! MenuBar.formAltaDisco.isVisible()) {
                 MenuBar.formAltaDisco.setVisible(true);
             }
         });
         altaPelicula.addActionListener(e -> {
             MenuBar.formAltaPelicula.setDefaultCloseOperation( MenuBar.formAltaPelicula.HIDE_ON_CLOSE);
-            MenuBar.formAltaPelicula.setBounds(100, 100, 600, 300);
+            MenuBar.formAltaPelicula.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-275, 500,500);
             if (! MenuBar.formAltaPelicula.isVisible()) {
                 MenuBar.formAltaPelicula.setVisible(true);
             }
         });
         altaVideojuego.addActionListener(e -> {
             MenuBar.formAVideoJuego.setDefaultCloseOperation( MenuBar.formAVideoJuego.HIDE_ON_CLOSE);
-            MenuBar.formAVideoJuego.setBounds(100, 100, 600, 300);
+            MenuBar.formAVideoJuego.setBounds((MenuBar.ANCHO_PANTALLA/2)-250, (MenuBar.ALTO_PANTALLA/2)-275, 500,500);
             if (! MenuBar.formAVideoJuego.isVisible()) {
                 MenuBar.formAVideoJuego.setVisible(true);
             }
