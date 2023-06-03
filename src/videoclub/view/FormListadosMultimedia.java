@@ -62,7 +62,7 @@ public class FormListadosMultimedia extends JFrame {
     }
 
     public void crearBotones() {
-        btnListaMult = new JButton("Todos los multimedia");
+        btnListaMult = new JButton("Multimedia");
         btnListaMult.setBounds(20, 80, 150, 25);
         panel.add(btnListaMult);
 

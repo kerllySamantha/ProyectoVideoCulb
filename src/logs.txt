@@ -671,3 +671,7 @@
 [03-06-2023 02:40:11] Se ha cerrado el programa
 [03-06-2023 02:45:50] Se ha iniciado el programa
 [03-06-2023 02:46:04] Se ha cerrado el programa
+[03-06-2023 11:36:24] Se ha iniciado el programa
+[03-06-2023 11:36:48] Se ha cerrado el programa
+[03-06-2023 11:37:01] Se ha iniciado el programa
+[03-06-2023 11:38:09] Se ha cerrado el programa
