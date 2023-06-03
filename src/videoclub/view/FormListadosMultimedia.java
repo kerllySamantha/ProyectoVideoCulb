@@ -32,7 +32,7 @@ public class FormListadosMultimedia extends JFrame {
         panel.setBackground(new Color(143,151,203));
 
         txtNif = new JTextField();
-        txtNif.setBounds(170, 20, 100, 25);
+        txtNif.setBounds(230, 20, 100, 25);
         panel.add(txtNif);
 
         lblListados = new JLabel("Listados");
@@ -52,7 +52,7 @@ public class FormListadosMultimedia extends JFrame {
         //panel.add(txtListaMultimedia);
 
         JScrollPane scrollPane = new JScrollPane(txtListaMultimedia);
-        scrollPane.setBounds(200, 50, 430, 210);
+        scrollPane.setBounds(200, 50, 250, 210);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         panel.add(scrollPane);
@@ -68,13 +68,13 @@ public class FormListadosMultimedia extends JFrame {
     }
 
     public void crearBotones() {
-        btnListaMult = new JButton("Multimedia alfabéticamente");
+        btnListaMult = new JButton("Multimedias");
         btnListaMult.setBounds(20, 80, 150, 25);
         btnListaMult.setBackground(new Color(214,220,255));
         btnListaMult.setForeground(new Color(143,151,203));
         panel.add(btnListaMult);
 
-        btnListaPeliculas = new JButton("Peliculas por año");
+        btnListaPeliculas = new JButton("Peliculas A-Z");
         btnListaPeliculas.setBounds(20, 110, 150, 25);
         btnListaPeliculas.setBackground(new Color(214,220,255));
         btnListaPeliculas.setForeground(new Color(143,151,203));
@@ -86,7 +86,7 @@ public class FormListadosMultimedia extends JFrame {
         btnListaDisco.setForeground(new Color(143,151,203));
         panel.add(btnListaDisco);
 
-        btnListaVideojuego = new JButton("VIdeojuegos por año");
+        btnListaVideojuego = new JButton("Videojuegos por año");
         btnListaVideojuego.setBounds(20, 170, 150, 25);
         btnListaVideojuego.setBackground(new Color(214,220,255));
         btnListaVideojuego.setForeground(new Color(143,151,203));
@@ -106,7 +106,7 @@ public class FormListadosMultimedia extends JFrame {
         panel.add(btnListaRecargos);
 
         btnBuscarNif = new JButton("Buscar Socio");
-        btnBuscarNif.setBounds(300, 20, 125, 25);
+        btnBuscarNif.setBounds(350, 20, 125, 25);
         btnBuscarNif.setBackground(new Color(214,220,255));
         btnBuscarNif.setForeground(new Color(143,151,203));
         panel.add(btnBuscarNif);
