@@ -89,7 +89,7 @@ public class GestionMultimedia {
             listaDiscos.append("Nombre del disco: ").append(d.getTitulo()).append("\nAutor: ").append(d.getAutor()).append("\nCanciones: \n");
 
             for (Cancion c: d.getCanciones()) {
-                listaDiscos.append("   -").append(c.getTituloCancion()). append("-").append(c.getDuracionMinSeg()).append("\n");
+                listaDiscos.append("   -").append(c.getTituloCancion()). append(" - ").append(c.getDuracionMinSeg()).append("\n");
             }
             listaDiscos.append("\n");
         }

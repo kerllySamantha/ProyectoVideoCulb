@@ -60,7 +60,6 @@ public class Disco extends Multimedia {
         }
         return super.toString() +
                 "\nDuración: " + getDuracion() +
-                "\nAutor: " + getAutor()+
                 "\nCanciones: \n\t" + listaCaciones + "\n";
     }
 }

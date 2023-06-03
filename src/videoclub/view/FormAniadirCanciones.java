@@ -1,5 +1,5 @@
 package view;
-import controller.GestionBasesDatos;
+
 import model.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;

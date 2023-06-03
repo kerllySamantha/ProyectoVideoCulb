@@ -82,7 +82,7 @@ public class FormAltaDisco extends JFrame{
                     canciones.setSize(400,400);
                 }
             } catch (Exception e) {
-                System.out.println(e);
+                e.printStackTrace();
             }
         });
     }
@@ -98,6 +98,7 @@ public class FormAltaDisco extends JFrame{
                     txtResumenAlta.setText(disco.toString());
                     limpiarCampos();
                     GestionBasesDatos.insertDisco(disco.getTitulo(), disco.getAutor(), disco.getFormato(), disco.getAnio(), disco.duracionDisco());
+                    aniadirCancionesBaseDatos();
                     GestionLogs.escribirRegistro(GestionLogs.registroAltaDisco(disco.getTitulo()));
                     JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo disco");
                 } else {
@@ -105,6 +106,18 @@ public class FormAltaDisco extends JFrame{
                 }
             }
         });
+    }
+
+    public void aniadirCancionesBaseDatos() {
+        try {
+            for (Cancion cancion: disco.getCanciones()) {
+                GestionBasesDatos.insertCancion(cancion.getTituloCancion(), cancion.getAutor(),
+                        cancion.getDuracionMinSeg(), cancion.getDuracionCancionSeg(), disco.getTitulo());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void limpiarCampos() {
