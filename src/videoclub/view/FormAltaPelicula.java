@@ -34,6 +34,7 @@ public class FormAltaPelicula extends JFrame {
     private JComboBox<Integer> cbAnioPelicula;
     private JLabel lblgenero;
     private JTextField txtGenero;
+    private JTextArea txtDatosPelicula;
     private JLabel btnGenero;
     private Pelicula pelicula;
 
@@ -53,9 +54,7 @@ public class FormAltaPelicula extends JFrame {
         btnAltaPelicula.addActionListener(actionEvent -> {
             try {
                 String tituloPelicula = txtTituloPelicula.getText().toUpperCase();
-                ;
                 String autorPelicula = txtAutorPelicula.getText().toUpperCase();
-                ;
                 int anioPelicula = Integer.parseInt((Objects.requireNonNull(cbAnioPelicula.getSelectedItem()).toString()));
                 String duracionPelicula = String.valueOf(0);
                 String actrizPrincipal = txtActriz.getText().toUpperCase(),
@@ -63,8 +62,12 @@ public class FormAltaPelicula extends JFrame {
                         genero = txtGenero.getText().toUpperCase();
                 Formato formato = null;
                 boolean datosCorrectos = true;
+                boolean comprobarTitulo = GestionMultimedia.comprobarMultiemdia(GestionMultimedia.multimedias, tituloPelicula);
 
-                if (txtTituloPelicula.getText().equals("")) {
+                if (comprobarTitulo) {
+                    datosCorrectos = false;
+                    JOptionPane.showMessageDialog(null, "El tititlo de la pelicula ya exixte");
+                } else if (txtTituloPelicula.getText().equals("")) {
                     datosCorrectos = false;
                     JOptionPane.showMessageDialog(null, "El titulo de la pelicula no puede estar vacia.");
                 } else if (txtAutorPelicula.getText().equals("")) {
@@ -94,6 +97,7 @@ public class FormAltaPelicula extends JFrame {
                 if (datosCorrectos) {
                     pelicula = new Pelicula(tituloPelicula, autorPelicula, formato, anioPelicula, duracionPelicula, actrizPrincipal, actorPrincipal, genero);
                     GestionMultimedia.multimedias.add(pelicula);
+                    txtDatosPelicula.setText(pelicula.toString());
                     GestionBasesDatos.insertPelicula(pelicula.getTitulo(), pelicula.getAutor(), pelicula.getFormato(), pelicula.getGenero(), pelicula.getAnio(), pelicula.getDuracionPelicula(), pelicula.getActorPrincipal(), pelicula.getActrizPrincipal());
                     JOptionPane.showMessageDialog(null, "Se ha añadido una nueva pelicula");
                     GestionLogs.escribirRegistro(GestionLogs.registroAltaPelicula(pelicula.getTitulo()));
@@ -105,7 +109,7 @@ public class FormAltaPelicula extends JFrame {
     }
 
     public void valoresCBAnio() {
-        for (int i = ANIO_ACTUAL; i >= ANIO_PRIMERA_PELICULA; i-- ) {
+        for (int i = ANIO_ACTUAL; i >= ANIO_PRIMERA_PELICULA; i--) {
             cbAnioPelicula.addItem(i);
         }
     }
