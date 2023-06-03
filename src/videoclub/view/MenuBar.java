@@ -27,6 +27,7 @@ public class MenuBar {
 
         menuVideoClub = new JMenuBar();
         menuVideoClub.setBackground(fondo);
+        menuVideoClub.setFont(new Font("Arial",Font.BOLD,16));
 
         altas = new JMenu("Altas");
         //bajas = new JMenu("Bajas");
@@ -84,20 +85,47 @@ public class MenuBar {
         exit = new JMenuItem("Exit");
         salir.add(exit);
 
+        altas.setForeground(fondoBotones);
+        altas.setFont(new Font("Arial",Font.BOLD,16));
+        alquileres.setForeground(fondoBotones);
+        alquileres.setFont(new Font("Arial",Font.BOLD,16));
+        devoluciones.setForeground(fondoBotones);
+        devoluciones.setFont(new Font("Arial",Font.BOLD,16));
+        listados.setForeground(fondoBotones);
+        listados.setFont(new Font("Arial",Font.BOLD,16));
+        pagos.setForeground(fondoBotones);
+        pagos.setFont(new Font("Arial",Font.BOLD,16));
+        salir.setForeground(fondoBotones);
+        salir.setFont(new Font("Arial",Font.BOLD,16));
+
         socio.setBackground(fondo);
+        socio.setForeground(fondoBotones);
         pelicula.setBackground(fondo);
+        pelicula.setForeground(fondoBotones);
         videojuego.setBackground(fondo);
+        videojuego.setForeground(fondoBotones);
         disco.setBackground(fondo);
+        disco.setForeground(fondoBotones);
         alquiler.setBackground(fondo);
+        alquiler.setForeground(fondoBotones);
         devolver.setBackground(fondo);
+        devolver.setForeground(fondoBotones);
         listMultimedia.setBackground(fondo);
+        listMultimedia.setForeground(fondoBotones);
         listaDiscos.setBackground(fondo);
+        listaDiscos.setForeground(fondoBotones);
         listaPelisOrden.setBackground(fondo);
+        listaPelisOrden.setForeground(fondoBotones);
         listaVideojAnio.setBackground(fondo);
+        listaVideojAnio.setForeground(fondoBotones);
         listActualSocio.setBackground(fondo);
+        listActualSocio.setForeground(fondoBotones);
         listRecargosPendSocio.setBackground(fondo);
+        listRecargosPendSocio.setForeground(fondoBotones);
         pagoRecargos.setBackground(fondo);
+        pagoRecargos.setForeground(fondoBotones);
         exit.setBackground(fondo);
+        exit.setForeground(fondoBotones);
 
         return menuVideoClub;
     }

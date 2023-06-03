@@ -42,6 +42,8 @@ public class FormPrincipalVideoClub extends JFrame {
         botonAltas.setMaximumSize(new Dimension(250, 60));
         botonAltas.setPreferredSize(new Dimension(200, 30));
         botonAltas.setBackground(fondoBotones);
+        botonAltas.setForeground(fondo);
+        botonAltas.setFont(new Font("Arial",Font.BOLD,18));
         panelPrincipal.add(botonAltas);
 
 
@@ -66,6 +68,8 @@ public class FormPrincipalVideoClub extends JFrame {
         btnAlquiler.setMaximumSize(new Dimension(250, 60));
         btnAlquiler.setPreferredSize(new Dimension(200, 30));
         btnAlquiler.setBackground(fondoBotones);
+        btnAlquiler.setForeground(fondo);
+        btnAlquiler.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipal.add(btnAlquiler);
 
         btnDevolucion = new JButton("Devolución");
@@ -73,6 +77,8 @@ public class FormPrincipalVideoClub extends JFrame {
         btnDevolucion.setMaximumSize(new Dimension(250, 60));
         btnDevolucion.setPreferredSize(new Dimension(200, 30));
         btnDevolucion.setBackground(fondoBotones);
+        btnDevolucion.setForeground(fondo);
+        btnDevolucion.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipal.add(btnDevolucion);
 
         btnListados = new JButton("Listar");
@@ -80,6 +86,8 @@ public class FormPrincipalVideoClub extends JFrame {
         btnListados.setMaximumSize(new Dimension(250, 60));
         btnListados.setPreferredSize(new Dimension(200, 30));
         btnListados.setBackground(fondoBotones);
+        btnListados.setForeground(fondo);
+        btnListados.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipal.add(btnListados);
 
         btnPagos = new JButton("Pagos");
@@ -87,6 +95,8 @@ public class FormPrincipalVideoClub extends JFrame {
         btnPagos.setMaximumSize(new Dimension(250, 60));
         btnPagos.setPreferredSize(new Dimension(200, 30));
         btnPagos.setBackground(fondoBotones);
+        btnPagos.setForeground(fondo);
+        btnPagos.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipal.add(btnPagos);
 
 

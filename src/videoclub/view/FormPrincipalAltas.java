@@ -33,6 +33,8 @@ public class FormPrincipalAltas extends JFrame {
         altaSocio.setMaximumSize(new Dimension(150, 60));
         altaSocio.setPreferredSize(new Dimension(120, 30));
         altaSocio.setBackground(fondoBotones);
+        altaSocio.setForeground(fondo);
+        altaSocio.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipalAltas.add(altaSocio);
 
         altaVideojuego = new JButton("Videojuego");
@@ -40,6 +42,8 @@ public class FormPrincipalAltas extends JFrame {
         altaVideojuego.setMaximumSize(new Dimension(150, 60));
         altaVideojuego.setPreferredSize(new Dimension(120, 30));
         altaVideojuego.setBackground(fondoBotones);
+        altaVideojuego.setForeground(fondo);
+        altaVideojuego.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipalAltas.add(altaVideojuego);
 
         altaPelicula = new JButton("Peliculas");
@@ -47,6 +51,8 @@ public class FormPrincipalAltas extends JFrame {
         altaPelicula.setMaximumSize(new Dimension(150, 60));
         altaPelicula.setPreferredSize(new Dimension(120, 30));
         altaPelicula.setBackground(fondoBotones);
+        altaPelicula.setForeground(fondo);
+        altaPelicula.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipalAltas.add(altaPelicula);
 
         altaDisco = new JButton("Disco");
@@ -54,6 +60,8 @@ public class FormPrincipalAltas extends JFrame {
         altaDisco.setMaximumSize(new Dimension(150, 60));
         altaDisco.setPreferredSize(new Dimension(120, 30));
         altaDisco.setBackground(fondoBotones);
+        altaDisco.setForeground(fondo);
+        altaDisco.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipalAltas.add(altaDisco);
 
         altaSocio.addActionListener(e -> {

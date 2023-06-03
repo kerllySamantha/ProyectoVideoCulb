@@ -3,7 +3,6 @@ package model;
 public class Videojuego extends Multimedia {
     private Plataforma plataforma;
 
-
     public Videojuego(String titulo, String autor, Formato formato, int anio, Plataforma plataforma) {
         super(titulo, autor, formato, anio);
         setPlataforma(plataforma);
