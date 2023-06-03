@@ -675,3 +675,11 @@
 [03-06-2023 11:36:48] Se ha cerrado el programa
 [03-06-2023 11:37:01] Se ha iniciado el programa
 [03-06-2023 11:38:09] Se ha cerrado el programa
+[03-06-2023 11:44:59] Se ha iniciado el programa
+[03-06-2023 11:48:22] Se ha cerrado el programa
+[03-06-2023 11:48:26] Se ha iniciado el programa
+[03-06-2023 11:48:37] Se ha cerrado el programa
+[03-06-2023 11:48:40] Se ha iniciado el programa
+[03-06-2023 11:50:11] Se ha cerrado el programa
+[03-06-2023 12:18:15] Se ha iniciado el programa
+[03-06-2023 12:18:26] Se ha cerrado el programa

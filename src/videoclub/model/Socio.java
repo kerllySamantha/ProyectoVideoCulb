@@ -13,7 +13,7 @@ public class Socio {
     private LocalDate fechaNac;
     private String poblacion;
     private int recargo;
-    private ArrayList <GestionAlquilerMul> historial;
+//    private ArrayList <GestionAlquilerMul> historial;
     private ArrayList <GestionAlquilerMul> alquilerActual;
 
     public Socio(String nif, String nombre, LocalDate fechaNac, String poblacion) {
@@ -22,7 +22,7 @@ public class Socio {
         setFechaNac(fechaNac);
         setPoblacion(poblacion);
         setRecargo(RECARGO_POR_DEFECTO);
-        historial = new ArrayList<>();
+//        historial = new ArrayList<>();
         alquilerActual = new ArrayList<>();
     }
     public Socio(String nif, String nombre, LocalDate fechaNac, String poblacion, int recargo) {
@@ -31,7 +31,7 @@ public class Socio {
         setFechaNac(fechaNac);
         setPoblacion(poblacion);
         setRecargo(recargo);
-        historial = new ArrayList<>();
+//        historial = new ArrayList<>();
         alquilerActual = new ArrayList<>();
     }
 
@@ -90,11 +90,7 @@ public class Socio {
         LocalDate fechaActual = LocalDate.now();
         Period period = Period.between(fechaNac, fechaActual);
         int edad = period.getYears();
-        if (edad > 18) {
-            return true;
-        } else {
-            return false;
-        }
+        return edad > 18;
     }
 
     @Override
