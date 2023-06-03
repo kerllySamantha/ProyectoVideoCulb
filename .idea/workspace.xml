@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="" />
+    <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="Poner nombre objetos enum en mayúscula">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/model/Videojuego.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalAltas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalAltas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormPrincipalVideoClub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/MenuBar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/model/Videojuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/model/Videojuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormListadosMultimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormListadosMultimedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalAltas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalAltas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormPrincipalVideoClub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/MenuBar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +31,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/kerlly" />
+    <option name="BRANCH" value="aine" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -56,12 +69,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="ramaPrincipal" />
-                    <option name="lastUsedInstant" value="1685713007" />
+                    <option name="branchName" value="kerlly" />
+                    <option name="lastUsedInstant" value="1685556610" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1685712990" />
+                    <option name="branchName" value="ramaPrincipal" />
+                    <option name="lastUsedInstant" value="1684947903" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -105,7 +118,6 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;339&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/kerll/IdeaProjects/ProyectoVideoClub/src/postgresql-42.6.0.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -119,7 +131,6 @@
       <recent name="C:\Users\ainea\IdeaProjects\ProyectoVideoClub\src\videoclub\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kerll\IdeaProjects\ProyectoVideoClub\src\videoclub\view" />
       <recent name="C:\Users\ainea\IdeaProjects\ProyectoVideoClub\src\videoclub\view" />
       <recent name="C:\Users\kerll\IdeaProjects\ProyectoVideoClub" />
       <recent name="C:\Users\kerll\IdeaProjects\ProyectoVideoClub\.idea" />
@@ -335,14 +346,7 @@
       <option name="project" value="LOCAL" />
       <updated>1685556723847</updated>
     </task>
-    <task id="LOCAL-00025" summary="Añadir metodo insertCanciones y más">
-      <created>1685749213395</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1685749213395</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -377,9 +381,6 @@
     <MESSAGE value="Crear Form y funcionalidad de FormPagoRecargo y modificar metodos de devolución y alquiler." />
     <MESSAGE value="Añadir menuItem de pagos" />
     <MESSAGE value="Poner nombre objetos enum en mayúscula" />
-    <MESSAGE value="Hacer que todos los forms tengan el mismo tamaño" />
-    <MESSAGE value="Solucionar gestión de los recargos y añadir metodos para la base de datos" />
-    <MESSAGE value="Añadir metodo insertCanciones y más" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir metodo insertCanciones y más" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poner nombre objetos enum en mayúscula" />
   </component>
 </project>
