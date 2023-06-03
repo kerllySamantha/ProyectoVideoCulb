@@ -56,7 +56,7 @@ public class FormAltaPelicula extends JFrame {
                 String tituloPelicula = txtTituloPelicula.getText().toUpperCase();
                 String autorPelicula = txtAutorPelicula.getText().toUpperCase();
                 int anioPelicula = Integer.parseInt((Objects.requireNonNull(cbAnioPelicula.getSelectedItem()).toString()));
-                String duracionPelicula = String.valueOf(0);
+                String duracionPelicula = txtDuracionPelicula.getText().toUpperCase();
                 String actrizPrincipal = txtActriz.getText().toUpperCase(),
                         actorPrincipal = txtActor.getText().toUpperCase(),
                         genero = txtGenero.getText().toUpperCase();
