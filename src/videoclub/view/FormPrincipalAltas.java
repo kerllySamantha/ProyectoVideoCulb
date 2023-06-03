@@ -31,24 +31,32 @@ public class FormPrincipalAltas extends JFrame {
         altaSocio.setBounds((super.getWidth()/2)-125, 20, 250,50);
         altaSocio.setFont(new Font("Arial", Font.BOLD, 20));
         altaSocio.setBackground(fondoBotones);
+        altaSocio.setForeground(fondo);
+        altaSocio.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipalAltas.add(altaSocio);
 
         altaVideojuego = new JButton("Videojuego");
         altaVideojuego.setFont(new Font("Arial", Font.BOLD, 20));
         altaVideojuego.setBounds((super.getWidth()/2)-125, 90, 250,50);
         altaVideojuego.setBackground(fondoBotones);
+        altaVideojuego.setForeground(fondo);
+        altaVideojuego.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipalAltas.add(altaVideojuego);
 
         altaPelicula = new JButton("Peliculas");
         altaPelicula.setFont(new Font("Arial", Font.BOLD, 20));
         altaPelicula.setBounds((super.getWidth()/2)-125, 160, 250,50);
         altaPelicula.setBackground(fondoBotones);
+        altaPelicula.setForeground(fondo);
+        altaPelicula.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipalAltas.add(altaPelicula);
 
         altaDisco = new JButton("Disco");
         altaDisco.setFont(new Font("Arial", Font.BOLD, 20));
         altaDisco.setBounds((super.getWidth()/2)-125, 230, 250,50);
         altaDisco.setBackground(fondoBotones);
+        altaDisco.setForeground(fondo);
+        altaDisco.setFont(new Font("Arial",Font.BOLD,16));
         panelPrincipalAltas.add(altaDisco);
 
         altaSocio.addActionListener(e -> {
