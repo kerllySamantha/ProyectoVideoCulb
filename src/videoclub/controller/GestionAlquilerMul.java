@@ -72,7 +72,7 @@ public class GestionAlquilerMul {
             }
         } else if (m instanceof Videojuego) {
             if (m.getAnio() < 2010) {
-
+                precio--;
             } else if (m.getAnio() == ANIO_ACTUAL) {
                 precio++;
             }

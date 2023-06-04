@@ -45,23 +45,23 @@ public class FormAlquiler extends JFrame {
             GestionSocioVideoClub.buscarSocio(nifSocio, alquilerSocio);
             String tituloSeleccionado = listarAlquiler.getSelectedValue();
             Multimedia multimediaAlquilada;
-            boolean encontrado = false;
-            for (Multimedia multimedia : alquilerMultimedia) {
-                if (multimedia.getTitulo().equalsIgnoreCase(tituloSeleccionado)) {
-                    multimediaAlquilada = multimedia;
-                    if (GestionBasesDatos.comprobarDisponibilidad(multimediaAlquilada.getTitulo(), multimediaAlquilada.getClass().getName().substring(6).toLowerCase())) {
-                        for (Socio socio : GestionSocioVideoClub.socios) {
-                            if (socio.getNif().equalsIgnoreCase(nifSocio)) {
-                                GestionSocioVideoClub.alquilarMultimedia(multimediaAlquilada, socio);
-                                encontrado = true;
+            if (GestionSocioVideoClub.comprobarNif(GestionSocioVideoClub.socios, nifSocio)) {
+                for (Multimedia multimedia : alquilerMultimedia) {
+                    if (multimedia.getTitulo().equalsIgnoreCase(tituloSeleccionado)) {
+                        multimediaAlquilada = multimedia;
+                        if (GestionBasesDatos.comprobarDisponibilidad(multimediaAlquilada.getTitulo(), multimediaAlquilada.getClass().getName().substring(6).toLowerCase())) {
+                            for (Socio socio : GestionSocioVideoClub.socios) {
+                                if (socio.getNif().equalsIgnoreCase(nifSocio)) {
+                                    GestionSocioVideoClub.alquilarMultimedia(multimediaAlquilada, socio);
+
+                                }
                             }
+                        } else {
+                            JOptionPane.showMessageDialog(null, "No quedan ejemplares disponibles");
                         }
-                    } else {
-                        JOptionPane.showMessageDialog(null, "No quedan ejemplares disponibles");
                     }
                 }
-            }
-            if (!encontrado) {
+            } else {
                 JOptionPane.showMessageDialog(null, "No existe ningun Socio con ese nif");
             }
         });

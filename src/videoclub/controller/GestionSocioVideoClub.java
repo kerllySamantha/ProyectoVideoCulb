@@ -120,28 +120,6 @@ public class GestionSocioVideoClub {
         }
     }
 
-    public static int buscarTitulo(String titulo, ArrayList<Multimedia> multimedia) {
-        int index = 0;
-        for (int i = 0; i < multimedia.size(); i++) {
-            if (multimedia.get(i).getTitulo().equalsIgnoreCase(titulo)) {
-                index = i;
-                return index;
-            }
-        }
-        return -1;
-    }
-
-//    public static int buscarTituloAlquilados(String titulo, Socio s) {
-//        int index = 0;
-//        for (int i = 0; i < s.getHistorial().size(); i++) {
-//            if (s.getHistorial().get(i).getTitulo().equalsIgnoreCase(titulo)) {
-//                index = i;
-//                return index;
-//            }
-//        }
-//        return -1;
-//    }
-
     public static int buscarSocio(String nif, ArrayList<Socio> socios) {
         int index = 0;
         for (int i = 0; i < socios.size(); i++) {
@@ -194,29 +172,5 @@ public class GestionSocioVideoClub {
         return listaAlquileres.toString();
     }
 }
-
-
-
-//
-//    public static void listaHistorial(ArrayList<Socio> socios) {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Introduce el NIF del socio que quieras consultar");
-//        String nif = sc.nextLine();
-//        if (buscarSocio(nif, socios) != -1) {
-//            try {
-//                System.out.println("Histórico de alquileres del socio");
-//                System.out.println("-----------------------------------------");
-//                for (int i = 0; i < socios.get(buscarSocio(nif, socios)).getHistorial().size(); i++) {
-//                    System.out.println(socios.get(buscarSocio(nif, socios)).getHistorial().get(i));
-//                    System.out.println("--------------------------");
-//                }
-//            } catch (Exception e) {
-//                System.out.println("El historial está vacio");
-//            }
-//        } else {
-//            System.out.println("No se ha encontrado el socio");
-//        }
-//    }
-//
 
 
