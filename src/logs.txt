@@ -475,33 +475,52 @@
 [03-06-2023 12:18:28] Se ha cerrado el programa
 [03-06-2023 12:19:35] Se ha iniciado el programa
 [03-06-2023 12:21:20] Se ha cerrado el programa
-[03-06-2023 12:27:00] Se ha iniciado el programa
-[03-06-2023 12:27:13] Se ha cerrado el programa
-[03-06-2023 12:40:30] Se ha iniciado el programa
-[03-06-2023 12:40:51] Se ha cerrado el programa
-[03-06-2023 12:45:08] Se ha iniciado el programa
-[03-06-2023 12:45:12] Se ha cerrado el programa
-[03-06-2023 12:45:36] Se ha iniciado el programa
-[03-06-2023 12:46:37] Se ha cerrado el programa
-[03-06-2023 13:24:04] Se ha iniciado el programa
-[03-06-2023 13:25:17] Se ha cerrado el programa
-[03-06-2023 17:00:43] Se ha iniciado el programa
-[03-06-2023 17:01:31] Se ha cerrado el programa
-[03-06-2023 17:07:57] Se ha iniciado el programa
-[03-06-2023 18:58:58] Se ha cerrado el programa
-[03-06-2023 20:48:58] Se ha iniciado el programa
-[03-06-2023 20:50:15] Se ha cerrado el programa
-[03-06-2023 23:22:40] Se ha iniciado el programa
-[04-06-2023 00:03:06] Se ha dado de alta la pelicula 'SHREK'
-[04-06-2023 00:03:24] Se ha cerrado el programa
-[04-06-2023 00:04:27] Se ha iniciado el programa
-[04-06-2023 00:05:04] Se ha dado de alta la pelicula 'SHREK 2'
-[04-06-2023 03:46:25] Socio con NIF 12345789X ha pagado los recargos
-[04-06-2023 03:46:36] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
-[04-06-2023 04:00:31] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
-[04-06-2023 04:00:34] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
-[04-06-2023 04:00:37] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
-[04-06-2023 04:00:39] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
-[04-06-2023 04:05:23] Se ha cerrado el programa
-[04-06-2023 04:05:31] Se ha iniciado el programa
-[04-06-2023 04:05:57] Se ha cerrado el programa
+[03-06-2023 12:38:34] Se ha iniciado el programa
+[03-06-2023 12:38:48] Se ha cerrado el programa
+[03-06-2023 12:40:01] Se ha iniciado el programa
+[03-06-2023 12:40:16] Se ha cerrado el programa
+[03-06-2023 12:45:34] Se ha iniciado el programa
+[03-06-2023 12:50:56] Se ha dado de alta la pelicula 'AVENGERS 2'
+[03-06-2023 12:53:23] Se ha dado de alta el videojuego 'SIMS 4'
+[03-06-2023 13:00:04] Se ha cerrado el programa
+[03-06-2023 13:00:22] Se ha iniciado el programa
+[03-06-2023 13:00:46] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[03-06-2023 13:00:58] Se ha cerrado el programa
+[03-06-2023 13:04:08] Se ha iniciado el programa
+[03-06-2023 13:04:24] Se ha alquilado el multimedia 'DIVIDE' (Disco) a socio con NIF 51784924X
+[03-06-2023 13:10:32] Se ha dado de alta al socio MARTA HERMANDEZ, con NIF 51785124X
+[03-06-2023 13:43:52] Se ha cerrado el programa
+[03-06-2023 13:59:01] Se ha iniciado el programa
+[03-06-2023 13:59:06] Se ha cerrado el programa
+[03-06-2023 13:59:08] Se ha iniciado el programa
+[03-06-2023 14:02:44] Se ha dado de alta al socio MARIA LOPEZ, con NIF 51789924X
+[03-06-2023 14:04:10] Se ha dado de alta la pelicula 'END GAME'
+[03-06-2023 14:04:52] Se ha dado de alta el videojuego 'POKEMON'
+[03-06-2023 14:07:05] Se ha dado de alta el disco 'CENIZAS'
+[03-06-2023 14:08:42] Se ha alquilado el multimedia 'SUPER SMASH BROS' (Videojuego) a socio con NIF 51784924X
+[03-06-2023 14:08:48] Se ha alquilado el multimedia 'ANIMAL CROSSING: NEW HORIZONS' (Videojuego) a socio con NIF 51784924X
+[03-06-2023 14:09:01] Se ha alquilado el multimedia 'FUTURE NOSTALGIA' (Disco) a socio con NIF 51784924X
+[03-06-2023 14:10:16] Socio con NIF 51784924X ha devuelto el multimedia'SUPER MARIO BROS' (Pelicula)
+[03-06-2023 14:10:28] Socio con NIF 51784924X ha devuelto el multimedia'AVENGERS' (Pelicula)
+[03-06-2023 14:14:47] Socio con NIF 12345678X ha pagado los recargos
+[03-06-2023 16:59:09] Se ha cerrado el programa
+[03-06-2023 21:50:26] Se ha iniciado el programa
+[03-06-2023 21:57:59] Se ha cerrado el programa
+[03-06-2023 21:58:52] Se ha iniciado el programa
+[03-06-2023 22:01:16] Se ha dado de alta al socio MARTA PEREZ, con NIF 51764924X
+[03-06-2023 22:04:02] Se ha dado de alta la pelicula 'AVENGERS INFINITY WAR'
+[03-06-2023 22:05:03] Se ha dado de alta el videojuego 'POKEMON 2'
+[03-06-2023 22:12:03] Se ha cerrado el programa
+[03-06-2023 22:34:27] Se ha iniciado el programa
+[03-06-2023 22:38:05] Se ha dado de alta al socio ROSA MARTINEZ, con NIF 6176924X
+[03-06-2023 22:39:14] Se ha dado de alta la pelicula 'AVENGERS INFINITY WAR'
+[03-06-2023 22:40:16] Se ha dado de alta el videojuego 'POKEMON'
+[03-06-2023 22:42:22] Se ha dado de alta el disco 'CENIZAS'
+[03-06-2023 22:44:03] Se ha alquilado el multimedia 'MARIO KART 8 DELUXE' (Videojuego) a socio con NIF 51784924X
+[03-06-2023 22:44:13] Se ha alquilado el multimedia 'POKEMON' (Videojuego) a socio con NIF 51784924X
+[03-06-2023 22:44:28] Se ha alquilado el multimedia 'AVENGERS' (Pelicula) a socio con NIF 51784924X
+[03-06-2023 22:49:37] Socio con NIF 51784924X ha devuelto el multimedia'MARIO KART 8 DELUXE' (Videojuego)
+[03-06-2023 22:49:44] Socio con NIF 51784924X ha devuelto el multimedia'LA FORMA DEL AGUA' (Pelicula)
+[03-06-2023 22:50:55] Socio con NIF 51784924X ha devuelto el multimedia'ANIMAL CROSSING: NEW HORIZONS' (Videojuego)
+[03-06-2023 22:55:04] Socio con NIF 12345789X ha pagado los recargos
+[03-06-2023 23:00:56] Se ha cerrado el programa

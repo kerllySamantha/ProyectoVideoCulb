@@ -8,10 +8,9 @@ import java.util.ArrayList;
 
 public class Socio {
     public static final int RECARGO_POR_DEFECTO = 0;
-    private String nif;
-    private String nombre;
+    private String nif, nombre, poblacion;
     private LocalDate fechaNac;
-    private String poblacion;
+
     private int recargo;
 
     private ArrayList <GestionAlquilerMul> alquilerActual;
