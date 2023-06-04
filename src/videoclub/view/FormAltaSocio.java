@@ -14,7 +14,7 @@ public class FormAltaSocio extends JFrame {
     private JPanel altasSocioMenu;
     private JTextField txtNIFSocioAlta;
     private JTextField txtNombreSocioAlta;
-    private JTextField txtPoblacionSocioAlta;
+
     private JButton btnCrearSocio;
     private JLabel nifSocioALta;
     private JLabel nombreSocioAlta;
@@ -27,21 +27,20 @@ public class FormAltaSocio extends JFrame {
 
     private String nifSocio, nombreSocio, poblacionSocio;
     private boolean existeNif;
-    Socio socio;
+    private Socio socio;
 
     public FormAltaSocio() {
         super.setContentPane(altasSocioMenu);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
         txtDatosSocio.setEditable(false);
-
-        aniadirSocio();
+        btnCrearSocio.addActionListener(actionEvent ->  aniadirSocio());
 
         btnRestValues.addActionListener(e -> {
             txtNombreSocioAlta.setText("");
             txtNIFSocioAlta.setText("");
             txtNombreSocioAlta.setText("");
-            //txtPoblacionSocioAlta.setText("");
+            txtFechaNac.setText("");
             cmbProvincias.setSelectedIndex(0);
             txtDatosSocio.setText("");
             txtFechaNac.setText("");
@@ -50,10 +49,7 @@ public class FormAltaSocio extends JFrame {
 
     public void aniadirSocio() {
         String patron = "^(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[0-2])/(19|20)\\d{2}$";
-
-        btnCrearSocio.addActionListener(actionEvent -> {
             try {
-                //do {
                 nifSocio = txtNIFSocioAlta.getText().toUpperCase();
                 existeNif = GestionSocioVideoClub.comprobarNif(GestionSocioVideoClub.socios, nifSocio);
                 nombreSocio = txtNombreSocioAlta.getText().toUpperCase();
@@ -62,23 +58,18 @@ public class FormAltaSocio extends JFrame {
                     txtDatosSocio.setText("");
                     JOptionPane.showMessageDialog(null, "El NIf ya existe");
 
-                    // } while (existeNif);
-                    //poblacionSocio = txtPoblacionSocioAlta.getText().toUpperCase();
                 } else if (nifSocio.length() > 9) {
                     JOptionPane.showMessageDialog(null, "La longitudud del nif no puede ser mayor de 10 ");
                 } else if ((nombreSocio.equalsIgnoreCase("") && nifSocio.equalsIgnoreCase(""))) {
                     JOptionPane.showMessageDialog(null, "No puedes dejar los campos vacios ");
-                    //socios.remove(this.socio);
                     txtDatosSocio.setText("");
 
                 } else if (nifSocio.equalsIgnoreCase("")) {
                     JOptionPane.showMessageDialog(null, "No puedes dejar el Nif vacio");
-                    // socios.remove(this.socio);
                     txtDatosSocio.setText("");
 
                 } else if (nombreSocio.equalsIgnoreCase("")) {
                     JOptionPane.showMessageDialog(null, "No puedes dejar el nombre vacio");
-                    //socios.remove(this.socio);
                     txtDatosSocio.setText("");
 
                 } else if (!txtFechaNac.getText().matches(patron) || txtFechaNac.getText().equals("")) {
@@ -89,7 +80,7 @@ public class FormAltaSocio extends JFrame {
                 } else {
                     socio = new Socio(nifSocio, nombreSocio, convertirADate(), poblacionSocio);
                     GestionSocioVideoClub.socios.add(socio);
-                    GestionBasesDatos.insertNuevoSocio(nifSocio, nombreSocio,convertirADate(), poblacionSocio );
+                    GestionBasesDatos.insertNuevoSocio(nifSocio, nombreSocio, convertirADate(), poblacionSocio);
                     JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo Socio");
                     txtDatosSocio.setText(socio.toString());
                     txtNIFSocioAlta.setText("");
@@ -100,13 +91,12 @@ public class FormAltaSocio extends JFrame {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        });
+
     }
 
     public LocalDate convertirADate() {
         String[] partesFecha = txtFechaNac.getText().split("/");
-        LocalDate fechaNac = LocalDate.of(Integer.parseInt(partesFecha[2]), Integer.parseInt(partesFecha[1]), Integer.parseInt(partesFecha[0]));
-        return fechaNac;
+        return LocalDate.of(Integer.parseInt(partesFecha[2]), Integer.parseInt(partesFecha[1]), Integer.parseInt(partesFecha[0]));
     }
 
 }

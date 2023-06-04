@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="gestionar cosas hehe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaPelicula.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormListadosMultimedia.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaPelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaSocio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaSocio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

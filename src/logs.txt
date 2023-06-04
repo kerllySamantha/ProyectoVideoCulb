@@ -524,3 +524,7 @@
 [03-06-2023 22:50:55] Socio con NIF 51784924X ha devuelto el multimedia'ANIMAL CROSSING: NEW HORIZONS' (Videojuego)
 [03-06-2023 22:55:04] Socio con NIF 12345789X ha pagado los recargos
 [03-06-2023 23:00:56] Se ha cerrado el programa
+[04-06-2023 01:38:12] Se ha cerrado el programa
+[04-06-2023 14:24:40] Se ha iniciado el programa
+[04-06-2023 14:25:17] Se ha dado de alta al socio KERLLLY, con NIF 63784924P
+[04-06-2023 14:25:27] Se ha cerrado el programa
