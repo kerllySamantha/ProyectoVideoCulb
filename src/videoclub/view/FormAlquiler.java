@@ -20,11 +20,9 @@ public class FormAlquiler extends JFrame {
     private JLabel lblNIF;
     private JLabel lblBuscar;
     private JTextField txtNifSocio;
-    private ButtonGroup grup = new ButtonGroup();
 
     private final ArrayList<Multimedia> filtroMultimedias = new ArrayList<>();
     DefaultListModel<String> model = new DefaultListModel<>();
-    private boolean existeNif;
 
 
     public FormAlquiler() {
@@ -32,6 +30,7 @@ public class FormAlquiler extends JFrame {
         super.setLocationRelativeTo(null);
         super.setJMenuBar(MenuBar.crearMenuBar());
         MenuBar.gestionDeVentanas();
+        ButtonGroup grup = new ButtonGroup();
         grup.add(DVDRadioButton);
         grup.add(CDRadioButton);
         grup.add(BLUERAYRadioButton);
@@ -53,7 +52,6 @@ public class FormAlquiler extends JFrame {
                             for (Socio socio : GestionSocioVideoClub.socios) {
                                 if (socio.getNif().equalsIgnoreCase(nifSocio)) {
                                     GestionSocioVideoClub.alquilarMultimedia(multimediaAlquilada, socio);
-
                                 }
                             }
                         } else {

@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="gestionar cosas hehe">
+    <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="establecer un tamaño a las ventanas y borrar codigo que no se usa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaSocio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAltaSocio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +64,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kerlly" />
-                    <option name="lastUsedInstant" value="1685881686" />
+                    <option name="lastUsedInstant" value="1685883316" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="ramaPrincipal" />
-                    <option name="lastUsedInstant" value="1685881615" />
+                    <option name="lastUsedInstant" value="1685883294" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -347,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685881582988</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="establecer un tamaño a las ventanas y borrar codigo que no se usa">
+      <created>1685883263949</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1685883263949</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,6 +390,22 @@
     <MESSAGE value="Añadir menuItem de pagos" />
     <MESSAGE value="Poner nombre objetos enum en mayúscula" />
     <MESSAGE value="gestionar cosas hehe" />
-    <option name="LAST_COMMIT_MESSAGE" value="gestionar cosas hehe" />
+    <MESSAGE value="establecer un tamaño a las ventanas y borrar codigo que no se usa" />
+    <option name="LAST_COMMIT_MESSAGE" value="establecer un tamaño a las ventanas y borrar codigo que no se usa" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java</url>
+          <line>27</line>
+          <properties class="view.FormAlquiler" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
