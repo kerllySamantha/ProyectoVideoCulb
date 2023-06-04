@@ -86,7 +86,7 @@ public class FormAltaDisco extends JFrame {
                     disco = new Disco(tituloDisco, autorDisco, formato, anioDisco);
                     FormAniadirCanciones canciones = new FormAniadirCanciones();
                     canciones.setVisible(true);
-                    canciones.setSize(400, 400);
+                    canciones.setBounds((MenuBar.ANCHO_PANTALLA/2)-200, (MenuBar.ALTO_PANTALLA/2)-225, 400,400);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
