@@ -475,3 +475,33 @@
 [03-06-2023 12:18:28] Se ha cerrado el programa
 [03-06-2023 12:19:35] Se ha iniciado el programa
 [03-06-2023 12:21:20] Se ha cerrado el programa
+[03-06-2023 12:27:00] Se ha iniciado el programa
+[03-06-2023 12:27:13] Se ha cerrado el programa
+[03-06-2023 12:40:30] Se ha iniciado el programa
+[03-06-2023 12:40:51] Se ha cerrado el programa
+[03-06-2023 12:45:08] Se ha iniciado el programa
+[03-06-2023 12:45:12] Se ha cerrado el programa
+[03-06-2023 12:45:36] Se ha iniciado el programa
+[03-06-2023 12:46:37] Se ha cerrado el programa
+[03-06-2023 13:24:04] Se ha iniciado el programa
+[03-06-2023 13:25:17] Se ha cerrado el programa
+[03-06-2023 17:00:43] Se ha iniciado el programa
+[03-06-2023 17:01:31] Se ha cerrado el programa
+[03-06-2023 17:07:57] Se ha iniciado el programa
+[03-06-2023 18:58:58] Se ha cerrado el programa
+[03-06-2023 20:48:58] Se ha iniciado el programa
+[03-06-2023 20:50:15] Se ha cerrado el programa
+[03-06-2023 23:22:40] Se ha iniciado el programa
+[04-06-2023 00:03:06] Se ha dado de alta la pelicula 'SHREK'
+[04-06-2023 00:03:24] Se ha cerrado el programa
+[04-06-2023 00:04:27] Se ha iniciado el programa
+[04-06-2023 00:05:04] Se ha dado de alta la pelicula 'SHREK 2'
+[04-06-2023 03:46:25] Socio con NIF 12345789X ha pagado los recargos
+[04-06-2023 03:46:36] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
+[04-06-2023 04:00:31] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
+[04-06-2023 04:00:34] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
+[04-06-2023 04:00:37] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
+[04-06-2023 04:00:39] Se ha alquilado el multimedia 'ENCANTO' (Pelicula) a socio con NIF 12345789X
+[04-06-2023 04:05:23] Se ha cerrado el programa
+[04-06-2023 04:05:31] Se ha iniciado el programa
+[04-06-2023 04:05:57] Se ha cerrado el programa
