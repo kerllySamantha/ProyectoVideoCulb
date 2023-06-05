@@ -84,6 +84,7 @@ public class FormAltaDisco extends JFrame {
 
                 if (datosCorrectos) {
                     disco = new Disco(tituloDisco, autorDisco, formato, anioDisco);
+                    GestionMultimedia.multimedias.add(disco);
                     FormAniadirCanciones canciones = new FormAniadirCanciones();
                     canciones.setVisible(true);
                     canciones.setBounds((MenuBar.ANCHO_PANTALLA/2)-200, (MenuBar.ALTO_PANTALLA/2)-225, 400,400);

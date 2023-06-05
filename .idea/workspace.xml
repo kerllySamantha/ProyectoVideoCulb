@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69e1ecbf-6853-43c8-9637-6482019df1f0" name="Changes" comment="establecer un tamaño a las ventanas y borrar codigo que no se usa">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/controller/GestionBasesDatos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoVideoClub/view/FormAlquiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/controller/GestionBasesDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAlquiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoclub/view/FormAltaDisco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
